@@ -104,5 +104,8 @@
     <ClInclude Include="StageBlock.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="GameTitle.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
