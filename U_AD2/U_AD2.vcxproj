@@ -154,6 +154,7 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="GameTitle.h" />
     <ClInclude Include="main .h" />
+    <ClInclude Include="ObjEnemyBlock.h" />
     <ClInclude Include="StageBlock.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
