@@ -8,3 +8,27 @@
 //使用するヘッダー
 #include"SceneMain.h"
 #include"GameHead.h"
+
+//コントラクタ
+CSceneTitle::CSceneTitle()
+{
+
+}
+
+//デストラクタ
+CSceneTitle::~CSceneTitle()
+{
+
+}
+
+//ゲーム初期化メイン
+void CSceneTitle::InitScene()
+{
+
+}
+
+//ゲーム実行メソッド
+void CSceneTitle::Scene()
+{
+
+}
