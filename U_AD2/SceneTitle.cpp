@@ -22,13 +22,15 @@ CSceneTitle::~CSceneTitle()
 
 }
 
-//ゲーム初期化メイン
+//ゲームメイン初期化メイン
 void CSceneTitle::InitScene()
 {
+	//出力させるグラフィックをサクセイ
+	Font::SetStrTex(L"アンダーアドベンチャー");
 
 }
 
-//ゲーム実行メソッド
+//ゲームメイン実行メソッド
 void CSceneTitle::Scene()
 {
 
