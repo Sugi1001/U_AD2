@@ -15,7 +15,7 @@ using namespace GameL;
 //コンストラクタ
 CSceneMain::CSceneMain()
 {
-
+	;
 }
 
 //デストラクタ
