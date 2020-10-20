@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class OBJBlock
+void CObjBlock
 {
-
+	
 };
