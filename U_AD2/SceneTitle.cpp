@@ -4,6 +4,7 @@
 
 //GeamLで使用するヘッダー
 #include"GameL\SceneObjManager.h"
+#include"GameL\DrawFont.h"
 
 //使用するヘッダー
 #include"SceneMain.h"
