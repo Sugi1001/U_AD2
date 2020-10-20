@@ -84,3 +84,5 @@ void CObjEnemyBlock::Action()
 	m_py += m_vy;
 
 }
+
+//
