@@ -14,5 +14,8 @@ public:
 	void Action();//アクション
 	void Draw();//ドロー
 private:
-	int m_map[10][10];
+	void BlockDraw(float x, float y, RECT_F* dst, float c[]);
+	int m_map[10][100];
+
+	float m_scroll;
 };
