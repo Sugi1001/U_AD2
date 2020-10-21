@@ -35,3 +35,4 @@ private:
 	bool m_hit_right;
 
 };
+
