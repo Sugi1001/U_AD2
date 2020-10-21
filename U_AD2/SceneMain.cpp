@@ -27,7 +27,10 @@ CSceneMain::~CSceneMain()
 //初期化メソッド
 void CSceneMain::InitScene()
 {
-
+	//外部データの読み込み(ステージ情報)
+	unique_ptr<wcha_t>_tp; //ステージ情報ポインター
+	int size;   //ステージ情報の大きさ
+	p = save::ExternalDataOpen(L"", &size); //外部データ読み込み
 }
 
 //実行中メソッド
