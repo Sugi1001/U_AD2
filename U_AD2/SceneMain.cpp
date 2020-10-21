@@ -31,6 +31,10 @@ void CSceneMain::InitScene()
 	unique_ptr<wcha_t>_tp; //ステージ情報ポインター
 	int size;   //ステージ情報の大きさ
 	p = save::ExternalDataOpen(L"", &size); //外部データ読み込み
+
+	//blockオブジェクト作成
+	CObjBlock* objb = new CObjBlock();
+	Objs::InsertObj(objb, OBJ_BLOCK, 9);
 }
 
 //実行中メソッド

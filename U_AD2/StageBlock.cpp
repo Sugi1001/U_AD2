@@ -201,7 +201,7 @@ void CObjBlock::Draw()
 			}
 		}
 	}
-
+}
 //BlockDrawMethod関数
 //引数１ float    x  :リソース切り替え位置x
 //引数２ float    y  :リソース切り替え位置y
@@ -219,4 +219,4 @@ void CObjBlock::Draw()
 	//描画
 	Draw::Draw(0, &src, dst, c, 0.0f);
    }
-}
+
