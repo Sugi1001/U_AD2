@@ -55,6 +55,7 @@ struct UserData
 #include "ObjEnemyBlock.h"
 #include "ObjHero.h"
 #include  "CObjToge.h"
+#include "ObjItem.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
