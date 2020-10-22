@@ -31,23 +31,17 @@ void CObjHero::Action()
 {
       
 
-	if (Input::GetVKey)
-	{
-		//’Êí‘¬“x
-		//m_speed_power = 0.5f;
-		m_ani_max_time = 4;
-	}
-
+	
 	//ƒL[‚Ì“ü—Í•ûŒü
 	if (Input::GetVKey(VK_RIGHT) == true)
 	{
-		//m_vx += m_speed_power;
+		m_vx+=0.1f;
 		m_posture = 1.0f;
 		m_ani_time+=1;
 	}
     else if (Input::GetVKey(VK_LEFT) == true)
 	{
-		//m_vx -= m_speed_power;
+		m_vx-=0.1f;
 		m_posture = 0.0f;
 		m_ani_time+=1;
 	}
