@@ -24,6 +24,12 @@ void CObjHero::Init()
 	float m_speed_power = 0.5f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
+	//blockとの衝突状態確認用
+	m_hit_up = false;
+	m_hit_down = false;
+	m_hit_left = false;
+	m_hit_right = false;
+
 }
 
 //アクション
