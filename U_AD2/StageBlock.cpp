@@ -53,95 +53,7 @@ void CObjBlock::Action()
 		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 }
-	//主人公の衝突状態確認用フラグの初期化
-	//hero->SetUp(false);
-	//hero->SetDown(false);
-	//hero->SetLeft(false);
-	//hero->SetRight(false);
-
-	//踏んでいるブロックの種類の初期化
-	//hero->SetBT(0);
-
-	//m_mapの全要素にアクセス
-	//for (int i = 0; i < 10; i++)
-	//{
-		//for (int j = 0; j < 10; j++)
-		//{
-			//if (m_map[i][j] > 0)
-			//{
-				//要素番号を座標に変更
-				//float x = j * 64.0f;
-				//float y = i * 64.0f;
-
-				//主人公とブロックの当たり判定
-				//if ((hx + (-m_scroll) + 64.0f > x) && (hx + (-m_scroll) < x + 64.0f) && (hy + 64.0f > y) && (hy < y + 64.0f))
-				//{
-					//上下左右の判定
-
-					//vectorの作成
-					//float vx = (hx + (-m_scroll)) - x;
-					//float vy = hy - y;
-					//長さを求める
-					//float len = sqrt(vx*vx + vy + vy);
-					//角度を求める
-					//float r = atan2(vy, vx);
-					//r = r * 180.0f / 3.14f;
-
-					//if (r <= 0.0f)
-						//r = abs(r);
-					//else
-						//r = 360.0f - abs(r);
-
-					//lenがある一定の長さのより短い場合判定に入る
-					//if (len < 88.0f)
-					//{
-						//角度で上下左右を判定
-						//if ((r < 45 && r>0) || r > 315)
-						//{
-							//右
-							//hero->SetRight(true);//主人公から見て、左の部分が衝突している
-							//hero->SetX(x + 64.0f + (m_scroll));//ブロックの位置＋主人公の幅
-							//hero->SetVX(-hero->GetVX()*0.1f);//VX*反発係数
-						//}
-						//if (r > 45 && r < 135)
-						//{
-							//上
-							//hero->SetDown(true);//主人公から見て、下の部分が衝突している
-							//hero->SetY(y - 64.0f);//ブロックの位置ー主人公の幅
-							//種類を渡すのスタートとゴールのみ変更する
-							//if (m_map[i][j] >= 2)
-								//hero->SetBT(m_map[i][j]);//ブロックの要素（type）を主人公に渡す
-							//hero->SetVY(0.0f);
-						//}
-						//if (r > 135 && r < 225)
-						//{
-							//左
-							//hero->SetLeft(true);//主人公から見て、右の部分が衝突している
-							//hero->SetX(x - 64.0f + (m_scroll));//ブロックの位置ー主人公の幅
-							//hero->SetVX(-hero->GetVX()*0.1f);//-VX*反発係数
-						//}
-						//if (r > 225 && r < 315)
-						//{
-							//下
-							//hero->SetUp(true);//主人公から見て、上の部分が衝突している
-							//hero->SetY(y + 64.0f);//ブロックの位置＋主人公の幅
-							//if (hero->GetVY() < 0)
-							//{
-								//hero->SetVY(0.0f);
-							//}
-						//}
-
-
-
-						//当たってる場合
-						//hero->SetX(hx);
-						//hero->SetY(0.0f);
-						//hero->SetVY(0.0f);
-					//}
-				//}
-			//}
-		//}
-	//}
+	
 
 //ドロー
 void CObjBlock::Draw()
@@ -291,7 +203,7 @@ void CObjBlock::Draw()
 						   {
 							   //上
 							   *down=true;//主人公から見て、下の部分が衝突している
-							   *yby - 64.0f;//ブロックの位置ー主人公の幅
+							   *y=by - 64.0f;//ブロックの位置ー主人公の幅
 							   //種類を渡すのスタートとゴールのみ変更する
 							   if (m_map[i][j] >= 2)
 								   *bt=m_map[i][j];//ブロックの要素（type）を主人公に渡す
