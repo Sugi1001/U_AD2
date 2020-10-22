@@ -34,12 +34,12 @@ void CObjToge::Action()
 
 	//HitBoxの内容を更新
 	CHitBox* Hit = Hits::GetHitBox(this);
-	Hit->SetPos
+	Hit->SetPos;
 
 
-		//HitBoxの位置の変更;
+		//HitBoxの位置の変更
 		HitBox* hit = Hits::GetHitBox(this);
-		Hit->SetPos(m_px, m_py)
+	    Hit->SetPos(m_px, m_py);
 
 		//主人公と接触したら主人公にダメージ
 		if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
