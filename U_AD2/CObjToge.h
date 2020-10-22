@@ -17,6 +17,8 @@ public:
 private:
 	float m_px;   //位置
 	float m_py;
+	float m_y;
+	float m_x;
 
 	//blockとの衝突確認用
 	bool m_hit_up;

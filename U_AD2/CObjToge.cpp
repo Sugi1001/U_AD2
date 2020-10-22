@@ -16,10 +16,10 @@ void CObjToge::Init()
 
 
 	//当たり判定用のHitBoxを作成
-	Hits::SetHitBox(this, m_px, m_py, 64, 64, ELEMENT_ENEMY, OBJ_TOGE, 1)
+	Hits::SetHitBox(this, m_px, m_py, 64, 64, ELEMENT_ENEMY, OBJ_TOGE, 1);
 
 		//HitBoxの位置の変更
-		CHitBox* hit = Hits::GetHitBox(this);
+		CHitBox * hit = Hits::GetHitBox(this);
 		hit->SetPos(m_px, m_py);
 
 }
@@ -29,12 +29,18 @@ void CObjToge::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	float hx = hero->GetX()
-		float hy = hero->GetY();
-	//HitBoxの内容を更新
+	float hx = hero->GetX();
+	float hy = hero->GetY();
 
-	CHitBox* hit = Hits::GetHitBox(this);
+	//HitBoxの内容を更新
+	CHitBox* Hit = Hits::GetHitBox(this);
 	Hit->SetPos
+
+
+		//HitBoxの位置の変更;
+		HitBox* hit = Hits::GetHitBox(this);
+		Hit->SetPos(m_px, m_py)
+
 		//主人公と接触したら主人公にダメージ
 		if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
 		{
@@ -43,9 +49,6 @@ void CObjToge::Action()
 
 
 		}
-	/ HitBoxの位置の変更
-		CHitBox* hit = Hits::GetHitBox(this)
-		hit->SetPos(m_px, m_py)
 
 }
 
