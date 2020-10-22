@@ -23,6 +23,6 @@ private:
 	int m_ani_time;//アニメーションフレーム動作間隔
 	int m_ani_frame;//描画フレーム
 
-	float m_speed_power = 0.5f;//通常速度
-	float m_ani_max_time;//アニメーション間隔幅
+	float m_speed_power;//スピードパワー
+	float m_ani_max_time;//アニメーション動作間隔最大値
 };
