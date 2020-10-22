@@ -1,12 +1,12 @@
 #pragma once
 //使用するヘッダー
-#include "GameL\SceneObjManeger.h"
-#include  "GameHead.h"
+#include "GameL\SceneObjManager.h"
+
 //使用するネームスペース
 using namespace GameL;
 
 //オブジェクト : 棘
-class CobjToge : public CObj
+class CObjToge : public CObj
 {
 public:
 	CObjToge() {};
