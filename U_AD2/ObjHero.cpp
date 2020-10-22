@@ -34,22 +34,22 @@ void CObjHero::Action()
 	if (Input::GetVKey)
 	{
 		//’Êí‘¬“x
-		m_speed_power = 0.5f;
+		//m_speed_power = 0.5f;
 		m_ani_max_time = 4;
 	}
 
 	//ƒL[‚Ì“ü—Í•ûŒü
 	if (Input::GetVKey(VK_RIGHT) == true)
 	{
-		m_vx += m_speed_power;
+		//m_vx += m_speed_power;
 		m_posture = 1.0f;
-		m_ani_time += 1;
+		m_ani_time+=1;
 	}
-    else if (Input::GetVKey(VK_RIGHT) == true)
+    else if (Input::GetVKey(VK_LEFT) == true)
 	{
-		m_vx -= m_speed_power;
+		//m_vx -= m_speed_power;
 		m_posture = 0.0f;
-		m_ani_time += 1;
+		m_ani_time+=1;
 	}
 	else
 	{
@@ -58,7 +58,7 @@ void CObjHero::Action()
 	}
 	if (m_ani_time > m_ani_max_time)
 	{
-		m_ani_frame += 1;
+		m_ani_frame+=1;
 		m_ani_time = 0;
 	}
 	if (m_ani_frame == 4)
@@ -95,7 +95,7 @@ void CObjHero::Draw()
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64.0f * m_posture) + m_px;
 	dst.m_right = (64 - 64.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0f;
+	dst.m_bottom = 64.0f + m_py;
 
 	//•`‰æ
 	Draw::Draw(0, &src, &dst, c, 0.0f);

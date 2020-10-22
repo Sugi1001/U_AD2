@@ -27,7 +27,9 @@ CSceneMain::~CSceneMain()
 //初期化メソッド
 void CSceneMain::InitScene()
 {
-	
+	//主人公オブジェクト作成
+	CObjHero* objb = new CObjHero();
+	Objs::InsertObj(objb, OBJ_HERO, 1);
 
 	//blockオブジェクト作成
 	CObjBlock* objb = new CObjBlock();
