@@ -30,3 +30,5 @@ void CObjItem::Draw()
 
 
 
+
+

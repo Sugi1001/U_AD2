@@ -21,6 +21,8 @@ private:
 	float m_vx;
 	float m_vy;  //姿勢
 	float m_posture;
+	float m_x;
+	float m_y;
 
 	int m_ani_time;  //アニメーションフレーム動作間隔
 	int m_ani_frame; //描画フレーム

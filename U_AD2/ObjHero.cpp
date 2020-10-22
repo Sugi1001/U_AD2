@@ -29,7 +29,7 @@ void CObjHero::Init()
 //ƒAƒNƒVƒ‡ƒ“
 void CObjHero::Action()
 {
-
+      
 
 	if (Input::GetVKey)
 	{
