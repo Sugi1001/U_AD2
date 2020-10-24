@@ -170,13 +170,13 @@ void CObjBlock::Draw()
 				   float scroll = scroll_on ? m_scroll : 0;
 
 				   //主人公とブロックの当たり判定
-				   if ((hx + (-m_scroll) + 64.0f > x) && (hx + (-m_scroll) < bx + 64.0f) && (hy + 64.0f > by) && (hy < y + 64.0f))
+				   if ((*x + (-scroll) + 64.0f > bx) && (*x + (-scroll) < bx + 64.0f) && (*y + 64.0f > by) && (*y < by + 64.0f))
 				   {
 					   //上下左右の判定
 
 					   //vectorの作成
-					   float rvx = (hx + (-m_scroll)) - bx;
-					   float rvy = hy - by;
+					   float rvx = (*x + (-m_scroll)) - bx;
+					   float rvy = *y - by;
 					   //長さを求める
 					   float len = sqrt(rvx*rvx + rvy + rvy);
 					   //角度を求める
