@@ -106,6 +106,10 @@ void CObjBlock::Draw()
 					//ゴールブロック
 					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
 				}
+				else if (m_map[i][j])
+				{
+					;//敵配置用の番号のため何もしない
+				}
 				else
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
@@ -160,7 +164,7 @@ void CObjBlock::Draw()
 	   {
 		   for (int j = 0; j < 10; j++)
 		   {
-			   if (m_map[i][j] > 0)
+			   if (m_map[i][j] > 0&&m_map[i][j]!=4)
 			   {
 				   //要素番号を座標に変更
 				   float bx = j * 64.0f;
