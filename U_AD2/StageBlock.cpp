@@ -244,3 +244,85 @@ void CObjBlock::Draw()
 	   };
    }
 
+   //内積関数
+   //引数１，２float ax,ay:Aベクトル
+   //引数３，４float bx,by:Bベクトル
+   //戻り値　float:射影
+   //内容　AベクトルとBベクトルで内積を行い射影をもとめる
+   float CObjBlock::Dot(float ax, float ay, float bx, float by)
+   {
+	   float t = 0.0f;
+
+	   t = ax * bx + ay * by;
+
+	   return t;
+   }
+
+   //外積関数
+   //引数１，２float ax,ay:Aベクトル
+   //引数３，４float bx,by:Bベクトル
+   //戻り値　float :射影
+   //内容　AベクトルとBベクトルで外積を行い射影をもとめる
+   float CObjBlock::Cross(float ax, float ay, float bx, float by)
+   {
+	   float t = 0.0f;
+
+	   t = ax * by + ay * bx;
+
+	   return t;
+   }
+
+   //符号を求めるマクロ
+#define SGN(x) 1-(x<=0)-(x<0)
+
+   //線と線と交差判定
+   bool CObjBlock::LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py)
+   {
+	   //エラーコード
+	   *out_px = -99999.0f; *out_py = -99999.0f;
+
+	   //Aベクトル作成（a2←a1）
+	   float ax = a2x - a1x;  float ay = a2y - a1y;
+
+	   //Bベクトル作成（b2←b1）
+	   float bx = b2x - b1x;  float by = b2y - b1y;
+
+	   //Cベクトル作成（b1←a1）
+	   float cx = b1x - a1x;  float cy = b1y - a1y;
+
+	   //Dベクトル作成
+	   float dx = b2x - a1x;  float dy = b2x - a1y;
+
+	   //A＊Cの射影とA*Bの射影を求める
+	   float t1 = Cross(ax, ay, cx, cy);
+	   float t2 = Cross(ax, ay, dx, dy);
+
+	   //符号が同じ方向になっているかどうかチェック
+	   if (SGN(t1) == SGN(t2))
+		   return false;//交点なし
+
+	   //交点を求める
+	   float px = bx * t1 + b1x;  float py = by * t1 + b1y;
+
+	   //APベクトル（p←a1）
+	   float apx = px - a1x;   float apy = py - a1y;
+
+	   //BPベクトル（p←a2）
+	   float bpx = px - a2x;  float bpy = py - a2y;
+
+	   //A.APの射影とA.BPの射影を求める
+	   float w1 = Dot(ax, ay, apx, apy);
+	   float w2 = Dot(ax, ay, bpx, bpy);
+
+	   //符号チェック
+	   if (SGN(w1) == SGN(w2))
+		   return false;//交点が外
+
+	   //交点を返す
+	   *out_px = px; *out_py;
+
+	   return true;
+   
+   }
+
+
