@@ -47,7 +47,7 @@ void CSceneMain::InitScene()
 	CObjBlock* objb = new CObjBlock();
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 9);
 
-	//
+   
 
 }
 
