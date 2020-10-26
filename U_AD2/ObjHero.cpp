@@ -12,11 +12,11 @@ using namespace GameL;
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_px = 0.0f; //位置
+	m_px = 1.0f; //位置
 	m_py = 0.0f;
-	m_vx = 0.0f;//移動ベクトル
-	m_vy = 0.0f;
-	m_posture = 0.0f; //右向き0.0f　左向き1.0f
+	m_vx = 1.0f;//移動ベクトル
+	m_vy = 1.0f;
+	m_posture = 1.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
 	m_ani_frame = 1;//静止フレームを初期にする
@@ -35,14 +35,7 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
-	if (Input::GetVKey('X') == true)
-	{
-		if (m_hit_down==true)
-		{
-			m_vy = -20;
-		}
-	}
-
+	
       
 	//if (m_py > 1000.0f)
 	//{
@@ -53,7 +46,7 @@ void CObjHero::Action()
 	
 	if (Input::GetVKey('X') == true)
 	{
-		if (m_hit_up == true)
+		if (m_hit_down == true)
 		{
 			m_vy = - 20;
 		}
@@ -82,7 +75,7 @@ void CObjHero::Action()
 		m_ani_frame+=1;
 		m_ani_time = 0;
 	}
-	if (m_ani_frame == 4)
+	if (m_ani_frame == 1)
 	{
 		m_ani_frame = 0;
 	}
@@ -121,7 +114,7 @@ void CObjHero::Draw()
 	RECT_F dst; //描画先表示位置
 
 	//切り取り位置の設定
-	src.m_top = .0f;
+	src.m_top = 1.0f;
 	src.m_left = 0.0f + AniData[m_ani_frame] * 50;
 	src.m_right = 50.0f + AniData[m_ani_frame] * 50;
 	src.m_bottom = 50.0f;
