@@ -36,7 +36,7 @@ void CObjGameOver::Action()
 void CObjGameOver::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	Font::StrDraw(L"GameOver", 230, 250, 32, c);
 
-	Font::SetStrTex(L"GameOver",256,245,32,c);
-	Font::SetStrTex(L"NEXT_CHALLENGE:ENTER_KEY",245,256,32,c);
+	Font::StrDraw(L"NEXT_CHALLENGE:ENTER_KEY", 200, 400, 32, c);
 }
