@@ -19,6 +19,8 @@ private:
 	float m_py;
 	float m_vx; //ˆÚ“®ƒxƒNƒgƒ‹
 	float m_vy;
+	float VK_RIGHT;
+	float VK_LEFT;
 	float m_posture; //p¨
 	
 
