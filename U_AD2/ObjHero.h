@@ -14,6 +14,12 @@ public:
 	void Action();
 	void Draw();
 
+	float GetX() { return m_px; }
+	float GetY() { return m_py; }
+	float GetVY() { return m_vy; }
+	float GetVX() { return m_vx; }
+	int GetBT() { return m_block_type; }
+
 private:
 	float m_px; //位置
 	float m_py;
@@ -35,4 +41,7 @@ private:
 	bool m_hit_down;
 	bool m_hit_left;
 	bool m_hit_right;
+
+	//踏んでいるblockの種類確認用
+	int m_block_type;
 };
