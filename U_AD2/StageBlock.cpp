@@ -335,4 +335,11 @@ void CObjBlock::Draw()
    
    }
 
+   //ålŒö‚Æ•Ç‚ÌŒğ·”»’èŠÖ”
+   bool CObjBlock::HeroBlockCrossPoint(float x, float y, float vx, float vy, float *out_px, float *out_py, float *out_len)
+   {
+
+	   return true;
+   }
+
 
