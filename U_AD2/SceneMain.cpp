@@ -37,7 +37,7 @@ void CSceneMain::InitScene()
 
 
 	//グラフィック読み込み
-	Draw::LoadImageW(L"image.png", 0, TEX_SIZE_512);
+	Draw::LoadImage(L"image.png", 0, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* objb = new CObjHero();
