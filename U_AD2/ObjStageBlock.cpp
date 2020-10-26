@@ -206,9 +206,9 @@ void CObjBlock::Draw()
 	   *bt=0;
 
 	   //m_mapの全要素にアクセス
-	   for (int i = 0; i < 10; i++)
+	   for (int i = 0; i < 50; i++)
 	   {
-		   for (int j = 0; j < 10; j++)
+		   for (int j = 0; j < 50; j++)
 		   {
 			   if (m_map[i][j] > 0&&m_map[i][j]!=4)
 			   {
