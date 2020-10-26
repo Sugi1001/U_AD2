@@ -145,7 +145,7 @@
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="ObjEnemyBlock.cpp" />
     <ClCompile Include="ObjHero.cpp" />
-    <ClCompile Include="StageBlock.cpp" />
+    <ClCompile Include="ObjStageBlock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjToge.h" />
