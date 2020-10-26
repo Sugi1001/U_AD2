@@ -20,7 +20,7 @@ void CObjTitle::Action()
 	//エンターキーを押してシーン：ゲームメインに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
 	{
-		Scene::SetScene(new CSceneMain);
+		Scene::SetScene(new CSceneMain());
 	}
 }
 
