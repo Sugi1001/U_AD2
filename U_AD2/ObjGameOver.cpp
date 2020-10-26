@@ -24,7 +24,9 @@ void CObjGameOver::Action()
 	}
 }
 
+//ÉhÉçÅ[
 void CObjGameOver::Draw()
 {
-
+	Font::SetStrTex(L"GameOver");
+	Font::SetStrTex(L"NEXT_CHALLENGE:ENTER_KEY");
 }
