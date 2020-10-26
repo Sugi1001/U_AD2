@@ -28,6 +28,8 @@ void CSceneTitle::InitScene()
 	//出力させるグラフィックをサクセイ
 	Font::SetStrTex(L"アンダーアドベンチャー");
 
+	CObjTitle*obj = new CObjTitle();
+	Objs::InsertObj(obj, OBJ_TITLE, 10);
 }
 
 //ゲームメイン実行メソッド
