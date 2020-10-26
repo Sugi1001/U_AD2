@@ -36,7 +36,19 @@ void CObjHero::Init()
 void CObjHero::Action()
 {
       
+	//if (m_py > 1000.0f)
+	//{
+	//	//場外に出たらリスタート
+	//	Scene::SetScene(new CSceneMain());
+	//}
 
+	if (Input::GetVKey('X') == true)
+	{
+		if (m_hit_down == true)
+		{
+			m_vy = -20;
+		}
+	}
 	
 	//キーの入力方向
 	if (Input::GetVKey(VK_RIGHT) == true)
@@ -68,6 +80,19 @@ void CObjHero::Action()
 
 	//摩擦
 	m_vx += -(m_vx * 0.098);
+
+	//自由落下運動
+	m_vx += 9.8 / (16.0f);
+
+
+
+	//ブロックとの当たり判定実行
+	/*CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
+	pb->BlockHit(&m_px, &m_py, true,
+		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
+		&m_block_type
+	);*/
+
 
 	//位置の更新
 	m_px += m_vx;
