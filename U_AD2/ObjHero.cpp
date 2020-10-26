@@ -53,13 +53,13 @@ void CObjHero::Action()
 	//キーの入力方向
 	if (Input::GetVKey(VK_RIGHT) == true)
 	{
-		m_vx+=0.1f;
+		m_vx=+0.1f;
 		m_posture = 1.0f;
 		m_ani_time+=1;
 	}
     else if (Input::GetVKey(VK_LEFT) == true)
 	{
-		m_vx-=0.1f;
+		m_vx=-0.1f;
 		m_posture = 0.0f;
 		m_ani_time+=1;
 	}
@@ -82,7 +82,7 @@ void CObjHero::Action()
 	m_vx += -(m_vx * 0.098);
 
 	//自由落下運動
-	m_vx += 9.8 / (16.0f);
+	m_vy += 9.8 / (16.0f);
 
 
 
@@ -112,16 +112,16 @@ void CObjHero::Draw()
 
 	//切り取り位置の設定
 	src.m_top = 0.0f;
-	src.m_left = 0.0f + AniData[m_ani_frame] * 64;
-	src.m_right = 64.0f + AniData[m_ani_frame] * 64;
-	src.m_bottom = 64.0f;
+	src.m_left = 0.0f + AniData[m_ani_frame] * 50;
+	src.m_right = 50.0f + AniData[m_ani_frame] * 50;
+	src.m_bottom = 50.0f;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
-	dst.m_left = (64.0f * m_posture) + m_px;
-	dst.m_right = (64 - 64.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0f + m_py;
+	dst.m_left = (50.0f * m_posture) + m_px;
+	dst.m_right = (50 - 50.0f * m_posture) + m_px;
+	dst.m_bottom = 50.0f + m_py;
 
 	//描画
-	Draw::Draw(0, &src, &dst, c, 0.0f);
+	Draw::Draw(1, &src, &dst, c, 0.0f);
 }
