@@ -338,8 +338,53 @@ void CObjBlock::Draw()
    //主人公と壁の交差判定関数
    bool CObjBlock::HeroBlockCrossPoint(float x, float y, float vx, float vy, float *out_px, float *out_py, float *out_len)
    {
+	   bool pb = false;//交差確認用
+	   float len = 99999.0f;//交点との距離
+	   //ブロックの辺ベクトル
+	   float edge[4][4]=
+	   {
+		   {0,0,64,0},//上辺
+	       {64,0,64,64},//右辺
+	       {64,64,0,64},//下辺
+	       {0,64,0,0},//左辺
+	   };
 
-	   return true;
+	   //m_mapの全要素アクセス
+	   for (int i = 0; i < 10; i++)
+	   {
+		   for (int j = 0; j < 100; j++)
+		   {
+			   if (m_map[i][j] > 0 && m_map[i][j] != 4)
+			   {
+				   //ブロックの４辺から交点を探す
+				   for (int k = 0; k < 4; k++)
+				   {
+					   //交点を探す
+					   float px, py;
+					   bool b;
+					   float l = 0.0f;
+					   b = LineCrossPoint(x, y, x + vx, y + vy, j * 64 + edge[k][0], i * 64 + edge[k][1],j*64+edge[k][2],i*64+edge[k][3], &px, &py);
+					   //交点チェック
+					   if (b == true)
+					   {
+						   //交点との距離を求める
+						   l = sqrt((px - x)*(px - x) + (py - y)*(py - y));
+
+						   //見つけた交差の中でも最も距離が短いモノを探す
+						   if (len > l)
+						   {
+							   len = l;
+							   *out_px = px;
+							   *out_py = py;
+							   pb = true;
+						   }
+					   }
+				   }
+			   }
+		   }
+	   }
+	   *out_len = len;
+	   return pb;
    }
 
 
