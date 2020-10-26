@@ -57,11 +57,11 @@ struct UserData
 
 //ゲームシーンオブジェクトヘッダ------------------
 #include"StageBlock.h"
-#include "ObjEnemyBlock.h"
+//#include "ObjEnemyBlock.h"
 #include "ObjHero.h"
-#include  "CObjToge.h"
-#include "ObjItem.h"
-#include  "ObjHP.h"
+//#include  "CObjToge.h"
+//#include "ObjItem.h"
+//#include  "ObjHP.h"
 
 #include "ObjTitle.h"
 //------------------------------------------------

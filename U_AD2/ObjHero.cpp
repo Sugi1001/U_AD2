@@ -3,7 +3,7 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 
-#include "GameL\SceneManager.h"
+#include "GameHead.h"
 #include "Objhero.h"
 
 //使用するネームスペース
