@@ -35,6 +35,14 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	if (Input::GetVKey('X') == true)
+	{
+		if (m_hit_down==true)
+		{
+			m_vy = -20;
+		}
+	}
+
       
 	//if (m_py > 1000.0f)
 	//{
@@ -42,13 +50,7 @@ void CObjHero::Action()
 	//	Scene::SetScene(new CSceneMain());
 	//}
 
-	if (Input::GetVKey('X') == true)
-	{
-		if (m_hit_down == true)
-		{
-			m_vy = -20;
-		}
-	}
+	
 	
 	//キーの入力方向
 	if (Input::GetVKey(VK_RIGHT) == true)
@@ -60,7 +62,7 @@ void CObjHero::Action()
     else if (Input::GetVKey(VK_LEFT) == true)
 	{
 		m_vx=+1.5f;
-		m_posture = 1.0f;
+		m_posture = 0.0f;
 		m_ani_time+=1;
 	}
 	else
