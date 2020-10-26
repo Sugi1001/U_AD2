@@ -39,7 +39,7 @@ void CSceneMain::InitScene()
 	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; i++)
+		for (int j = 0; j < 10; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);
