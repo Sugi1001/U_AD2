@@ -20,13 +20,22 @@ public:
 	float GetVX() { return m_vx; }
 	int GetBT() { return m_block_type; }
 
+	void SetX(float x) { m_px = x; }
+	void SetY(float y) { m_py = y; }
+	void SetVY(float vy) { m_vy = vy; }
+	void SetVY(float vx) { m_vx = vx; }
+	void SetBT(int t) { m_block_type = t; }
+
+	void SetdUp(bool b) { m_hit_up = b; }
+	void SetDown(bool b) { m_hit_down = b; }
+	void SetLeft(bool b) { m_hit_left = b; }
+	void SetRight(bool b) { m_hit_right = b; }
+
 private:
 	float m_px; //位置
 	float m_py;
 	float m_vx; //移動ベクトル
 	float m_vy;
-	float VK_RIGHT;
-	float VK_LEFT;
 	float m_posture; //姿勢
 	
 
