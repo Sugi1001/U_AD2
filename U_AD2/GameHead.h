@@ -13,6 +13,7 @@ enum OBJ_NAME
 	OBJ_HP,
 
 	OBJ_TITLE,
+	OBJ_GAME_OVER,
 };
 //------------------------------------------------
 
@@ -64,6 +65,7 @@ struct UserData
 #include  "ObjHP.h"
 
 #include "ObjTitle.h"
+#include"ObjGameOver.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
