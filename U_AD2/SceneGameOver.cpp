@@ -29,8 +29,12 @@ CSceneGameOver::~CSceneGameOver()
 void CSceneGameOver::InitScene()
 {
 	//出力させる文字のグラフィックを作成
-	Font::SetStrTex("L"GameOver);
-	Font::(L"NEXT_CHALLENGE:????");
+	Font::SetStrTex(L"GameOver");
+	Font::SetStrTex(L"NEXT_CHALLENGE:ENTER_KEY");
+
+	//ゲームオーバーオブジェクト作成
+	CObjGameOver*obj = new CObjGameOver();
+	Objs::InsertObj(obj, OBJ_GAME_OVER, 10);
 }
 
 //実行中メソッド
