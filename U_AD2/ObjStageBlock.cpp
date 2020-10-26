@@ -179,7 +179,7 @@ void CObjBlock::Draw()
 	src.m_right = src.m_left + 64.0f;
 	src.m_bottom = src.m_top + 64.0f;
 	//•`‰æ
-	Draw::Draw(0, &src, dst, c, 0.0f);
+	Draw::Draw(2, &src, dst, c, 0.0f);
    }
    //BlockHitŠÖ”
 //ˆø”‚P float* x       :”»’è‚ğs‚¤object‚ÌxˆÊ’u
