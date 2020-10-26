@@ -35,6 +35,20 @@ void CSceneMain::InitScene()
 	int size;//ステージ情報の大きさ
 	p = Save::ExternalDataOpen(L"stage.csv", &size);//外部データ読み込み
 
+	int map[50][50];
+	int count = 1;
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; i++)
+		{
+			int w = 0;
+			swscanf_s(&p.get()[count], L"%d", &w);
+
+			map[i][j] = w;
+			count += 2;
+		}
+	}
+
 
 	//グラフィック読み込み
 	Draw::LoadImage(L"image.png", 0, TEX_SIZE_512);
