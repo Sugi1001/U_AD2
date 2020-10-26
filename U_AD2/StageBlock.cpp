@@ -52,6 +52,11 @@ void CObjBlock::Action()
 		hero->SetX(300);//主人公はラインを超えないようにする
 		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
 	}
+	//テスト　交差取得
+	//float a, b;
+	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
+	//int aa = 0;
+	//aa++;
 }
 	
 
@@ -291,7 +296,7 @@ void CObjBlock::Draw()
 	   float cx = b1x - a1x;  float cy = b1y - a1y;
 
 	   //Dベクトル作成
-	   float dx = b2x - a1x;  float dy = b2x - a1y;
+	   float dx = b2x - a1x;  float dy = b2y - a1y;
 
 	   //A＊Cの射影とA*Bの射影を求める
 	   float t1 = Cross(ax, ay, cx, cy);
@@ -301,8 +306,13 @@ void CObjBlock::Draw()
 	   if (SGN(t1) == SGN(t2))
 		   return false;//交点なし
 
+	   //射影を絶対値化
+	   t1 = abs(t1); t2 = abs(t2);
+
 	   //交点を求める
-	   float px = bx * t1 + b1x;  float py = by * t1 + b1y;
+	   float px = bx * (t1 / (t1 + t2)) + b1x;
+	   float py = by * (t1 / (t1 + t2)) + b1x;
+
 
 	   //APベクトル（p←a1）
 	   float apx = px - a1x;   float apy = py - a1y;
