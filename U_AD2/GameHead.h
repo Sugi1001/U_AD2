@@ -11,6 +11,8 @@ enum OBJ_NAME
 	OBJ_TOGE,
 	OBJ_HERO,
 	OBJ_HP,
+
+	OBJ_TITLE,
 };
 //------------------------------------------------
 
@@ -60,11 +62,14 @@ struct UserData
 #include  "CObjToge.h"
 #include "ObjItem.h"
 #include  "ObjHP.h"
+
+#include "ObjTitle.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
 #include"SceneTitle.h"
 #include "SceneMain.h"
+#include"SceneGameOver.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
