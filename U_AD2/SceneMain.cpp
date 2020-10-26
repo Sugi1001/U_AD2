@@ -4,6 +4,7 @@
 
 //GameLで使用するヘッダー
 #include "GameL\SceneObjManager.h"
+#include "GameL\DrawTexture.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -27,6 +28,9 @@ CSceneMain::~CSceneMain()
 //初期化メソッド
 void CSceneMain::InitScene()
 {
+	//グラフィック読み込み
+	Draw::LoadImageW(L"image.png", 0, TEX_SIZE_512);
+
 	//主人公オブジェクト作成
 	CObjHero* objb = new CObjHero();
 	Objs::InsertObj(objb, OBJ_HERO, 1);
