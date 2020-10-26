@@ -3,7 +3,7 @@
 #include"GameL\SceneManager.h"
 
 #include"GameHead.h"
-#include"ObjTitle"
+#include"ObjTitle.h"
 
 //使用するネームペース
 using namespace GameL;
