@@ -125,9 +125,6 @@
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="StageBlock.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
@@ -153,6 +150,9 @@
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjGameOver.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStageBlock.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
