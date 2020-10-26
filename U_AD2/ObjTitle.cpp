@@ -11,7 +11,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjTitle::Init()
 {
-
+	m_key_flag = false;
 }
 
 //アクション
@@ -20,7 +20,14 @@ void CObjTitle::Action()
 	//エンターキーを押してシーン：ゲームメインに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
 	{
-		Scene::SetScene(new CSceneMain());
+		if (m_key_flag == true)
+		{
+			Scene::SetScene(new CSceneMain());
+		}
+	}
+	else
+	{
+		m_key_flag = true;
 	}
 }
 
