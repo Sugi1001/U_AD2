@@ -1,5 +1,6 @@
 #include"GameL\DrawFont.h"
 #include"GameL\WinInputs.h"
+#include"GameL\SceneManager.h"
 
 #include"GameHead.h"
 #include"ObjTitle"
@@ -16,7 +17,11 @@ void CObjTitle::Init()
 //アクション
 void CObjTitle::Action()
 {
-
+	//エンターキーを押してシーン：ゲームメインに移行する
+	if (Input::GetVKey(VK_RETURN) == true)
+	{
+		Scene::SetScene(new CSceneMain);
+	}
 }
 
 //ドロー
