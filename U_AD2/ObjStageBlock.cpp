@@ -4,7 +4,7 @@
 #include"GameL/SceneManager.h"
 
 #include"GameHead.h"
-#include"StageBlock.h"
+#include"ObjStageBlock.h"
 #include"GameL\SceneObjManager.h"
 
 //使用するネームスペース
