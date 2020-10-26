@@ -18,6 +18,8 @@ private:
 	float m_py;
 	float m_vx; //移動ベクトル
 	float m_vy;
+	float VK_RIGHT;
+	float VK_LEFT;
 	float m_posture; //姿勢
 
 	int m_ani_time;//アニメーションフレーム動作間隔
