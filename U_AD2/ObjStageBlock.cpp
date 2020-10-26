@@ -130,9 +130,9 @@ void CObjBlock::Draw()
 
 //m_scroll-=3.0f;//スクロール実験用
 
-	for (int i = 0; i < 50; i++)
+	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j<50; j++)
+		for (int j = 0; j<10; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
@@ -152,7 +152,7 @@ void CObjBlock::Draw()
 					//ゴールブロック
 					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
 				}
-				else if (m_map[i][j])
+				else if (m_map[i][j]==1)
 				{
 					;//敵配置用の番号のため何もしない
 				}
@@ -160,6 +160,7 @@ void CObjBlock::Draw()
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
 				}
+
 			}
 		}
 	}
