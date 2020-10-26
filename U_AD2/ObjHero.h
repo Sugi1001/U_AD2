@@ -13,6 +13,7 @@ public:
 	void Init();
 	void Action();
 	void Draw();
+
 private:
 	float m_px; //位置
 	float m_py;
@@ -21,6 +22,7 @@ private:
 	float VK_RIGHT;
 	float VK_LEFT;
 	float m_posture; //姿勢
+	
 
 	int m_ani_time;//アニメーションフレーム動作間隔
 	int m_ani_frame;//描画フレーム
