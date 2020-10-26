@@ -40,12 +40,14 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"image.png", 0, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
-	CObjHero* objb = new CObjHero();
-	Objs::InsertObj(objb, OBJ_HERO, 1);
+	CObjHero* obj = new CObjHero();
+	Objs::InsertObj(obj, OBJ_HERO, 1);
 
 	//blockオブジェクト作成
 	CObjBlock* objb = new CObjBlock();
-	Objs::InsertObj(objb, OBJ_BLOCK, 9);
+	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 9);
+
+	//
 
 }
 
