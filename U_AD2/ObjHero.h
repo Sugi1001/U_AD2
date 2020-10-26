@@ -23,7 +23,7 @@ public:
 	void SetX(float x) { m_px = x; }
 	void SetY(float y) { m_py = y; }
 	void SetVY(float vy) { m_vy = vy; }
-	void SetVY(float vx) { m_vx = vx; }
+	void SetVX(float vx) { m_vx = vx; }
 	void SetBT(int t) { m_block_type = t; }
 
 	void SetdUp(bool b) { m_hit_up = b; }
