@@ -132,7 +132,7 @@ void CObjBlock::Draw()
 
 	for (int i = 0; i < 50; i++)
 	{
-		for (int j = 0; j, 50; j++)
+		for (int j = 0; j<50; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
