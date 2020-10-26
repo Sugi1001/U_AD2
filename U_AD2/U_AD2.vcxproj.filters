@@ -149,5 +149,8 @@
     <ClInclude Include="ObjItem.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
