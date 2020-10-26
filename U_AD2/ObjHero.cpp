@@ -44,9 +44,9 @@ void CObjHero::Action()
 
 	if (Input::GetVKey('X') == true)
 	{
-		if (m_hit_down == true)
+		if (m_hit_up == true)
 		{
-			m_vy = -20;
+			m_vy = - 20;
 		}
 	}
 	
@@ -77,6 +77,7 @@ void CObjHero::Action()
 	{
 		m_ani_frame = 0;
 	}
+	
 
 	//摩擦
 	m_vx += -(m_vx * 0.098);
@@ -111,15 +112,15 @@ void CObjHero::Draw()
 	RECT_F dst; //描画先表示位置
 
 	//切り取り位置の設定
-	src.m_top = 0.0f;
+	src.m_top = .0f;
 	src.m_left = 0.0f + AniData[m_ani_frame] * 50;
 	src.m_right = 50.0f + AniData[m_ani_frame] * 50;
 	src.m_bottom = 50.0f;
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_py;
+	dst.m_top = 1.0f + m_py;
 	dst.m_left = (50.0f * m_posture) + m_px;
-	dst.m_right = (50 - 50.0f * m_posture) + m_px;
+	dst.m_right = (50 + 50.0f * m_posture) + m_py;
 	dst.m_bottom = 50.0f + m_py;
 
 	//描画
