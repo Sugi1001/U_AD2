@@ -26,7 +26,7 @@ public:
 
 private:
 	void BlockDraw(float x, float y, RECT_F* dst, float c[]);
-	int m_map[10][100];//マップ情報
+	int m_map[50][50];//マップ情報
 
 	float m_scroll;
 
