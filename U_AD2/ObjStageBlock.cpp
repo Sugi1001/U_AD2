@@ -93,6 +93,7 @@ void CObjBlock::Action()
 		hero->GetX();//主人公はラインを超えないようにする
 		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
 	}
+	
 
 	//テスト　交差取得
 	//float a, b;
