@@ -43,7 +43,7 @@ void CObjHero::Action()
 	//場外に出たらリスタート
 		//Scene::SetScene(new CSceneMain());//CSceneGameOver
 	//}
-
+	
 	//
 	//if (Input::GetVKey('X') == true)
 	//{
