@@ -82,10 +82,10 @@ void CObjBlock::Action()
 	float hy = hero->GetY();
 
 	//主人公衝突判定
-	hero->SetUp(false);
-	hero->SetDown(false);
-	hero->SetLeft(false);
-	hero->SetRight(false);
+	//hero->SetUp(false);
+	//hero->SetDown(false);
+	//hero->SetLeft(false);
+	//hero->SetRight(false);
 	//後方スクロールライン
 	if (hx < 80)
 	{
