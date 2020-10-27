@@ -93,6 +93,7 @@ void CObjBlock::Action()
 		hero->GetX();//主人公はラインを超えないようにする
 		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
 	}
+
 	//テスト　交差取得
 	//float a, b;
 	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
@@ -130,16 +131,16 @@ void CObjBlock::Draw()
 
 //m_scroll-=3.0f;//スクロール実験用
 
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 50; i++)
 	{
-		for (int j = 0; j<15; j++)
+		for (int j = 0; j<50; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
 
 				//表示位置の設定
 				dst.m_top = i * 64.0f;
-				dst.m_left = j * 64.0f; //+ m_scroll;
+				dst.m_left = j * 64.0f+ m_scroll;
 				dst.m_right = dst.m_left + 64.0f;
 				dst.m_bottom = dst.m_top + 64.0f;
 				if (m_map[i][j]==1)
