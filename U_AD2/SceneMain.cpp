@@ -54,6 +54,11 @@ void CSceneMain::InitScene()
 	//グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
 
+	//Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
+
+	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
+
+	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
 
