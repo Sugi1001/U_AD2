@@ -90,11 +90,11 @@ void CObjHero::Action()
 
 
 	//ブロックとの当たり判定実行
-	/*CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
-	pb->BlockHit(&m_px, &m_py, true,
-		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
-		&m_block_type
-	);*/
+	//CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
+	//pb->BlockHit(&m_px, &m_py, true,
+		//&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
+		//&m_block_type
+	//);
 
 
 	//位置の更新
