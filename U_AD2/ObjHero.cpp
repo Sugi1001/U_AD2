@@ -67,7 +67,7 @@ void CObjHero::Action()
 	}
 	else
 	{
-		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
+		m_ani_frame = 0; //キーが入力が無い場合静止フレームにする
 		m_ani_time = 0;
 	}
 	if (m_ani_time > m_ani_max_time)
@@ -120,7 +120,7 @@ void CObjHero::Draw()
 	src.m_bottom = 64.0f;
 
 	//表示位置の設定
-	dst.m_top = .0f + m_py;
+	dst.m_top = 1.0f + m_py;
 	dst.m_left = (64.0f * m_posture) + m_px;
 	dst.m_right = (64 + 64.0f * m_posture) + m_py;
 	dst.m_bottom = 64.0f + m_py;
@@ -130,5 +130,5 @@ void CObjHero::Draw()
 	dst.m_bottom = 30.0f + m_py;
 
 	//描画
-	Draw::Draw(1, &src, &dst, c, 0.0f);
+	Draw::Draw(0, &src, &dst, c, 0.0f);
 }
