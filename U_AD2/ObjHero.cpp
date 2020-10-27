@@ -37,11 +37,11 @@ void CObjHero::Action()
 {
 	
       
-	if (m_py > 1000.0f)
-	{
+	//if (m_py > 1000.0f)
+	//{
 	//場外に出たらリスタート
-		Scene::SetScene(new CSceneMain());//CSceneGameOver
-	}
+		//Scene::SetScene(new CSceneMain());//CSceneGameOver
+	//}
 
 	
 	if (Input::GetVKey('X') == true)
