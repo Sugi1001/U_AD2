@@ -56,19 +56,19 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_RIGHT) == true)
 	{
 		m_vx=-1.5f;
-		m_posture = 1.0f;
+		m_posture = 1.5f;
 		m_ani_time+=1;
 	}
     else if (Input::GetVKey(VK_LEFT) == true)
 	{
 		m_vx=+1.5f;
 		m_posture = 0.0f;
-		m_ani_time+=1;
+		m_ani_time+=2;
 	}
 	else
 	{
-		m_ani_frame = 0; //キーが入力が無い場合静止フレームにする
-		m_ani_time = 0;
+		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
+		m_ani_time = 1;
 	}
 	if (m_ani_time > m_ani_max_time)
 	{
@@ -118,6 +118,8 @@ void CObjHero::Draw()
 	src.m_top = 0.0f;
 	src.m_left = 0.0f+ AniData[m_ani_frame] * 64;
 	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
+	src.m_left = 64.0f+ AniData[m_ani_frame] * 30;
+	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
 	src.m_bottom = 64.0f;
 
 	//表示位置の設定
