@@ -105,7 +105,7 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
-	//int AniData[4] = { 1,0,2,0 };
+	int AniData[4] = { 1,0,2,0 };
 
 	//描画カラー情報
 	//float  c[4] = { 1,0,2,0};
