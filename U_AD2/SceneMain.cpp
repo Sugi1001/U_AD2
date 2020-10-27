@@ -36,11 +36,11 @@ void CSceneMain::InitScene()
 	int size;//ステージ情報の大きさ
 	p = Save::ExternalDataOpen(L"stage.csv", &size);//外部データ読み込み
 
-	int map[50][50];
-	int count = 1;
+	int map[100][100];
+	int count = 2;
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j > 10; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);
@@ -59,6 +59,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
+	Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
 
 	
