@@ -55,11 +55,15 @@ void CSceneMain::InitScene()
 	//Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
 
 	////Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
+	Draw::LoadImage(L"主人公.png", 2, TEX_SIZE_512);
 
 	//Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
+	//Draw::LoadImage(L"主人公（移動　逆）.png", 2, TEX_SIZE_512);
 
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	////Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
+	Draw::LoadImage(L"地面.png", 1, TEX_SIZE_512);
+	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
 
 	
@@ -67,7 +71,7 @@ void CSceneMain::InitScene()
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero();
-	Objs::InsertObj(obj, OBJ_HERO, 1);
+	Objs::InsertObj(obj, OBJ_HERO, 10);
 
 	//blockオブジェクト作成
 	CObjBlock* objb = new CObjBlock();
