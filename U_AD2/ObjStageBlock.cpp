@@ -110,7 +110,7 @@ void CObjBlock::Draw()
 
 				//ï\é¶à íuÇÃê›íË
 				dst.m_top = i * 64.0f;
-				dst.m_left = j * 64.0f;//+ m_scroll;
+				dst.m_left = j * 64.0f;+ m_scroll;
 				dst.m_right = dst.m_left + 64.0f;
 				dst.m_bottom = dst.m_top + 64.0f;
 				if (m_map[i][j]==1)

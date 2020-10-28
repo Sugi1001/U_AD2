@@ -110,8 +110,8 @@ void CObjHero::Draw()
 	int AniData[4] = { 1,0,2,0 };
 
 	////描画カラー情報
-	//float  c[4] = { 1,0,2,0};
-	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	float  c[4] = { 1,0,2,0};
+	//float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
@@ -121,23 +121,23 @@ void CObjHero::Draw()
 	src.m_left = 0.0f + AniData[m_ani_frame] * 0;
 	src.m_right = 64.0f + AniData[m_ani_frame] * 64;
 	src.m_bottom = 64.0f;
-	/*src.m_top = 64.0f;
-	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
-	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
-	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
-	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
-	src.m_top = 1.0f;
-	src.m_left = 50.0f+ AniData[m_ani_frame] * 50;
-	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
-	src.m_left = 64.0f+ AniData[m_ani_frame] * 30;
-	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
+//	src.m_top = 64.0f;
+//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
+//	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
+//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
+//	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
+//	src.m_top = 1.0f;
+//	src.m_left = 50.0f+ AniData[m_ani_frame] * 50;
+//	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
+//	src.m_left = 64.0f+ AniData[m_ani_frame] * 30;
+//	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
 	src.m_top = 0.0f;
-	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
+//	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
 		src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
 		src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
 		src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
 	src.m_bottom = 64.0f;
-	src.m_bottom = 64.0f;*/
+	//src.m_bottom = 64.0f;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
@@ -156,7 +156,7 @@ void CObjHero::Draw()
 	dst.m_bottom = 30.0f + m_py;*/
 
 	////描画
-	Draw::Draw(2, &src, &dst, c, 1.0f);
+	Draw::Draw(1, &src, &dst, c, 1.0f);
 	//Draw::Draw(2, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 1.0f);
