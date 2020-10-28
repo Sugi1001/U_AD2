@@ -90,7 +90,7 @@ void CObjBlock::Draw()
 	dst.m_right = 800.0f;
 	dst.m_bottom = 600.0f;
 
-	Draw::Draw(5, &src, &dst, c, 0.0f);
+	Draw::Draw(0, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
 //切り取り位置の設定
@@ -151,7 +151,7 @@ void CObjBlock::Draw()
 	src.m_right = src.m_left + 64.0f;
 	src.m_bottom = src.m_top + 64.0f;
 	//描画
-	Draw::Draw(5, &src, dst, c, 0.0f);
+	Draw::Draw(2, &src, dst, c, 0.0f);
    }
    //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
