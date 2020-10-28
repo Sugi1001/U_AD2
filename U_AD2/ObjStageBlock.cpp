@@ -183,8 +183,9 @@ void CObjBlock::Draw()
 	   {
 		   for (int j=0;j<150;j++) 
 		   {
-			   if (m_map[i][j] > 0&&m_map[i][j]!=4)
+			   if (m_map[i][j] > 0&&m_map[i][j]!=2)
 			   {
+				   
 				   //要素番号を座標に変更
 				   float bx = j * 64.0f;
 				   float by = i * 64.0f;
@@ -222,6 +223,7 @@ void CObjBlock::Draw()
 							   *x=bx + 64.0f + (scroll);//ブロックの位置＋主人公の幅
 							   *vx=-(*vx)*0.1f;//VX*反発係数
 						   }
+				
 						   if (r > 45 && r < 135)
 						   {
 							   //上
