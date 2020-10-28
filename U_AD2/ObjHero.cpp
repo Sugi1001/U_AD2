@@ -13,8 +13,8 @@ using namespace GameL;
 void CObjHero::Init()
 {
 
-	m_px = 100.0f; //位置
-	m_py = 0.0f;
+	m_px = 70.0f; //位置
+	m_py = 64.0f;
 	m_vx = 0.0f;//移動ベクトル
 	m_vy = 0.0f;
 	m_posture = 3.0f; //右向き0.0f　左向き1.0f
