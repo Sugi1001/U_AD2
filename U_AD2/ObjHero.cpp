@@ -131,19 +131,19 @@ void CObjHero::Draw()
 //	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
 //	src.m_left = 64.0f+ AniData[m_ani_frame] * 30;
 //	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
-	src.m_top = 0.0f;
+	//src.m_top = 0.0f;
 //	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
-		src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-		src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-		src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	src.m_bottom = 64.0f;
+	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
+	//	src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
+	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
+	//src.m_bottom = 64.0f;
 	//src.m_bottom = 64.0f;
 
 	//ï\é¶à íuÇÃê›íË
 	dst.m_top = 0.0f + m_py;
-	dst.m_left = (43 * m_posture) + m_px;
-	dst.m_right = (43 - 43.0f * m_posture) + m_px;
-	dst.m_bottom = 43.0f + m_py;
+	dst.m_left = (23 * m_posture) + m_px;
+	dst.m_right = (89 - 45.0f * m_posture) + m_px;
+	dst.m_bottom = 89-0.1f + m_py;
 	//dst.m_top = 1.0f + m_py;
 	/*dst.m_top = 0.0f + m_py;
 	dst.m_top = 0.0f +m_py;
