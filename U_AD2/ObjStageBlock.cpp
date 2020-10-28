@@ -92,10 +92,10 @@ void CObjBlock::Draw()
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 	//マップチップによるblock設置
 //切り取り位置の設定
-src.m_top =0.0f;
-src.m_left=320.0f;
-src.m_right=src.m_left+64.0f;
-src.m_bottom=64.0f;
+//src.m_top =0.0f;
+//src.m_left=320.0f;
+//src.m_right=src.m_left+64.0f;
+//src.m_bottom=64.0f;
 
 //m_scroll-=3.0f;//スクロール実験用
 
@@ -108,7 +108,7 @@ src.m_bottom=64.0f;
 
 				//表示位置の設定
 				dst.m_top = i * 64.0f;
-				dst.m_left = j * 64.0f+ m_scroll;
+				dst.m_left = j * 64.0f;//+ m_scroll;
 				dst.m_right = dst.m_left + 64.0f;
 				dst.m_bottom = dst.m_top + 64.0f;
 				if (m_map[i][j]==1)
