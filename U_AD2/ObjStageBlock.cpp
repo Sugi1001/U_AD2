@@ -113,17 +113,17 @@ void CObjBlock::Draw()
 				dst.m_left = j * 64.0f;+ m_scroll;
 				dst.m_right = dst.m_left + 64.0f;
 				dst.m_bottom = dst.m_top + 64.0f;
-				if (m_map[i][j]==1)
+				if (m_map[i][j]==2)
 				{
 					//スタートブロック
 					BlockDraw(320.0f + 64.0f, 0.0f, &dst, c);
 				}
-				else if (m_map[i][j] == 2)
+				else if (m_map[i][j] == 3)
 				{
 					//ゴールブロック
 					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
 				}
-				else if (m_map[i][j] == 3)
+				else if (m_map[i][j] == 4)
 				{
 					;//敵配置用の番号のため何もしない
 				}

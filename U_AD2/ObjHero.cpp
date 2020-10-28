@@ -13,10 +13,10 @@ using namespace GameL;
 void CObjHero::Init()
 {
 
-	m_px = 3.0f; //位置
-	m_py = 3.0f;
-	m_vx = 3.0f;//移動ベクトル
-	m_vy = 3.0f;
+	m_px = 100.0f; //位置
+	m_py = 0.0f;
+	m_vx = 0.0f;//移動ベクトル
+	m_vy = 0.0f;
 	m_posture = 3.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
@@ -31,18 +31,19 @@ void CObjHero::Init()
 	m_hit_left = false;
 	m_hit_right = false;
 
+	m_block_type = 0;
 }
 
 //アクション
 void CObjHero::Action()
 {
 	 
-	//if (m_py > 1000.0f)
-	//{
+	if (m_py > 1000.0f)
+	{
 	//場外に出たらリスタート
-		//Scene::SetScene(new CSceneMain());//CSceneGameOver
+		Scene::SetScene(new CSceneMain());//CSceneGameOver
 	
-	//}
+	}
 
 	//
 	if (Input::GetVKey('X') == true)
@@ -101,52 +102,86 @@ void CObjHero::Action()
 	//位置の更新
 	m_px += m_vx;
 	m_py += m_vy;
+
+	//主人公の位置X（ｍ＿ｘ）+主人公機の幅分がX軸方向に領域外を認識
+	/*if (m_px + 32.0f > 800.0f)
+	{
+		m_px = 800.0f - 32.0f;
+	}*/
 }
 
 //ドロー
 void CObjHero::Draw()
 {
 	
-	int AniData[4] = { 1,0,2,0 };
+	//int AniData[4] = { 1,0,2,0 };
 
 	////描画カラー情報
-	float  c[4] = { 1,0,2,0};
-	//float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	//float  c[4] = { 1,0,2,0};
+	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
 
 	////切り取り位置の設定
+
 	src.m_top = 0.0f;
-	src.m_left = 0.0f + AniData[m_ani_frame] * 0;
-	src.m_right = 64.0f + AniData[m_ani_frame] * 64;
+	src.m_left = 0.0f;
+	src.m_right = 64.0f;
 	src.m_bottom = 64.0f;
+
+
+
+
+
+
+
+
+
+	//src.m_top = 0.0f;
+	//src.m_left = 0.0f; //+ AniData[m_ani_frame] * 64;
+	//src.m_right = 64.0f + AniData[m_ani_frame] * 64;
+	//src.m_bottom = 64.0f;
 //	src.m_top = 64.0f;
 //	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
 //	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
+//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64
 //	src.m_top = 1.0f;
 //	src.m_left = 50.0f+ AniData[m_ani_frame] * 50;
 //	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 30;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
-	src.m_top = 0.0f;
 //	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
-		src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-		src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-		src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	src.m_bottom = 64.0f;
+	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
+	//	src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
+	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
+	//src.m_bottom = 64.0f;
+		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
+		//src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
+		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
 	//src.m_bottom = 64.0f;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
-	dst.m_left = (43 * m_posture) + m_px;
-	dst.m_right = (43 - 43.0f * m_posture) + m_px;
-	dst.m_bottom = 43.0f + m_py;
+	dst.m_left = (23 * m_posture) + m_px;
+	dst.m_right = (89 - 45.0f * m_posture) + m_px;
+	dst.m_bottom = 56-0.1f + m_py;
+	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
+	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	dst.m_bottom = 64.0f + m_py;
+
+
+
+
+
+
+
+
+
+	//dst.m_top = 0.0f + m_py;
+	//dst.m_left = (64 * m_posture) + m_px;
+	//dst.m_right = (64 - 64.0f * m_posture) + m_px;
+	//dst.m_bottom = 64.0f + m_py;
 	//dst.m_top = 1.0f + m_py;
 	/*dst.m_top = 0.0f + m_py;
-	dst.m_top = 0.0f +m_py;
 	dst.m_left = (64.0f * m_posture) + m_px;
 	dst.m_right =  (64 + 64.0f * m_posture) + m_py;
 	dst.m_bottom = 64.0f +m_py;
@@ -156,7 +191,7 @@ void CObjHero::Draw()
 	dst.m_bottom = 30.0f + m_py;*/
 
 	////描画
-	Draw::Draw(1, &src, &dst, c, 1.0f);
+	Draw::Draw(1, &src, &dst, c, 0.0f);
 	//Draw::Draw(2, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 1.0f);
