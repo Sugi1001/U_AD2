@@ -50,15 +50,15 @@ void CObjBlock::Action()
 	//hero->SetLeft(false);
 	//hero->SetRight(false);
 	//後方スクロールライン
-	if (hx < 80)
+	if (hy < 300)
 	{
-		hero->GetX();//主人公はラインを超えないようにする
+		hero->GetY();//主人公はラインを超えないようにする
 		m_scroll -= hero->GetVY();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 	//前方スクロールライン
-	if (hx > 300)
+	if (hy > 300)
 	{
-		hero->GetX();//主人公はラインを超えないようにする
+		hero->GetY();//主人公はラインを超えないようにする
 		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 	
@@ -89,7 +89,9 @@ void CObjBlock::Draw()
 	dst.m_left = 0.0f;
 	dst.m_right = 800.0f;
 	dst.m_bottom = 600.0f;
-	Draw::Draw(0, &src, &dst, c, 0.0f);
+
+	Draw::Draw(5, &src, &dst, c, 0.0f);
+
 	//マップチップによるblock設置
 //切り取り位置の設定
 src.m_top =0.0f;
@@ -149,7 +151,7 @@ src.m_bottom=64.0f;
 	src.m_right = src.m_left + 64.0f;
 	src.m_bottom = src.m_top + 64.0f;
 	//描画
-	Draw::Draw(1, &src, dst, c, 0.0f);
+	Draw::Draw(5, &src, dst, c, 0.0f);
    }
    //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
