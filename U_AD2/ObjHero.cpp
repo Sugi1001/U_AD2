@@ -156,7 +156,7 @@ void CObjHero::Draw()
 	dst.m_bottom = 30.0f + m_py;*/
 
 	////•`‰æ
-	Draw::Draw(1, &src, &dst, c, 1.0f);
+	Draw::Draw(10, &src, &dst, c, 1.0f);
 	//Draw::Draw(2, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 1.0f);
