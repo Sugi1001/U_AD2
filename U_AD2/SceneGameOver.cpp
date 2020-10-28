@@ -34,7 +34,7 @@ void CSceneGameOver::InitScene()
 
 	//ゲームオーバーオブジェクト作成
 	CObjGameOver*obj = new CObjGameOver();
-	Objs::InsertObj(obj, OBJ_GAME_OVER, 10);
+	Objs::InsertObj(obj, OBJ_GAME_OVER, 11);
 }
 
 //実行中メソッド
