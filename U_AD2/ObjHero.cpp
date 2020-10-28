@@ -150,6 +150,10 @@ void CObjHero::Draw()
 //	src.m_left = 50.0f+ AniData[m_ani_frame] * 50;
 //	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
 //	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
+	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
+	//	src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
+	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
+	//src.m_bottom = 64.0f;
 		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
 		//src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
 		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
@@ -157,6 +161,9 @@ void CObjHero::Draw()
 
 	//ï\é¶à íuÇÃê›íË
 	dst.m_top = 0.0f + m_py;
+	dst.m_left = (23 * m_posture) + m_px;
+	dst.m_right = (89 - 45.0f * m_posture) + m_px;
+	dst.m_bottom = 56-0.1f + m_py;
 	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
 	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
 	dst.m_bottom = 64.0f + m_py;
