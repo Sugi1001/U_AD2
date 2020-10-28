@@ -36,7 +36,7 @@ void CSceneMain::InitScene()
 	int size;//ステージ情報の大きさ
 	p = Save::ExternalDataOpen(L"stage.csv", &size);//外部データ読み込み
 
-	int map[50][50];
+	int map[10][150];
 	int count = 2;
 	for (int i = 0; i < 50; i++)
 	{
@@ -74,7 +74,7 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj, OBJ_HERO, 10);
 
 	//blockオブジェクト作成
-	CObjBlock* objb = new CObjBlock();
+	CObjBlock* objb = new CObjBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
    
