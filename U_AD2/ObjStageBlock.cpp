@@ -270,7 +270,7 @@ void CObjBlock::Draw()
    //引数３，４float bx,by:Bベクトル
    //戻り値　float:射影
    //内容　AベクトルとBベクトルで内積を行い射影をもとめる
-   float CObjBlock::Dot(float ax, float ay, float bx, float by)
+  /* float CObjBlock::Dot(float ax, float ay, float bx, float by)
    {
 	   float t = 0.0f;
 
@@ -401,6 +401,6 @@ void CObjBlock::Draw()
 	   }
 	   *out_len = len;
 	   return pb;
-   }
+   }*/
 
 
