@@ -91,9 +91,8 @@ void CObjHero::Action()
 	m_vx += -(m_vx * -0.0);
 
 	//é©óRóéâ∫â^ìÆ
-	m_vy += 21.8 / (6.0f);
-	m_vy += 7.8 / (16.0f);
-	m_vy += 30.8 / (6.0f);
+	m_vy += 34.8 / (9.0f);
+	
 
 
 
@@ -167,18 +166,18 @@ void CObjHero::Draw()
 
 	//ï\é¶à íuÇÃê›íË
 	dst.m_top = 0.0f + m_py;
-	dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_px;
+	/*dst.m_left = (64 * m_posture) + m_px;
+	dst.m_right = (64 - 12.0f * m_posture) + m_px*/;
 	dst.m_bottom = 64-0.1f + m_py;
-	dst.m_left =/*(     64.0f*m_posture) */+ m_px;
-	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	dst.m_bottom = 64-0.1f + m_py;
+	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
+	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	/*dst.m_bottom = 64-0.1f + m_py;
 	dst.m_bottom = 64-0.1f + m_py;*/
 	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
 	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
 	//dst.m_bottom = 64-0.1f + m_py;
-	dst.m_left =(     64.0f*m_posture) + m_px;
-	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
+	/*dst.m_left =(     64.0f*m_posture) + m_px;
+	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;*/
 	dst.m_left =(     64.0f*m_posture) + m_px;
 	dst.m_right = (64 - 64.0f*m_posture)+m_px;
 	//dst.m_left =/*(     64.0f*m_posture) */64.0f + m_px;
