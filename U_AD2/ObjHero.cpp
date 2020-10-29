@@ -81,7 +81,7 @@ void CObjHero::Action()
 		m_ani_frame+=1;
 		m_ani_time = 0;
 	}
-	if (m_ani_frame == 1)
+	if (m_ani_frame == 4)
 	{
 		m_ani_frame = 0;
 	}
@@ -93,6 +93,7 @@ void CObjHero::Action()
 	//Ž©—R—Ž‰º‰^“®
 	m_vy += 21.8 / (6.0f);
 	m_vy += 7.8 / (16.0f);
+	m_vy += 30.8 / (6.0f);
 
 
 
@@ -169,7 +170,7 @@ void CObjHero::Draw()
 	dst.m_left = (64 * m_posture) + m_px;
 	dst.m_right = (64 - 12.0f * m_posture) + m_px;
 	dst.m_bottom = 64-0.1f + m_py;
-	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
+	dst.m_left =(     64.0f*m_posture) + m_px;
 	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
 	dst.m_bottom = 64.0f + m_py;
 
