@@ -55,13 +55,13 @@ void CObjHero::Action()
 	}
 	//
 	////ÉLÅ[ÇÃì¸óÕï˚å¸
-	if (Input::GetVKey(VK_RIGHT) == true)
+	if (Input::GetVKey(VK_LEFT) == true)
 	{
 		m_vx=+1.5f;
 		m_posture = 1.5f;
 		m_ani_time+=1;
 	}
-    else if (Input::GetVKey(VK_LEFT) == true)
+    else if (Input::GetVKey(VK_RIGHT) == true)
 	{
 		m_vx=-1.5f;
 		m_posture = 0.0f;
@@ -191,8 +191,8 @@ void CObjHero::Draw()
 	dst.m_bottom = 30.0f + m_py;*/
 
 	////ï`âÊ
+	//Draw::Draw(1, &src, &dst, c, 0.0f);
 	Draw::Draw(1, &src, &dst, c, 0.0f);
-	Draw::Draw(10, &src, &dst, c, 1.0f);
 	//Draw::Draw(2, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 1.0f);
