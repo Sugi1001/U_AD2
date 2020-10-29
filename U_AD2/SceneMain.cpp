@@ -37,10 +37,10 @@ void CSceneMain::InitScene()
 	p = Save::ExternalDataOpen(L"stag.csv", &size);//外部データ読み込み
 
 	int map[10][150];
-	int count = 2;
+	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j > 150; j++)
+		for (int j = 0; j < 150; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);

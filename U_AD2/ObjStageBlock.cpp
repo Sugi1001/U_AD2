@@ -183,7 +183,7 @@ void CObjBlock::Draw()
 	   {
 		   for (int j=0;j<150;j++) 
 		   {
-			   if (m_map[i][j] > 0&&m_map[i][j]!=3)
+			   if (m_map[i][j] > 0&&m_map[i][j]!=4)
 			   {
 				   
 				   //—v‘f”Ô†‚ğÀ•W‚É•ÏX
