@@ -62,8 +62,8 @@ void CSceneMain::InitScene()
 	//Draw::LoadImage(L"主人公（移動　逆）.png", 2, TEX_SIZE_512);
 
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
-	////Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
+	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
 
