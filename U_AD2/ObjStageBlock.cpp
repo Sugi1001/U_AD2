@@ -184,7 +184,7 @@ void CObjStageBlock::Draw()
 	   //m_mapの全要素にアクセス
 	   for (int i = 0; i < 10; i++)
 	   {
-		   for (int j = 0; j < 10; j++)
+		   for (int j = 0; j < 150; j++)
 		   {
 			   if (m_map[i][j] > 0)
 			   {
