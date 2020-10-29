@@ -91,7 +91,7 @@ void CObjHero::Action()
 	m_vx += -(m_vx * 0.098);
 
 	//Ž©—R—Ž‰º‰^“®
-	m_vy += 21.8 / (6.0f);
+	m_vy += 16.8 / (6.0f);
 
 
 
