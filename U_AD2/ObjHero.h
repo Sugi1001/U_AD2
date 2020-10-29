@@ -39,8 +39,8 @@ private:
 	float m_posture; //姿勢
 	
 
-	int m_ani_time;//アニメーションフレーム動作間隔
-	int m_ani_frame;//描画フレーム
+	int m_ani_time = 0;//アニメーションフレーム動作間隔
+	int m_ani_frame = 1;//描画フレーム  //静止フレームを初期にする。
 
 	
 	float m_ani_max_time;//アニメーション動作間隔最大値
