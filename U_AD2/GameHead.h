@@ -7,10 +7,11 @@ enum OBJ_NAME
 	//ゲームで使うオブジェクトの名前
 	//OBJ_○○と表記
 	OBJ_ENEMY_BLOCK,
-	OBJ_STAGE_BLOCK,
 	OBJ_TOGE,
 	OBJ_HERO,
 	OBJ_HP,
+	//OBJ_BLOCK,
+	OBJ_STAGE_BLOCK,
 	OBJ_BLOCK,
 
 	OBJ_TITLE,
