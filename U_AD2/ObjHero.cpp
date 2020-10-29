@@ -67,7 +67,7 @@ void CObjHero::Action()
 	{
 		m_vx=+1.5f;
 		m_posture = 0.0f;
-		m_ani_time+=2;
+		m_ani_time+=1;
 	}
 	else
 	{
