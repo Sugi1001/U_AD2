@@ -39,6 +39,8 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	//移動ベクトルの破棄
+	m_vy = 0.0f;
 	 
 	if (m_py > 1000.0f)
 	{
@@ -74,7 +76,7 @@ void CObjHero::Action()
 		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
 		m_ani_time = 1;
 	}
-	if (m_ani_time > m_ani_max_time)
+	if (m_ani_time > 4)
 	{
 		m_ani_frame+=1;
 		m_ani_time = 0;
@@ -89,6 +91,7 @@ void CObjHero::Action()
 	m_vx += -(m_vx * -0.0);
 
 	//自由落下運動
+	m_vy += 21.8 / (6.0f);
 	m_vy += 7.8 / (16.0f);
 
 
@@ -106,10 +109,10 @@ void CObjHero::Action()
 	m_py += m_vy;
 
 	//主人公の位置X（ｍ＿ｘ）+主人公機の幅分がX軸方向に領域外を認識
-	/*if (m_px + 32.0f > 800.0f)
+	if (m_px + 32.0f > 800.0f)
 	{
 		m_px = 800.0f - 32.0f;
-	}*/
+	}
 }
 
 //ドロー
