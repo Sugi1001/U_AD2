@@ -13,16 +13,16 @@ using namespace GameL;
 void CObjHero::Init()
 {
 
-	m_px = 70.0f; //位置
-	m_py = 64.0f;
-	m_vx = 0.0f;//移動ベクトル
-	m_vy = 0.0f;
-	m_posture = 3.0f; //右向き0.0f　左向き1.0f
+	m_px = 1.0f; //位置
+	m_py = 1.0f;
+	m_vx = 1.0f;//移動ベクトル
+	m_vy = 1.0f;
+	m_posture =1.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
-	m_ani_frame = 1;//静止フレームを初期にする
+	m_ani_frame = 0;//静止フレームを初期にする
 
-	float m_speed_power = 0.5f;//通常速度
+	float m_speed_power = 1.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
 	//blockとの衝突状態確認用
@@ -39,6 +39,8 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	//移動ベクトルの破棄
+	m_vy = 0.0f;
 	 
 	if (m_py > 1000.0f)
 	{
@@ -52,20 +54,20 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = - 20;
+			m_vy = + 20;
 		}
 	}
 	//
 	////キーの入力方向
 	if (Input::GetVKey(VK_LEFT) == true)
 	{
-		m_vx=-10.5f;
+		m_vx=-3.0f;
 		m_posture = 1.5f;
 		m_ani_time+=1;
 	}
     else if (Input::GetVKey(VK_RIGHT) == true)
 	{
-		m_vx=+10.5f;
+		m_vx=+3.0f;
 		m_posture = 0.0f;
 		m_ani_time+=1;
 	}
@@ -74,22 +76,24 @@ void CObjHero::Action()
 		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
 		m_ani_time = 1;
 	}
-	if (m_ani_time > m_ani_max_time)
+	if (m_ani_time > 4)
 	{
 		m_ani_frame+=1;
 		m_ani_time = 0;
 	}
-	if (m_ani_frame == 1)
+	if (m_ani_frame == 4)
 	{
 		m_ani_frame = 0;
 	}
 	
 
 	//摩擦
-	m_vx += -(m_vx * 0.098);
+	m_vx += -(m_vx * -0.0);
 
 	//自由落下運動
-	m_vy += 9.8 / (16.0f);
+	m_vy += 21.8 / (6.0f);
+	m_vy += 7.8 / (16.0f);
+	m_vy += 30.8 / (6.0f);
 
 
 
@@ -166,7 +170,7 @@ void CObjHero::Draw()
 	dst.m_left = (64 * m_posture) + m_px;
 	dst.m_right = (64 - 12.0f * m_posture) + m_px;
 	dst.m_bottom = 64-0.1f + m_py;
-	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
+	dst.m_left =(     64.0f*m_posture) + m_px;
 	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
 	dst.m_bottom = 64.0f + m_py;
 
