@@ -176,6 +176,91 @@ void CObjStageBlock::Draw()
 	   *down=false;
 	   *left=false;
 	   *right=false;
+	   //踏んでいるブロックの種類の初期化
+	   *bt=0;
+
+	   //m_mapの全要素にアクセス
+	   for (int i = 0; i < 10; i++)
+	   {
+		   for (int j = 0; j < 10; j++)
+		   {
+			   if (m_map[i][j] > 0)
+			   {
+				   //要素番号を座標に変更
+				   float bx = j * 64.0f;
+				   float by = i * 64.0f;
+				   //スクロールの影響
+				   float scroll = scroll_on ? m_scroll : 0;
+
+				   //主人公とブロックの当たり判定
+				   if (( *x + (-scroll) + 64.0f > bx) && (*x + (-scroll) < bx + 64.0f) && (*y + 64.0f > by) && (*y < by + 64.0f))
+				   {
+					   //上下左右の判定
+
+					   //vectorの作成
+					   float rvx = (*x + (-scroll)) - bx;
+					   float rvy = *y - by;
+					   //長さを求める
+					   float len = sqrt(rvx*rvx + rvy + rvy);
+					   //角度を求める
+					   float r = atan2(rvy, rvx);
+					   r = r * 180.0f / 3.14f;
+
+					   if (r <= 0.0f)
+						   r = abs(r);
+					   else
+						   r = 360.0f - abs(r);
+
+					   //lenがある一定の長さのより短い場合判定に入る
+					   if (len < 88.0f)
+					   {
+						   //角度で上下左右を判定
+						   if ((r < 45 && r>0) || r > 315)
+						   {
+							   //右
+							   *right=true;//主人公から見て、左の部分が衝突している
+							   *x=bx + 64.0f + (scroll);//ブロックの位置＋主人公の幅
+							   *vx=-(*vx)*0.1f;//VX*反発係数
+						   }
+						   if (r > 45 && r < 135)
+						   {
+							   //上
+							   *down=true;//主人公から見て、下の部分が衝突している
+							   *y=by - 64.0f;//ブロックの位置ー主人公の幅
+							   //種類を渡すのスタートとゴールのみ変更する
+							   if (m_map[i][j] >= 2)
+								   *bt=m_map[i][j];//ブロックの要素（type）を主人公に渡す
+							   *vy=0.0f;
+						   }
+						   if (r > 135 && r < 225)
+						   {
+							   //左
+							   *left=true;//主人公から見て、右の部分が衝突している
+							   *x=bx - 64.0f + (scroll);//ブロックの位置ー主人公の幅
+							   *vx=-(*vx)*0.1f;//-VX*反発係数
+						   }
+						   if (r > 225 && r < 315)
+						   {
+							   //下
+							   *up=true;//主人公から見て、上の部分が衝突している
+							   *y=by + 64.0f;//ブロックの位置＋主人公の幅
+							   if (*vy < 0)
+							   {
+								   *vy=0.0f;
+							   }
+						   }
+
+
+
+						   //当たってる場合
+						   //hero->SetX(hx);
+						   //hero->SetY(0.0f);
+						   //hero->SetVY(0.0f);
+					   }
+				   }
+			   }
+		   }
+	   }
    }
 
    //内積関数
@@ -183,7 +268,7 @@ void CObjStageBlock::Draw()
    //引数３，４float bx,by:Bベクトル
    //戻り値　float:射影
    //内容　AベクトルとBベクトルで内積を行い射影をもとめる
-  /* float CObjBlock::Dot(float ax, float ay, float bx, float by)
+   float CObjStageBlock::Dot(float ax, float ay, float bx, float by)
    {
 	   float t = 0.0f;
 
@@ -197,7 +282,7 @@ void CObjStageBlock::Draw()
    //引数３，４float bx,by:Bベクトル
    //戻り値　float :射影
    //内容　AベクトルとBベクトルで外積を行い射影をもとめる
-   float CObjBlock::Cross(float ax, float ay, float bx, float by)
+   float CObjStageBlock::Cross(float ax, float ay, float bx, float by)
    {
 	   float t = 0.0f;
 
@@ -210,7 +295,7 @@ void CObjStageBlock::Draw()
 #define SGN(x) 1-(x<=0)-(x<0)
 
    //線と線と交差判定
-   bool CObjBlock::LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py)
+   bool CObjStageBlock::LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py)
    {
 	   //エラーコード
 	   *out_px = -99999.0f; *out_py = -99999.0f;
@@ -265,7 +350,7 @@ void CObjStageBlock::Draw()
    }
 
    //主人公と壁の交差判定関数
-   bool CObjBlock::HeroBlockCrossPoint(float x, float y, float vx, float vy, float *out_px, float *out_py, float *out_len)
+   bool CObjStageBlock::HeroBlockCrossPoint(float x, float y, float vx, float vy, float *out_px, float *out_py, float *out_len)
    {
 	   bool pb = false;//交差確認用
 	   float len = 99999.0f;//交点との距離
@@ -314,6 +399,6 @@ void CObjStageBlock::Draw()
 	   }
 	   *out_len = len;
 	   return pb;
-   }*/
+   }
 
 
