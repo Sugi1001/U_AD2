@@ -40,6 +40,8 @@ void CObjBlock::Init()
 //アクション
 void CObjBlock::Action()
 {
+	//ブロックとの当たり判定実行
+	CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
 
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
