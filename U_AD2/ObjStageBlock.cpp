@@ -49,10 +49,10 @@ void CObjStageBlock::Action()
 	float hy = hero->GetY();
 
 	//主人公衝突判定
-	hero->SetUp(false);
-	hero->SetDown(false);
-	hero->SetLeft(false);
-	hero->SetRight(false);
+	//hero->SetUp(false);
+	//hero->SetDown(false);
+	//hero->SetLeft(false);
+	//hero->SetRight(false);
 	//後方スクロールライン
 	if (hy < 300)
 	{
@@ -60,7 +60,7 @@ void CObjStageBlock::Action()
 		m_scroll -= hero->GetVY();//主人公が本来動くべき分の値をm_scrollに加える
 	}
     //前方スクロールライン
-	if (hy > 300)
+	if (hy > 80)
 	{
 		hero->GetY();//主人公はラインを超えないようにする
 		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
