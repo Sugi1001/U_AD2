@@ -9,7 +9,7 @@
 
 //使用するネームスペース
 using namespace GameL;
-CObjBlock::CObjBlock(int map[10][150])
+CObjStageBlock::CObjStageBlock(int map[10][150])
 	{
 		//*{1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1},
 		//{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
@@ -29,7 +29,7 @@ CObjBlock::CObjBlock(int map[10][150])
 	};
 	
 //イニシャライズ
-void CObjBlock::Init()
+void CObjStageBlock::Init()
 {
 	m_scroll = 0.0f;
 
@@ -38,7 +38,7 @@ void CObjBlock::Init()
 	
 }
 //アクション
-void CObjBlock::Action()
+void CObjStageBlock::Action()
 {
 	//ブロックとの当たり判定実行
 	CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
@@ -77,7 +77,7 @@ void CObjBlock::Action()
 	
 
 //ドロー
-void CObjBlock::Draw()
+void CObjStageBlock::Draw()
 {
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -128,7 +128,7 @@ void CObjBlock::Draw()
 					//ゴールブロック
 					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
 				}
-				else if (m_map[i][j] == 0)
+				else if (m_map[i][j] == 4)
 				{
 					;//敵配置用の番号のため何もしない
 				}
@@ -148,7 +148,7 @@ void CObjBlock::Draw()
 //引数４ float    c  :カラー情報
 //ブロックを64*64限定描画用。リソース切り替えのみx.yで
 //設定できる
-   void CObjBlock::BlockDraw(float x, float y, RECT_F* dst, float c[])
+   void CObjStageBlock::BlockDraw(float x, float y, RECT_F* dst, float c[])
    {
 	RECT_F src;
 	src.m_top = y;
@@ -171,7 +171,7 @@ void CObjBlock::Draw()
 //引数10 int* bt        :下部分判定、特殊なブロックのタイプを返す
 //判定を行うobjectとブロック50*50限定で、あたり判定と上下左右判定を行う
 //その結果は引数４～１０に返す
-   void CObjBlock::BlockHit(float *x, float *y, bool scroll_on, bool*up, bool* down, bool *left, bool* right, float* vx, float *vy, int* bt)
+   void CObjStageBlock::BlockHit(float *x, float *y, bool scroll_on, bool*up, bool* down, bool *left, bool* right, float* vx, float *vy, int* bt)
    {
 	   //主人公の衝突状態確認用フラグの初期化
 	   *up=false;
