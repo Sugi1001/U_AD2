@@ -75,7 +75,7 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj, OBJ_HERO, 10);
 
 	//blockオブジェクト作成
-	CObjBlock* objb = new CObjBlock(map);
+	CObjStageBlock* objb = new CObjStageBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
    
