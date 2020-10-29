@@ -31,6 +31,10 @@ public:
 	void SetLeft(bool b) { m_hit_left = b; }
 	void SetRight(bool b) { m_hit_right = b; }
 
+	float GetScroll() {
+		return m_scroll;
+	}
+
 private:
 	float m_px; //位置
 	float m_py;
@@ -53,4 +57,6 @@ private:
 
 	//踏んでいるblockの種類確認用
 	int m_block_type;
+
+	float m_scroll;
 };

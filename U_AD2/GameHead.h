@@ -58,9 +58,10 @@ struct UserData
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
+#include "ObjHero.h"
 #include"ObjStageBlock.h"
 //#include "ObjEnemyBlock.h"
-#include "ObjHero.h"
+
 //#include  "CObjToge.h"
 //#include "ObjItem.h"
 //#include  "ObjHP.h"
@@ -77,5 +78,5 @@ struct UserData
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSceneTitle
+#define SET_GAME_START  CSceneMain
 //-----------------------------------------------

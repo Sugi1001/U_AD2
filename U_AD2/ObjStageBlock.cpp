@@ -24,7 +24,11 @@ CObjBlock::CObjBlock(int map[10][150])
 	  
 	   
 	  //マップデータをコピー
-	memcpy(m_map,map, sizeof(int)*(10 * 150));
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 150; j++) {
+			m_map[i][j] = map[i][j];
+		}
+	}
 	
 	};
 	
@@ -51,18 +55,72 @@ void CObjBlock::Action()
 	//hero->SetLeft(false);
 	//hero->SetRight(false);
 	//後方スクロールライン
-	if (hy < 300)
+	if (hx < 80)
 	{
-		hero->GetY();//主人公はラインを超えないようにする
-		m_scroll -= hero->GetVY();//主人公が本来動くべき分の値をm_scrollに加える
+		hero->SetX(80);//主人公はラインを超えないようにする
+		m_scroll -= hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 	//前方スクロールライン
-	if (hy > 300)
+	if (hx > 800)
 	{
-		hero->GetY();//主人公はラインを超えないようにする
-		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
+		hero->SetX(800);//主人公はラインを超えないようにする
+		m_scroll -= hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 	
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 100; j++) {
+			if (m_map[i][j] > 0) {
+				float x = j * 64.0f;
+				float y = i * 64.0f;
+
+				if ((hx + (-m_scroll) + 64.0f > x) && (hx + (-m_scroll) < x + 64.0f) && (hy + 64.0f > y) && (hy < y + 64.0f)) {
+					float vx = (hx + (-m_scroll)) - x;
+					float vy = hy - y;
+
+					float len = sqrt(vx * vx + vy * vy);
+
+					float r = atan2(vy, vx);
+					r = r * 180.0f / 3.14f;
+
+					if (r <= 0.0f)
+						r = abs(r);
+					else
+						r = 360.0f - abs(r);
+
+					if (len < 88.0f) {
+						if ((r < 45 && r > 0) || r > 315) {
+							hero->SetRight(true);
+							hero->SetX(x + 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+						}
+						if (r > 45 && r < 135) {
+							hero->SetDown(true);
+							hero->SetY(y - 64.0f);
+							if (m_map[i][j] >= 2)
+								hero->SetBT(m_map[i][j]);
+							hero->SetVY(0.0f);
+						}
+						if (r > 135 && r < 225) {
+							hero->SetLeft(true);
+							hero->SetX(x - 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+						}
+						if (r > 255 && r < 315) {
+							hero->SetUp(true);
+							hero->SetY(y + 64.0f);
+							if (hero->GetVY() < 0) {
+								hero->SetVY(0.0f);
+							}
+						}
+					}
+				}
+			}
+			else if (m_map[i][j] == 3)
+			{
+
+			}
+		}
+	}
 
 	//テスト　交差取得
 	//float a, b;
@@ -86,6 +144,7 @@ void CObjBlock::Draw()
 	src.m_left = 0.0f;
 	src.m_right = 512.0f;
 	src.m_bottom = 512.0f;
+
 	dst.m_top = 0.0f;
 	dst.m_left = 0.0f;
 	dst.m_right = 800.0f;
@@ -147,10 +206,12 @@ void CObjBlock::Draw()
    void CObjBlock::BlockDraw(float x, float y, RECT_F* dst, float c[])
    {
 	RECT_F src;
-	src.m_top = y;
-	src.m_left = x;
+	src.m_top = 0;
+	src.m_left = 0;
 	src.m_right = src.m_left + 64.0f;
 	src.m_bottom = src.m_top + 64.0f;
+
+	
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
    }
@@ -183,7 +244,7 @@ void CObjBlock::Draw()
 	   {
 		   for (int j=0;j<150;j++) 
 		   {
-			   if (m_map[i][j] > 0&&m_map[i][j]!=2)
+			   if (m_map[i][j] > 0)
 			   {
 				   
 				   //要素番号を座標に変更
@@ -202,7 +263,7 @@ void CObjBlock::Draw()
 					   float rvx = (*x + (-m_scroll)) - bx;
 					   float rvy = *y - by;
 					   //長さを求める
-					   float len = sqrt(rvx*rvx + rvy + rvy);
+					   float len = sqrt(rvx*rvx + rvy * rvy);
 					   //角度を求める
 					   float r = atan2(rvy, rvx);
 					   r = r * 180.0f / 3.14f;
