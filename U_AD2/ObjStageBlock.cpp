@@ -124,7 +124,7 @@ void CObjBlock::Draw()
 					//ゴールブロック
 					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
 				}
-				else if (m_map[i][j] == 4)
+				else if (m_map[i][j] == 5)
 				{
 					;//敵配置用の番号のため何もしない
 				}
