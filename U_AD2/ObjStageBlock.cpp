@@ -40,8 +40,7 @@ void CObjStageBlock::Init()
 //アクション
 void CObjStageBlock::Action()
 {
-	//ブロックとの当たり判定実行
-	CObjBlock::CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
+	
 
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
@@ -350,7 +349,8 @@ void CObjStageBlock::Draw()
 	   return true;
    
    }
-
+//ブロックとの当たり判定実行
+	//CObjStageBlock::CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
    //主人公と壁の交差判定関数
    bool CObjStageBlock::HeroBlockCrossPoint(float x, float y, float vx, float vy, float *out_px, float *out_py, float *out_len)
    {
