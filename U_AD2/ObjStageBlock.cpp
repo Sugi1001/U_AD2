@@ -25,7 +25,7 @@ CObjStageBlock::CObjStageBlock(int map[10][106])
 	   
 	  //マップデータをコピー
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 150; j++) {
+		for (int j = 0; j < 106; j++) {
 			m_map[i][j] = map[i][j];
 		}
 	}
@@ -74,7 +74,7 @@ void CObjStageBlock::Action()
 	}
 	
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 100; j++) {
+		for (int j = 0; j < 106; j++) {
 			if (m_map[i][j] > 0) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;

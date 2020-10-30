@@ -61,7 +61,7 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = - 5;
+			m_vy = - 120;
 		}
 	}
 	//
@@ -120,9 +120,9 @@ void CObjHero::Action()
 	m_py += m_vy;
 
 	//主人公の位置X（ｍ＿ｘ）+主人公機の幅分がX軸方向に領域外を認識
-	if (m_px + 32.0f > 800.0f)
+	if (m_px + 20.0f > 800.0f)
 	{
-		m_px = 800.0f - 32.0f;
+		m_px = 800.0f - 20.0f;
 	}
 }
 
