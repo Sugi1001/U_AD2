@@ -5,6 +5,7 @@
 
 #include "GameHead.h"
 #include "Objhero.h"
+#include "ObjStageBlock.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -32,6 +33,8 @@ void CObjHero::Init()
 	m_hit_right = false;
 
 	m_block_type = 0;
+
+	
 }
 
 //アクション
@@ -92,13 +95,13 @@ void CObjHero::Action()
 
 
 	//ブロックとの当たり判定実行
-	/*CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
+	CObjBlock* pb = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
 	pb->BlockHit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
-	);*/
+	);
 
-
+	
 	//位置の更新
 	m_px += m_vx;
 	m_py += m_vy;
@@ -162,8 +165,8 @@ void CObjHero::Draw()
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_px;
-	dst.m_bottom = 64-0.1f + m_py;
+	dst.m_right = (64 - 64.0f * m_posture) + m_px;
+	dst.m_bottom = 64.0f + m_py;
 	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
 	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
 	dst.m_bottom = 64.0f + m_py;

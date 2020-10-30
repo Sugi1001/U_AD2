@@ -7,6 +7,7 @@
 #include "GameL\DrawTexture.h"
 #include"GameL/DrawFont.h"
 #include"GameL/UserData.h"
+#include "ObjStageBlock.h"
 
 
 //使用するネームスペース
@@ -76,6 +77,7 @@ void CSceneMain::InitScene()
 	//blockオブジェクト作成
 	CObjBlock* objb = new CObjBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
+
 
    
 
