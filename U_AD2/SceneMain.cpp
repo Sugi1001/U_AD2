@@ -43,7 +43,7 @@ void CSceneMain::InitScene()
 	//for (int i = 0; i < 10; i++)
 	int map[10][106];
 	int count = 1;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 10; i++)*/
 	{
 		//for (int j = 0; j < 150; j++)
 		for (int j = 0; j < 106; j++)

@@ -114,7 +114,7 @@ void CObjHero::Action()
 		&m_block_type
 	);
 
-
+	
 	//à íuÇÃçXêV
 	m_px += m_vx;
 	m_py += m_vy;
