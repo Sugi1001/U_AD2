@@ -39,7 +39,7 @@ void CObjStageBlock::Init()
 	m_scroll = 0.0f;
 
 	//マップ情報
-	//int block_date[10][150] =
+	//int map[10][150] =
 	
 }
 //アクション
@@ -67,7 +67,7 @@ void CObjStageBlock::Action()
 	//前方スクロールライン
 	if (hx > 800)
     //前方スクロールライン
-	if (hy > 80)
+	if (hx > 80)
 	{
 		hero->SetX(800);//主人公はラインを超えないようにする
 		m_scroll -= hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
@@ -166,7 +166,7 @@ void CObjStageBlock::Draw()
 //src.m_right=src.m_left+64.0f;
 //src.m_bottom=64.0f;
 
-//m_scroll-=3.0f;//スクロール実験用
+//m_scroll+=3.0f;//スクロール実験用
 
 	for (int i = 0; i < 10; i++)
 	{
