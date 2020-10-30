@@ -19,7 +19,7 @@ public:
 	float GetVY() { return m_vy; }
 	float GetVX() { return m_vx; }
 	int GetBT() { return m_block_type; }
-	float GetScroll() { return m_scroll; }
+	//float GetScroll() { return m_scroll; }
 
 	void SetX(float x) { m_px = x; }
 	void SetY(float y) { m_py = y; }
@@ -61,5 +61,5 @@ private:
 	//“¥‚ñ‚Å‚¢‚éblock‚ÌŽí—ÞŠm”F—p
 	int m_block_type;
 
-	float m_scroll;
+	//float m_scroll;
 };
