@@ -64,7 +64,7 @@ void CObjStageBlock::Action()
 	//hero->SetLeft(false);
 	//hero->SetRight(false);
 	//後方スクロールライン
-	if (hx < 80)
+	if (hx < 0)
 	{
 		hero->SetX(80);//主人公はラインを超えないようにする
 		SetScroll(hero->GetVX());
