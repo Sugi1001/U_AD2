@@ -50,6 +50,8 @@ void CObjStageBlock::Action()
 	
 	
 
+	
+
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
@@ -67,12 +69,17 @@ void CObjStageBlock::Action()
 		hero->SetX(80);//主人公はラインを超えないようにする
 		SetScroll(hero->GetVX());
 		m_scroll += hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
+
+		
 	}
 	//前方スクロールライン
 	if (hx > 800){
 		hero->SetX(800);
 		SetScroll((hero->GetVX())-(hero->GetVX()*2));
 		m_scroll -= hero->GetScroll()*2;
+
+               
+
 	}
 	
 	for (int i = 0; i < 10; i++) {
@@ -202,7 +209,8 @@ void CObjStageBlock::Draw()
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
 				}
-
+				//摩擦
+					m_vx += +(m_vx * 0.098);
 			}
 		}
 	}
