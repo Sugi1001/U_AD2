@@ -85,6 +85,7 @@ void CSceneMain::InitScene()
 	CObjStageBlock* objb = new CObjStageBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
+	
 
    
 

@@ -17,15 +17,15 @@ void CObjHero::Init()
 {
 
 	m_px = 1.0f; //位置
-	m_py = 1.0f;
+	m_py = 0.0f;
 	m_vx = 1.0f;//移動ベクトル
-	m_vy = 1.0f;
-	m_posture =1.0f; //右向き0.0f　左向き1.0f
+	m_vy = 0.0f;
+	m_posture =0.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
 	m_ani_frame = 0;//静止フレームを初期にする
 
-	float m_speed_power = 1.0f;//通常速度
+	float m_speed_power = 6.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
 	//blockとの衝突状態確認用
@@ -72,6 +72,7 @@ void CObjHero::Action()
 		m_posture = 1.5f;
 		m_ani_time+=1;
 	}
+	
     else if (Input::GetVKey(VK_RIGHT) == true)
 	{
 		m_vx=-1.5f;
@@ -148,55 +149,43 @@ void CObjHero::Draw()
 
 
 
-	
-
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_py;
+	dst.m_right = (64 + 12.0f * m_posture) + m_py;
 	dst.m_bottom = 64-0.1f + m_px;
 	
 	dst.m_bottom = 64-0.1f + m_px;
 	dst.m_bottom = 64-0.1f + m_px;
 	dst.m_left = (64.0f * m_posture);64.0f +m_px;
-	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;
-	
+	dst.m_right = (64 + 64.0f * m_posture); 64.0f + m_px;
 	dst.m_bottom = 64-0.1f + m_py;
 	dst.m_left =( 64.0f*m_posture)+ m_px;
 	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
 	dst.m_bottom = 64-0.1f + m_py;
 	dst.m_bottom = 64-0.1f + m_py;
-	
+	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
+	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	/*dst.m_bottom = 64-0.1f + m_py;
+	dst.m_bottom = 64-0.1f + m_py;*/
+	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
+	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	//dst.m_bottom = 64-0.1f + m_py;
+	/*dst.m_left =(     64.0f*m_posture) + m_px;
+	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;*/
 	dst.m_left =(     64.0f*m_posture) + m_px;
 	dst.m_right = (64 - 64.0f*m_posture)+m_px;
-	
+	//dst.m_left =/*(     64.0f*m_posture) */64.0f + m_px;
+	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	//dst.m_left =/*(     64.0f*m_posture)*/ + m_px;
+	//dst.m_right = (64.0f*m_posture)+m_px;
+	//dst.m_bottom = 64.0f + m_py;
 	dst.m_right = (64 - 64.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0f + m_py;
-	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
-	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	dst.m_left =0.0f + m_px;
+	dst.m_right =64.0f+m_px;
 	dst.m_bottom = 64.0f + m_py;
 
-
-
-
-
-
-
-
-
-	//dst.m_top = 0.0f + m_py;
-	//dst.m_left = (64 * m_posture) + m_px;
-	//dst.m_right = (64 - 64.0f * m_posture) + m_px;
-	//dst.m_bottom = 64.0f + m_py;
-	//dst.m_top = 1.0f + m_py;
-	/*dst.m_top = 0.0f + m_py;
-	dst.m_left = (64.0f * m_posture) + m_px;
-	dst.m_right =  (64 + 64.0f * m_posture) + m_py;
-	dst.m_bottom = 64.0f +m_py;
-	dst.m_top = 40.0f + m_py;
-	dst.m_left = (30.0f * m_posture) + m_px;
-	dst.m_right = (40 + 64.0f * m_posture) + m_py;
-	dst.m_bottom = 30.0f + m_py;*/
 
 	////描画
 	//Draw::Draw(1, &src, &dst, c, 0.0f);
