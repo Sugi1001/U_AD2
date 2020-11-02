@@ -210,7 +210,7 @@ void CObjStageBlock::Draw()
 					BlockDraw(320.0f, 0.0f, &dst, c);
 				}
 				//–€ŽC
-					m_vx += +(m_vx * 0.098);
+					//m_vx += +(m_vx * 0.098);
 			}
 		}
 	}
