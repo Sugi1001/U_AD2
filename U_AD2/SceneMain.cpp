@@ -64,10 +64,10 @@ void CSceneMain::InitScene()
 	//Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 	//Draw::LoadImage(L"主人公.png", 10, TEX_SIZE_512);
-
+	Draw::LoadImage(L"アンダーアドベンチャー", 10, TEX_SIZE_512);
 	//Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 	//Draw::LoadImage(L"主人公（移動　逆）.png", 2, TEX_SIZE_512);
-
+	Draw::LoadImage(L"アンダーアドベンチャー.png", 10, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
@@ -85,6 +85,7 @@ void CSceneMain::InitScene()
 	CObjStageBlock* objb = new CObjStageBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
+	
 
    
 
