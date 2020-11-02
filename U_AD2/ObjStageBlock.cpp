@@ -5,6 +5,7 @@
 #include"GameL\SceneObjManager.h"
 #include"GameHead.h"
 #include"ObjStageBlock.h"
+#include"GameL\DrawFont.h"
 
 
 //使用するネームスペース
@@ -41,6 +42,7 @@ void CObjStageBlock::Init()
 	//マップ情報
 	//int map[10][150] =
 	
+	
 }
 //アクション
 void CObjStageBlock::Action()
@@ -53,6 +55,7 @@ void CObjStageBlock::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
+	
 	//主人公衝突判定
 	//hero->SetUp(false);
 	//hero->SetDown(false);
@@ -62,15 +65,14 @@ void CObjStageBlock::Action()
 	if (hx < 80)
 	{
 		hero->SetX(80);//主人公はラインを超えないようにする
-		m_scroll -= hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
+		SetScroll(hero->GetVX());
+		m_scroll += hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 	//前方スクロールライン
-	if (hx > 800)
-    //前方スクロールライン
-	if (hx > 80)
-	{
-		hero->SetX(800);//主人公はラインを超えないようにする
-		m_scroll -= hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
+	if (hx > 300){
+		hero->SetX(300);
+		SetScroll((hero->GetVX())-(hero->GetVX()*2));
+		m_scroll -= hero->GetScroll()*2;
 	}
 	
 	for (int i = 0; i < 10; i++) {
@@ -127,7 +129,7 @@ void CObjStageBlock::Action()
 			}
 		}
 	}
-
+	
 	//テスト　交差取得
 	//float a, b;
 	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
@@ -157,8 +159,10 @@ void CObjStageBlock::Draw()
 	dst.m_right = 800.0f;
 	dst.m_bottom = 600.0f;
 
-	Draw::Draw(0, &src, &dst, c, 0.0f);
+	
 
+	Draw::Draw(0, &src, &dst, c, 0.0f);
+	
 	//マップチップによるblock設置
 //切り取り位置の設定
 //src.m_top =0.0f;
@@ -166,7 +170,7 @@ void CObjStageBlock::Draw()
 //src.m_right=src.m_left+64.0f;
 //src.m_bottom=64.0f;
 
-//m_scroll+=3.0f;//スクロール実験用
+    //m_scroll+=3.0f;//スクロール実験用
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -177,7 +181,7 @@ void CObjStageBlock::Draw()
 
 				//表示位置の設定
 				dst.m_top = i * 64.0f;
-				dst.m_left = j * 64.0f;+ m_scroll;
+				dst.m_left = j * 64.0f+ m_scroll;
 				dst.m_right = dst.m_left + 64.0f;
 				dst.m_bottom = dst.m_top + 64.0f;
 				if (m_map[i][j]==2)

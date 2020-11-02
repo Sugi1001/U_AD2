@@ -47,7 +47,6 @@ void CObjHero::Init()
 void CObjHero::Action()
 {
 	//移動ベクトルの破棄
-	m_vy = 0.0f;
 	 
 	if (m_py > 1000.0f)
 	{
@@ -61,7 +60,7 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = - 120;
+			m_vy = - 20;
 		}
 	}
 	//
@@ -97,15 +96,10 @@ void CObjHero::Action()
 	
 
 	//摩擦
-	m_vx += -(m_vx * -0.0);
+	m_vx += -(m_vx * 0.098);
 
 	//自由落下運動
 	m_vy += 9.8 / (16.0f);
-	
-	m_vy += 34.8 / (9.0f);
-	
-
-
 
 	//ブロックとの当たり判定実行
 	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
@@ -154,61 +148,28 @@ void CObjHero::Draw()
 
 
 
-	//src.m_top = 0.0f;
-	//src.m_left = 0.0f; //+ AniData[m_ani_frame] * 64;
-	//src.m_right = 64.0f + AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
-//	src.m_top = 64.0f;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64
-//	src.m_top = 1.0f;
-//	src.m_left = 50.0f+ AniData[m_ani_frame] * 50;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
-//	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
-	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//	src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
-		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-		//src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
+	
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64 * m_posture) + m_px;
 	dst.m_right = (64 - 12.0f * m_posture) + m_py;
 	dst.m_bottom = 64-0.1f + m_px;
-	/*dst.m_left = (64.0f * m_posture); 64.0f + m_px;
-	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;*/
+	
 	dst.m_bottom = 64-0.1f + m_px;
 	dst.m_bottom = 64-0.1f + m_px;
 	dst.m_left = (64.0f * m_posture);64.0f +m_px;
 	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;
-	/*dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_px*/;
+	
 	dst.m_bottom = 64-0.1f + m_py;
 	dst.m_left =( 64.0f*m_posture)+ m_px;
 	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
 	dst.m_bottom = 64-0.1f + m_py;
 	dst.m_bottom = 64-0.1f + m_py;
-	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	/*dst.m_bottom = 64-0.1f + m_py;
-	dst.m_bottom = 64-0.1f + m_py;*/
-	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	//dst.m_bottom = 64-0.1f + m_py;
-	/*dst.m_left =(     64.0f*m_posture) + m_px;
-	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;*/
+	
 	dst.m_left =(     64.0f*m_posture) + m_px;
 	dst.m_right = (64 - 64.0f*m_posture)+m_px;
-	//dst.m_left =/*(     64.0f*m_posture) */64.0f + m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	//dst.m_left =/*(     64.0f*m_posture)*/ + m_px;
-	//dst.m_right = (64.0f*m_posture)+m_px;
-	//dst.m_bottom = 64.0f + m_py;
+	
 	dst.m_right = (64 - 64.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0f + m_py;
 	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
