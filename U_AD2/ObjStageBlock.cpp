@@ -69,8 +69,8 @@ void CObjStageBlock::Action()
 		m_scroll += hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 	//前方スクロールライン
-	if (hx > 300){
-		hero->SetX(300);
+	if (hx > 800){
+		hero->SetX(800);
 		SetScroll((hero->GetVX())-(hero->GetVX()*2));
 		m_scroll -= hero->GetScroll()*2;
 	}
