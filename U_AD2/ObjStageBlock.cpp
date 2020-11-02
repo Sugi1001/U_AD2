@@ -114,7 +114,7 @@ void CObjStageBlock::Action()
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
 							hero->SetY(y + 64.0f);
-							if (hero->GetVY() < 0) {
+							if (hero->GetVY() < 1) {
 								hero->SetVY(0.0f);
 							}
 						}
