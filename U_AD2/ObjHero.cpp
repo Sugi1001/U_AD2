@@ -72,6 +72,7 @@ void CObjHero::Action()
 		m_posture = 1.5f;
 		m_ani_time+=1;
 	}
+	
     else if (Input::GetVKey(VK_RIGHT) == true)
 	{
 		m_vx=-1.5f;
@@ -151,13 +152,13 @@ void CObjHero::Draw()
 	//ï\é¶à íuÇÃê›íË
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_py;
+	dst.m_right = (64 + 12.0f * m_posture) + m_py;
 	dst.m_bottom = 64-0.1f + m_px;
 	
 	dst.m_bottom = 64-0.1f + m_px;
 	dst.m_bottom = 64-0.1f + m_px;
 	dst.m_left = (64.0f * m_posture);64.0f +m_px;
-	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;
+	dst.m_right = (64 + 64.0f * m_posture); 64.0f + m_px;
 	dst.m_bottom = 64-0.1f + m_py;
 	dst.m_left =( 64.0f*m_posture)+ m_px;
 	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
@@ -188,7 +189,7 @@ void CObjHero::Draw()
 
 	////ï`âÊ
 	//Draw::Draw(1, &src, &dst, c, 0.0f);
-	Draw::Draw(10, &src, &dst, c, 0.0f);
+	Draw::Draw(1, &src, &dst, c, 0.0f);
 	//Draw::Draw(2, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 0.0f);
 	////Draw::Draw(0, &src, &dst, c, 1.0f);
