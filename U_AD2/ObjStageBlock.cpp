@@ -5,6 +5,7 @@
 #include"GameL\SceneObjManager.h"
 #include"GameHead.h"
 #include"ObjStageBlock.h"
+#include"GameL\DrawFont.h"
 
 
 //使用するネームスペース
@@ -25,7 +26,7 @@ CObjStageBlock::CObjStageBlock(int map[10][106])
 	   
 	  //マップデータをコピー
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 150; j++) {
+		for (int j = 0; j < 106; j++) {
 			m_map[i][j] = map[i][j];
 		}
 	}
@@ -39,7 +40,8 @@ void CObjStageBlock::Init()
 	m_scroll = 0.0f;
 
 	//マップ情報
-	//int block_date[10][150] =
+	//int map[10][150] =
+	
 	
 }
 //アクション
@@ -48,33 +50,40 @@ void CObjStageBlock::Action()
 	
 	
 
+	
+
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
+	
 	//主人公衝突判定
 	//hero->SetUp(false);
 	//hero->SetDown(false);
 	//hero->SetLeft(false);
 	//hero->SetRight(false);
 	//後方スクロールライン
-	if (hx < 80)
+	if (hx < 0)
 	{
 		hero->SetX(80);//主人公はラインを超えないようにする
-		m_scroll -= hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
+		SetScroll(hero->GetVX());
+		m_scroll += hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
+
+		
 	}
 	//前方スクロールライン
-	if (hx > 800)
-    //前方スクロールライン
-	if (hy > 80)
-	{
-		hero->SetX(800);//主人公はラインを超えないようにする
-		m_scroll -= hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
+	if (hx > 800){
+		hero->SetX(800);
+		SetScroll((hero->GetVX())-(hero->GetVX()*2));
+		m_scroll -= hero->GetScroll()*2;
+
+               
+
 	}
 	
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 100; j++) {
+		for (int j = 0; j < 106; j++) {
 			if (m_map[i][j] > 0) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -114,7 +123,7 @@ void CObjStageBlock::Action()
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
 							hero->SetY(y + 64.0f);
-							if (hero->GetVY() < 0) {
+							if (hero->GetVY() < 1) {
 								hero->SetVY(0.0f);
 							}
 						}
@@ -127,7 +136,7 @@ void CObjStageBlock::Action()
 			}
 		}
 	}
-
+	
 	//テスト　交差取得
 	//float a, b;
 	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
@@ -157,8 +166,10 @@ void CObjStageBlock::Draw()
 	dst.m_right = 800.0f;
 	dst.m_bottom = 600.0f;
 
-	Draw::Draw(0, &src, &dst, c, 0.0f);
+	
 
+	Draw::Draw(0, &src, &dst, c, 0.0f);
+	
 	//マップチップによるblock設置
 //切り取り位置の設定
 //src.m_top =0.0f;
@@ -166,7 +177,7 @@ void CObjStageBlock::Draw()
 //src.m_right=src.m_left+64.0f;
 //src.m_bottom=64.0f;
 
-//m_scroll-=3.0f;//スクロール実験用
+    m_scroll-=1.0f;//スクロール実験用
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -177,7 +188,7 @@ void CObjStageBlock::Draw()
 
 				//表示位置の設定
 				dst.m_top = i * 64.0f;
-				dst.m_left = j * 64.0f;+ m_scroll;
+				dst.m_left = j * 64.0f+ m_scroll;
 				dst.m_right = dst.m_left + 64.0f;
 				dst.m_bottom = dst.m_top + 64.0f;
 				if (m_map[i][j]==2)
@@ -198,7 +209,8 @@ void CObjStageBlock::Draw()
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
 				}
-
+				//摩擦
+					//m_vx += +(m_vx * 0.098);
 			}
 		}
 	}

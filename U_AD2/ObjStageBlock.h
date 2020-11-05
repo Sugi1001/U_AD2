@@ -26,13 +26,17 @@ public:
 
 private:
 	void BlockDraw(float x, float y, RECT_F* dst, float c[]);
-	int m_map[10][150] = { 0 };//マップ情報
-	int m_map[10][106];//マップ情報
+	//int m_map[10][150] = { 0 };//マップ情報
+	int m_map[10][106];
+//	int m_map[10][150] = { 0 };//マップ情報
+	//int m_map[10][106];//マップ情報
 
 	float m_scroll;
 
+
 	float Dot(float ax, float ay, float bx, float by);//内積
 	float Cross(float ax, float ay, float bx, float by);//外積
+
 
 	//線と線と交差判定
 	bool LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py);

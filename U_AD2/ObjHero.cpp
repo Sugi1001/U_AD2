@@ -17,15 +17,15 @@ void CObjHero::Init()
 {
 
 	m_px = 1.0f; //位置
-	m_py = 1.0f;
+	m_py = 0.0f;
 	m_vx = 1.0f;//移動ベクトル
-	m_vy = 1.0f;
-	m_posture =1.0f; //右向き0.0f　左向き1.0f
+	m_vy = 0.0f;
+	m_posture =0.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
 	m_ani_frame = 0;//静止フレームを初期にする
 
-	float m_speed_power = 1.0f;//通常速度
+	float m_speed_power = 6.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
 	//blockとの衝突状態確認用
@@ -47,7 +47,6 @@ void CObjHero::Init()
 void CObjHero::Action()
 {
 	//移動ベクトルの破棄
-	m_vy = 0.0f;
 	 
 	if (m_py > 1000.0f)
 	{
@@ -61,7 +60,7 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = - 5;
+			m_vy = - 20;
 		}
 	}
 	//
@@ -73,6 +72,7 @@ void CObjHero::Action()
 		m_posture = 1.5f;
 		m_ani_time+=1;
 	}
+	
     else if (Input::GetVKey(VK_RIGHT) == true)
 	{
 		m_vx=-1.5f;
@@ -97,15 +97,10 @@ void CObjHero::Action()
 	
 
 	//摩擦
-	m_vx += -(m_vx * -0.0);
+	m_vx += -(m_vx * 0.098);
 
 	//自由落下運動
 	m_vy += 9.8 / (16.0f);
-	
-	m_vy += 34.8 / (9.0f);
-	
-
-
 
 	//ブロックとの当たり判定実行
 	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
@@ -114,15 +109,15 @@ void CObjHero::Action()
 		&m_block_type
 	);
 
-
+	
 	//位置の更新
 	m_px += m_vx;
 	m_py += m_vy;
 
 	//主人公の位置X（ｍ＿ｘ）+主人公機の幅分がX軸方向に領域外を認識
-	if (m_px + 32.0f > 800.0f)
+	if (m_px + 20.0f > 800.0f)
 	{
-		m_px = 800.0f - 32.0f;
+		m_px = 800.0f - 20.0f;
 	}
 }
 
@@ -130,7 +125,7 @@ void CObjHero::Action()
 void CObjHero::Draw()
 {
 	
-	//int AniData[4] = { 1,0,2,0 };
+	int AniData[4] = { 1,0,2,0 };
 
 	////描画カラー情報
 	//float  c[4] = { 1,0,2,0};
@@ -141,8 +136,8 @@ void CObjHero::Draw()
 
 	////切り取り位置の設定
 
-	src.m_top = 0.0f;
-	src.m_left = 0.0f;
+	src.m_top = 64.0f;
+	src.m_left = 64.0f;
 	src.m_right = 64.0f;
 	src.m_bottom = 64.0f;
 
@@ -154,45 +149,21 @@ void CObjHero::Draw()
 
 
 
-	//src.m_top = 0.0f;
-	//src.m_left = 0.0f; //+ AniData[m_ani_frame] * 64;
-	//src.m_right = 64.0f + AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
-//	src.m_top = 64.0f;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64
-//	src.m_top = 1.0f;
-//	src.m_left = 50.0f+ AniData[m_ani_frame] * 50;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
-//	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
-	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//	src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
-		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-		//src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
-
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_py;
+	dst.m_right = (64 + 12.0f * m_posture) + m_py;
 	dst.m_bottom = 64-0.1f + m_px;
-	/*dst.m_left = (64.0f * m_posture); 64.0f + m_px;
-	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;*/
-	dst.m_bottom = 64-0.1f + m_px;
-	dst.m_bottom = 64-0.1f + m_px;
-	dst.m_left = (64.0f * m_posture);64.0f +m_px;
-	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;
-	/*dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_px*/;
-	dst.m_bottom = 64-0.1f + m_py;
+	
+	/*dst.m_bottom = 64-0.1f + m_px;*/
+	//dst.m_bottom = 64-0.1f + m_px;
+	//dst.m_left = (64.0f * m_posture);64.0f +m_px;
+	//dst.m_right = (64 + 64.0f * m_posture); 64.0f + m_px;
+	//dst.m_bottom = 64-0.1f + m_py;
 	dst.m_left =( 64.0f*m_posture)+ m_px;
-	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
+	//dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
 	dst.m_bottom = 64-0.1f + m_py;
-	dst.m_bottom = 64-0.1f + m_py;
+	//dst.m_bottom = 64-0.1f + m_py;
 	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
 	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
 	/*dst.m_bottom = 64-0.1f + m_py;
@@ -202,40 +173,19 @@ void CObjHero::Draw()
 	//dst.m_bottom = 64-0.1f + m_py;
 	/*dst.m_left =(     64.0f*m_posture) + m_px;
 	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;*/
-	dst.m_left =(     64.0f*m_posture) + m_px;
-	dst.m_right = (64 - 64.0f*m_posture)+m_px;
-	//dst.m_left =/*(     64.0f*m_posture) */64.0f + m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	//dst.m_left =/*(     64.0f*m_posture)*/ + m_px;
-	//dst.m_right = (64.0f*m_posture)+m_px;
-	//dst.m_bottom = 64.0f + m_py;
+	//dst.m_left =(     64.0f*m_posture) + m_px;
+	/*dst.m_right = (64 - 64.0f*m_posture)+m_px;*/
+	dst.m_left =/*(     64.0f*m_posture) 64.0f */+ m_px;
+	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	dst.m_left =/*(     64.0f*m_posture)*/ + m_px;
+	dst.m_right = (64.0f*m_posture)+m_px;
+	dst.m_bottom = 64.0f + m_py;
 	dst.m_right = (64 - 64.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0f + m_py;
-	dst.m_left =/*(     64.0f*m_posture)*/0.0f + m_px;
-	dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	dst.m_bottom = 64.0f + m_py;
+	/*dst.m_left =0.0f + m_px;
+	dst.m_right =64.0f+m_px;
+	dst.m_bottom = 64.0f + m_py;*/
 
-
-
-
-
-
-
-
-
-	//dst.m_top = 0.0f + m_py;
-	//dst.m_left = (64 * m_posture) + m_px;
-	//dst.m_right = (64 - 64.0f * m_posture) + m_px;
-	//dst.m_bottom = 64.0f + m_py;
-	//dst.m_top = 1.0f + m_py;
-	/*dst.m_top = 0.0f + m_py;
-	dst.m_left = (64.0f * m_posture) + m_px;
-	dst.m_right =  (64 + 64.0f * m_posture) + m_py;
-	dst.m_bottom = 64.0f +m_py;
-	dst.m_top = 40.0f + m_py;
-	dst.m_left = (30.0f * m_posture) + m_px;
-	dst.m_right = (40 + 64.0f * m_posture) + m_py;
-	dst.m_bottom = 30.0f + m_py;*/
 
 	////描画
 	//Draw::Draw(1, &src, &dst, c, 0.0f);
