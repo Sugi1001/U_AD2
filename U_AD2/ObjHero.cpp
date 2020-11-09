@@ -46,6 +46,9 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	//HitBoxの内容を更新
+	CHitBox* hit = Hits::GetHitBox(this);
+	hit->SetPos(m_x, m_y);
 	//移動ベクトルの破棄
 	 
 	if (m_py > 1000.0f)
@@ -67,7 +70,8 @@ void CObjHero::Action()
 	//オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
 	for (int i = 0; i < 3; i++)
 	{
-		if(hit->)
+		if (hit->CheckObjNameHit(m_hp -= 1)
+
 	}
 
 
