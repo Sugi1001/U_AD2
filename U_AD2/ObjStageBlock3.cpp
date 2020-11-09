@@ -427,7 +427,7 @@ bool CObjStageBlock3::LineCrossPoint(float a1x, float a1y, float a2x, float a2y,
 
 }
 //ブロックとの当たり判定実行
-	//CObjStageBlock4::CObjStageBlock4* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
+	//CObjStageBlock3::CObjStageBlock3* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
    //主人公と壁の交差判定関数
 bool CObjStageBlock3::HeroBlockCrossPoint(float x, float y, float vx, float vy, float* out_px, float* out_py, float* out_len)
 {
