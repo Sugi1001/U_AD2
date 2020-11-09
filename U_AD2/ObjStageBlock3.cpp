@@ -203,7 +203,8 @@ void CObjStageBlock3::Draw()
 				}
 				else if (m_map[i][j] == 4)
 				{
-					;//敵配置用の番号のため何もしない
+					//ぬかるみブッロク
+					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
 				}
 				else
 				{
@@ -234,7 +235,7 @@ void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
 }
-/*void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
+void CObjStageBlock3::BlockDraw3(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -245,7 +246,7 @@ void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
 
 	//描画
 	Draw::Draw(4, &src, dst, c, 0.0f);
-}*/
+}
 //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
 //引数２ float* y       :判定を行うobjectのy位置
