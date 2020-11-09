@@ -6,7 +6,7 @@
 #include "GameL\SceneObjManager.h"
 
 #include "GameHead.h"
-#include "Objhero.h"
+#include "ObjHero.h"
 #include "ObjStageBlock.h"
 
 //使用するネームスペース
@@ -53,6 +53,21 @@ void CObjHero::Action()
 	//場外に出たらリスタート
 		Scene::SetScene(new CSceneMain());//CSceneGameOver
 	
+	}
+
+	//当たり判定を行うオブジェクト情報部
+	int data_base[3] =
+	{
+		OBJ_HERO,
+		OBJ_TOGE,
+		OBJ_ENEMY_BLOCK,
+
+	};
+
+	//オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
+	for (int i = 0; i < 3; i++)
+	{
+		if(hit->)
 	}
 
 
