@@ -141,7 +141,7 @@
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjStageBlock1.cpp" />
-    <ClCompile Include="ObjStageBlock3.cpp" />
+    <ClCompile Include="ObjStageBlock2.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
@@ -173,7 +173,7 @@
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjItem.h" />
     <ClInclude Include="ObjStageBlock1.h" />
-    <ClInclude Include="ObjStageBlock3.h" />
+    <ClInclude Include="ObjStageBlock2.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
