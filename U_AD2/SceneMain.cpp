@@ -106,6 +106,10 @@ void CSceneMain::InitScene()
 	CObjStageBlock* objb = new CObjStageBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
+	//棘オブジェクト作成
+	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
+	Objs::InsertObj(objt, OBJ_TOGE, 1);
+
 	
 
    

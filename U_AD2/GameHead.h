@@ -63,7 +63,7 @@ struct UserData
 #include"ObjStageBlock.h"
 //#include "ObjEnemyBlock.h"
 
-//#include  "CObjToge.h"
+#include  "CObjToge.h"
 //#include "ObjItem.h"
 //#include  "ObjHP.h"
 
