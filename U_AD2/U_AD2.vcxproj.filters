@@ -84,6 +84,9 @@
     <ClCompile Include="ObjStageBlock.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="ObjStageBlock3.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -155,7 +158,7 @@
     <ClInclude Include="ObjStageBlock.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjStageBlock1.h">
+    <ClInclude Include="ObjStageBlock3.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
