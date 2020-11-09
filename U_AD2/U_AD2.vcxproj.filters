@@ -173,7 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="主人公.png">
-      <Filter>ソース ファイル</Filter>
+      <Filter>リソース ファイル</Filter>
     </Image>
   </ItemGroup>
 </Project>
