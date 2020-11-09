@@ -203,7 +203,8 @@ void CObjStageBlock::Draw()
 				}
 				else if (m_map[i][j] == 4)
 				{
-					;//敵配置用の番号のため何もしない
+					//毒ブロック
+					BlockDraw(320.0f+64.0f,0.0f,&dst,c);
 				}
 				else
 				{
