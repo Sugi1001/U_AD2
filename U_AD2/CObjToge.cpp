@@ -14,7 +14,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjToge::Init()
 {
-
+  
 
 	//当たり判定用のHitBoxを作成
 	Hits::SetHitBox(this, m_px, m_py, 64, 64, ELEMENT_ENEMY, OBJ_TOGE, 1);
@@ -33,22 +33,22 @@ void CObjToge::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
-	//HitBoxの内容を更新
+	/*HitBoxの内容を更新
 	CHitBox* Hit = Hits::GetHitBox(this);
-	Hit->;
+	Hit->;*/
 
 
 		////HitBoxの位置の変更
 		//HitBox* hit = Hits::GetHitBox(this);
 	 //   Hit->SetPos(m_px, m_py);
 
-		//主人公と接触したら主人公にダメージ
-		if ( hit->CheckObjNameHit(OBJ_HERO) != nullptr)
-		{
+		////主人公と接触したら主人公にダメージ
+		//if ( hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+		//{
 
 
 
-		}
+		//}
 
 }
 

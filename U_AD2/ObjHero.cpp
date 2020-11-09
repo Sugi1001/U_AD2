@@ -55,6 +55,8 @@ void CObjHero::Action()
 	
 	}
 
+
+
 	
 	if (Input::GetVKey('X') == true)
 	{
