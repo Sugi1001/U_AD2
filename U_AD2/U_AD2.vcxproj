@@ -152,6 +152,7 @@
     </ClCompile>
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjStageBlock.cpp" />
+    <ClCompile Include="StageBlock4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjToge.h">
