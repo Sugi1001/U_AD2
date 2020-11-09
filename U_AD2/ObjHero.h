@@ -43,6 +43,8 @@ private:
 	float m_vy;
 	float m_posture; //p¨
 
+	float m_hp; //ålŒö‚ÌHP
+
 	float m_scroll;
 	
 
