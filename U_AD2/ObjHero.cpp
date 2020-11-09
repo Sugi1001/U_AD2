@@ -65,7 +65,7 @@ void CObjHero::Action()
 			m_vy = - 20;
 		}
 	}
-	//
+	
 	////ƒL[‚Ì“ü—Í•ûŒü
 	if (Input::GetVKey(VK_LEFT) == true)
 	{
@@ -151,7 +151,7 @@ void CObjHero::Draw()
 	dst.m_right = 64.0;
 	dst.m_bottom = 64.0;
 
-
+	//•`‰æ
 	Draw::Draw(1, &src, &dst, c, 1.0f);
 
 
