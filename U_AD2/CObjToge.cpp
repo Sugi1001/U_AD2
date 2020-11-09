@@ -32,20 +32,20 @@ void CObjToge::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
-	//HitBoxの内容を更新
-	CHitBox* Hit = Hits::GetHitBox(this);
-	Hit->SetPos;
+	////HitBoxの内容を更新
+	//CHitBox* Hit = Hits::GetHitBox(this);
+	//Hit->SetPos;
 
 
-		//HitBoxの位置の変更
-		HitBox* hit = Hits::GetHitBox(this);
-	    Hit->SetPos(m_px, m_py);
+		////HitBoxの位置の変更
+		//HitBox* hit = Hits::GetHitBox(this);
+	 //   Hit->SetPos(m_px, m_py);
 
 		//主人公と接触したら主人公にダメージ
 		if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
 		{
 
-			this->Setstaus(true); //自身に削除命令を出さない。
+			this->SetStatus(true); //自身に削除命令を出さない。
 
 
 		}
