@@ -26,6 +26,7 @@ public:
 
 private:
 	void BlockDraw(float x, float y, RECT_F* dst, float c[]);
+	void BlockDraw1(float x, float y, RECT_F* dst, float c[]);
 	//int m_map[10][150] = { 0 };//マップ情報
 	int m_map[10][106];
 	//	int m_map[10][150] = { 0 };//マップ情報
