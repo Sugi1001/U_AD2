@@ -6,11 +6,11 @@
 using namespace GameL;
 
 //オブジェクト：ブロック＆背景
-class CObjStageBlock4 :public CObj
+class CObjStageBlock3 :public CObj
 {
 public:
-	CObjStageBlock4(int map[10][106]);
-	~CObjStageBlock4() {};
+	CObjStageBlock3(int map[10][106]);
+	~CObjStageBlock3() {};
 	void Init();//イニシャライズ
 	void Action();//アクション
 	void Draw();//ドロー

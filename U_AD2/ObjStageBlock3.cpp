@@ -4,13 +4,13 @@
 #include"GameL/SceneManager.h"
 #include"GameL\SceneObjManager.h"
 #include"GameHead.h"
-#include "ObjStageBlock4.h"
+#include "ObjStageBlock3.h"
 #include"GameL\DrawFont.h"
 
 
 //使用するネームスペース
 using namespace GameL;
-CObjStageBlock4::CObjStageBlock4(int map[10][106])
+CObjStageBlock3::CObjStageBlock3(int map[10][106])
 {
 	//{1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1},
 	//{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
@@ -35,7 +35,7 @@ CObjStageBlock4::CObjStageBlock4(int map[10][106])
 };
 
 //イニシャライズ
-void CObjStageBlock4::Init()
+void CObjStageBlock3::Init()
 {
 	m_scroll = 0.0f;
 
@@ -45,7 +45,7 @@ void CObjStageBlock4::Init()
 
 }
 //アクション
-void CObjStageBlock4::Action()
+void CObjStageBlock3::Action()
 {
 
 
@@ -147,7 +147,7 @@ void CObjStageBlock4::Action()
 
 
 //ドロー
-void CObjStageBlock4::Draw()
+void CObjStageBlock3::Draw()
 {
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -222,7 +222,7 @@ void CObjStageBlock4::Draw()
 //引数４ float    c  :カラー情報
 //ブロックを64*64限定描画用。リソース切り替えのみx.yで
 //設定できる
-void CObjStageBlock4::BlockDraw(float x, float y, RECT_F* dst, float c[])
+void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -247,7 +247,7 @@ void CObjStageBlock4::BlockDraw(float x, float y, RECT_F* dst, float c[])
 //引数10 int* bt        :下部分判定、特殊なブロックのタイプを返す
 //判定を行うobjectとブロック50*50限定で、あたり判定と上下左右判定を行う
 //その結果は引数４～１０に返す
-void CObjStageBlock4::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool* down, bool* left, bool* right, float* vx, float* vy, int* bt)
+void CObjStageBlock3::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool* down, bool* left, bool* right, float* vx, float* vy, int* bt)
 {
 	//主人公の衝突状態確認用フラグの初期化
 	*up = false;
@@ -346,7 +346,7 @@ void CObjStageBlock4::BlockHit(float* x, float* y, bool scroll_on, bool* up, boo
 //引数３，４float bx,by:Bベクトル
 //戻り値　float:射影
 //内容　AベクトルとBベクトルで内積を行い射影をもとめる
-float CObjStageBlock4::Dot(float ax, float ay, float bx, float by)
+float CObjStageBlock3::Dot(float ax, float ay, float bx, float by)
 {
 	float t = 0.0f;
 
@@ -360,7 +360,7 @@ float CObjStageBlock4::Dot(float ax, float ay, float bx, float by)
 //引数３，４float bx,by:Bベクトル
 //戻り値　float :射影
 //内容　AベクトルとBベクトルで外積を行い射影をもとめる
-float CObjStageBlock4::Cross(float ax, float ay, float bx, float by)
+float CObjStageBlock3::Cross(float ax, float ay, float bx, float by)
 {
 	float t = 0.0f;
 
@@ -373,7 +373,7 @@ float CObjStageBlock4::Cross(float ax, float ay, float bx, float by)
 #define SGN(x) 1-(x<=0)-(x<0)
 
    //線と線と交差判定
-bool CObjStageBlock4::LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py)
+bool CObjStageBlock3::LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py)
 {
 	//エラーコード
 	*out_px = -99999.0f; *out_py = -99999.0f;
@@ -429,7 +429,7 @@ bool CObjStageBlock4::LineCrossPoint(float a1x, float a1y, float a2x, float a2y,
 //ブロックとの当たり判定実行
 	//CObjStageBlock4::CObjStageBlock4* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
    //主人公と壁の交差判定関数
-bool CObjStageBlock4::HeroBlockCrossPoint(float x, float y, float vx, float vy, float* out_px, float* out_py, float* out_len)
+bool CObjStageBlock3::HeroBlockCrossPoint(float x, float y, float vx, float vy, float* out_px, float* out_py, float* out_len)
 {
 	bool pb = false;//交差確認用
 	float len = 99999.0f;//交点との距離
