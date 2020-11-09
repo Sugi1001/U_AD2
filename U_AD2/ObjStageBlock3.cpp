@@ -234,7 +234,7 @@ void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
 	//•`‰æ
 	Draw::Draw(2, &src, dst, c, 0.0f);
 }
-void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
+/*void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -245,7 +245,7 @@ void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
 
 	//•`‰æ
 	Draw::Draw(4, &src, dst, c, 0.0f);
-}
+}*/
 //BlockHitŠÖ”
 //ˆø”‚P float* x       :”»’è‚ğs‚¤object‚ÌxˆÊ’u
 //ˆø”‚Q float* y       :”»’è‚ğs‚¤object‚ÌyˆÊ’u
