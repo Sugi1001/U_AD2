@@ -6,6 +6,7 @@
 
 #include "GameHead.h"
 #include  "CObjToge.h"
+#include  "ObjHero.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -32,9 +33,9 @@ void CObjToge::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
-	////HitBoxの内容を更新
-	//CHitBox* Hit = Hits::GetHitBox(this);
-	//Hit->SetPos;
+	//HitBoxの内容を更新
+	CHitBox* Hit = Hits::GetHitBox(this);
+	Hit->;
 
 
 		////HitBoxの位置の変更
@@ -42,10 +43,9 @@ void CObjToge::Action()
 	 //   Hit->SetPos(m_px, m_py);
 
 		//主人公と接触したら主人公にダメージ
-		if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+		if ( hit->CheckObjNameHit(OBJ_HERO) != nullptr)
 		{
 
-			this->SetStatus(true); //自身に削除命令を出さない。
 
 
 		}
