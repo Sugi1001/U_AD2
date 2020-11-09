@@ -169,6 +169,7 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjItem.h" />
+    <ClInclude Include="ObjStageBlock1.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
