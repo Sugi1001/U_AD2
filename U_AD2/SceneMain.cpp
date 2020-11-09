@@ -86,7 +86,7 @@ void CSceneMain::InitScene()
 	//int map[10][150];
 	//int count = 1;
 	//for (int i = 0; i < 10; i++)
-	int map[10][106];
+	int map3[10][106];
 	for (int i = 0; i < 10; i++)
 	{
 		//for (int j = 0; j < 150; j++)
@@ -95,7 +95,7 @@ void CSceneMain::InitScene()
 			int w = 0;
 			swscanf_s(&b.get()[count], L"%d", &w);
 
-			map[i][j] = w;
+			map3[i][j] = w;
 			count += 2;
 		}
 	}
