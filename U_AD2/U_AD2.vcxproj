@@ -152,7 +152,7 @@
     </ClCompile>
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjStageBlock.cpp" />
-    <ClCompile Include="ObjStageBlock4.cpp" />
+    <ClCompile Include="ObjStageBlock3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjToge.h">
@@ -184,7 +184,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h" />
-    <ClInclude Include="ObjStageBlock4.h" />
+    <ClInclude Include="ObjStageBlock3.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="主人公.png" />
