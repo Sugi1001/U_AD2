@@ -24,9 +24,9 @@ void CObjToge::Init()
 void CObjToge::Action()
 {
 	//主人公の位置を取得
-	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	/*CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
-	float hy = hero->GetY();
+	float hy = hero->GetY();*/
 
 	/*HitBoxの内容を更新
 	CHitBox* Hit = Hits::GetHitBox(this);
@@ -42,7 +42,7 @@ void CObjToge::Action()
 	float hy = hero->GetY();
 
 	//主人公と棘の当たり判定
-	if ((hx + 126.0f > x) && (hx < x + 96.0f) && (hy + 64.0f > y) && (hy < y + 64.0f))
+	if ((hx + 126.0f >m_x) && (hx < m_x + 96.0f) && (hy + 64.0f > m_y) && (hy < m_y + 64.0f))
 	{
 		//当たっている場
 		
@@ -70,7 +70,7 @@ void CObjToge::Draw()
 	dst.m_bottom = 32.0f + m_y;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(0,&src,&dst,c,0.0f)
+	Draw::Draw(0, &src, &dst, c, 0.0f);
 
 
 }

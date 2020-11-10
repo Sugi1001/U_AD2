@@ -20,6 +20,7 @@ private:
 	float m_y;
 	float m_x;
 
+
 	//block‚Æ‚ÌÕ“ËŠm”F—p
 	bool m_hit_up;
 	bool m_hit_down;
