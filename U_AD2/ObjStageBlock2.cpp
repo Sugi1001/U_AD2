@@ -194,21 +194,21 @@ void CObjStageBlock2::Draw()
 				if (m_map[i][j] == 2)
 				{
 					//スタートブロック
-					BlockDraw(320.0f + 64.0f, 0.0f, &dst, c);
+					BlockDraw3(320.0f + 64.0f, 0.0f, &dst, c);
 				}
 				else if (m_map[i][j] == 3)
 				{
 					//ゴールブロック
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
+					BlockDraw3(320.0f + 64.0f, 64.0f, &dst, c);
 				}
 				else if (m_map[i][j] == 4)
 				{
 					//ぬかるみブッロク
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
+					BlockDraw4(320.0f + 64.0f, 64.0f, &dst, c);
 				}
 				else
 				{
-					BlockDraw(320.0f, 0.0f, &dst, c);
+					BlockDraw3(320.0f, 0.0f, &dst, c);
 				}
 				//摩擦
 					//m_vx += +(m_vx * 0.098);
