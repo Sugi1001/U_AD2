@@ -59,7 +59,7 @@ void CObjHero::Action()
 	}
 
 	//当たり判定を行うオブジェクト情報部
-	int data_base[3] =
+	int data_base[3]
 	{
 		OBJ_HERO,
 		OBJ_TOGE,
@@ -67,22 +67,22 @@ void CObjHero::Action()
 
 	};
 
-	////オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
-	//for (int i = 0; i < 3; i++)
-	//{
-	//	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
-	//	{
-	//		m_hp -= 1;
-	//	}
+	//オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
+	for (int i = 0; i < 3; i++)
+	{
+		if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
+		{
+			m_hp -= 1;
+		}
 
-	//}
+	}
 
 	//HPが0になったら破棄
-	/*if (m_hp <= 0)
+	if (m_hp <= 0)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
-	}*/
+	}
 
 
 
@@ -196,8 +196,8 @@ void CObjHero::Draw()
 	//dst.m_left = (64 * m_posture) + m_px;
 	//dst.m_right = (64 + 12.0f * m_posture) + m_py;
 	//dst.m_bottom = 64-0.1f + m_px;
-	//
-	///*dst.m_bottom = 64-0.1f + m_px;
+	
+	//dst.m_bottom = 64-0.1f + m_px;
 	//dst.m_bottom = 64-0.1f + m_px;
 	//dst.m_left = (64.0f * m_posture);64.0f +m_px;
 	//dst.m_right = (64 + 64.0f * m_posture); 64.0f + m_px;
@@ -209,10 +209,10 @@ void CObjHero::Draw()
 	//dst.m_left =(     64.0f*m_posture)+ m_px;
 	//dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
 	//dst.m_bottom = 64-0.1f + m_py;
-	////dst.m_bottom = 64-0.1f + m_py;*/
-	////dst.m_left =/*(     64.0f*m_posture) */+ m_px;
-	////dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	////dst.m_bottom = 64-0.1f + m_py;
+	//dst.m_bottom = 64-0.1f + m_py;
+	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
+	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
+	//dst.m_bottom = 64-0.1f + m_py;
 	///*dst.m_left =(     64.0f*m_posture) + m_px;
 	//dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;*/
 	//dst.m_left =(     64.0f*m_posture) + m_px;
