@@ -1,7 +1,7 @@
 //使用するヘッダーファイル
 #include"GameL\DrawTexture.h"
 #include"GameHead.h"
-
+#include"ObjTitle.h"
 #include"ObjBackground.h"
 
 //使用してる加茂野のネームスペース
