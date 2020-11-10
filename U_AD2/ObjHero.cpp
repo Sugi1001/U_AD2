@@ -103,7 +103,16 @@ void CObjHero::Action()
 		m_posture = 1.5f;
 		m_ani_time+=1;
 	}
-	
+	if (m_ani_time > 4)
+	{
+		m_ani_frame += 1;
+		m_ani_time = 0;
+	}
+	if (m_ani_frame == 4)
+	{
+		m_ani_frame = 0;
+	}
+
     else if (Input::GetVKey(VK_RIGHT) == true)
 	{
 		m_vx=-1.5f;
@@ -115,15 +124,6 @@ void CObjHero::Action()
 	{
 		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
 		m_ani_time = 1;
-	}
-	if (m_ani_time > 4)
-	{
-		m_ani_frame+=1;
-		m_ani_time = 0;
-	}
-	if (m_ani_frame == 4)
-	{
-		m_ani_frame = 0;
 	}
 	
 

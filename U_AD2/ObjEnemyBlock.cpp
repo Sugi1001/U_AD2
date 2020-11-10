@@ -73,8 +73,8 @@ void CObjEnemyBlock::Action()
 	//摩擦
 	m_vx += -(m_vx * 0.098);
 
-	//自由落下運動
-	m_vy += 9.8 / (16.0f);
+	/*自由落下運動
+	m_vy += 9.8 / (16.0f);*/
 
 	//位置の更新
 	m_px += m_vx;
