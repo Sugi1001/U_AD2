@@ -34,10 +34,7 @@ void CObjEnemyBlock::Init()
 void CObjEnemyBlock::Action()
 {
 	//落下
-	if (m_py > 1000.0f)
-	{
-		;
-	}
+	m_vy += 9.8 / (16.0f);
 
 	//通常速度
 	m_speed_power = 0.5f;
@@ -85,7 +82,7 @@ void CObjEnemyBlock::Action()
 
 }
 
-////ドロー(CObjEnemy Blockのドロー)
+//ドロー(CObjEnemy Blockのドロー)
 void CObjEnemyBlock::Draw()
 {
 	//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
