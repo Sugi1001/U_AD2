@@ -41,12 +41,12 @@ void CSceneMain::InitScene()
 	//int map[10][150];
 	//int count = 1;
 	//for (int i = 0; i < 10; i++)
-	int map[10][106];
+	int map[10][500];
 	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
 		//for (int j = 0; j < 150; j++)
-		for (int j = 0; j < 106; j++)
+		for (int j = 0; j < 500; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);
