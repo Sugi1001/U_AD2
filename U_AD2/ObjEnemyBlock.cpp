@@ -108,4 +108,5 @@ void CObjEnemyBlock::Draw()
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
-	Draw::Draw(0,&src, &dst, c, 0.0f);
+	Draw::Draw(0, &src, &dst, c, 0.0f);
+}
