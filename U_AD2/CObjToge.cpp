@@ -32,8 +32,8 @@ void CObjToge::Action()
 	float hy = hero->GetY();*/
 
 	//HitBoxの内容を更新
-	CHitBox* Hit = Hits::GetHitBox(this);
-	Hit->SetPos(m_x, m_y);
+	//CHitBox* Hit = Hits::GetHitBox(this);
+	//Hit->SetPos(m_x, m_y);
 
 
 	////HitBoxの位置の変更

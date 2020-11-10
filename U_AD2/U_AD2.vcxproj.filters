@@ -93,9 +93,6 @@
     <ClCompile Include="UtilityModule.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjStageBlock3.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjEnemy.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -184,9 +181,6 @@
     </ClInclude>
     <ClInclude Include="UtilityModule.h">
       <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjStageBlock3.h">
-      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjEnemy.h">
       <Filter>ソース ファイル</Filter>
