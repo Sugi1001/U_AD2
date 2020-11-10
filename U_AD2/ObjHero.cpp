@@ -46,9 +46,9 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
-	//HitBoxの内容を更新
-	//CHitBox* hit = Hits::GetHitBox(this);
-	//hit->SetPos(m_x, m_y);
+	/*HitBoxの内容を更新
+	CHitBox* hit = Hits::GetHitBox(this);
+	hit->SetPos(m_x, m_y);*/
 
 	//棘が主人公に接触したら主人公のHPを減らす
 	//if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
@@ -167,23 +167,20 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
-	
-	int AniData[4] = { 1,0,2,0 };
 
-	////描画カラー情報
-	//float  c[4] = { 1,0,2,0};
+	///描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
 
-	
-	
+
+
 	//切り取り位置の設定
 	src.m_top = 0.0f;
-	src.m_left = 320.0f;
-	src.m_right = src.m_left + 64.0f;
-	src.m_bottom = 32.0f;
+	src.m_left = 0.0f;
+	src.m_right = 64.0f;
+	src.m_bottom = 64.0f;
 
 
 	//表示位置の設定
@@ -195,50 +192,8 @@ void CObjHero::Draw()
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
 
-
-
-	////表示位置の設定
-	//dst.m_top = 0.0f + m_py;
-	//dst.m_left = (64 * m_posture) + m_px;
-	//dst.m_right = (64 + 12.0f * m_posture) + m_py;
-	//dst.m_bottom = 64-0.1f + m_px;
-	
-	//dst.m_bottom = 64-0.1f + m_px;
-	//dst.m_bottom = 64-0.1f + m_px;
-	//dst.m_left = (64.0f * m_posture);64.0f +m_px;
-	//dst.m_right = (64 + 64.0f * m_posture); 64.0f + m_px;
-	//dst.m_bottom = 64-0.1f + m_py;
-	//dst.m_left =( 64.0f*m_posture)+ m_px;
-	//dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
-	//dst.m_bottom = 64-0.1f + m_py;
-	//dst.m_bottom = 64-0.1f + m_py;
-	//dst.m_left =(     64.0f*m_posture)+ m_px;
-	//dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;
-	//dst.m_bottom = 64-0.1f + m_py;
-	//dst.m_bottom = 64-0.1f + m_py;
-	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	//dst.m_bottom = 64-0.1f + m_py;
-	///*dst.m_left =(     64.0f*m_posture) + m_px;
-	//dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;*/
-	//dst.m_left =(     64.0f*m_posture) + m_px;
-	///*dst.m_right = (64 - 64.0f*m_posture)+m_px;*/
-	///*dst.m_left =(     64.0f*m_posture)+ 64.0f + m_px;*/
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	//dst.m_left =/*(     64.0f*m_posture)*/ + m_px;
-	//dst.m_right = (64.0f*m_posture)+m_px;
-	//dst.m_bottom = 64.0f + m_py;
-	//dst.m_right = (64 - 64.0f * m_posture) + m_px;
-	//dst.m_bottom = 64.0f + m_py;
-	////dst.m_left =0.0f + m_px;
-	//dst.m_right =64.0f+m_px;
-	////dst.m_bottom = 64.0f + m_py;*/
-
-
-	////描画
-	//Draw::Draw(1, &src, &dst, c, 0.0f);
-	//Draw::Draw(1, &src, &dst, c, 1.0f);
-	//Draw::Draw(2, &src, &dst, c, 0.0f);
-	////Draw::Draw(0, &src, &dst, c, 0.0f);
-	////Draw::Draw(0, &src, &dst, c, 1.0f);
 }
+	
+	
+
+
