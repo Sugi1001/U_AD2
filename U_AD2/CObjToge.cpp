@@ -2,7 +2,6 @@
 #include "GameL\DrawTexture.h"
 #include  "GameL\WinInputs.h"
 #include  "GameL\SceneManager.h"
-#include  "GameL\HitBoxManager.h"
 
 #include "GameHead.h"
 #include  "CObjToge.h"
@@ -15,13 +14,9 @@ using namespace GameL;
 void CObjToge::Init()
 {
   
-
-	//当たり判定用のHitBoxを作成
-	Hits::SetHitBox(this, m_px, m_py, 64, 64, ELEMENT_ENEMY, OBJ_TOGE, 1);
-
-		//HitBoxの位置の変更
-		CHitBox * hit = Hits::GetHitBox(this);
-		hit->SetPos(m_px, m_py);
+	//マップ情報
+	
+	
 
 }
 
@@ -38,17 +33,20 @@ void CObjToge::Action()
 	Hit->;*/
 
 
-		////HitBoxの位置の変更
-		//HitBox* hit = Hits::GetHitBox(this);
-	 //   Hit->SetPos(m_px, m_py);
+	////HitBoxの位置の変更
+	//HitBox* hit = Hits::GetHitBox(this);
+ //   Hit->SetPos(m_px, m_py);
 
-		////主人公と接触したら主人公にダメージ
-		//if ( hit->CheckObjNameHit(OBJ_HERO) != nullptr)
-		//{
+	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	float hx = hero->GetX();
+	float hy = hero->GetY();
 
-
-
-		//}
+	//主人公と棘の当たり判定
+	if ((hx + 126.0f > x) && (hx < x + 96.0f) && (hy + 64.0f > y) && (hy < y + 64.0f))
+	{
+		//当たっている場
+		
+	}
 
 }
 
@@ -71,7 +69,8 @@ void CObjToge::Draw()
 	dst.m_right = 32.0f + m_x;
 	dst.m_bottom = 32.0f + m_y;
 
-	//0番目に登録したグラフィックをsrc.dst.cの情報を元に描画
+	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
+	Draw::Draw(0,&src,&dst,c,0.0f)
 
 
 }
