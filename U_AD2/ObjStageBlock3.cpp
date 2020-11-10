@@ -8,6 +8,7 @@
 #include"GameL\DrawFont.h"
 
 
+
 //使用するネームスペース
 using namespace GameL;
 CObjStageBlock3::CObjStageBlock3(int map[10][106])
