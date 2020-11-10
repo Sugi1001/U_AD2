@@ -50,7 +50,7 @@ private:
 	//float hit;
 
 	float m_scroll;
-	float m_hp;
+	float m_hp;  //主人公のひっとぽいんと
 	
 
 	int m_ani_time = 0;//アニメーションフレーム動作間隔

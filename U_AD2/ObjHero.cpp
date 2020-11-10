@@ -140,6 +140,12 @@ void CObjHero::Action()
 		&m_block_type
 	);
 
+//棘が主人公に接触したら主人公のHPを減らす
+	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
+	{
+		m_hp -= 1;
+	}
+
 	
 	//位置の更新
 	m_px += m_vx;

@@ -2,6 +2,7 @@
 #include "GameL\DrawTexture.h"
 #include  "GameL\WinInputs.h"
 #include  "GameL\SceneManager.h"
+#include  "GameL\HitBoxManager.h"
 
 #include "GameHead.h"
 #include  "CObjToge.h"
@@ -15,6 +16,8 @@ void CObjToge::Init()
 {
   
 	//マップ情報
+	////当たり判定用のHitBoxの作成
+	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_TOGE, 4);
 	
 	
 
@@ -23,31 +26,25 @@ void CObjToge::Init()
 //アクション
 void CObjToge::Action()
 {
-	//主人公の位置を取得
+	//zz主人公の位置を取得
 	/*CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
 	float hy = hero->GetY();*/
 
-	/*HitBoxの内容を更新
+	//HitBoxの内容を更新
 	CHitBox* Hit = Hits::GetHitBox(this);
-	Hit->;*/
+	Hit->SetPos(m_x, m_y);
 
 
 	////HitBoxの位置の変更
-	//HitBox* hit = Hits::GetHitBox(this);
- //   Hit->SetPos(m_px, m_py);
+	HitBox* hit = Hits::GetHitBox(this);
+    Hit->SetPos(m_px, m_py);
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
-	//主人公と棘の当たり判定
-	if ((hx + 126.0f > m_x) && (hx < m_x + 96.0f) && (hy + 64.0f > m_y) && (hy < m_y + 64.0f))
-	{
-		//当たっている場
-
-		
-	}
+	//棘と接触したら主人公のHPを減らす
 
 }
 

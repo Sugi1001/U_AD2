@@ -10,7 +10,7 @@ enum OBJ_NAME
 	//OBJ_ENEMY,
 	OBJ_TOGE,
 	OBJ_HERO,
-	OBJ_HP,
+	//OBJ_HP,
 	//OBJ_BLOCK,
 	OBJ_STAGE_BLOCK,
 	OBJ_STAGE_BLOCK1,
@@ -72,7 +72,7 @@ struct UserData
 
 #include  "CObjToge.h"
 //#include "ObjItem.h"
-//#include  "ObjHP.h"
+
 
 #include "ObjTitle.h"
 #include"ObjGameOver.h"
