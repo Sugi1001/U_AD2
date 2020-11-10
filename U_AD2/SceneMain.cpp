@@ -139,6 +139,7 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(objt, OBJ_TOGE, 4);
 
 	
+	//タイトル背景オブジェクト作成
 
    
 
