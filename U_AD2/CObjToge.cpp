@@ -42,9 +42,10 @@ void CObjToge::Action()
 	float hy = hero->GetY();
 
 	//主人公と棘の当たり判定
-	if ((hx + 126.0f >m_x) && (hx < m_x + 96.0f) && (hy + 64.0f > m_y) && (hy < m_y + 64.0f))
+	if ((hx + 126.0f > m_x) && (hx < m_x + 96.0f) && (hy + 64.0f > m_y) && (hy < m_y + 64.0f))
 	{
 		//当たっている場
+
 		
 	}
 
@@ -53,7 +54,8 @@ void CObjToge::Action()
 //ドロー
 void CObjToge::Draw()
 {
-	//描画カラー情報 R=RED G=Green B=Blue A=alpha(透過情報)
+	float  c[4] = { 1.0f , 1.0f ,1.0f ,1.0f };
+
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
 
