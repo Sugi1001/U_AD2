@@ -45,10 +45,11 @@ void CObjTitle::Draw()
 	src.m_right = 512.0f;
 	src.m_bottom = 448.0f;
 
-	dst.m_top = 0.0f;
-	dst.m_left = 0.0f;
-	dst.m_right = 80.0f;
-	dst.m_bottom = 600.0f;
+	src.m_top = 0.0f;
+	src.m_left = 0.0f;
+	src.m_right = 800.0f;
+	src.m_bottom = 600.0f;
 
-	Draw::Draw(10, &src, &dst, c, 0.0f);
+	Draw::Draw(10, &src,&dst,c,0.0f);
+
 }
