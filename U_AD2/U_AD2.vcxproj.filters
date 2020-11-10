@@ -78,15 +78,6 @@
     <ClCompile Include="ObjStageBlock.cpp">
       <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
-    <ClCompile Include="ObjStageBlock1.cpp">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjStageBlock2.cpp">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjStageBlock3.cpp">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
       <Filter>ソース ファイル\title over</Filter>
     </ClCompile>
@@ -177,15 +168,6 @@
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjStageBlock1.h">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjStageBlock2.h">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjStageBlock3.h">
       <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
     <ClInclude Include="SceneGameOver.h">
