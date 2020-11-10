@@ -56,7 +56,7 @@ void CSceneMain::InitScene()
 		}
 	}
 	//外部データの読み込み（ステージ情報2）
-	unique_ptr<wchar_t>a;//ステージ情報ポインター
+	/*unique_ptr<wchar_t>a;//ステージ情報ポインター
 	int size1;//ステージ情報の大きさ
 	//p = Save::ExternalDataOpen(L"test.csv", &size);//外部データ読み込み
 	a = Save::ExternalDataOpen(L"Stage3.csv", &size1);//外部データ読み込み
@@ -98,7 +98,7 @@ void CSceneMain::InitScene()
 			map3[i][j] = w;
 			count += 2;
 		}
-	}
+	}*/
 
 	////グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);

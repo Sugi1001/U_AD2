@@ -142,10 +142,10 @@
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjStageBlock1.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjStageBlock2.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjItem.cpp" />
@@ -183,10 +183,10 @@
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjItem.h" />
     <ClInclude Include="ObjStageBlock1.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjStageBlock2.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneGameOver.h" />
