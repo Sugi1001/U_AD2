@@ -33,6 +33,7 @@ void CSceneGameOver::InitScene()
 	Font::SetStrTex(L"がんばれ");
 	Font::SetStrTex(L"NEXT_CHALLENGE:ENTER_KEY");
 
+
 	//ゲームオーバーオブジェクト作成
 	CObjGameOver*obj = new CObjGameOver();
 	Objs::InsertObj(obj, OBJ_GAME_OVER, 11);
