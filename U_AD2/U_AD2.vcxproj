@@ -140,8 +140,12 @@
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
-    <ClCompile Include="ObjStageBlock1.cpp" />
-    <ClCompile Include="ObjStageBlock2.cpp" />
+    <ClCompile Include="ObjStageBlock1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ObjStageBlock2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
@@ -152,7 +156,9 @@
     </ClCompile>
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjStageBlock.cpp" />
-    <ClCompile Include="ObjStageBlock3.cpp" />
+    <ClCompile Include="ObjStageBlock3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjToge.h">
@@ -172,8 +178,12 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjItem.h" />
-    <ClInclude Include="ObjStageBlock1.h" />
-    <ClInclude Include="ObjStageBlock2.h" />
+    <ClInclude Include="ObjStageBlock1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ObjStageBlock2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
@@ -184,7 +194,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h" />
-    <ClInclude Include="ObjStageBlock3.h" />
+    <ClInclude Include="ObjStageBlock3.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="主人公.png" />
