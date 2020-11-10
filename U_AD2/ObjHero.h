@@ -46,11 +46,10 @@ private:
 	float m_x;
 	float m_y; //HitBox用の位置
 
-	//float m_hp; //主人公のHP
-	//float hit;
+	float m_hp; //主人公のHP //主人公のひっとぽいんと
+	float hit;
 
 	float m_scroll;
-	float m_hp;  //主人公のひっとぽいんと
 	
 
 	int m_ani_time = 0;//アニメーションフレーム動作間隔
