@@ -37,8 +37,8 @@ void CObjToge::Action()
 
 
 	////HitBoxの位置の変更
-	HitBox* hit = Hits::GetHitBox(this);
-    Hit->SetPos(m_px, m_py);
+	/*HitBox* hit = Hits::GetHitBox(this);
+    Hit->SetPos(m_px, m_py);*/
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
@@ -69,7 +69,7 @@ void CObjToge::Draw()
 	dst.m_bottom = 32.0f + m_y;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(0, &src, &dst, c, 0.0f);
+	Draw::Draw(4, &src, &dst, c, 0.0f);
 
 
 }
