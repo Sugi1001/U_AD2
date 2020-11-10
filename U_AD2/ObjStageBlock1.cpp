@@ -147,7 +147,7 @@ void CObjStageBlock1::Action()
 
 
 //ドロー
-void CObjStageBlock::Draw()
+void CObjStageBlock1::Draw()
 {
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -194,21 +194,21 @@ void CObjStageBlock::Draw()
 				if (m_map[i][j] == 2)
 				{
 					//スタートブロック
-					BlockDraw(320.0f + 64.0f, 0.0f, &dst, c);
+					BlockDraw1(320.0f + 64.0f, 0.0f, &dst, c);
 				}
 				else if (m_map[i][j] == 3)
 				{
 					//ゴールブロック
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
+					BlockDraw1(320.0f + 64.0f, 64.0f, &dst, c);
 				}
 				else if (m_map[i][j] == 4)
 				{
 					//毒ブロック
-					BlockDraw(320.0f+64.0f,0.0f,&dst,c);
+					BlockDraw1(320.0f+64.0f,0.0f,&dst,c);
 				}
 				else
 				{
-					BlockDraw(320.0f, 0.0f, &dst, c);
+					BlockDraw1(320.0f, 0.0f, &dst, c);
 				}
 				//摩擦
 					//m_vx += +(m_vx * 0.098);
@@ -223,7 +223,7 @@ void CObjStageBlock::Draw()
 //引数４ float    c  :カラー情報
 //ブロックを64*64限定描画用。リソース切り替えのみx.yで
 //設定できる
-void CObjStageBlock::BlockDraw1(float x, float y, RECT_F* dst, float c[])
+void CObjStageBlock1::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -261,7 +261,7 @@ void CObjStageBlock1::BlockDraw2(float x, float y, RECT_F* dst, float c[])
 //引数10 int* bt        :下部分判定、特殊なブロックのタイプを返す
 //判定を行うobjectとブロック50*50限定で、あたり判定と上下左右判定を行う
 //その結果は引数４～１０に返す
-void CObjStageBlock::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool* down, bool* left, bool* right, float* vx, float* vy, int* bt)
+void CObjStageBlock1::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool* down, bool* left, bool* right, float* vx, float* vy, int* bt)
 {
 	//主人公の衝突状態確認用フラグの初期化
 	*up = false;
