@@ -135,7 +135,7 @@ void CSceneMain::InitScene()
 
 	//棘オブジェクト作成
 	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
-	Objs::InsertObj(objt, OBJ_TOGE, 1);
+	Objs::InsertObj(objt, OBJ_TOGE, 4);
 
 	
 
