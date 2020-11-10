@@ -194,12 +194,12 @@ void CObjStageBlock3::Draw()
 				if (m_map[i][j] == 2)
 				{
 					//スタートブロック
-					BlockDraw(320.0f + 64.0f, 0.0f, &dst, c);
+					BlockDraw5(320.0f + 64.0f, 0.0f, &dst, c);
 				}
 				else if (m_map[i][j] == 3)
 				{
 					//ゴールブロック
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
+					BlockDraw5(320.0f + 64.0f, 64.0f, &dst, c);
 				}
 				else if (m_map[i][j] == 4)
 				{
@@ -207,7 +207,7 @@ void CObjStageBlock3::Draw()
 				}
 				else
 				{
-					BlockDraw(320.0f, 0.0f, &dst, c);
+					BlockDraw5(320.0f, 0.0f, &dst, c);
 				}
 				//摩擦
 					//m_vx += +(m_vx * 0.098);
@@ -222,7 +222,7 @@ void CObjStageBlock3::Draw()
 //引数４ float    c  :カラー情報
 //ブロックを64*64限定描画用。リソース切り替えのみx.yで
 //設定できる
-void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
+void CObjStageBlock3::BlockDraw5(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
