@@ -38,4 +38,6 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"アンダーアドベンチャー", 230, 250, 32, c);
 
 	Font::StrDraw(L"GameStart:エンター押してね!", 200, 400, 32, c);
+
+
 }
