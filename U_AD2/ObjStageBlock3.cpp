@@ -222,7 +222,7 @@ void CObjStageBlock3::Draw()
 //引数４ float    c  :カラー情報
 //ブロックを64*64限定描画用。リソース切り替えのみx.yで
 //設定できる
-void CObjStageBlock3::BlockDraw(float x, float y, RECT_F* dst, float c[])
+void CObjStageBlock3::BlockDraw5(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
