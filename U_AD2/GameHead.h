@@ -17,7 +17,7 @@ enum OBJ_NAME
 
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
-	OBJ_BACKGROUND,
+	//OBJ_BACKGROUND,
 };
 //------------------------------------------------
 
@@ -70,7 +70,7 @@ struct UserData
 
 
 #include "ObjTitle.h"
-#include"ObjBackground.h"
+//#include"ObjBackground.h"
 #include"ObjGameOver.h"
 //------------------------------------------------
 
