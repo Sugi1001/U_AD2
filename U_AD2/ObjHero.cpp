@@ -49,6 +49,12 @@ void CObjHero::Action()
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
+
+	//棘が主人公に接触したら主人公のHPを減らす
+	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
+	{
+		m_hp -= 2;
+	}
 	//移動ベクトルの破棄
 	 
 	if (m_py > 1000.0f)
@@ -58,14 +64,14 @@ void CObjHero::Action()
 	
 	}
 
-	//当たり判定を行うオブジェクト情報部
-	int data_base[3] =
-	{
-		OBJ_HERO,
-		OBJ_TOGE,
-		OBJ_ENEMY_BLOCK,
+	////当たり判定を行うオブジェクト情報部
+	//int data_base[3] =
+	//{
+	//	OBJ_HERO,
+	//	OBJ_TOGE,
+	//	OBJ_ENEMY_BLOCK,
 
-	};
+	//};
 
 	////オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
 	//for (int i = 0; i < 3; i++)
@@ -140,11 +146,11 @@ void CObjHero::Action()
 		&m_block_type
 	);
 
-//棘が主人公に接触したら主人公のHPを減らす
-	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
-	{
-		m_hp -= 1;
-	}
+////棘が主人公に接触したら主人公のHPを減らす
+//	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
+//	{
+//		m_hp -= 2;
+//	}
 
 	
 	//位置の更新
