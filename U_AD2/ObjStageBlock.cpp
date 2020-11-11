@@ -200,6 +200,7 @@ void CObjStageBlock::Draw()
 				{
 					//ゴールブロック
 					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
+					//Scene::SetScene(new CSceneGameClear());
 				}
 				else if (m_map[i][j] == 4)
 				{
