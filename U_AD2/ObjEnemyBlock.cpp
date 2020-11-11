@@ -12,16 +12,19 @@ using namespace GameL;
 //イニシャライズ
 void CObjEnemyBlock::Init()
 {
-	m_px = 100.0f;  //位置
+	
+
+	m_px = 1.0f;  //位置
 	m_py = 0.0f;    //移動ベクトル
-	m_vy = 0.0f;
+	m_vy = 1.0f;
 	m_posture = 1.0f;  //右向き0.0f　左向き　1.0f
 
 	m_ani_time = 0;  //静止フレームを初期にする。
 	m_ani_frame = 1;
 
-	m_speed_power = 0.5f;//通常速度
-	m_ani_max_time = 4; //アニメーション間隔幅
+	float m_speed_power = 6.0f;//通常速度
+	float m_ani_max_time;//アニメーション間隔幅
+
 
 	//blockとの衝突状態確認用
 	m_hit_up = false;
@@ -29,10 +32,13 @@ void CObjEnemyBlock::Init()
 	m_hit_left = false;
 	m_hit_right = false;
 
+
+
 }
 //アクション
 void CObjEnemyBlock::Action()
 {
+   
 	//落下
 	m_vy += 9.8 / (16.0f);
 
@@ -100,5 +106,5 @@ void CObjEnemyBlock::Draw()
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
-	Draw::Draw(17, &src, &dst, c, 0.0f);
+	Draw::Draw(10, &src, &dst, c, 0.0f);
 }
