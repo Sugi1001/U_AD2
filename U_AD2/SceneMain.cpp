@@ -35,13 +35,18 @@ void CSceneMain::InitScene()
 	//外部データの読み込み（ステージ情報）
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
-	p = Save::ExternalDataOpen(L"stage.csv", &size);//外部データ読み込み
+	//p = Save::ExternalDataOpen(L"test.csv", &size);//外部データ読み込み
+	p = Save::ExternalDataOpen(L"Stage500.csv", &size);//外部データ読み込み
 
-	int map[10][150];
-	int count = 2;
-	for (int i = 0; i < 50; i++)
+	//int map[10][150];
+	//int count = 1;
+	//for (int i = 0; i < 10; i++)
+	int map[10][500];
+	int count = 1;
+	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j > 50; j++)
+		//for (int j = 0; j < 150; j++)
+		for (int j = 0; j < 500; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);
@@ -50,20 +55,71 @@ void CSceneMain::InitScene()
 			count += 2;
 		}
 	}
+	//外部データの読み込み（ステージ情報2）
+	/*unique_ptr<wchar_t>a;//ステージ情報ポインター
+	int size1;//ステージ情報の大きさ
+	//p = Save::ExternalDataOpen(L"test.csv", &size);//外部データ読み込み
+	a = Save::ExternalDataOpen(L"Stage3.csv", &size1);//外部データ読み込み
 
+	//int map[10][150];
+	//int count = 1;
+	//for (int i = 0; i < 10; i++)
+	int map2[10][106];
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 106; j++)
+		{
+			int w = 0;
+			swscanf_s(&a.get()[count], L"%d", &w);
+
+			map2[i][j] = w;
+			count += 2;
+		}
+	}
+
+	//外部データの読み込み（ステージ情報）
+	unique_ptr<wchar_t>b;//ステージ情報ポインター
+	int size2;//ステージ情報の大きさ
+	//p = Save::ExternalDataOpen(L"test.csv", &size);//外部データ読み込み
+	b = Save::ExternalDataOpen(L"Stage1.csv", &size2);//外部データ読み込み
+
+	//int map[10][150];
+	//int count = 1;
+	//for (int i = 0; i < 10; i++)
+	int map3[10][106];
+	for (int i = 0; i < 10; i++)
+	{
+		//for (int j = 0; j < 150; j++)
+		for (int j = 0; j < 106; j++)
+		{
+			int w = 0;
+			swscanf_s(&b.get()[count], L"%d", &w);
+
+			map3[i][j] = w;
+			count += 2;
+		}
+	}*/
 
 	////グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
+	Draw::LoadImage(L"taitle.png", 10, TEX_SIZE_512);
 
-	////Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
-	Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
+	//Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
+	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
+	  //Draw::LoadImage(L"主人公（移動 逆) .png", 1, TEX_SIZE_512);
+   //Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
 
 	//Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 	//Draw::LoadImage(L"主人公（移動　逆）.png", 2, TEX_SIZE_512);
 
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
-	////Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
+	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);
+	Draw::LoadImage(L"毒.png", 4, TEX_SIZE_512);
+	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
+	Draw::LoadImage(L"こうもり.png", 6, TEX_SIZE_512);
+	Draw::LoadImage(L"こうもり（移動）.png", 7, TEX_SIZE_512);
+	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
 
@@ -75,12 +131,18 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj, OBJ_HERO, 10);
 
 	//blockオブジェクト作成
-	CObjBlock* objb = new CObjBlock(map);
+	CObjStageBlock* objb = new CObjStageBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
+	//棘オブジェクト作成
+	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
+	Objs::InsertObj(objt, OBJ_TOGE, 4);
 
+	
+	//タイトル背景オブジェクト作成
+	//CObjBackground* back = new CObjBackground();
+	//Objs::InsertObj(back, OBJ_BACKGROUND, 10);
    
-
 }
 
 //実行中メソッド

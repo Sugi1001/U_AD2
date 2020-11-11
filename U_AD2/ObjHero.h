@@ -19,6 +19,7 @@ public:
 	float GetVY() { return m_vy; }
 	float GetVX() { return m_vx; }
 	int GetBT() { return m_block_type; }
+	//float GetScroll() { return m_scroll; }
 
 	void SetX(float x) { m_px = x; }
 	void SetY(float y) { m_py = y; }
@@ -31,16 +32,28 @@ public:
 	void SetLeft(bool b) { m_hit_left = b; }
 	void SetRight(bool b) { m_hit_right = b; }
 
+	float GetScroll() {
+		return m_scroll;
+	}
+
 private:
 	float m_px; //位置
 	float m_py;
 	float m_vx; //移動ベクトル
 	float m_vy;
 	float m_posture; //姿勢
+
+	float m_x;
+	float m_y; //HitBox用の位置
+
+	float m_hp; //主人公のHP //主人公のひっとぽいんと
+	float hit;
+
+	float m_scroll;
 	
 
-	int m_ani_time;//アニメーションフレーム動作間隔
-	int m_ani_frame;//描画フレーム
+	int m_ani_time = 0;//アニメーションフレーム動作間隔
+	int m_ani_frame = 1;//描画フレーム  //静止フレームを初期にする。
 
 	
 	float m_ani_max_time;//アニメーション動作間隔最大値
@@ -53,4 +66,6 @@ private:
 
 	//踏んでいるblockの種類確認用
 	int m_block_type;
+
+	//float m_scroll;
 };

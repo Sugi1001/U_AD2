@@ -27,9 +27,10 @@ void CSceneTitle::InitScene()
 {
 	//出力させるグラフィックをサクセイ
 	Font::SetStrTex(L"アンダーアドベンチャー");
+	Font::SetStrTex(L"エンタキー押してくださいお願いします(*-*)");
 
 	CObjTitle*obj = new CObjTitle();
-	Objs::InsertObj(obj, OBJ_TITLE, 10);
+	Objs::InsertObj(obj, OBJ_TITLE, 1);
 }
 
 //ゲームメイン実行メソッド

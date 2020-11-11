@@ -30,7 +30,9 @@ void CSceneGameOver::InitScene()
 {
 	//出力させる文字のグラフィックを作成
 	Font::SetStrTex(L"GameOver");
+	Font::SetStrTex(L"がんばれ");
 	Font::SetStrTex(L"NEXT_CHALLENGE:ENTER_KEY");
+
 
 	//ゲームオーバーオブジェクト作成
 	CObjGameOver*obj = new CObjGameOver();
