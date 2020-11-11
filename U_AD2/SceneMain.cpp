@@ -119,7 +119,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
 	Draw::LoadImage(L"こうもり.png", 6, TEX_SIZE_512);
 	Draw::LoadImage(L"こうもり（移動）.png", 7, TEX_SIZE_512);
-	Draw::LoadImage(L".png", 9, TEX_SIZE_512);
+	Draw::LoadImage(L"とげ１.png", 12, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
@@ -137,7 +137,7 @@ void CSceneMain::InitScene()
 
 	//棘オブジェクト作成
 	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
-	Objs::InsertObj(objt, OBJ_TOGE, 4);
+	Objs::InsertObj(objt, OBJ_TOGE, 12);
 
 	
 	//タイトル背景オブジェクト作成
