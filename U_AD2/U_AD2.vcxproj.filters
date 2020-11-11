@@ -102,11 +102,8 @@
     <ClCompile Include="ObjStageBlock3.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjStageBlock3.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjBackground.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\title over</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,11 +188,8 @@
     <ClInclude Include="ObjStageBlock3.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjStageBlock3.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjBackground.h">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\title over</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
