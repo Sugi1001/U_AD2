@@ -203,7 +203,8 @@ void CObjStageBlock::Draw()
 				}
 				else if (m_map[i][j] == 4)
 				{
-					;//敵配置用の番号のため何もしない
+					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);//宝
+				
 				}
 				else
 				{
@@ -233,6 +234,18 @@ void CObjStageBlock::Draw()
 	
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
+   }
+   void CObjStageBlock::BlockDraw1(float x, float y, RECT_F* dst, float c[])
+   {
+	   RECT_F src;
+	   src.m_top = 0;
+	   src.m_left = 0;
+	   src.m_right = src.m_left + 64.0f;
+	   src.m_bottom = src.m_top + 64.0f;
+
+
+	   //描画
+	   Draw::Draw(50, &src, dst, c, 0.0f);
    }
    //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
