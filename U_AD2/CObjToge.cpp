@@ -64,12 +64,13 @@ void CObjToge::Draw()
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_y;
-	dst.m_left = 0.0f + m_x;
+	dst.m_left = 46.0f + m_x;
 	dst.m_right = 32.0f + m_x;
 	dst.m_bottom = 32.0f + m_y;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(12, &src, &dst, c, 0.0f);
+	Draw::Draw(16, &src, &dst, c, 0.0f);
+
 
 
 }
