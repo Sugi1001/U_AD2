@@ -29,7 +29,7 @@ CSceneClear::~CSceneClear()
 //初期化メソッド
 void CSceneClear::InitScene()
 {
-	Font::SetStrTex(L"おめでとう！敵のボスを撃破しました");
+	Font::SetStrTex(L"おめでとう！");
 
 	//音楽情報の読み取り
 	//Audio::LoadAudio(0, L"BGMGameClear.wav", BACK_MUSIC);
