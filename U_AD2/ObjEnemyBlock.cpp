@@ -39,8 +39,6 @@ void CObjEnemyBlock::Init()
 void CObjEnemyBlock::Action()
 {
    
-	//落下
-	m_vy += 9.8 / (16.0f);
 
 	//位置の更新
 	m_px += m_vx;
@@ -77,6 +75,14 @@ void CObjEnemyBlock::Action()
 	}
 
 
+
+	//との当たり判定実行
+	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
+	pb->BlockHit(&m_px, &m_py, true,
+		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
+		&m_block_type
+	);
+
 	/*自由落下運動
 	m_vy += 9.8 / (16.0f);*/
 
@@ -94,15 +100,15 @@ void CObjEnemyBlock::Draw()
 
 	//切り取り位置の設定
 	src.m_top = 0.0f;
-	src.m_left = 126.0f;
-	src.m_right = 96.0f;
-	src.m_bottom = 32.0f;
+	src.m_left = 0.0f;
+	src.m_right = 64.0f;
+	src.m_bottom = 64.0f;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_y;
 	dst.m_left = 0.0f + m_x;
-	dst.m_right = 32.0f + m_x;
-	dst.m_bottom = 32.0f + m_y;
+	dst.m_right = 64.0f + m_x;
+	dst.m_bottom = 64.0f + m_y;
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
