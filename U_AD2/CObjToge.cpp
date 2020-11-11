@@ -69,7 +69,7 @@ void CObjToge::Draw()
 	dst.m_bottom = 32.0f + m_y;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(4, &src, &dst, c, 0.0f);
+	Draw::Draw(12, &src, &dst, c, 0.0f);
 
 
 }
