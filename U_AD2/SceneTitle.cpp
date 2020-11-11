@@ -31,6 +31,7 @@ void CSceneTitle::InitScene()
 
 	CObjTitle*obj = new CObjTitle();
 	Objs::InsertObj(obj, OBJ_TITLE, 1);
+
 }
 
 //ゲームメイン実行メソッド
