@@ -1,6 +1,6 @@
 #pragma once
 //使用するヘッダー
-#include"GameL\SceneObjManager.h"
+#include"GameL\SceneManager.h"
 #include"ObjTitle.h"
 //使用するネームスペース
 using namespace GameL;
