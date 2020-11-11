@@ -98,10 +98,10 @@ void CObjEnemyBlock::Draw()
 	src.m_bottom = 50.0f;
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_y;
-	dst.m_left = 0.0f + m_x;
-	dst.m_right = 50.0f + m_x;
-	dst.m_bottom = 50.0f + m_y;
+	dst.m_top = 0.0f + m_py;
+	dst.m_left = (30.0f * m_posture) + m_px;
+	dst.m_right = (50 - 50.0f * m_posture) + m_px;
+	dst.m_bottom = 64.0 + m_py;
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
