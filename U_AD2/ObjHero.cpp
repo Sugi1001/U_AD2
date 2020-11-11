@@ -46,8 +46,8 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
-	/*HitBoxの内容を更新
-	CHitBox* hit = Hits::GetHitBox(this);
+	//HitBoxの内容を更新
+	/*CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);*/
 
 	//棘が主人公に接触したら主人公のHPを減らす
@@ -184,10 +184,10 @@ void CObjHero::Draw()
 
 
 	//表示位置の設定
-	dst.m_top = 0.0f;
-	dst.m_left = 0.0f;
-	dst.m_right = 64.0;
-	dst.m_bottom = 64.0;
+	dst.m_top = 0.0f+m_py;
+	dst.m_left =(          64.0f*m_posture)+m_px;
+	dst.m_right =( 64  -   64.0f*m_posture)+m_px;
+	dst.m_bottom = 64.0+m_py;
 
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
