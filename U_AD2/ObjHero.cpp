@@ -40,7 +40,6 @@ void CObjHero::Init()
 
 	m_scroll = 0;
 
-	
 }
 
 //アクション
@@ -144,6 +143,8 @@ void CObjHero::Action()
 	pb->BlockHit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
+
+		
 	);
 
 ////棘が主人公に接触したら主人公のHPを減らす
