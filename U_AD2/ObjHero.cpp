@@ -20,10 +20,10 @@ void CObjHero::Init()
 	m_py = 0.0f;
 	m_vx = 1.0f;//移動ベクトル
 	m_vy = 0.0f;
-	m_posture =0.0f; //右向き0.0f　左向き1.0f
+	m_posture =1.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
-	m_ani_frame = 0;//静止フレームを初期にする
+	m_ani_frame = 1;//静止フレームを初期にする
 
 	float m_speed_power = 6.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
