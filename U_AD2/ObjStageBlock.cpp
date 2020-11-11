@@ -63,7 +63,7 @@ void CObjBlock::Action()
 		m_scroll -= hero->GetVX();//主人公が本来動くべき分の値をm_scrollに加える
 	}
 	
-
+	
 	//テスト　交差取得
 	//float a, b;
 	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
@@ -86,6 +86,7 @@ void CObjBlock::Draw()
 	src.m_left = 0.0f;
 	src.m_right = 512.0f;
 	src.m_bottom = 512.0f;
+
 	dst.m_top = 0.0f;
 	dst.m_left = 0.0f;
 	dst.m_right = 800.0f;
@@ -151,6 +152,8 @@ void CObjBlock::Draw()
 	src.m_left = x;
 	src.m_right = src.m_left + 64.0f;
 	src.m_bottom = src.m_top + 64.0f;
+
+	
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
    }
