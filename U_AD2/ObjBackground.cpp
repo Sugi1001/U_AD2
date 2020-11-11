@@ -1,6 +1,7 @@
 //使用するヘッダーファイル
 #include"GameL\DrawTexture.h"
 #include"GameHead.h"
+#include"GameL\SceneManager.h"
 #include"ObjTitle.h"
 #include"ObjBackground.h"
 
