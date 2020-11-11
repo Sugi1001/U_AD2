@@ -40,10 +40,6 @@ void CObjEnemyBlock::Action()
 {
 
 
-	//位置の更新
-	m_px += m_vx;
-	m_py += m_vy;
-
 	//方向
 	if (false)
 	{
@@ -75,8 +71,13 @@ void CObjEnemyBlock::Action()
 	}
 
 
-	/*自由落下運動
-	m_vy += 9.8 / (16.0f);*/
+	//自由落下運動
+	m_vy += 9.8 / (16.0f);
+
+	//位置の更新
+	m_px += m_vx;
+	m_py += m_vy;
+
 
 
 }
@@ -93,14 +94,14 @@ void CObjEnemyBlock::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f;
 	src.m_left = 0.0f;
-	src.m_right = 64.0f;
-	src.m_bottom = 64.0f;
+	src.m_right = 50.0f;
+	src.m_bottom = 50.0f;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_y;
 	dst.m_left = 0.0f + m_x;
-	dst.m_right = 64.0f + m_x;
-	dst.m_bottom = 64.0f + m_y;
+	dst.m_right = 50.0f + m_x;
+	dst.m_bottom = 50.0f + m_y;
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
