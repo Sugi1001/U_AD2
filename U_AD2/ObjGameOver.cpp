@@ -36,7 +36,8 @@ void CObjGameOver::Action()
 void CObjGameOver::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	Font::StrDraw(L"GameOver　ゲ～ムオ～バ～", 230, 190 , 32, c);
-	Font::StrDraw(L"あきらめていいんですか?", 215, 250, 32, c);
-	Font::StrDraw(L"ENTER_KEYでタイトルに戻るよ", 200, 400, 32, c);
+	Font::StrDraw(L"GameOver　ゲ～ムオ～バ～", 120, 190 , 50, c);
+	Font::StrDraw(L"あきらめていいんですか?", 215, 275, 32, c);
+	Font::StrDraw(L"タイトルから出直してきてくださいまし", 150, 330, 32, c);
+	Font::StrDraw(L"ENTER_KEYでタイトルに戻るよ", 100, 400, 50, c);
 }
