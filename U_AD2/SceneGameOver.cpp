@@ -30,7 +30,7 @@ void CSceneGameOver::InitScene()
 {
 	//出力させる文字のグラフィックを作成
 	Font::SetStrTex(L"GameOver　ゲ～ムオ～バ～");
-	Font::SetStrTex(L"がんばれ");
+	Font::SetStrTex(L"あきらめていいんですか?");
 	Font::SetStrTex(L"ENTER_KEYでタイトルに戻るよ");
 
 
