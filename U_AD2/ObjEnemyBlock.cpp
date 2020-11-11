@@ -36,9 +36,9 @@ void CObjEnemyBlock::Action()
 	//落下
 	m_vy += 9.8 / (16.0f);
 
-	//通常速度
-	m_speed_power = 0.5f;
-	m_ani_max_time = 4;
+	//位置の更新
+	m_px += m_vx;
+	m_py += m_vy;
 
 	//方向
 	if (false)
@@ -70,15 +70,10 @@ void CObjEnemyBlock::Action()
 		m_ani_frame = 0;
 	}
 
-	//摩擦
-	m_vx += -(m_vx * 0.098);
 
 	/*自由落下運動
 	m_vy += 9.8 / (16.0f);*/
 
-	//位置の更新
-	m_px += m_vx;
-	m_py += m_vy;
 
 }
 
@@ -105,5 +100,5 @@ void CObjEnemyBlock::Draw()
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
-	Draw::Draw(2, &src, &dst, c, 0.0f);
+	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
