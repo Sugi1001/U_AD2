@@ -38,7 +38,7 @@ void CObjEnemyBlock::Init()
 //アクション
 void CObjEnemyBlock::Action()
 {
-   
+
 
 	//位置の更新
 	m_px += m_vx;
@@ -74,14 +74,6 @@ void CObjEnemyBlock::Action()
 		m_ani_frame = 0;
 	}
 
-
-
-	//との当たり判定実行
-	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
-	pb->BlockHit(&m_px, &m_py, true,
-		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
-		&m_block_type
-	);
 
 	/*自由落下運動
 	m_vy += 9.8 / (16.0f);*/
