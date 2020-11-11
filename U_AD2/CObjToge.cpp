@@ -73,5 +73,7 @@ void CObjToge::Draw()
 
 
 
+
+
 }
 
