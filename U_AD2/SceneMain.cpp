@@ -120,6 +120,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"こうもり.png", 6, TEX_SIZE_512);
 	Draw::LoadImage(L"こうもり（移動）.png", 7, TEX_SIZE_512);
 	Draw::LoadImage(L"とげ１.png", 12, TEX_SIZE_512);
+	Draw::LoadImage(L"岩.png", 3, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
