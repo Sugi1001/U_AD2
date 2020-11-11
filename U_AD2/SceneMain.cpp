@@ -119,7 +119,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
 	Draw::LoadImage(L"こうもり.png", 6, TEX_SIZE_512);
 	Draw::LoadImage(L"こうもり（移動）.png", 7, TEX_SIZE_512);
-	Draw::LoadImage(L"とげ1.png", 3, TEX_SIZE_512);
+	Draw::LoadImage(L"とげ1.png", 8, TEX_SIZE_512);
 	Draw::LoadImage(L"岩2.png", 10, TEX_SIZE_512);
 	Draw::LoadImage(L"宝箱（重要アイテム）.png", 50, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
@@ -139,7 +139,7 @@ void CSceneMain::InitScene()
 
 	//棘オブジェクト作成
 	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
-	Objs::InsertObj(objt, OBJ_TOGE, 3);
+	Objs::InsertObj(objt, OBJ_TOGE, 8);
 
 	//岩2オブジェクト作成
 	CObjEnemyBlock* objeb = new CObjEnemyBlock();
