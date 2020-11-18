@@ -56,9 +56,9 @@ void CObjToge::Action()
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&d
 	);
-	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	/*CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
-	float hy = hero->GetY();
+	float hy = hero->GetY();*/
 
 	//ž™‚ÆÚG‚µ‚½‚çŽålŒö‚ÌHP‚ðŒ¸‚ç‚·
 
