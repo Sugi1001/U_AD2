@@ -147,12 +147,7 @@ void CObjHero::Action()
 		
 
 	);
-       //Enemy‚ÆÚG‚µ‚½‚çŽålŒöíœ
-	//if (hit->CheckElementHit(ELEMENT_ENEMY) == true)
-	//{
-		//this->SetStatus(false);
-		//Hits::DeleteHitBox(this);
-	//}
+       
 ////ž™‚ªŽålŒö‚ÉÚG‚µ‚½‚çŽålŒö‚ÌHP‚ðŒ¸‚ç‚·
 //	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
 //	{
