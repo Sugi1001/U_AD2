@@ -6,7 +6,7 @@
 #include"ObjEnemy.h"
 
 //使用するネームスペース
-using namespace GameL;
+/*ing namespace GameL;
 
 //コンストラクタ
 CObjEnemy::CObjEnemy(float x, float y)
@@ -81,7 +81,7 @@ void CObjEnemy::Action()
 	}*/
 
 	//完全に領域外に出たら敵を破棄する
-	if (m_x < -32.0f)
+	/* (m_x < -32.0f)
 	{
 		this->SetStatus(false);//自身に削除命令を出す
 		Hits::DeleteHitBox(this);//敵が所有するHitBoxに削除する
@@ -111,4 +111,4 @@ void CObjEnemy::Draw()
 
 	//０番目に登録したグラフィックをsrc,dst,cの情報の元に描画
 	Draw::Draw(6, &src, &dst, c, 0.0f);
-}
+}*/
