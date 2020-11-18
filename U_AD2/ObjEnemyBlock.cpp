@@ -14,9 +14,10 @@ void CObjEnemyBlock::Init()
 {
 	
 
-	m_px = 1.0f;  //位置
-	m_py = 0.0f;    //移動ベクトル
-	m_vy = 1.0f;
+	m_vx = 0.0f;  //位置
+	m_vy = 0.0f;    //移動ベクトル
+	m_px = 400.0f - 32.0f;
+	m_py = -64.0f;
 	m_posture = 1.0f;  //右向き0.0f　左向き　1.0f
 
 	m_ani_time = 0;  //静止フレームを初期にする。
@@ -80,7 +81,7 @@ void CObjEnemyBlock::Action()
 
 	//次のブロックを出す
 	CObjEnemyBlock* c = new CObjEnemyBlock();
-	Objs::InsertObj(c, OBJ_STAGE_BLOCK, 1);
+	Objs::InsertObj(c, OBJ_ENEMY_BLOCK, 1);
 
 
 }
