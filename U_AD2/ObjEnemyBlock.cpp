@@ -12,7 +12,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjEnemyBlock::Init()
 {
-	
+
 
 	m_vx = 0.0f;  //位置
 	m_vy = 0.0f;    //移動ベクトル
