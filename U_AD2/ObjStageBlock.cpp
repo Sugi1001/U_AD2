@@ -194,18 +194,31 @@ void CObjStageBlock::Draw()
 				if (m_map[i][j]==2)
 				{
 					//スタートブロック
-					BlockDraw(320.0f + 64.0f, 0.0f, &dst, c);
+					src.m_top =0.0f;
+                    src.m_left=320.0f+64.0;
+                    src.m_right=src.m_left+64.0f;
+                    src.m_bottom=src.m_top+64.0f;
+					Draw::Draw(0,&src,&dst,c,0.0f);
 				}
 				else if (m_map[i][j] == 3)
 				{
 					//ゴールブロック
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(0, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
 					//Scene::SetScene(new CSceneGameClear());
 				}
 				else if (m_map[i][j] == 4)
 				{
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);//宝
-				
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(50, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);//宝
 				}
 				else
 				{
