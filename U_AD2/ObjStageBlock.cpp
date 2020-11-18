@@ -282,7 +282,7 @@ void CObjStageBlock::Draw()
 				   float bx = j * 64.0f;
 				   float by = i * 64.0f;
 				   //スクロールの影響
-				   float scroll = scroll_on ? m_scroll : 0;
+				   float scroll = scroll_on ? m_scroll :0;
 
 				   //主人公とブロックの当たり判定
 				   if (( *x + (-scroll) + 64.0f > bx) && (*x + (-scroll) < bx + 64.0f) && (*y + 64.0f > by) && (*y < by + 64.0f))
