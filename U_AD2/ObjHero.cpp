@@ -16,7 +16,6 @@ using namespace GameL;
 void CObjHero::Init()
 {
 
-
 	m_px = 1.0f; //位置
 	m_py = 0.0f;
 	m_vx = 1.0f;//移動ベクトル
@@ -25,8 +24,6 @@ void CObjHero::Init()
 
 	m_ani_time = 0;
 	m_ani_frame = 1;//静止フレームを初期にする
-
-	
 
 	float m_speed_power = 6.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
@@ -42,8 +39,6 @@ void CObjHero::Init()
 	m_block_type = 0;
 
 	m_scroll = 0;
-
-	//当たり判定用HitBoxを作成
 
 }
 
@@ -61,8 +56,6 @@ void CObjHero::Action()
 	//}
 	//移動ベクトルの破棄
 
-	
-	 
 	if (m_py > 1000.0f)
 	{
 		//場外に出たらリスタート
@@ -70,13 +63,35 @@ void CObjHero::Action()
 
 	}
 
+	////当たり判定を行うオブジェクト情報部
+	//int data_base[3] =
+	//{
+	//	OBJ_HERO,
+	//	OBJ_TOGE,
+	//	OBJ_ENEMY_BLOCK,
+
+	//};
+
+	//オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
+	//for (int i = 0; i < 3; i++)
+	//{
+		//if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
+		//{
+			//m_hp -= 1;
+		//}
+
+	//}
+
+	//HPが0になったら破棄
+	//if (m_hp <= 0)
+	//{
+		//this->SetStatus(false);
+		//Hits::DeleteHitBox(this);
+	//}
 
 
 
 
-
-
-	
 	if (Input::GetVKey('X') == true)
 	{
 		if (m_hit_down == true)
@@ -132,17 +147,12 @@ void CObjHero::Action()
 
 
 	);
-      // Enemyと接触したら主人公削除
-	if (hit->CheckElementHit(ELEMENT_ENEMY) == true)
-	{
-		this->SetStatus(false);
-		Hits::DeleteHitBox(this);
-	//}
-////棘が主人公に接触したら主人公のHPを減らす
-//	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
-//	{
-//		m_hp -= 2;
-//	}
+
+	////棘が主人公に接触したら主人公のHPを減らす
+	//	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
+	//	{
+	//		m_hp -= 2;
+	//	}
 
 
 		//位置の更新
