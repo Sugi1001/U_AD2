@@ -9,11 +9,11 @@
 using namespace GameL;
 
 //コンストラクタ
-//CObjEnemy::CObjEnemy(/*float x, float y*/)
-//{
-	//m_x = 800;
-	//m_y = 400;
-//}
+CObjEnemy::CObjEnemy(float x, float y)
+{
+	m_x = x;
+	m_y = y;
+}
 
 
 //イニシャライズ

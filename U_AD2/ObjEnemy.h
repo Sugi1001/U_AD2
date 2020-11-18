@@ -9,7 +9,7 @@ class CObjEnemy :public CObj
 {
 
 public:
-	CObjEnemy(/*float x, float y*/) {};
+	CObjEnemy(float x, float y) {};
 	~CObjEnemy() {};
 	void Init();
 	void Action();
