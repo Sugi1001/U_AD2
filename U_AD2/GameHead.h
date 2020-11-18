@@ -68,6 +68,7 @@ struct UserData
 
 #include  "CObjToge.h"
 //#include "ObjItem.h"
+#include"ObjEnemy.h"
 
 
 #include "ObjTitle.h"
