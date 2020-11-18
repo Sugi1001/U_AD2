@@ -149,10 +149,6 @@ void CSceneMain::InitScene()
 	//CObjEnemy* obj_enemy = new CObjEnemy();
 	//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 6);
 
-	
-	//タイトル背景オブジェクト作成
-	//CObjTitle* back = new CObjTitle();
-	//Objs::InsertObj(back, OBJ_TITLE, 10);
    
 }
 

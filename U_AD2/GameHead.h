@@ -72,7 +72,6 @@ struct UserData
 
 
 #include "ObjTitle.h"
-//#include"ObjBackground.h"
 #include"ObjGameOver.h"
 #include"ObjGameClear.h"
 //------------------------------------------------
