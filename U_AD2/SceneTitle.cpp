@@ -29,7 +29,7 @@ void CSceneTitle::InitScene()
 	Font::SetStrTex(L"アンダーアドベンチャー");
 	Font::SetStrTex(L"エンタキー押してくださいお願いします(*-*)");
 
-	CObjTitle*obj = new CObjTitle();
+	CObjTitle*obj = new CObjTitle();//画像でんし
 	Objs::InsertObj(obj, OBJ_TITLE, 1);
 
 }
