@@ -63,7 +63,12 @@ void CObjEnemy::Action()
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
 
-
+	//ålŒö‚ÆÚG‚µ‚Ä‚¢‚é‚©‚Ç‚¤‚©‚ğ’²‚×‚é
+	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
 
 	//“G‚ªŠ®‘S‚É—ÌˆæŠO‚Éo‚½‚ç“G‚ğ”jŠü‚·‚é
 	/*bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
