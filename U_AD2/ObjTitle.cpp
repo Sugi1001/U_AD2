@@ -40,6 +40,7 @@ void CObjTitle::Draw()
 	
 	Font::StrDraw(L"アンダーアドベンチャー", 230, 250, 32, c);
 	Font::StrDraw(L"エンタキー押してくださいお願いします(*-*)", 100, 300, 32, c);
+
 	
 	RECT_F src;
 	RECT_F dst;
