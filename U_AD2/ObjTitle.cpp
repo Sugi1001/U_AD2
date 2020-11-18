@@ -41,8 +41,7 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"アンダーアドベンチャー", 230, 250, 32, c);
 	Font::StrDraw(L"エンタキー押してくださいお願いします(*-*)", 100, 300, 32, c);
 
-	
-	RECT_F src;
+	/*RECT_F src;
 	RECT_F dst;
 
 	src.m_top = 256.0f;
@@ -55,5 +54,6 @@ void CObjTitle::Draw()
 	src.m_right = 800.0f;
 	src.m_bottom = 600.0f;
 
-	Draw::Draw(10, &src,&dst,c,0.0f);
+	Draw::Draw(10, &src, &dst, c, 0.0f);*/
+
 }
