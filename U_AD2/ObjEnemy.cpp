@@ -9,11 +9,11 @@
 using namespace GameL;
 
 //コンストラクタ
-CObjEnemy::CObjEnemy(float x, float y)
-{
-	m_x = x;
-	m_y = y;
-}
+//CObjEnemy::CObjEnemy(/*float x, float y*/)
+//{
+	//m_x = 800;
+	//m_y = 400;
+//}
 
 
 //イニシャライズ
@@ -63,7 +63,12 @@ void CObjEnemy::Action()
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
 
-
+	//主人公と接触しているかどうかを調べる
+	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
 
 	//敵が完全に領域外に出たら敵を破棄する
 	/*bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);

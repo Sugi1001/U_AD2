@@ -46,8 +46,8 @@ void CObjHero::Init()
 void CObjHero::Action()
 {
 	//HitBoxの内容を更新
-	/*CHitBox* hit = Hits::GetHitBox(this);
-	hit->SetPos(m_x, m_y);*/
+	//CHitBox* hit = Hits::GetHitBox(this);
+	//hit->SetPos(m_x, m_y);
 
 	//棘が主人公に接触したら主人公のHPを減らす
 	//if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
@@ -145,8 +145,14 @@ void CObjHero::Action()
 		&m_block_type
 
 		
-	);
 
+	);
+       //Enemyと接触したら主人公削除
+	//if (hit->CheckElementHit(ELEMENT_ENEMY) == true)
+	//{
+		//this->SetStatus(false);
+		//Hits::DeleteHitBox(this);
+	//}
 ////棘が主人公に接触したら主人公のHPを減らす
 //	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
 //	{
