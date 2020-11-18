@@ -78,6 +78,9 @@ void CObjEnemyBlock::Action()
 	m_px += m_vx;
 	m_py += m_vy;
 
+	//次のブロックを出す
+	CObjEnemyBlock* c = new CObjEnemyBlock();
+	Objs::InsertObj(c, OBJ_STAGE_BLOCK, 1);
 
 
 }
@@ -113,5 +116,5 @@ void CObjEnemyBlock::Draw()
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
-	Draw::Draw(10, &src, &dst, c, 0.0f);
+	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
