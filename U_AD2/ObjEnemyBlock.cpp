@@ -12,7 +12,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjEnemyBlock::Init()
 {
-	
+
 
 	m_vx = 0.0f;  //位置
 	m_vy = 0.0f;    //移動ベクトル
@@ -80,8 +80,8 @@ void CObjEnemyBlock::Action()
 	m_py += m_vy;
 
 	//次のブロックを出す
-	CObjEnemyBlock* c = new CObjEnemyBlock();
-	Objs::InsertObj(c, OBJ_ENEMY_BLOCK, 1);
+	//CObjEnemyBlock* c = new CObjEnemyBlock();
+	//Objs::InsertObj(c, OBJ_ENEMY_BLOCK, 1);
 
 
 }

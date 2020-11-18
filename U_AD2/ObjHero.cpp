@@ -21,7 +21,7 @@ void CObjHero::Init()
 	m_py = 0.0f;
 	m_vx = 1.0f;//移動ベクトル
 	m_vy = 0.0f;
-	m_posture =1.0f; //右向き0.0f　左向き1.0f
+	m_posture = 1.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
 	m_ani_frame = 1;//静止フレームを初期にする
@@ -37,7 +37,7 @@ void CObjHero::Init()
 	m_hit_left = false;
 	m_hit_right = false;
 
-	
+
 
 	m_block_type = 0;
 
@@ -50,14 +50,28 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	//HitBoxの内容を更新
+	//CHitBox* hit = Hits::GetHitBox(this);
+	//hit->SetPos(m_x, m_y);
+
+	//棘が主人公に接触したら主人公のHPを減らす
+	//if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
+	//{
+		//m_hp -= 2;
+	//}
+	//移動ベクトルの破棄
+
 	
 	 
 	if (m_py > 1000.0f)
 	{
-	//場外に出たらリスタート
+		//場外に出たらリスタート
 		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
-	
+
 	}
+
+
+
 
 
 
@@ -67,17 +81,17 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = - 20;
+			m_vy = -20;
 		}
 	}
-	
+
 	////キーの入力方向
 	if (Input::GetVKey(VK_LEFT) == true)
 	{
-		m_vx=+1.5f;
-		m_vx=-5.0f;
+		m_vx = +1.5f;
+		m_vx = -5.0f;
 		m_posture = 1.5f;
-		m_ani_time+=1;
+		m_ani_time += 1;
 	}
 	if (m_ani_time > 4)
 	{
@@ -89,19 +103,19 @@ void CObjHero::Action()
 		m_ani_frame = 0;
 	}
 
-    else if (Input::GetVKey(VK_RIGHT) == true)
+	else if (Input::GetVKey(VK_RIGHT) == true)
 	{
-		m_vx=-1.5f;
-		m_vx=+3.0f;
+		m_vx = -1.5f;
+		m_vx = +3.0f;
 		m_posture = 0.0f;
-		m_ani_time+=1;
+		m_ani_time += 1;
 	}
 	else
 	{
 		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
 		m_ani_time = 1;
 	}
-	
+
 
 	//摩擦
 	m_vx += -(m_vx * 0.098);
@@ -115,7 +129,7 @@ void CObjHero::Action()
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
 
-		
+
 
 	);
       // Enemyと接触したら主人公削除
@@ -130,8 +144,8 @@ void CObjHero::Action()
 //		m_hp -= 2;
 //	}
 
-	
-	//位置の更新
+
+		//位置の更新
 	m_px += m_vx;
 	m_py += m_vy;
 
@@ -162,9 +176,9 @@ void CObjHero::Draw()
 
 
 	//表示位置の設定
-	dst.m_top = 0.0f+m_py;
-	dst.m_left =(     40.0f*m_posture)+m_px;
-	dst.m_right =( 64  -   50.0f*m_posture)+m_px;
+	dst.m_top = 0.0f + m_py;
+	dst.m_left = (40.0f * m_posture) + m_px;
+	dst.m_right = (64 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
 
 	//表示位置の設定
@@ -177,7 +191,3 @@ void CObjHero::Draw()
 	Draw::Draw(1, &src, &dst, c, 1.0f);
 
 }
-	
-	
-
-
