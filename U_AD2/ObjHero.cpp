@@ -48,12 +48,12 @@ void CObjHero::Action()
 {
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
-	hit->SetPos(m_x, m_y);
+	hit->SetPos(m_x , m_y);
 
 	//棘が主人公に接触したら主人公のHPを減らす
 	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
 	{
-		m_hp -= 2;
+		m_hp -= 2;   
 	}
 	//移動ベクトルの破棄
 	 

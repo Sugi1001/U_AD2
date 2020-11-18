@@ -46,6 +46,7 @@ void CObjToge::Action()
 
 	//ž™‚ÆÚG‚µ‚½‚çŽålŒö‚ÌHP‚ðŒ¸‚ç‚·
 
+
 }
 
 //ƒhƒ[
