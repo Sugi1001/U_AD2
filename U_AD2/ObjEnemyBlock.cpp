@@ -80,8 +80,8 @@ void CObjEnemyBlock::Action()
 	m_py += m_vy;
 
 	//次のブロックを出す
-	CObjEnemyBlock* c = new CObjEnemyBlock();
-	Objs::InsertObj(c, OBJ_ENEMY_BLOCK, 1);
+	//CObjEnemyBlock* c = new CObjEnemyBlock();
+	//Objs::InsertObj(c, OBJ_ENEMY_BLOCK, 1);
 
 
 }
