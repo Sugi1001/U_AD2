@@ -16,9 +16,9 @@ using namespace GameL;
 void CObjHero::Init()
 {
 
-	m_px = 1.0f; //位置
+	m_px = 0.0f; //位置
 	m_py = 0.0f;
-	m_vx = 1.0f;//移動ベクトル
+	m_vx = 0.0f;//移動ベクトル
 	m_vy = 0.0f;
 	m_posture =1.0f; //右向き0.0f　左向き1.0f
 
@@ -160,7 +160,7 @@ void CObjHero::Action()
 	m_py += m_vy;
 
 	//主人公の位置X（ｍ＿ｘ）+主人公機の幅分がX軸方向に領域外を認識
-	if (m_px + 20.0f > 800.0f)
+	if (m_px + 30.0f > 500.0f)
 	{
 		m_px = 800.0f - 20.0f;
 	}
@@ -187,14 +187,14 @@ void CObjHero::Draw()
 
 	//表示位置の設定
 	dst.m_top = 0.0f+m_py;
-	dst.m_left =(     40.0f*m_posture)+m_px;
-	dst.m_right =( 64  -   50.0f*m_posture)+m_px;
+	dst.m_left =(     0.0f*m_posture)+m_px;
+	dst.m_right =( 60  -   50.0f*m_posture)+m_px;
 	dst.m_bottom = 64.0 + m_py;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (40.0f * m_posture) + m_px;
-	dst.m_right = (64 - 50.0f * m_posture) + m_px;
+	dst.m_right = (60 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
 
 	//描画
