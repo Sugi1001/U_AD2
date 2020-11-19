@@ -140,7 +140,7 @@ void CObjStageBlock::Action()
 			}
 		}
 	}
-	
+
 	//テスト　交差取得
 	//float a, b;
 	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
