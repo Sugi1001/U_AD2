@@ -209,7 +209,7 @@ void CObjStageBlock::Draw()
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(2, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
-					
+					//Scene::SetScene((new CSceneGameClear()));
 				}
 				else if (m_map[i][j] == 4)
 				{
@@ -219,7 +219,7 @@ void CObjStageBlock::Draw()
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(50, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);//•ó
-                    //Scene::SetScene((new CSceneGameClear()));
+                   
 				}
 				else if (m_map[i][j] == 5)
 				{
