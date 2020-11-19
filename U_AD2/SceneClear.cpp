@@ -29,7 +29,10 @@ CSceneClear::~CSceneClear()
 //初期化メソッド
 void CSceneClear::InitScene()
 {
-	Font::SetStrTex(L"おめでとう！");
+	Font::SetStrTex(L"クリアおめでとう！！");
+	Font::SetStrTex(L"これで主人公の借金もなくなることだろう");
+	Font::SetStrTex(L"ただし、借金が増えないとも言ってない");
+	Font::SetStrTex(L"最後に一言いうとしたらプレイしてくれてありがとうございました");
 
 	//音楽情報の読み取り
 	//Audio::LoadAudio(0, L"BGMGameClear.wav", BACK_MUSIC);
