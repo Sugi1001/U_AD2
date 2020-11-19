@@ -73,20 +73,16 @@ void CObjHero::Action()
 	//};
 
 	//オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
-	//for (int i = 0; i < 3; i++)
-	//{
-		//if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
-		//{
-			//m_hp -= 1;
-		//}
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 3; j < 1; j++);
+	}
 
-	//}
-
-	//HPが0になったら破棄
+	////HPが0になったら破棄
 	//if (m_hp <= 0)
 	//{
-		//this->SetStatus(false);
-		//Hits::DeleteHitBox(this);
+	//	this->SetStatus(false);
+	//	Hits::DeleteHitBox(this);
 	//}
 
 
