@@ -227,10 +227,16 @@ void CObjStageBlock::Draw()
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(20, &src, &dst, c, 0.0f);
+                    //–€ŽC
+					//m_vx += +(m_vx * 0.098);
+
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
-				//–€ŽC
-					//m_vx += +(m_vx * 0.098);
+				else
+				{
+					BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				
 			}
 		}
 	}
