@@ -178,6 +178,7 @@
     <ClInclude Include="ObjGameClear.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjItem.h" />
+    <ClInclude Include="ObjNukalmi.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneClear.h" />
     <ClInclude Include="SceneGameOver.h" />

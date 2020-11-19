@@ -182,6 +182,9 @@
     <ClInclude Include="SceneClear.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="ObjNukalmi.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="主人公.png">
