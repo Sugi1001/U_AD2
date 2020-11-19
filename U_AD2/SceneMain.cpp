@@ -38,7 +38,7 @@ void CSceneMain::InitScene()
 	p = Save::ExternalDataOpen(L"Stage500.csv", &size);//外部データ読み込み
 
 	//int map[10][150];
-	int count = 1;
+	//int count = 1;
 	//for (int i = 0; i < 10; i++)
 	int map[10][500];
 	int count = 1;
