@@ -38,6 +38,9 @@ private:
 	bool m_hit_down;
 	bool m_hit_left;
 	bool m_hit_right;
+	int m_stop_map_y;//動いてない時のマップ位置X番号
+	int m_stop_map_x;//動いてない時のマップ位置Y番号
+
 
 };
 
