@@ -35,18 +35,17 @@ void CSceneMain::InitScene()
 	//外部データの読み込み（ステージ情報）
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
-	p = Save::ExternalDataOpen(L"test.csv", &size);//外部データ読み込み
-	p = Save::ExternalDataOpen(L"stag.csv", &size);//外部データ読み込み
+	p = Save::ExternalDataOpen(L"Stage500.csv", &size);//外部データ読み込み
 
-	int map[10][150];
-	int count = 1;
-	for (int i = 0; i < 10; i++)
-	int map[10][106];
+	//int map[10][150];
+	//int count = 1;
+	//for (int i = 0; i < 10; i++)
+	int map[10][500];
 	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 150; j++)
-		for (int j = 0; j < 106; j++)
+		//for (int j = 0; j < 150; j++)
+		for (int j = 0; j < 500; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);
@@ -57,25 +56,20 @@ void CSceneMain::InitScene()
 	}
 
 
-	////グラフィック読み込み
+	//グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
-
-	////Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
+	Draw::LoadImage(L"taitle.png", 10, TEX_SIZE_512);
 	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
-	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
-	//Draw::LoadImage(L"主人公.png", 10, TEX_SIZE_512);
-
-	//Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
-	//Draw::LoadImage(L"主人公（移動　逆）.png", 2, TEX_SIZE_512);
-
-	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
-	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
-	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
-
-
-	
-
+	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);
+	Draw::LoadImage(L"毒.png", 4, TEX_SIZE_512);
+	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
+	Draw::LoadImage(L"こうもり.png", 6, TEX_SIZE_512);
+	Draw::LoadImage(L"こうもり（移動）.png", 7, TEX_SIZE_512);
+	Draw::LoadImage(L"とげ１.png", 8, TEX_SIZE_512);
+	Draw::LoadImage(L"岩2.png", 9, TEX_SIZE_512);
+	Draw::LoadImage(L"氷床.png", 20, TEX_SIZE_512);
+	Draw::LoadImage(L"宝箱（重要アイテム）.png", 50, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero();
@@ -85,9 +79,19 @@ void CSceneMain::InitScene()
 	CObjStageBlock* objb = new CObjStageBlock(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
+	//棘オブジェクト作成
+	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
+	Objs::InsertObj(objt, OBJ_TOGE, 8);
+
+	//岩2オブジェクト作成
+	CObjEnemyBlock* objeb = new CObjEnemyBlock();
+	Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 17);
+
+	//こうもりオブジェクト作成
+	//CObjEnemy* obj_enemy = new CObjEnemy();
+	//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 6);
 
    
-
 }
 
 //実行中メソッド
