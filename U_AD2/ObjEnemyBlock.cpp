@@ -98,8 +98,8 @@ void CObjEnemyBlock::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f;
 	src.m_left = 0.0f;
-	src.m_right = src.m_left + 64.0f;
-	src.m_bottom = src.m_top + 64.0f;
+	src.m_right = src.m_left + 50.0f;
+	src.m_bottom = src.m_top + 30.0f;
 
 
 	//表示位置の設定
@@ -117,5 +117,5 @@ void CObjEnemyBlock::Draw()
 
 
 	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
-	Draw::Draw(3, &src, &dst, c, 0.0f);
+	Draw::Draw(9, &src, &dst, c, 0.0f);
 }
