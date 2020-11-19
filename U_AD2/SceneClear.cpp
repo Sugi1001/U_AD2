@@ -41,7 +41,7 @@ void CSceneClear::InitScene()
 
 	//クリアオブジェクト作成
 	//ObjGameClear* obj = new ObjGameClear();
-	//Objs::InsertObj(obj, OBJ_CLEAR, 10);
+	//Objs::InsertObj(obj, OBJ_CLEAR, 12);
 }
 
 //実行中メソッド
