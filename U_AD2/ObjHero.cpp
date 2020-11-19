@@ -143,83 +143,10 @@ void CObjHero::Draw()
 
 
 
-	//src.m_top = 0.0f;
-	//src.m_left = 0.0f; //+ AniData[m_ani_frame] * 64;
-	//src.m_right = 64.0f + AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
-//	src.m_top = 64.0f;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 64;
-//	src.m_left = 64.0f+ AniData[m_ani_frame] * 64
-//	src.m_top = 1.0f;
-//	src.m_left = 50.0f+ AniData[m_ani_frame] * 50;
-//	src.m_right = 64.0f+AniData[m_ani_frame] * 30;
-//	src.m_left = 64.0f;//+ AniData[m_ani_frame] * 64;
-	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//	src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-	//	src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
-		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-		//src.m_left = 0.0f;//+ AniData[m_ani_frame] * 64;
-		//src.m_right = 64.0f;//+AniData[m_ani_frame] * 64;
-	//src.m_bottom = 64.0f;
 
 	//ï\é¶à íuÇÃê›íË
-	dst.m_top = 0.0f + m_py;
-	dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_py;
-	dst.m_bottom = 64-0.1f + m_px;
-	/*dst.m_left = (64.0f * m_posture); 64.0f + m_px;
-	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;*/
-	dst.m_bottom = 64-0.1f + m_px;
-	dst.m_bottom = 64-0.1f + m_px;
-	dst.m_left = (64.0f * m_posture);64.0f +m_px;
-	dst.m_right = (64 - 64.0f * m_posture); 64.0f + m_px;
-	/*dst.m_left = (64 * m_posture) + m_px;
-	dst.m_right = (64 - 12.0f * m_posture) + m_px*/;
-	dst.m_bottom = 64-0.1f + m_py;
-	dst.m_left =( 64.0f*m_posture)+ m_px;
-	dst.m_right = (64-64.0f*m_posture)64.0f+m_px;
-	dst.m_bottom = 64-0.1f + m_py;
-	dst.m_bottom = 64-0.1f + m_py;
-	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	/*dst.m_bottom = 64-0.1f + m_py;
-	dst.m_bottom = 64-0.1f + m_py;*/
-	//dst.m_left =/*(     64.0f*m_posture) */+ m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	//dst.m_bottom = 64-0.1f + m_py;
-	/*dst.m_left =(     64.0f*m_posture) + m_px;
-	dst.m_right = (64-64.0f*m_posture)+64.0f+m_px;*/
-	dst.m_left =(     64.0f*m_posture) + m_px;
-	dst.m_right = (64 - 64.0f*m_posture)+m_px;
-	//dst.m_left =/*(     64.0f*m_posture) */64.0f + m_px;
-	//dst.m_right = /*(64-64.0f*m_posture)*/64.0f+m_px;
-	//dst.m_left =/*(     64.0f*m_posture)*/ + m_px;
-	//dst.m_right = (64.0f*m_posture)+m_px;
-	//dst.m_bottom = 64.0f + m_py;
-
-
-
-
-
-
-
-
-
-	//dst.m_top = 0.0f + m_py;
-	//dst.m_left = (64 * m_posture) + m_px;
-	//dst.m_right = (64 - 64.0f * m_posture) + m_px;
-	//dst.m_bottom = 64.0f + m_py;
-	//dst.m_top = 1.0f + m_py;
-	/*dst.m_top = 0.0f + m_py;
-	dst.m_left = (64.0f * m_posture) + m_px;
-	dst.m_right =  (64 + 64.0f * m_posture) + m_py;
-	dst.m_bottom = 64.0f +m_py;
-	dst.m_top = 40.0f + m_py;
-	dst.m_left = (30.0f * m_posture) + m_px;
-	dst.m_right = (40 + 64.0f * m_posture) + m_py;
-	dst.m_bottom = 30.0f + m_py;*/
+	
+	
 
 	////ï`âÊ
 	//Draw::Draw(1, &src, &dst, c, 0.0f);
