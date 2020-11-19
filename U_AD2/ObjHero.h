@@ -19,6 +19,7 @@ public:
 	float GetVY() { return m_vy; }
 	float GetVX() { return m_vx; }
 	int GetBT() { return m_block_type; }
+	
 	//float GetScroll() { return m_scroll; }
 
 	void SetX(float x) { m_px = x; }
@@ -26,6 +27,8 @@ public:
 	void SetVY(float vy) { m_vy = vy; }
 	void SetVX(float vx) { m_vx = vx; }
 	void SetBT(int t) { m_block_type = t; }
+	
+
 
 	void SetUp(bool b) { m_hit_up = b; }
 	void SetDown(bool b) { m_hit_down = b; }
@@ -42,6 +45,12 @@ private:
 	float m_vx; //移動ベクトル
 	float m_vy;
 	float m_posture; //姿勢
+
+	float m_x;
+	float m_y; //HitBox用の位置
+
+	float m_hp; //主人公のHP //主人公のひっとぽいんと
+	float hit;
 
 	float m_scroll;
 	
