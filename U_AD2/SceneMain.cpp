@@ -122,6 +122,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"とげ１.png", 8, TEX_SIZE_512);
 	Draw::LoadImage(L"岩2.png", 3, TEX_SIZE_512);
 	Draw::LoadImage(L"宝箱（重要アイテム）.png", 50, TEX_SIZE_512);
+	Draw::LoadImage(L"氷床.png", 20, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
