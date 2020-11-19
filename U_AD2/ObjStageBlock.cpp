@@ -29,7 +29,7 @@ CObjStageBlock::CObjStageBlock(int map[10][106])
 			m_map[i][j] = map[i][j];
 		}
 	}
-	memcpy(m_map,map, sizeof(int)*(10 * 106));
+	memcpy(m_map,map, sizeof(int)*(10 * 150));
 	
 	};
 	
