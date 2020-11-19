@@ -69,6 +69,10 @@ void CObjStageBlock::Action()
 		hero->SetX(80);//主人公はラインを超えないようにする
 		SetScroll(hero->GetVX());
 		m_scroll += hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
+		
+		
+		//場外に出たらリスタート
+		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
 
 		
 	}
