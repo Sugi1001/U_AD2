@@ -18,6 +18,7 @@ enum OBJ_NAME
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
 	OBJ_CLEAR,
+	OBJ_NUKALMI,
 	//OBJ_BACKGROUND,
 };
 //------------------------------------------------
@@ -67,6 +68,7 @@ struct UserData
 #include "ObjEnemyBlock.h"
 
 #include  "CObjToge.h"
+#include  "ObjNukalmi.h"
 //#include "ObjItem.h"
 //#include"ObjEnemy.h"
 
@@ -74,6 +76,7 @@ struct UserData
 #include "ObjTitle.h"
 #include"ObjGameOver.h"
 #include"ObjGameClear.h"
+
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
