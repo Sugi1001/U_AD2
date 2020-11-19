@@ -70,6 +70,8 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"岩2.png", 9, TEX_SIZE_512);
 	Draw::LoadImage(L"氷床.png", 20, TEX_SIZE_512);
 	Draw::LoadImage(L"宝箱（重要アイテム）.png", 50, TEX_SIZE_512);
+	Draw::LoadImage(L"ぬかるみ.png", 30, TEX_SIZE_512);
+
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero();
