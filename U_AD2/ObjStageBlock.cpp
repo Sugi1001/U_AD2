@@ -136,7 +136,7 @@ void CObjStageBlock::Action()
 			}
 			else if (m_map[i][j] == 3)
 			{
-				//Scene::SetScene((new CSceneGameClear()));
+				Scene::SetScene((new CSceneClear()));
 			}
 		}
 	}
