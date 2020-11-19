@@ -40,8 +40,8 @@ void CSceneClear::InitScene()
 	//Audio::Start(0); //音楽スタート
 
 	//クリアオブジェクト作成
-	//ObjGameClear* obj = new ObjGameClear();
-	//Objs::InsertObj(obj, OBJ_CLEAR, 12);
+	CObjGameClear* obj = new CObjGameClear();
+	Objs::InsertObj(obj, OBJ_CLEAR, 1);
 }
 
 //実行中メソッド
