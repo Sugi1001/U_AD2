@@ -233,7 +233,7 @@ void CObjStageBlock::Draw()
 
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
-				else if (m_map[i][j] == 5)
+				else if (m_map[i][j] == 6)
 				{
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
@@ -241,6 +241,10 @@ void CObjStageBlock::Draw()
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(8, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				else
+				{
+					BlockDraw(320.0f, 0.0f, &dst, c);
 				}
 				
 			}
