@@ -199,9 +199,9 @@ void CObjStageBlock::Action()
 		}
 	}
 
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
-			if (m_map[i][j] >= 7) {
+			if (m_map[i][j] >= 6) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -254,7 +254,7 @@ void CObjStageBlock::Action()
 				}
 			}
 		}
-	}
+	}*/
 		
 	
 
