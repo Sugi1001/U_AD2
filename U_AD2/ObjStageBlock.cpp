@@ -606,7 +606,7 @@ void CObjStageBlock::Draw()
 	   if (SGN(w1) == SGN(w2))
 		   return false;//交点が外
 
-	   //交点を返す
+	   //杉下を返す
 	   *out_px = px; *out_py;
 
 	   return true;
@@ -646,7 +646,7 @@ void CObjStageBlock::Draw()
 					   //交点チェック
 					   if (b == true)
 					   {
-						   //交点との距離を求める
+						   //杉下との距離を求める、だるいから
 						   l = sqrt((px - x)*(px - x) + (py - y)*(py - y));
 
 						   //見つけた交差の中でも最も距離が短いモノを探す
