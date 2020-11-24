@@ -199,7 +199,7 @@ void CObjStageBlock::Action()
 		}
 	}
 
-	/*for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] >= 6) {
 				float x = j * 64.0f;
@@ -231,16 +231,18 @@ void CObjStageBlock::Action()
 							if (m_map[i][j] >= 2)
 								hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);
+                            Scene::SetScene((new CSceneGameOver()));
 						}
 						if (r > 135 && r < 225) {
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Scene::SetScene((new CSceneClear()));
+							
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
 							hero->SetY(y + 64.0f);
+                            
 							if (hero->GetVY() < 1) {
 								hero->SetVY(0.0f);
 							}
@@ -254,7 +256,7 @@ void CObjStageBlock::Action()
 				}
 			}
 		}
-	}*/
+	}
 		
 	
 

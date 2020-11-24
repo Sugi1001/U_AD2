@@ -153,7 +153,7 @@ void CObjHero::Action()
 		);*/
 
 
-	////ž™‚ªŽålŒö‚ÉÚG‚µ‚½‚çŽålŒö‚ÌHP‚ðŒ¸‚ç‚·
+	//ž™‚ªŽålŒö‚ÉÚG‚µ‚½‚çŽålŒö‚ÌHP‚ðŒ¸‚ç‚·
 	//	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
 	//	{
 	//		m_hp -= 2;
