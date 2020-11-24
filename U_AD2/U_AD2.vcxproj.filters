@@ -22,6 +22,12 @@
     <Filter Include="ソース ファイル\Clear">
       <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Hero">
+      <UniqueIdentifier>{353f4933-e220-4d2d-a7ef-b7f359951917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Sisutemu">
+      <UniqueIdentifier>{d0c4d1e9-a215-47ff-9123-e3ccc2710503}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -63,13 +69,7 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjHero.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjEnemyBlock.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="CObjToge.cpp">
@@ -93,9 +93,6 @@
     <ClCompile Include="SceneTitle.cpp">
       <Filter>ソース ファイル\title over</Filter>
     </ClCompile>
-    <ClCompile Include="UtilityModule.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjNukalmi.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -104,6 +101,15 @@
     </ClCompile>
     <ClCompile Include="ObjGameClear.cpp">
       <Filter>ソース ファイル\Clear</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjHero.cpp">
+      <Filter>ソース ファイル\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain.cpp">
+      <Filter>ソース ファイル\Sisutemu</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityModule.cpp">
+      <Filter>ソース ファイル\Sisutemu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -146,13 +152,7 @@
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjHero.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjEnemyBlock.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMain.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="CObjToge.h">
@@ -176,9 +176,6 @@
     <ClInclude Include="SceneTitle.h">
       <Filter>ソース ファイル\title over</Filter>
     </ClInclude>
-    <ClInclude Include="UtilityModule.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjNukalmi.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
@@ -187,6 +184,15 @@
     </ClInclude>
     <ClInclude Include="ObjGameClear.h">
       <Filter>ソース ファイル\Clear</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjHero.h">
+      <Filter>ソース ファイル\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain.h">
+      <Filter>ソース ファイル\Sisutemu</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityModule.h">
+      <Filter>ソース ファイル\Sisutemu</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
