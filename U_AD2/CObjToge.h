@@ -17,8 +17,16 @@ public:
 private:
 	float m_px;   //位置
 	float m_py;
-	float m_y;
 	float m_x;
+	float m_y;
+	float m_vx;
+	float m_vy;
+	float m_posture;  //姿勢
+
+	int m_ani_time;
+	int m_ani_frame;
+
+	
 
 
 	//blockとの衝突確認用

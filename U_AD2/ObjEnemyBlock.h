@@ -23,7 +23,9 @@ private:
 	float m_posture;
 	float m_x;
 	float m_y;
-	int m_block_type;
+	/*int m_block_type;*/
+	int GetMap(int x, int y);
+	void SetMap(int x, int y, int id);
 
 	int m_ani_time;  //アニメーションフレーム動作間隔
 	int m_ani_frame; //描画フレーム
@@ -36,6 +38,9 @@ private:
 	bool m_hit_down;
 	bool m_hit_left;
 	bool m_hit_right;
+	int m_stop_map_y;//動いてない時のマップ位置X番号
+	int m_stop_map_x;//動いてない時のマップ位置Y番号
+
 
 };
 

@@ -47,17 +47,17 @@ void CObjStageBlock::Init()
 //アクション
 void CObjStageBlock::Action()
 {
-	
-	
 
-	
+
+
+
 
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
-	
+
 	//主人公衝突判定
 	//hero->SetUp(false);
 	//hero->SetDown(false);
@@ -70,18 +70,22 @@ void CObjStageBlock::Action()
 		SetScroll(hero->GetVX());
 		m_scroll += hero->GetScroll();//主人公が本来動くべき分の値をm_scrollに加える
 
-		
+
+		//場外に出たらリスタート
+		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
+
+
 	}
 	//前方スクロールライン
-	if (hx > 800){
+	if (hx > 800) {
 		hero->SetX(800);
-		SetScroll((hero->GetVX())-(hero->GetVX()*2));
-		m_scroll -= hero->GetScroll()*2;
+		SetScroll((hero->GetVX()) - (hero->GetVX() * 2));
+		m_scroll -= hero->GetScroll() * 2;
 
-               
+
 
 	}
-	
+
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] > 0) {
@@ -119,6 +123,7 @@ void CObjStageBlock::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
+							//Scene::SetScene((new CSceneClear()));
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
@@ -130,13 +135,129 @@ void CObjStageBlock::Action()
 					}
 				}
 			}
-			else if (m_map[i][j] == 3)
+			else
 			{
 
 			}
 		}
 	}
+
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 500; j++) {
+			if (m_map[i][j] >= 7) {
+				float x = j * 64.0f;
+				float y = i * 64.0f;
+
+				if ((hx + (-m_scroll) + 64.0f > x) && (hx + (-m_scroll) < x + 64.0f) && (hy + 64.0f > y) && (hy < y + 64.0f)) {
+					float vx = (hx + (-m_scroll)) - x;
+					float vy = hy - y;
+
+					float len = sqrt(vx * vx + vy * vy);
+
+					float r = atan2(vy, vx);
+					r = r * 180.0f / 3.14f;
+
+					if (r <= 0.0f)
+						r = abs(r);
+					else
+						r = 360.0f - abs(r);
+
+					if (len < 88.0f) {
+						if ((r < 45 && r > 0) || r > 315) {
+							hero->SetRight(true);
+							hero->SetX(x + 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+						}
+						if (r > 45 && r < 135) {
+							hero->SetDown(true);
+							hero->SetY(y - 64.0f);
+							if (m_map[i][j] >= 2)
+								hero->SetBT(m_map[i][j]);
+							hero->SetVY(0.0f);
+						}
+						if (r > 135 && r < 225) {
+							hero->SetLeft(true);
+							hero->SetX(x - 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+							Scene::SetScene((new CSceneClear()));
+						}
+						if (r > 255 && r < 315) {
+							hero->SetUp(true);
+							hero->SetY(y + 64.0f);
+							if (hero->GetVY() < 1) {
+								hero->SetVY(0.0f);
+							}
+						}
+					}
+				}
+
+				else
+				{
+
+				}
+			}
+		}
+	}
+
+	/*for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 500; j++) {
+			if (m_map[i][j] >= 6) {
+				float x = j * 64.0f;
+				float y = i * 64.0f;
+
+				if ((hx + (-m_scroll) + 64.0f > x) && (hx + (-m_scroll) < x + 64.0f) && (hy + 64.0f > y) && (hy < y + 64.0f)) {
+					float vx = (hx + (-m_scroll)) - x;
+					float vy = hy - y;
+
+					float len = sqrt(vx * vx + vy * vy);
+
+					float r = atan2(vy, vx);
+					r = r * 180.0f / 3.14f;
+
+					if (r <= 0.0f)
+						r = abs(r);
+					else
+						r = 360.0f - abs(r);
+
+					if (len < 88.0f) {
+						if ((r < 45 && r > 0) || r > 315) {
+							hero->SetRight(true);
+							hero->SetX(x + 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+						}
+						if (r > 45 && r < 135) {
+							hero->SetDown(true);
+							hero->SetY(y - 64.0f);
+							if (m_map[i][j] >= 2)
+								hero->SetBT(m_map[i][j]);
+							hero->SetVY(0.0f);
+						}
+						if (r > 135 && r < 225) {
+							hero->SetLeft(true);
+							hero->SetX(x - 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+							Scene::SetScene((new CSceneClear()));
+						}
+						if (r > 255 && r < 315) {
+							hero->SetUp(true);
+							hero->SetY(y + 64.0f);
+							if (hero->GetVY() < 1) {
+								hero->SetVY(0.0f);
+							}
+						}
+					}
+				}
+
+				else
+				{
+
+				}
+			}
+		}
+	}*/
+		
 	
+
 	//テスト　交差取得
 	//float a, b;
 	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
@@ -177,7 +298,7 @@ void CObjStageBlock::Draw()
 //src.m_right=src.m_left+64.0f;
 //src.m_bottom=64.0f;
 
-    m_scroll-=1.0f;//スクロール実験用
+    m_scroll-=2.0f;//スクロール実験用
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -194,25 +315,74 @@ void CObjStageBlock::Draw()
 				if (m_map[i][j]==2)
 				{
 					//スタートブロック
-					BlockDraw(320.0f + 64.0f, 0.0f, &dst, c);
+					src.m_top =0.0f;
+                    src.m_left=320.0f+64.0;
+                    src.m_right=src.m_left+64.0f;
+                    src.m_bottom=src.m_top+64.0f;
+					Draw::Draw(2,&src,&dst,c,0.0f);
 				}
 				else if (m_map[i][j] == 3)
 				{
 					//ゴールブロック
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
-					//Scene::SetScene(new CSceneGameClear());
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(2, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
+					//Scene::SetScene((new CSceneClear()));
+					/*if (ObjHero != nullptr)
+					{
+						Scene::SetScene((new CSceneClear()));
+					};*/
 				}
 				else if (m_map[i][j] == 4)
 				{
-					BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);//宝
-				
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(30, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);//宝
+					
+				}
+				else if (m_map[i][j] == 5)
+				{
+					//	氷
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(20, &src, &dst, c, 0.0f);
+                    //摩擦
+					//m_vx += +(m_vx * 0.098);
+
+					//BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				else if (m_map[i][j] == 6)
+				{
+					//棘
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(8, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				else if(m_map[i][j] == 7)
+				{
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(50, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
 				else
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
 				}
-				//摩擦
-					//m_vx += +(m_vx * 0.098);
+				
 			}
 		}
 	}
@@ -282,7 +452,7 @@ void CObjStageBlock::Draw()
 				   float bx = j * 64.0f;
 				   float by = i * 64.0f;
 				   //スクロールの影響
-				   float scroll = scroll_on ? m_scroll : 0;
+				   float scroll = scroll_on ? m_scroll :0;
 
 				   //主人公とブロックの当たり判定
 				   if (( *x + (-scroll) + 64.0f > bx) && (*x + (-scroll) < bx + 64.0f) && (*y + 64.0f > by) && (*y < by + 64.0f))

@@ -29,7 +29,12 @@ CSceneClear::~CSceneClear()
 //初期化メソッド
 void CSceneClear::InitScene()
 {
-	Font::SetStrTex(L"おめでとう！");
+	Font::SetStrTex(L"クリアおめでとう！！");
+	Font::SetStrTex(L"これで主人公の借金もなくなることだろう");
+	Font::SetStrTex(L"ただし、借金が増えないとも言ってない");
+	Font::SetStrTex(L"主人公のぐ～たら生活は続いていけるのだろうか!!");
+	Font::SetStrTex(L"最後に一言いうとしたらプレイしてくれてありがとうございました");
+
 
 	//音楽情報の読み取り
 	//Audio::LoadAudio(0, L"BGMGameClear.wav", BACK_MUSIC);
@@ -40,8 +45,8 @@ void CSceneClear::InitScene()
 	//Audio::Start(0); //音楽スタート
 
 	//クリアオブジェクト作成
-	//ObjGameClear* obj = new ObjGameClear();
-	//Objs::InsertObj(obj, OBJ_CLEAR, 10);
+	CObjClear* obj = new CObjClear();
+	Objs::InsertObj(obj, OBJ_CLEAR, 1);
 }
 
 //実行中メソッド
