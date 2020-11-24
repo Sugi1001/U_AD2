@@ -29,9 +29,12 @@ CSceneGameOver::~CSceneGameOver()
 void CSceneGameOver::InitScene()
 {
 	//出力させる文字のグラフィックを作成
-	Font::SetStrTex(L"GameOver");
-	Font::SetStrTex(L"がんばれ");
-	Font::SetStrTex(L"NEXT_CHALLENGE:ENTER_KEY");
+	Font::SetStrTex(L"GameOver　ゲ～ムオ～バ～");
+	Font::SetStrTex(L"あきらめていいんですか?");
+	Font::SetStrTex(L"燃え尽きすぎてますの～?w");
+	Font::SetStrTex(L"タイトルから出直してきてくださいまし");
+	Font::SetStrTex(L"ENTER_KEYでタイトルに戻るよ");
+	Font::SetStrTex(L"何度もクリアできない場合は落ち着くために休憩をはさみましょう");
 
 
 	//ゲームオーバーオブジェクト作成

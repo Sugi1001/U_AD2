@@ -34,8 +34,25 @@ void CObjTitle::Action()
 //ドロー
 void CObjTitle::Draw()
 {
+	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	Font::StrDraw(L"アンダーアドベンチャー", 230, 250, 32, c);
 
-	Font::StrDraw(L"GameStart:エンター押してね!", 200, 400, 32, c);
+	
+	Font::StrDraw(L"アンダーアドベンチャー", 230, 250, 32, c);
+	Font::StrDraw(L"エンタキー押してくださいお願いします(*-*)", 100, 300, 32, c);
+	
+	RECT_F src;
+	RECT_F dst;
+
+	src.m_top = 256.0f;
+	src.m_left = 0.0f;
+	src.m_right = 512.0f;
+	src.m_bottom = 512.0f;
+
+	src.m_top = 0.0f;
+	src.m_left = 0.0f;
+	src.m_right = 800.0f;
+	src.m_bottom = 600.0f;
+
+	Draw::Draw(10, &src,&dst,c,0.0f);
 }

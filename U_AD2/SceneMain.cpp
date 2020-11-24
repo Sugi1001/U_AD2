@@ -102,10 +102,10 @@ void CSceneMain::InitScene()
 
 	////グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
-	Draw::LoadImage(L"taitle.png", 0, TEX_SIZE_512);
+	Draw::LoadImage(L"taitle.png", 10, TEX_SIZE_512);
 
 	//Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
-	Draw::LoadImage(L"主人公 (移動 逆) .png", 1, TEX_SIZE_512);
+	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 	  //Draw::LoadImage(L"主人公（移動 逆) .png", 1, TEX_SIZE_512);
    //Draw::LoadImage(L"主人公.png", 1, TEX_SIZE_512);
 
@@ -119,6 +119,9 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
 	Draw::LoadImage(L"こうもり.png", 6, TEX_SIZE_512);
 	Draw::LoadImage(L"こうもり（移動）.png", 7, TEX_SIZE_512);
+	Draw::LoadImage(L"とげ1.png", 8, TEX_SIZE_512);
+	Draw::LoadImage(L"岩2.png", 10, TEX_SIZE_512);
+	Draw::LoadImage(L"宝箱（重要アイテム）.png", 50, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	//Draw::LoadImage(L"地面.png", 0, TEX_SIZE_512);
 
@@ -136,12 +139,17 @@ void CSceneMain::InitScene()
 
 	//棘オブジェクト作成
 	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
-	Objs::InsertObj(objt, OBJ_TOGE, 4);
+	Objs::InsertObj(objt, OBJ_TOGE, 8);
+
+	//岩2オブジェクト作成
+	CObjEnemyBlock* objeb = new CObjEnemyBlock();
+	Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 17);
 
 	
-
+	//タイトル背景オブジェクト作成
+	//CObjTitle* back = new CObjTitle();
+	//Objs::InsertObj(back, OBJ_TITLE, 10);
    
-
 }
 
 //実行中メソッド

@@ -14,7 +14,10 @@ using namespace GameL;
 //イニシャライズ
 void CObjToge::Init()
 {
-  
+	m_px;
+	m_py;
+	m_x;
+	m_y;
 	//マップ情報
 	////当たり判定用のHitBoxの作成
 	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_TOGE, 4);
@@ -32,8 +35,8 @@ void CObjToge::Action()
 	float hy = hero->GetY();*/
 
 	//HitBoxの内容を更新
-	CHitBox* Hit = Hits::GetHitBox(this);
-	Hit->SetPos(m_x, m_y);
+	//CHitBox* Hit = Hits::GetHitBox(this);
+	//Hit->SetPos(m_x, m_y);
 
 
 	////HitBoxの位置の変更
@@ -59,18 +62,23 @@ void CObjToge::Draw()
 
 	//切り取り位置の設定
 	src.m_top = 0.0f;
-	src.m_left = 126.0f;
-	src.m_right = 96.0f;
-	src.m_bottom = 32.0f;
+	src.m_left = 0.0f;
+	src.m_right = 64.0f;
+	src.m_bottom = 64.0f;
+
+	
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_y;
-	dst.m_left = 0.0f + m_x;
+	dst.m_top = -34.0f + m_py;
+	dst.m_left = -34.0f + m_px;
 	dst.m_right = 32.0f + m_x;
 	dst.m_bottom = 32.0f + m_y;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(4, &src, &dst, c, 0.0f);
+	Draw::Draw(8, &src, &dst, c,0.0f);
+
+
+
 
 
 }
