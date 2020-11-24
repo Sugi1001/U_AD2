@@ -146,14 +146,14 @@ void CObjHero::Action()
 	);
 
 	//ぬかるみとの当たり判定実行
-	CObjNukalmi* pb = (CObjNukalmi*) Objs::GetObj(OBJ_NUKALMI);
+	/*CObjNukalmi* pb = (CObjNukalmi*) Objs::GetObj(OBJ_NUKALMI);
 	pb->BlockHit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
-		);
+		);*/
 
 
-	////棘が主人公に接触したら主人公のHPを減らす
+	//棘が主人公に接触したら主人公のHPを減らす
 	//	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
 	//	{
 	//		m_hp -= 2;
