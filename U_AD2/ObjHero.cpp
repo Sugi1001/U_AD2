@@ -146,11 +146,11 @@ void CObjHero::Action()
 	);
 
 	//‚Ê‚©‚é‚İ‚Æ‚Ì“–‚½‚è”»’èÀs
-	CObjNukalmi* pb = (CObjNukalmi*) Objs::GetObj(OBJ_NUKALMI);
+	/*CObjNukalmi* pb = (CObjNukalmi*) Objs::GetObj(OBJ_NUKALMI);
 	pb->BlockHit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
-		);
+		);*/
 
 
 	////™‚ªålŒö‚ÉÚG‚µ‚½‚çålŒö‚ÌHP‚ğŒ¸‚ç‚·
