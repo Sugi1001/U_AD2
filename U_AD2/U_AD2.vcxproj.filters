@@ -19,6 +19,9 @@
     <Filter Include="ソース ファイル\title over">
       <UniqueIdentifier>{47bfe6db-c4a9-4050-bd4e-ef7b0d98e336}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Clear">
+      <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -93,14 +96,14 @@
     <ClCompile Include="UtilityModule.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjGameClear.cpp">
+    <ClCompile Include="ObjNukalmi.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SceneClear.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Clear</Filter>
     </ClCompile>
-    <ClCompile Include="ObjNukalmi.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="ObjGameClear.cpp">
+      <Filter>ソース ファイル\Clear</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -176,14 +179,14 @@
     <ClInclude Include="UtilityModule.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjGameClear.h">
+    <ClInclude Include="ObjNukalmi.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneClear.h">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
-    <ClInclude Include="ObjNukalmi.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="ObjGameClear.h">
+      <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
