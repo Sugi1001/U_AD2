@@ -38,7 +38,7 @@ void CObjHero::Init()
 
 	m_block_type = 0;
 
-	//m_scroll +=2.0f;
+	m_scroll +=2.0f;
 
 }
 
