@@ -102,7 +102,9 @@ void CSceneMain::InitScene()
 	CObjTime* objti = new CObjTime();
 	Objs::InsertObj(objti, OBJ_TIME, 11);
 
-   
+	//タイトル作成
+	CObjTitle* objeo = new CObjTitle();
+	Objs::InsertObj(objeb, OBJ_TITLE, 10);
 }
 
 //実行中メソッド
