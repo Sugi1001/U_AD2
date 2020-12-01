@@ -22,7 +22,7 @@
     <Filter Include="ソース ファイル\Sisutemu">
       <UniqueIdentifier>{d0c4d1e9-a215-47ff-9123-e3ccc2710503}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\title over\stage">
+    <Filter Include="ソース ファイル\stage">
       <UniqueIdentifier>{84196e1a-d979-4133-af07-f610410a4307}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Hero\Clear">
@@ -79,7 +79,7 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjStageBlock.cpp">
-      <Filter>ソース ファイル\title over\stage</Filter>
+      <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
       <Filter>ソース ファイル\title over</Filter>
@@ -192,7 +192,7 @@
       <Filter>ソース ファイル\Sisutemu</Filter>
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
