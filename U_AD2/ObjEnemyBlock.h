@@ -23,6 +23,7 @@ private:
 	float m_posture;
 	float m_x;
 	float m_y;
+	float m_stop_flag;
 	/*int m_block_type;*/
 	int GetMap(int x, int y);
 	void SetMap(int x, int y, int id);
