@@ -33,6 +33,13 @@ CSceneMain::~CSceneMain()
 //初期化メソッド
 void CSceneMain::InitScene()
 {
+	//音楽情報の読み込み
+	Audio::LoadAudio(0, L"Stage.wav", BACK_MUSIC);
+
+	//ボリュームを1.5に戻す
+	float v = Audio::VolumeMaster(1.5);
+	Audio::Start(0); //音楽スタート
+
 	//Font作成
 	Font::SetStrTex(L"0123456789分秒");
 	//外部データの読み込み（ステージ情報）
