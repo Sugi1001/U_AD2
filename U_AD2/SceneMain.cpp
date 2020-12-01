@@ -8,6 +8,7 @@
 #include"GameL/DrawFont.h"
 #include"GameL/UserData.h"
 #include "ObjStageBlock.h"
+#include"GameL/Audio.h"
 
 
 //使用するネームスペース
