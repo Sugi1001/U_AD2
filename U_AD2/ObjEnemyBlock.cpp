@@ -60,6 +60,13 @@ void CObjEnemyBlock::Action()
 		}
 	}
 
+	//移動止まったら、動かないフラグを立てる
+	if (m_vy == OBJ_ENEMY_BLOCK && abs(m_vx) <= OBJ_ENEMY_BLOCK)
+	{
+		m_stop_flag = false;
+		obj->SetMap(m_stop_map_x, m_stop_map_y, 99);
+	}
+
 }
 
 //ドロー(CObjEnemy Blockのドロー)

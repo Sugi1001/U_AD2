@@ -102,7 +102,7 @@ void CSceneMain::InitScene()
 	CObjTime* objti = new CObjTime();
 	Objs::InsertObj(objti, OBJ_TIME, 11);
 
-   
+	
 }
 
 //実行中メソッド
