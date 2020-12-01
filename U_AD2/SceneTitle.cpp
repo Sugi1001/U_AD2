@@ -40,6 +40,10 @@ void CSceneTitle::InitScene()
 	CObjTitle*obj = new CObjTitle();//画像でんし
 	Objs::InsertObj(obj, OBJ_TITLE, 1);
 
+	//タイトル作成
+	CObjTitle* objeo = new CObjTitle();
+	Objs::InsertObj(objeo, OBJ_TITLE, 10);
+
 }
 
 //ゲームメイン実行メソッド
