@@ -38,7 +38,7 @@ void CObjHero::Init()
 
 	m_block_type = 0;
 
-	m_scroll = 0;
+	m_scroll +=2.0f;
 
 }
 
@@ -116,7 +116,7 @@ void CObjHero::Action()
 
 	else if (Input::GetVKey(VK_RIGHT) == true)
 	{
-		m_vx = -1.5f;
+		m_vx = -10.5f;
 		m_vx = +3.0f;
 		m_posture = 0.0f;
 		m_ani_time += 1;
@@ -201,8 +201,10 @@ void CObjHero::Draw()
 	dst.m_left = (40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
-
 	//•`‰æ
 	Draw::Draw(1, &src, &dst, c, 1.0f);
+
+    m_scroll += 2.0f;
+
 
 }
