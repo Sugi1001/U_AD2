@@ -204,7 +204,7 @@ void CObjHero::Draw()
 	//•`‰æ
 	Draw::Draw(1, &src, &dst, c, 1.0f);
 
-    m_scroll += 2.0f;
+    //m_scroll += 2.0f;
 
 
 }

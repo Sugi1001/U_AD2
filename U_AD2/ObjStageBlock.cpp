@@ -86,7 +86,10 @@ void CObjStageBlock::Action()
 
 
 	}
+	
+	
 
+	
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] > 0) {
@@ -106,7 +109,10 @@ void CObjStageBlock::Action()
 						r = abs(r);
 					else
 						r = 360.0f - abs(r);
-
+					if (m_map[i][j]>=128)
+					{
+						
+					}
 					if (len < 88.0f) {
 						if ((r < 45 && r > 0) || r > 315) {
 							hero->SetRight(true);
@@ -140,7 +146,8 @@ void CObjStageBlock::Action()
 
 			}
 		}
-	}
+	
+    }
 for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] == 6) {
@@ -280,7 +287,7 @@ for (int i = 0; i < 10; i++) {
 							hero->SetX(x + 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
 						}
-						if (r > 45 && r < 135) {
+						if (r > 45 && r < 130) {
 							hero->SetDown(true);
 							hero->SetY(y - 64.0f);
 							if (m_map[i][j] >= 2)
@@ -288,7 +295,7 @@ for (int i = 0; i < 10; i++) {
 							hero->SetVY(0.0f);
                             Scene::SetScene((new CSceneGameOver()));
 						}
-						if (r > 135 && r < 225) {
+						if (r > 130 && r < 225) {
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
@@ -312,7 +319,7 @@ for (int i = 0; i < 10; i++) {
 			}
 		}
 		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 500; j++) {
+			for (int j = 0; j < 128; j++) {
 				if (m_map[i][j] == 9) {
 					float x = j * 64.0f;
 					float y = i * 64.0f;
@@ -341,7 +348,7 @@ for (int i = 0; i < 10; i++) {
 							if (r > 45 && r < 135) {
 								hero->SetDown(true);
 								hero->SetY(y - 64.0f);
-								if (m_map[i][j] >= 2)
+								if (m_map[i][j] >= 9)
 									hero->SetBT(m_map[i][j]);
 								hero->SetVY(0.0f);
 							}
@@ -509,7 +516,7 @@ void CObjStageBlock::Draw()
 					src.m_left = 320.0f + 64.0;
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
-					Draw::Draw(50, &src, &dst, c, 0.0f);
+					Draw::Draw(2, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
 				else
