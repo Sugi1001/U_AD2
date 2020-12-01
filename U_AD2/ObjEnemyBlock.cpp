@@ -64,7 +64,7 @@ void CObjEnemyBlock::Action()
 	if (m_vy == OBJ_ENEMY_BLOCK && abs(m_vx) <= OBJ_ENEMY_BLOCK)
 	{
 		m_stop_flag = false;
-		obj->SetMap(m_stop_map_x, m_stop_map_y, 99);
+		//obj->SetMap(m_stop_map_x, m_stop_map_y, 99);
 	}
 
 }
