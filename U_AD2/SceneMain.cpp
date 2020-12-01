@@ -32,6 +32,8 @@ CSceneMain::~CSceneMain()
 //初期化メソッド
 void CSceneMain::InitScene()
 {
+	//Font作成
+	Font::SetStrTex(L"0123456789分秒");
 	//外部データの読み込み（ステージ情報）
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
@@ -95,6 +97,10 @@ void CSceneMain::InitScene()
 	//こうもりオブジェクト作成
 	//CObjEnemy* obj_enemy = new CObjEnemy();
 	//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 6);
+
+	//タイムオブジェクト作成
+	CObjTime* objti = new CObjTime();
+	Objs::InsertObj(objti, OBJ_TIME, 11);
 
    
 }

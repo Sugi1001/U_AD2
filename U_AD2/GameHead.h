@@ -19,6 +19,7 @@ enum OBJ_NAME
 	OBJ_GAME_OVER,
 	OBJ_CLEAR,
 	OBJ_NUKALMI,
+	OBJ_TIME,
 	//OBJ_BACKGROUND,
 };
 //------------------------------------------------
@@ -69,6 +70,7 @@ struct UserData
 
 #include  "CObjToge.h"
 #include  "ObjNukalmi.h"
+#include   "ObjTime.h"
 //#include "ObjItem.h"
 //#include"ObjEnemy.h"
 
