@@ -69,5 +69,5 @@ private:
 	//“¥‚ñ‚Å‚¢‚éblock‚ÌŽí—ÞŠm”F—p
 	int m_block_type;
 
-	//float m_scroll;
+	
 };
