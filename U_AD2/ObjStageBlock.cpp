@@ -124,7 +124,6 @@ void CObjStageBlock::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							//Scene::SetScene((new CSceneClear()));
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
@@ -314,7 +313,7 @@ void CObjStageBlock::Action()
 		}
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 500; j++) {
-				if (m_map[i][j] >= 7) {
+				if (m_map[i][j] == 9) {
 					float x = j * 64.0f;
 					float y = i * 64.0f;
 
