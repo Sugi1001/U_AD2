@@ -25,7 +25,7 @@
     <Filter Include="ソース ファイル\stage">
       <UniqueIdentifier>{84196e1a-d979-4133-af07-f610410a4307}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Hero\Clear">
+    <Filter Include="ソース ファイル\Clear">
       <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -97,10 +97,10 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SceneClear.cpp">
-      <Filter>ソース ファイル\Hero\Clear</Filter>
+      <Filter>ソース ファイル\Clear</Filter>
     </ClCompile>
     <ClCompile Include="ObjGameClear.cpp">
-      <Filter>ソース ファイル\Hero\Clear</Filter>
+      <Filter>ソース ファイル\Clear</Filter>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Hero</Filter>
@@ -180,10 +180,10 @@
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneClear.h">
-      <Filter>ソース ファイル\Hero\Clear</Filter>
+      <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
     <ClInclude Include="ObjGameClear.h">
-      <Filter>ソース ファイル\Hero\Clear</Filter>
+      <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Hero</Filter>
