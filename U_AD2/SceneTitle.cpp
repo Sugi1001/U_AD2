@@ -31,7 +31,7 @@ void CSceneTitle::InitScene()
 	Font::SetStrTex(L"エンタキー押してくださいお願いします(*-*)");
 
 	//音楽情報の読み込み
-	Audio::LoadAudio(0, L"Gametitle.mp3", SOUND_TYPE::BACK_MUSIC);
+	Audio::LoadAudio(0, L"Gametitle.wav", SOUND_TYPE::BACK_MUSIC);
 
 	//バックミュージックスタート
 	float Volume = Audio::VolumeMaster(-0.8f); //マスターボリュームを0.8下げる
