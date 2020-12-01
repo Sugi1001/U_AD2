@@ -7,6 +7,9 @@
 
 #include "GameHead.h"
 #include "ObjHero.h"
+
+
+
 #include "ObjStageBlock.h"
 
 //使用するネームスペース
@@ -204,7 +207,7 @@ void CObjHero::Draw()
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
 
-    m_scroll += 2.0f;
+    //m_scroll += 2.0f;
 
 
 }
