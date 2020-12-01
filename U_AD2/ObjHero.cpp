@@ -7,6 +7,9 @@
 
 #include "GameHead.h"
 #include "ObjHero.h"
+
+
+
 #include "ObjStageBlock.h"
 
 //使用するネームスペース
