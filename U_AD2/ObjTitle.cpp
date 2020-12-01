@@ -43,22 +43,26 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"エンタキー押してくださいお願いします(*-*)", 100, 300, 32, c);
 
 
-		//RECT_F src;//描画元切り取り
-		//RECT_F dst;//描画先表示位置
+		RECT_F src;//描画元切り取り
+		RECT_F dst;//描画先表示位置
 
 		 //背景表示
-		//src.m_top = 256.0f;
-		//src.m_left = 0.0f;
-		//src.m_right = 512.0f;
-		//src.m_bottom = 512.0f;
+		src.m_top = 256.0f;
+		src.m_left = 0.0f;
+		src.m_right = 512.0f;
+		src.m_bottom = 512.0f;
 
-		//dst.m_top = 0.0f;
-		//dst.m_left = 0.0f;
-		//dst.m_right = 800.0f;
-		//dst.m_bottom = 600.0f;
+		dst.m_top = 0.0f;
+        dst.m_left = 0.0f;
+		dst.m_right = 800.0f;
+		dst.m_bottom = 600.0f;
 
 
 
-		//Draw::Draw(10, &src, &dst, c, 0.0f);
+		Draw::Draw(10, &src, &dst, c, 0.0f);
+
+		//タイトル作成
+		CObjTitle* objeo = new CObjTitle();
+		Objs::InsertObj(objeo, OBJ_TITLE, 10);
 
 }

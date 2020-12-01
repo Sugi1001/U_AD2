@@ -109,10 +109,6 @@ void CObjStageBlock::Action()
 						r = abs(r);
 					else
 						r = 360.0f - abs(r);
-					if (m_map[i][j]>=128)
-					{
-						
-					}
 					if (len < 88.0f) {
 						if ((r < 45 && r > 0) || r > 315) {
 							hero->SetRight(true);
@@ -148,6 +144,7 @@ void CObjStageBlock::Action()
 		}
 	
     }
+	//スタート位置の設定
 for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] == 6) {
@@ -203,6 +200,7 @@ for (int i = 0; i < 10; i++) {
 			}
 		}
 	}
+//ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] >= 8) {
@@ -260,7 +258,7 @@ for (int i = 0; i < 10; i++) {
 		}
 	}
 	
-
+	//棘の上部に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] >= 7) {
@@ -293,18 +291,18 @@ for (int i = 0; i < 10; i++) {
 							if (m_map[i][j] >= 2)
 								hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);
-                            Scene::SetScene((new CSceneGameOver()));
+							Scene::SetScene((new CSceneGameOver()));
 						}
 						if (r > 130 && r < 225) {
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							
+
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
 							hero->SetY(y + 64.0f);
-                            
+
 							if (hero->GetVY() < 1) {
 								hero->SetVY(0.0f);
 							}
@@ -318,69 +316,67 @@ for (int i = 0; i < 10; i++) {
 				}
 			}
 		}
-		for (int i = 0; i < 10; i++) {
-			for (int j = 0; j < 128; j++) {
-				if (m_map[i][j] == 9) {
-					float x = j * 64.0f;
-					float y = i * 64.0f;
+	}
+	//中間の設定（途中）
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 128; j++) {
+			if (m_map[i][j] == 9) {
+				float x = j * 64.0f;
+				float y = i * 64.0f;
 
-					if ((hx + (-m_scroll) + 64.0f > x) && (hx + (-m_scroll) < x + 64.0f) && (hy + 64.0f > y) && (hy < y + 64.0f)) {
-						float vx = (hx + (-m_scroll)) - x;
-						float vy = hy - y;
+				if ((hx + (-m_scroll) + 64.0f > x) && (hx + (-m_scroll) < x + 64.0f) && (hy + 64.0f > y) && (hy < y + 64.0f)) {
+					float vx = (hx + (-m_scroll)) - x;
+					float vy = hy - y;
 
-						float len = sqrt(vx * vx + vy * vy);
+					float len = sqrt(vx * vx + vy * vy);
 
-						float r = atan2(vy, vx);
-						r = r * 180.0f / 3.14f;
+					float r = atan2(vy, vx);
+					r = r * 180.0f / 3.14f;
 
-						if (r <= 0.0f)
-							r = abs(r);
-						else
-							r = 360.0f - abs(r);
+					if (r <= 0.0f)
+						r = abs(r);
+					else
+						r = 360.0f - abs(r);
 
-						if (len < 88.0f) {
-							if ((r < 45 && r > 0) || r > 315) {
-								hero->SetRight(true);
-								hero->SetX(x + 64.0f + (m_scroll));
-								hero->SetVX(-hero->GetVX() * 0.1f);
-								Draw::Draw(31, &src, &dst, c, 0.0f);
-							}
-							if (r > 45 && r < 135) {
-								hero->SetDown(true);
-								hero->SetY(y - 64.0f);
-								if (m_map[i][j] >= 9)
-									hero->SetBT(m_map[i][j]);
+					if (len < 88.0f) {
+						if ((r < 45 && r > 0) || r > 315) {
+							hero->SetRight(true);
+							hero->SetX(x + 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+							Draw::Draw(31, &src, &dst, c, 0.0f);
+						}
+						if (r > 45 && r < 135) {
+							hero->SetDown(true);
+							hero->SetY(y - 64.0f);
+							if (m_map[i][j] >= 9)
+								hero->SetBT(m_map[i][j]);
 								hero->SetVY(0.0f);
-							}
-							if (r > 135 && r < 225) {
-								hero->SetLeft(true);
-								hero->SetX(x - 64.0f + (m_scroll));
-								hero->SetVX(-hero->GetVX() * 0.1f);
-								Draw::Draw(31, &src, &dst, c, 0.0f);
+						}
+						if (r > 135 && r < 225) {
+							hero->SetLeft(true);
+							hero->SetX(x - 64.0f + (m_scroll));
+							hero->SetVX(-hero->GetVX() * 0.1f);
+							Draw::Draw(31, &src, &dst, c, 0.0f);
 
-							}
-							if (r > 255 && r < 315) {
-								hero->SetUp(true);
-								hero->SetY(y + 64.0f);
+						}
+						if (r > 255 && r < 315) {
+							hero->SetUp(true);
+							hero->SetY(y + 64.0f);
 
-								if (hero->GetVY() < 1) {
-									hero->SetVY(0.0f);
-								}
+							if (hero->GetVY() < 1) {
+								hero->SetVY(0.0f);
 							}
 						}
 					}
+				}
 
-					else
-					{
+				else
+				{
 
-					}
 				}
 			}
 		}
 	}
-		
-	
-
 	//テスト　交差取得
 	//float a, b;
 	//LineCrossPoint(0, 0, 10, 10, 0, 5, 10, 5, &a, &b);
