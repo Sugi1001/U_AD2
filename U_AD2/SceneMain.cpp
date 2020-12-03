@@ -35,6 +35,8 @@ void CSceneMain::InitScene()
 {
 	//‰¹Šyî•ñ‚Ì“Ç‚İ‚İ
 	Audio::LoadAudio(0, L"Stage.wav", BACK_MUSIC);
+	Audio::LoadAudio(1, L"BGM GameClear.wav", BACK_MUSIC);
+	Audio::LoadAudio(2, L"BGM Gameover.wav", BACK_MUSIC);
 
 	//ƒ{ƒŠƒ…[ƒ€‚ğ1.5‚É–ß‚·
 	float v = Audio::VolumeMaster(1.5);

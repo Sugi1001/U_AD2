@@ -37,7 +37,7 @@ void CSceneClear::InitScene()
 
 
 	//音楽情報の読み取り
-	Audio::LoadAudio(0, L"BGM GameClear.wav", BACK_MUSIC);
+	Audio::LoadAudio(1, L"BGM GameClear.wav", BACK_MUSIC);
 
 	//バックミュージックスタート
 	float v = Audio::VolumeMaster(0); //マスターボリュームを0.8下げる

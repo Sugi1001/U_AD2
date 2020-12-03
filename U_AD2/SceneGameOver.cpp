@@ -40,7 +40,7 @@ void CSceneGameOver::InitScene()
 
 
 	//‰¹Šyî•ñ‚Ì“Ç‚İ‚İ
-	Audio::LoadAudio(0, L"BGM Gameover.wav",BACK_MUSIC);
+	Audio::LoadAudio(2, L"BGM Gameover.wav",BACK_MUSIC);
 
 	//ƒ{ƒŠƒ…[ƒ€‚ğ1.0‚É–ß‚·
 	float v = Audio::VolumeMaster(0);
