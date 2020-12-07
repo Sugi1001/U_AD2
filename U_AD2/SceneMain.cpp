@@ -8,7 +8,7 @@
 #include"GameL/DrawFont.h"
 #include"GameL/UserData.h"
 #include "ObjStageBlock.h"
-#include"GameL/Audio.h"
+//#include"GameL/Audio.h"
 
 
 //使用するネームスペース
@@ -34,14 +34,14 @@ CSceneMain::~CSceneMain()
 void CSceneMain::InitScene()
 {
 	//音楽情報の読み込み
-	Audio::LoadAudio(0, L"Stage.wav", BACK_MUSIC);
-	Audio::LoadAudio(1, L"BGM GameClear.wav", BACK_MUSIC);
-	Audio::LoadAudio(2, L"BGM Gameover.wav", BACK_MUSIC);
-	Audio::LoadAudio(3, L"BGM Gametitle.wav", SOUND_TYPE::BACK_MUSIC);
+	//Audio::LoadAudio(0, L"Stage.wav", BACK_MUSIC);
+	//Audio::LoadAudio(1, L"BGM GameClear.wav", BACK_MUSIC);
+	//Audio::LoadAudio(2, L"BGM Gameover.wav", BACK_MUSIC);
+	//Audio::LoadAudio(3, L"BGM Gametitle.wav", SOUND_TYPE::BACK_MUSIC);
 
 	//ボリュームを1.5に戻す
-	float v = Audio::VolumeMaster(1.5);
-	Audio::Start(0); //音楽スタート
+	//float v = Audio::VolumeMaster(1.5);
+	//Audio::Start(0); //音楽スタート
 
 	//Font作成
 	Font::SetStrTex(L"0123456789分秒");
