@@ -17,6 +17,12 @@ void CObjEnemyBlock::Init()
 	m_px = 400.0f;
 	m_py = 64.0f;
 	
+	//block‚Æ‚ÌÕ“Ëó‘ÔŠm”F—p
+	m_hit_up = false;
+	m_hit_down = false;
+	m_hit_left = false;
+	m_hit_right = false;
+
 
 
 }
