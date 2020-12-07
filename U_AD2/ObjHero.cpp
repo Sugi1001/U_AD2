@@ -39,7 +39,7 @@ void CObjHero::Init()
 
 
 
-	m_block_type = 0;
+	m_block_type = 0; //踏んでいるブロックの種類を確認用
 
 	m_scroll +=2.0f;
 
