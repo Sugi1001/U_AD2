@@ -18,4 +18,6 @@ private:
 	int m_flag_time; //時間計測スタートフラグ
 
 
+
+
 };
