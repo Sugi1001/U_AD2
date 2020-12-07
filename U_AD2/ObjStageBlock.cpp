@@ -104,10 +104,13 @@ void CObjStageBlock::Action()
 					r = r * 180.0f / 3.14f;
 
 					if (r <= 0.0f)
-						r = abs(r);
-					else
-						r = 360.0f - abs(r);
-
+					{
+					  r = abs(r);
+				    }
+				    else
+				    {
+					 r = 360.0f - abs(r);
+				    }
 					if (len < 88.0f) {
 						if ((r < 45 && r > 0) || r > 315) {
 							hero->SetRight(true);
