@@ -19,14 +19,14 @@
     <Filter Include="ソース ファイル\Hero">
       <UniqueIdentifier>{353f4933-e220-4d2d-a7ef-b7f359951917}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Sisutemu">
+      <UniqueIdentifier>{d0c4d1e9-a215-47ff-9123-e3ccc2710503}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ソース ファイル\stage">
       <UniqueIdentifier>{84196e1a-d979-4133-af07-f610410a4307}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\Clear">
       <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\SceneMain&amp;UtilityModel">
-      <UniqueIdentifier>{d0c4d1e9-a215-47ff-9123-e3ccc2710503}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -106,12 +106,15 @@
       <Filter>ソース ファイル\Hero</Filter>
     </ClCompile>
     <ClCompile Include="SceneMain.cpp">
-      <Filter>ソース ファイル\SceneMain&amp;UtilityModel</Filter>
+      <Filter>ソース ファイル\Sisutemu</Filter>
     </ClCompile>
     <ClCompile Include="UtilityModule.cpp">
-      <Filter>ソース ファイル\SceneMain&amp;UtilityModel</Filter>
+      <Filter>ソース ファイル\Sisutemu</Filter>
     </ClCompile>
     <ClCompile Include="ObjTime.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="tyukan.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -189,15 +192,18 @@
       <Filter>ソース ファイル\Hero</Filter>
     </ClInclude>
     <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル\SceneMain&amp;UtilityModel</Filter>
+      <Filter>ソース ファイル\Sisutemu</Filter>
     </ClInclude>
     <ClInclude Include="UtilityModule.h">
-      <Filter>ソース ファイル\SceneMain&amp;UtilityModel</Filter>
+      <Filter>ソース ファイル\Sisutemu</Filter>
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h">
       <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
     <ClInclude Include="ObjTime.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="tyukan.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
