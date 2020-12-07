@@ -56,7 +56,7 @@ private:
 
 	int m_ani_time = 0;//アニメーションフレーム動作間隔
 	int m_ani_frame = 1;//描画フレーム  //静止フレームを初期にする。
-
+	int m_map[10][500] = { 0 };
 	
 	float m_ani_max_time;//アニメーション動作間隔最大値
 
