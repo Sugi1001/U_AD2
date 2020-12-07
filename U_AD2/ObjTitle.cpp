@@ -42,7 +42,7 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"アンダーアドベンチャー", 150, 200, 50, c);
 	Font::StrDraw(L"エンタキー押してくださいお願いします(*-*)", 120, 270, 30, c);
 
-	Font::StrDraw(L"あらすじ", 300, 400, 32, c);
+	Font::StrDraw(L"あらすじなのじゃ", 300, 400, 32, c);
 	Font::StrDraw(L"主人公のもとに闇金が！！", 220, 450, 32, c);
 	Font::StrDraw(L"借りた金の返済のために洞窟へ！！", 200, 490, 32, c);
 }
