@@ -71,7 +71,7 @@ struct UserData
 
 #include  "CObjToge.h"
 #include  "ObjNukalmi.h"
-//#include "ObjTime.h"
+#include "ObjTime.h"
 //#include "GameL/Audio.h"
 //#include "ObjItem.h"
 //#include"ObjEnemy.h"

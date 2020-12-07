@@ -67,7 +67,7 @@ void CSceneMain::InitScene()
 
 	//グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
-	Draw::LoadImage(L"taitle.png", 10, TEX_SIZE_512);
+	Draw::LoadImage(L"タイトル.png", 10, TEX_SIZE_512);
 	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);
@@ -106,8 +106,8 @@ void CSceneMain::InitScene()
 	//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 6);
 
 	//タイムオブジェクト作成
-	/*CObjTime* objti = new CObjTime();
-	Objs::InsertObj(objti, OBJ_TIME, 11);*/
+	CObjTime* objti = new CObjTime();
+	Objs::InsertObj(objti, OBJ_TIME, 11);
 
 	
 }
