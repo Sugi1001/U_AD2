@@ -37,8 +37,8 @@ void CSceneTitle::InitScene()
 	//float Volume = Audio::VolumeMaster(-0.8f); //マスターボリュームを0.8下げる
 	//Audio::Start(0); //音楽スタート
 
-	CObjTitle*obj = new CObjTitle();//画像でんし
-	Objs::InsertObj(obj, OBJ_TITLE, 1);
+	//CObjTitle*obj = new CObjTitle();//画像でんし
+	//Objs::InsertObj(obj, OBJ_TITLE, 1);
 
 	//タイトル作成
 	CObjTitle* objeo = new CObjTitle();
