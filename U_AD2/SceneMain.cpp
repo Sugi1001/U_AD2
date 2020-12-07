@@ -36,7 +36,7 @@ void CSceneMain::InitScene()
 	//音楽情報の読み込み
 	Audio::LoadAudio(4, L"BGM Stage.wav", SOUND_TYPE::BACK_MUSIC);
 	//ボリュームを1.5に戻す
-	float v = Audio::VolumeMaster(1.5);
+	float v = Audio::VolumeMaster(0.5);
 	Audio::Start(4); //音楽スタート
 
 	//Font作成
