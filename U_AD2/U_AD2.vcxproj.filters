@@ -114,6 +114,9 @@
     <ClCompile Include="ObjTime.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="tyukan.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -198,6 +201,9 @@
       <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
     <ClInclude Include="ObjTime.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="tyukan.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>

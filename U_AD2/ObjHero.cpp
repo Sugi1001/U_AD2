@@ -64,7 +64,12 @@ void CObjHero::Action()
 		//場外に出たらリスタート
 		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
 
+		
+
 	}
+	//中間点で死亡した場合、中間点で、沸くプログラム
+
+	
 
 	////当たり判定を行うオブジェクト情報部
 	//int data_base[3] =
