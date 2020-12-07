@@ -156,7 +156,7 @@
     </ClCompile>
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjStageBlock.cpp" />
-    <ClCompile Include="tyukan.cpp" />
+    <ClCompile Include="Objtyukan.cpp" />
     <ClCompile Include="UtilityModule.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -193,7 +193,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h" />
-    <ClInclude Include="tyukan.h" />
+    <ClInclude Include="Objtyukan.h" />
     <ClInclude Include="UtilityModule.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>

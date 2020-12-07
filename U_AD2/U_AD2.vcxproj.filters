@@ -114,7 +114,7 @@
     <ClCompile Include="ObjTime.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="tyukan.cpp">
+    <ClCompile Include="Objtyukan.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -203,7 +203,7 @@
     <ClInclude Include="ObjTime.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="tyukan.h">
+    <ClInclude Include="Objtyukan.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>

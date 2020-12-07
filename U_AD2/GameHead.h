@@ -20,6 +20,7 @@ enum OBJ_NAME
 	OBJ_CLEAR,
 	OBJ_NUKALMI,
 	OBJ_TIME,
+	OBJ_TYUKAN,
 	//OBJ_BACKGROUND,
 };
 //------------------------------------------------
@@ -72,6 +73,7 @@ struct UserData
 #include  "ObjNukalmi.h"
 #include   "ObjTime.h"
 #include "GameL/Audio.h"
+#include"Objtyukan.h"
 //#include "ObjItem.h"
 //#include"ObjEnemy.h"
 
