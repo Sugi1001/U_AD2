@@ -45,4 +45,6 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"あらすじなのじゃ", 270, 400, 32, c);
 	Font::StrDraw(L"主人公のもとに闇金が！！", 220, 450, 32, c);
 	Font::StrDraw(L"借りた金の返済のために洞窟へ！！", 200, 490, 32, c);
+	Font::StrDraw(L"なに？主人公がなかなか家から出ない？", 200, 530, 13, c);
+	Font::StrDraw(L"構わん　今すぐ拉致ってつれてけ", 200, 542, 13, c);
 }
