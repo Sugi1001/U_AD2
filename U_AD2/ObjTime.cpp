@@ -48,8 +48,8 @@ void CObjTime::Draw()
 	int minute; //•ª
 	int second; //•b
 
-	second = (m_time / 60 % 60); //•b
-	minute = (m_time / 60 / 60); //•ª
+	second = (m_time / 60) % 60; //•b
+	minute = (m_time / 60) / 60; //•ª
 	  
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
@@ -65,6 +65,12 @@ void CObjTime::Draw()
 	swprintf_s(str, L"%d•ª:%d•b", m_time,second); //•ª : •b‚Ì’l‚ð•¶Žš—ñ‰»
 
 	Font::StrDraw(str, 10, 10,20, c);
+
+
+
+	
+
+
 
 
 }
