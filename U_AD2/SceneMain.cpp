@@ -110,8 +110,8 @@ void CSceneMain::InitScene()
 	//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 6);
 
 	//タイムオブジェクト作成
-	CObjTime* objti = new CObjTime();
-	Objs::InsertObj(objti, OBJ_TIME, 11);
+	/*CObjTime* objti = new CObjTime();
+	Objs::InsertObj(objti, OBJ_TIME, 11);*/
 
 	
 }
