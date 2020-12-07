@@ -118,7 +118,7 @@ void CObjStageBlock::Action()
 						if (r > 45 && r < 135) {
 							hero->SetDown(true);
 							hero->SetY(y - 64.0f);
-							if (m_map[i][j] >= 9)
+							if (m_map[i][j] >= 6)
 								hero->SetBT(m_map[i][j]);
 								hero->SetVY(0.0f);
 						}
