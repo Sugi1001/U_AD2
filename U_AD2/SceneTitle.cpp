@@ -38,7 +38,7 @@ void CSceneTitle::InitScene()
 	Audio::LoadAudio(3, L"BGM Gametitle.wav",BACK_MUSIC);
 
 	//バックミュージックスタート
-	float Volume = Audio::VolumeMaster(-0.1f); //マスターボリュームを0.8下げる
+	float Volume = Audio::VolumeMaster(0.5f); //マスターボリュームを0.8下げる
 	Audio::Start(3); //音楽スタート
 
 	//CObjTitle*obj = new CObjTitle();//画像でんし
