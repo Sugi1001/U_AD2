@@ -5,7 +5,7 @@
 //GeamLで使用するヘッダー
 #include"GameL\SceneObjManager.h"
 #include"GameL\DrawFont.h"
-//#include"GameL/Audio.h"
+#include"GameL/Audio.h"
 
 //使用するヘッダー
 #include"SceneMain.h"
@@ -31,11 +31,11 @@ void CSceneTitle::InitScene()
 	Font::SetStrTex(L"エンタキー押してくださいお願いします(*-*)");
 
 	//音楽情報の読み込み
-	//Audio::LoadAudio(3, L"BGM Gametitle.wav", SOUND_TYPE::BACK_MUSIC);
+	Audio::LoadAudio(3, L"BGM Gametitle.wav",BACK_MUSIC);
 
 	//バックミュージックスタート
-	//float Volume = Audio::VolumeMaster(-0.8f); //マスターボリュームを0.8下げる
-	//Audio::Start(0); //音楽スタート
+	float Volume = Audio::VolumeMaster(-0.8f); //マスターボリュームを0.8下げる
+	Audio::Start(3); //音楽スタート
 
 	//CObjTitle*obj = new CObjTitle();//画像でんし
 	//Objs::InsertObj(obj, OBJ_TITLE, 1);
