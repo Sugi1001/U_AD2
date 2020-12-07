@@ -116,7 +116,7 @@ void CObjStageBlock::Action()
 							hero->SetRight(true);
 							hero->SetX(x + 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Draw::Draw(31, &src, &dst, c, 0.0f);
+							//Draw::Draw(31, &src, &dst, c, 0.0f);
 						}
 						if (r > 45 && r < 135) {
 							hero->SetDown(true);
@@ -129,7 +129,7 @@ void CObjStageBlock::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Draw::Draw(31, &src, &dst, c, 0.0f);
+							//Draw::Draw(31, &src, &dst, c, 0.0f);
 
 						}
 						if (r > 255 && r < 315) {
