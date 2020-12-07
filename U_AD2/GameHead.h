@@ -20,6 +20,7 @@ enum OBJ_NAME
 	OBJ_CLEAR,
 	OBJ_NUKALMI,
 	OBJ_TIME,
+	OBJ_TYUKAN,
 	//OBJ_BACKGROUND,
 };
 //------------------------------------------------
