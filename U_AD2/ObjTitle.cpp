@@ -61,7 +61,7 @@ void CObjTitle::Draw()
 
 		Draw::Draw(10, &src, &dst, c, 0.0f);
 
-		//タイトル作成
+		//タイトル作成！
 		CObjTitle* objeo = new CObjTitle();
 		Objs::InsertObj(objeo, OBJ_TITLE, 10);
 
