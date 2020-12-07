@@ -133,6 +133,7 @@ void CObjHero::Action()
 	{
 		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
 		m_ani_time = 1;
+		m_vx -= 0.22f;
 	}
 
 
@@ -211,31 +212,4 @@ void CObjHero::Draw()
 	dst.m_bottom = 64.0 + m_py;
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
-
-    m_scroll += 2.0f;
-	for (int i = 0; i < 10; i++)
-	{
-		for (int j = 0; j < 500; j++)
-		{
-			if (m_map[i][j] > 0)
-			{
-
-				//表示位置の設定
-				dst.m_top = i * 64.0f;
-				dst.m_left = j * 64.0f + m_scroll;
-				dst.m_right = dst.m_left + 64.0f;
-				dst.m_bottom = dst.m_top + 64.0f;
-				if (m_map[i][j] == 2)
-				{
-
-				}
-				else
-				{
-					;
-				}
-
-			}
-		}
-	}
-
 }
