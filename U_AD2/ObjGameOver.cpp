@@ -36,6 +36,7 @@ void CObjGameOver::Action()
 void CObjGameOver::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+
 	Font::StrDraw(L"GameOver　ゲ～ムオ～バ～", 120, 110 , 50, c);
 	Font::StrDraw(L"あきらめてしまうのですねwww", 170, 195, 32, c);
 	Font::StrDraw(L"燃え尽きすぎてますのね～?w", 170, 250, 32, c);
@@ -43,6 +44,6 @@ void CObjGameOver::Draw()
 	Font::StrDraw(L"ENTER_KEYでタイトルに戻るよ", 90, 400, 50, c);
 
 
-	Font::StrDraw(L"何度もクリアできない場合は落ち着くために休憩をはさみましょう", 45, 490, 25, c);
-	Font::StrDraw(L"体調面などもきちんと考えてプレイを続けましょう", 70, 530, 27, c);
+	Font::StrDraw(L"何度もクリアできない場合は落ち着くために休憩をはさみましょう", 110, 490, 20, c);
+	Font::StrDraw(L"体調面などもきちんと考えてプレイを続けましょう", 165, 530, 20, c);
 }
