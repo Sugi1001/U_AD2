@@ -60,11 +60,15 @@ void CObjTime::Draw()
 		swprintf_s(str, L"%d•ª%d•b", minute, second);
 
 	else
-
-
 	swprintf_s(str, L"%d•ª:%d•b", m_time,second); //•ª : •b‚Ì’l‚ð•¶Žš—ñ‰»
 
 	Font::StrDraw(str, 10, 10,20, c);
+
+
+
+
+
+
 
 
 
