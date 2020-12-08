@@ -62,7 +62,7 @@ void CObjTime::Draw()
 	else
 
 
-	swprintf_s(str, L"%d•ª:%d•b", m_time,second); //•ª : •b‚Ì’l‚ğ•¶š—ñ‰»
+	swprintf_s(str, L"™‰º•ª:%d•b", m_time,second); //•ª : •b‚Ì’l‚ğ•¶š—ñ‰»
 
 	Font::StrDraw(str, 10, 10,20, c);
 
