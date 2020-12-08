@@ -45,7 +45,6 @@ void CSceneGameOver::InitScene()
 	//音楽情報の読み込み
 	Audio::LoadAudio(2, L"BGM Gameover.wav",BACK_MUSIC);
 
-	//ボリュームを1.0に戻す
 	float v = Audio::VolumeMaster(2);
 	v = Audio::VolumeMaster((0.4 - v));
 	Audio::Start(2); //音楽スタート
