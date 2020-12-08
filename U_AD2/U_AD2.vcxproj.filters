@@ -16,9 +16,6 @@
     <Filter Include="ソース ファイル\Hero">
       <UniqueIdentifier>{353f4933-e220-4d2d-a7ef-b7f359951917}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Sisutemu">
-      <UniqueIdentifier>{d0c4d1e9-a215-47ff-9123-e3ccc2710503}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\stage">
       <UniqueIdentifier>{84196e1a-d979-4133-af07-f610410a4307}</UniqueIdentifier>
     </Filter>
@@ -30,6 +27,9 @@
     </Filter>
     <Filter Include="ソース ファイル\GameTitle">
       <UniqueIdentifier>{47bfe6db-c4a9-4050-bd4e-ef7b0d98e336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SceneMain UtilityModule">
+      <UniqueIdentifier>{d0c4d1e9-a215-47ff-9123-e3ccc2710503}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -103,10 +103,10 @@
       <Filter>ソース ファイル\Hero</Filter>
     </ClCompile>
     <ClCompile Include="SceneMain.cpp">
-      <Filter>ソース ファイル\Sisutemu</Filter>
+      <Filter>ソース ファイル\SceneMain UtilityModule</Filter>
     </ClCompile>
     <ClCompile Include="UtilityModule.cpp">
-      <Filter>ソース ファイル\Sisutemu</Filter>
+      <Filter>ソース ファイル\SceneMain UtilityModule</Filter>
     </ClCompile>
     <ClCompile Include="ObjTime.cpp">
       <Filter>ソース ファイル</Filter>
@@ -189,10 +189,10 @@
       <Filter>ソース ファイル\Hero</Filter>
     </ClInclude>
     <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル\Sisutemu</Filter>
+      <Filter>ソース ファイル\SceneMain UtilityModule</Filter>
     </ClInclude>
     <ClInclude Include="UtilityModule.h">
-      <Filter>ソース ファイル\Sisutemu</Filter>
+      <Filter>ソース ファイル\SceneMain UtilityModule</Filter>
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h">
       <Filter>ソース ファイル\stage</Filter>
