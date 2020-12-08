@@ -17,7 +17,7 @@ using namespace GameL;
 //コントラクタ
 CSceneGameOver::CSceneGameOver()
 {
-
+	
 }
 
 //デストラクタ
