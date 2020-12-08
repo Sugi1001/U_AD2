@@ -28,7 +28,7 @@ void CSceneTitle::InitScene()
 {
 	//出力させるグラフィックをサクセイ
 	Font::SetStrTex(L"アンダーアドベンチャー");
-	Font::SetStrTex(L"エンタキー押してくださいお願いします(*-*)");
+	Font::SetStrTex(L"エンタキー押したらスタートなのじゃ！！(*-*)");
 
 	Font::SetStrTex(L"あらすじなのじゃ！！");
 	Font::SetStrTex(L"主人公のもとに闇金が！！");
