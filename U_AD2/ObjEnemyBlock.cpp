@@ -5,6 +5,7 @@
 
 #include "GameHead.h"
 #include  "ObjEnemyBlock.h"
+#include "Objtyukan.h"
 
 //使用するヘッダーファイル
 using namespace GameL;
@@ -29,6 +30,24 @@ void CObjEnemyBlock::Init()
 //アクション
 void CObjEnemyBlock::Action()
 {
+	//岩の位置を取得
+	CObjEnemyBlock* enemyblock = (CObjEnemyBlock*)Objs::GetObj(OBJ_ENEMY_BLOCK);
+	float hx = enemyblock->GetX();
+	float hy = enemyblock->GetY();
+
+	//m_mapの全要素にアクセス
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; j++)
+		{
+			if (m_map[i][j] > 0)
+			{
+				//要素番号を座標に変更
+				float x = j * 64.0f;
+				float y = i * 64.0f;
+			}
+		}
+	}
 
 	//岩の位置X（ｍ＿ｘ）+主人公機の幅分がX軸方向に領域外を認識
 	if (m_px + 20.0f > 800.0f)
