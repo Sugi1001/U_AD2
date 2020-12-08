@@ -420,7 +420,7 @@ void CObjStageBlock::Draw()
 //src.m_right=src.m_left+64.0f;
 //src.m_bottom=64.0f;
 
-   // m_scroll-=2.0f;//スクロール実験用
+    m_scroll-=2.0f;//スクロール実験用
 
 	for (int i = 0; i < 10; i++)
 	{
