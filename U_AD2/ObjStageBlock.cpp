@@ -265,7 +265,7 @@ for (int i = 0; i < 10; i++) {
 //ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
-			if (m_map[i][j] >= 8) {
+			if (m_map[i][j] == 8) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
