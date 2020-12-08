@@ -14,6 +14,7 @@ public :
 	void Action(); //アクション
 	void Draw(); //ドロー
 private:
+	int 杉下友一;
 	int m_time; //時間
 	int m_flag_time; //時間計測スタートフラグ
 
