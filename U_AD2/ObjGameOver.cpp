@@ -42,6 +42,7 @@ void CObjGameOver::Draw()
 	Font::StrDraw(L"タイトルから出直してきてくださいましっ!", 110, 300, 32, c);
 	Font::StrDraw(L"ENTER_KEYでタイトルに戻るよ", 90, 400, 50, c);
 
+
 	Font::StrDraw(L"何度もクリアできない場合は落ち着くために休憩をはさみましょう", 45, 490, 25, c);
 	Font::StrDraw(L"体調面などもきちんと考えてプレイを続けましょう", 70, 530, 27, c);
 }
