@@ -210,6 +210,7 @@ void CObjHero::Draw()
 	dst.m_left = (40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
+
 	//•`‰æ
 	Draw::Draw(1, &src, &dst, c, 1.0f);
 }
