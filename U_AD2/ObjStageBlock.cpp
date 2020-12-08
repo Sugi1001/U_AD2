@@ -152,7 +152,7 @@ void CObjStageBlock::Action()
 	}
 
 	
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] > 0) {
 				float x = j * 64.0f;
@@ -205,7 +205,7 @@ void CObjStageBlock::Action()
 			}
 		}
 	
-    }
+    }*/
 	//スタート位置の設定
 for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
@@ -745,7 +745,7 @@ void CObjStageBlock::Draw()
 	   if (SGN(w1) == SGN(w2))
 		   return false;//交点が外
 
-	   //杉下を返す
+	   //岩を返す
 	   *out_px = px; *out_py;
 
 	   return true;
