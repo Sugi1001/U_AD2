@@ -48,4 +48,5 @@ void CObjTitle::Draw()
 
 	Font::StrDraw(L"なに？主人公がなかなか家から出ない？", 310, 540, 15, c);
 	Font::StrDraw(L"構わん　今すぐ拉致ってつれてけ", 330, 558, 15, c);
+
 }
