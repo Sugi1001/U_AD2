@@ -66,6 +66,10 @@ void CObjTime::Draw()
 
 	
 
+	
+
+	
+
 
 
 
