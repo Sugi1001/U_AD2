@@ -64,7 +64,7 @@ void CObjTime::Draw()
 
 	Font::StrDraw(str, 10, 10,20, c);
 
-
+	
 
 
 
