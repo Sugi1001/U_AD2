@@ -59,11 +59,11 @@ void CObjTime::Draw()
 
 	//分　：　秒の値を文字列か
 	if (second < 60) {
-		swprintf_s(str, L"%d分%d秒", minute, second);
+		swprintf_s(str, L"%d分%d秒", minute,second);
 	}
 	else
 	{
-		swprintf_s(str, L"%d分:%d秒", m_time, second); //分 : 秒の値を文字列化
+		swprintf_s(str, L"%d分%d秒", m_time, second); //分 : 秒の値を文字列化
 	}
 
 	
