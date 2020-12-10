@@ -60,10 +60,10 @@ void CObjStageBlock::Action()
 
 
 	//主人公衝突判定
-	/*hero->SetUp(false);
-	hero->SetDown(false);
+	hero->SetUp(false);
+	//hero->SetDown(false);
 	hero->SetLeft(false);
-	hero->SetRight(false);*/
+	hero->SetRight(false);
 	//後方スクロールライン
 	if (hx < 0)
 	{
@@ -73,7 +73,7 @@ void CObjStageBlock::Action()
 
 
 		//場外に出たらリスタート
-		//Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
+		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
 
 
 	}
