@@ -3,6 +3,7 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 #include "GameL\DrawFont.h"
+#include "GameL\Audio.h"
 
 #include "GameHead.h"
 #include "ObjTime.h"
@@ -32,6 +33,9 @@ void CObjTime::Action()
 	else if (hero->GetBT() == 3)
 	{
 		m_flag_time = false;
+	}
+	else if (hero->GetBT() == 7) {
+	
 	}
 
 	//フラグがオンの時、時間を進める

@@ -19,7 +19,7 @@ public:
 	float GetVY() { return m_vy; }
 	float GetVX() { return m_vx; }
 	int GetBT() { return m_block_type; }
-	
+
 	//float GetScroll() { return m_scroll; }
 
 	void SetX(float x) { m_px = x; }
@@ -27,7 +27,7 @@ public:
 	void SetVY(float vy) { m_vy = vy; }
 	void SetVX(float vx) { m_vx = vx; }
 	void SetBT(int t) { m_block_type = t; }
-	
+
 
 
 	void SetUp(bool b) { m_hit_up = b; }
@@ -38,6 +38,10 @@ public:
 	float GetScroll() {
 		return m_scroll;
 	}
+	void SetScroll(float scr) { m_scroll = scr; }
+
+	bool GetCheckPoint() { return checkpoint; }
+	
 
 private:
 	float m_px; //位置
@@ -69,5 +73,9 @@ private:
 	//踏んでいるblockの種類確認用
 	int m_block_type;
 
+	bool checkpoint = false;
+	float check_x;
+	float check_y;
+	float check_scr;
 	
 };

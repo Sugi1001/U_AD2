@@ -17,6 +17,11 @@ private:
 	
 	int m_time; //時間
 	int m_flag_time; //時間計測スタートフラグ
+	struct PlayerData {
+		float x;
+		float y;
+		float scroll;
+	};
 
 
 

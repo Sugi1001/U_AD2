@@ -4,10 +4,9 @@
 #include "GameL\SceneManager.h"
 
 #include "GameHead.h"
-#include  "ObjEnemyBlock.h"
-#include "Objtyukan.h"
+#include "ObjEnemyBlock.h"
 
-//使用するヘッダーファイル
+//使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ

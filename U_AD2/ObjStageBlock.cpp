@@ -353,7 +353,13 @@ for (int i = 0; i < 10; i++) {
 							if (m_map[i][j] >= 2)
 								hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);
-							Scene::SetScene((new CSceneGameOver()));
+							CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+							if (hero->GetCheckPoint() == false) {
+								Scene::SetScene((new CSceneGameOver()));
+							}
+							else {
+							
+							}
 						}
 						if (r > 130 && r < 225) {
 							hero->SetLeft(true);
