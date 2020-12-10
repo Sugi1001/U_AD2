@@ -57,7 +57,7 @@ void CObjTime::Draw()
 	wchar_t str[128];
 
 	//分　：　秒の値を文字列か
-	if (second < 10)
+	if (second < 60)
 		swprintf_s(str, L"%d分%d秒", minute, second);
 
 	else
