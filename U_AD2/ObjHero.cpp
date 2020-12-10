@@ -83,7 +83,10 @@ void CObjHero::Action()
 	//オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
 	for (int i = 0; i < 3; i++)
 	{
-		for (int j = 3; j < 1; j++);
+		for (int j = 3; j < 1; j++)
+		{
+			;
+		}
 	}
 
 	////HPが0になったら破棄
@@ -107,7 +110,7 @@ void CObjHero::Action()
 	////キーの入力方向
 	if (Input::GetVKey(VK_LEFT) == true)
 	{
-		m_vx = +1.5f;
+		m_vx = -1.5f;
 		m_vx = -5.0f;
 		m_posture = 1.5f;
 		m_ani_time += 1;
