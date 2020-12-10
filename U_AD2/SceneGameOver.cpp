@@ -43,9 +43,9 @@ void CSceneGameOver::InitScene()
 	Audio::LoadAudio(2, L"BGM Gameover.wav",BACK_MUSIC);
 
 	//ボリュームを1.0に戻す
-	float v = Audio::VolumeMaster(0);
+	/*float v = Audio::VolumeMaster(0);
 	v = Audio::VolumeMaster((1.0 - v));
-	Audio::Start(0); //音楽スタート
+	Audio::Start(0); //音楽スタート*/
 
 	//ゲームオーバーオブジェクト作成
 	CObjGameOver*obj = new CObjGameOver();
