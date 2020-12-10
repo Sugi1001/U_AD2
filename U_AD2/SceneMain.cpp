@@ -98,8 +98,8 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(objt, OBJ_TOGE, 8);
 
 	//岩2オブジェクト作成
-	CObjEnemyBlock* objeb = new CObjEnemyBlock();
-	Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 17);
+	/*CObjEnemyBlock* objeb = new CObjEnemyBlock();
+	Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 33);*/
 
 	//こうもりオブジェクト作成
 	//CObjEnemy* obj_enemy = new CObjEnemy();
@@ -107,7 +107,7 @@ void CSceneMain::InitScene()
 
 	//タイムオブジェクト作成
 	CObjTime* objti = new CObjTime();
-	Objs::InsertObj(objti, OBJ_TIME, 11);
+	Objs::InsertObj(objti, OBJ_TIME, 1);
 
 	
 }
