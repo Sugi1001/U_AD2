@@ -26,6 +26,8 @@ void CObjEnemyBlock::Init()
 
 
 
+
+
 }
 //ƒAƒNƒVƒ‡ƒ“
 void CObjEnemyBlock::Action()
