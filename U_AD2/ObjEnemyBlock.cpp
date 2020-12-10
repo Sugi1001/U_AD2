@@ -45,20 +45,20 @@ void CObjEnemyBlock::Draw()
 	RECT_F src; //描画先切り取り位置
 	RECT_F dst; //描画先表示位置
 	
-	////切り取り位置の設定
-	//src.m_top = 0.0f;
-	//src.m_left = 0.0f;
-	//src.m_right = 50.0f;
-	//src.m_bottom = 50.0f;
+	//切り取り位置の設定
+	src.m_top = 0.0f;
+	src.m_left = 0.0f;
+	src.m_right = 50.0f;
+	src.m_bottom = 50.0f;
 
-	////表示位置の設定
-	//dst.m_top = 0.0f;
-	//dst.m_left = 50.0f;
-	//dst.m_right = 0.0f;
-	//dst.m_bottom = 50.0f;
+	//表示位置の設定
+	dst.m_top = 0.0f;
+	dst.m_left = 50.0f;
+	dst.m_right = 0.0f;
+	dst.m_bottom = 50.0f;
 
 
 
-	////0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
-	//Draw::Draw(9, &src, &dst, c, 0.0f);
+	//0番目に登録したグラフィックをsrc.dst.cの情報をもとに描画
+	Draw::Draw(9, &src, &dst, c, 0.0f);
 }
