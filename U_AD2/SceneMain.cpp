@@ -9,6 +9,7 @@
 #include"GameL/UserData.h"
 #include "ObjStageBlock.h"
 #include"GameL/Audio.h"
+#include"ObjTime.h"
 
 
 //使用するネームスペース
