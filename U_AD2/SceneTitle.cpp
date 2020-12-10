@@ -28,17 +28,19 @@ void CSceneTitle::InitScene()
 {
 	//出力させるグラフィックをサクセイ
 	Font::SetStrTex(L"アンダーアドベンチャー");
-	Font::SetStrTex(L"エンタキー押してくださいお願いします(*-*)");
+	Font::SetStrTex(L"エンタキー押したらスタートなのじゃ！！(*-*)");
+
+	Font::SetStrTex(L"あらすじなのじゃ！！");
+	Font::SetStrTex(L"主人公のもとに闇金が！！");
+	Font::SetStrTex(L"借りた金の返済のために洞窟へ！！");
+
 
 	//音楽情報の読み込み
-	/*Audio::LoadAudio(3, L"BGM Gametitle.wav", SOUND_TYPE::BACK_MUSIC);
+	Audio::LoadAudio(3, L"BGM Gametitle.wav",BACK_MUSIC);
 
 	//バックミュージックスタート
-	float Volume = Audio::VolumeMaster(-0.8f); //マスターボリュームを0.8下げる
-	Audio::Start(0); //音楽スタート*/
-
-	CObjTitle*obj = new CObjTitle();//画像でんし
-	Objs::InsertObj(obj, OBJ_TITLE, 1);
+	float Volume = Audio::VolumeMaster(0.5f); 
+	Audio::Start(3); //音楽スタート
 
 	//タイトル作成
 	CObjTitle* objeo = new CObjTitle();

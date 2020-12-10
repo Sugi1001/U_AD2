@@ -38,31 +38,19 @@ void CObjTitle::Draw()
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
+	//タイトル文
+	Font::StrDraw(L"アンダーアドベンチャー", 17, 150, 70, c);
 	
-	Font::StrDraw(L"アンダーアドベンチャー", 230, 250, 32, c);
-	Font::StrDraw(L"エンタキー押してくださいお願いします(*-*)", 100, 300, 32, c);
+	//あらすじ文
+	Font::StrDraw(L"あらすじなのじゃ～", 270, 300, 32, c);
+	Font::StrDraw(L"主人公のもとに闇金が！！", 220, 350, 32, c);
+	Font::StrDraw(L"借りた金の返済のために洞窟へ！！", 200, 390, 32, c);
 
+	//誘導文
+	Font::StrDraw(L"エンタキー押したらスタートなのじゃ！！(*-*)", 28, 485, 35, c);
 
-		RECT_F src;//描画元切り取り
-		RECT_F dst;//描画先表示位置
-
-		 //背景表示
-		src.m_top = 256.0f;
-		src.m_left = 0.0f;
-		src.m_right = 512.0f;
-		src.m_bottom = 512.0f;
-
-		dst.m_top = 0.0f;
-        dst.m_left = 0.0f;
-		dst.m_right = 800.0f;
-		dst.m_bottom = 600.0f;
-
-
-
-		Draw::Draw(10, &src, &dst, c, 0.0f);
-
-		//タイトル作成
-		CObjTitle* objeo = new CObjTitle();
-		Objs::InsertObj(objeo, OBJ_TITLE, 10);
+	//小ネタ文
+	Font::StrDraw(L"なに？主人公がなかなか家から出ない？", 310, 540, 15, c);
+	Font::StrDraw(L"構わん　今すぐ拉致ってつれてけ", 330, 558, 15, c);
 
 }

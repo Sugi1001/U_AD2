@@ -30,19 +30,19 @@ CSceneClear::~CSceneClear()
 void CSceneClear::InitScene()
 {
 	Font::SetStrTex(L"クリアおめでとう！！");
-	Font::SetStrTex(L"これで主人公の借金もなくなることだろう");
+	Font::SetStrTex(L"これで主人公の借金も無事に返済できるだろう");
 	Font::SetStrTex(L"ただし、借金が増えないとも言ってない");
 	Font::SetStrTex(L"主人公のぐ～たら生活は続いていけるのだろうか!!");
-	Font::SetStrTex(L"最後に一言いうとしたらプレイしてくれてありがとうございました");
+	Font::SetStrTex(L"最後に一言いうとしたらプレイしていただきありがとうございました");
 
 
 	//音楽情報の読み取り
-	/*Audio::LoadAudio(1, L"BGM GameClear.wav", BACK_MUSIC);
+	Audio::LoadAudio(1, L"BGM Gameclear.wav", BACK_MUSIC);
 
 	//バックミュージックスタート
-	float v = Audio::VolumeMaster(0); //マスターボリュームを0.8下げる
+	float v = Audio::VolumeMaster(1); 
 	v = Audio::VolumeMaster(1.0 - v);
-	Audio::Start(0); //音楽スタート*/
+	Audio::Start(1); //音楽スタート
 
 	//クリアオブジェクト作成
 	CObjClear* obj = new CObjClear();

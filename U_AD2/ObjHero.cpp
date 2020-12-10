@@ -39,9 +39,9 @@ void CObjHero::Init()
 
 
 
-	m_block_type = 0;
+	m_block_type = 0; //踏んでいるブロックの種類を確認用
 
-	m_scroll +=2.0f;
+	m_scroll -=2.0f;
 
 }
 
@@ -64,7 +64,12 @@ void CObjHero::Action()
 		//場外に出たらリスタート
 		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
 
+		
+
 	}
+	//中間点で死亡した場合、中間点で、沸くプログラム
+
+	
 
 	////当たり判定を行うオブジェクト情報部
 	//int data_base[3] =
@@ -128,6 +133,7 @@ void CObjHero::Action()
 	{
 		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
 		m_ani_time = 1;
+		m_vx -= 0.22f;
 	}
 
 
@@ -204,10 +210,7 @@ void CObjHero::Draw()
 	dst.m_left = (40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
+
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
-
-    //m_scroll += 2.0f;
-
-
 }

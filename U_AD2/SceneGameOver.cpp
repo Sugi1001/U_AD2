@@ -17,7 +17,7 @@ using namespace GameL;
 //コントラクタ
 CSceneGameOver::CSceneGameOver()
 {
-
+	
 }
 
 //デストラクタ
@@ -31,10 +31,13 @@ void CSceneGameOver::InitScene()
 {
 	//出力させる文字のグラフィックを作成
 	Font::SetStrTex(L"GameOver　ゲ～ムオ～バ～");
+	
 	Font::SetStrTex(L"あきらめてしまうのですね～www");
 	Font::SetStrTex(L"燃え尽きすぎてますのね～?w");
 	Font::SetStrTex(L"タイトルから出直してきてくださいましっ!");
-	Font::SetStrTex(L"ENTER_KEYでタイトルに戻るよ");
+	
+    Font::SetStrTex(L"ENTER_KEYでタイトルに戻るよ");
+	
 	Font::SetStrTex(L"何度もクリアできない場合は落ち着くために休憩をはさみましょう");
 	Font::SetStrTex(L"体調面などもきちんと考えてプレイを続けましょう");
 
@@ -42,10 +45,9 @@ void CSceneGameOver::InitScene()
 	//音楽情報の読み込み
 	Audio::LoadAudio(2, L"BGM Gameover.wav",BACK_MUSIC);
 
-	//ボリュームを1.0に戻す
-	/*float v = Audio::VolumeMaster(0);
-	v = Audio::VolumeMaster((1.0 - v));
-	Audio::Start(0); //音楽スタート*/
+	float v = Audio::VolumeMaster(2);
+	v = Audio::VolumeMaster((0.4 - v));
+	Audio::Start(2); //音楽スタート
 
 	//ゲームオーバーオブジェクト作成
 	CObjGameOver*obj = new CObjGameOver();

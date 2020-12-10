@@ -34,17 +34,12 @@ CSceneMain::~CSceneMain()
 void CSceneMain::InitScene()
 {
 	//音楽情報の読み込み
-	/*Audio::LoadAudio(0, L"Stage.wav", BACK_MUSIC);
-	Audio::LoadAudio(1, L"BGM GameClear.wav", BACK_MUSIC);
-	Audio::LoadAudio(2, L"BGM Gameover.wav", BACK_MUSIC);
-	Audio::LoadAudio(3, L"BGM Gametitle.wav", SOUND_TYPE::BACK_MUSIC);
-
-	//ボリュームを1.5に戻す
-	float v = Audio::VolumeMaster(1.5);
-	Audio::Start(0); //音楽スタート*/
+	Audio::LoadAudio(4, L"BGM Stage.wav", SOUND_TYPE::BACK_MUSIC);
+	float v = Audio::VolumeMaster(0.5);
+	Audio::Start(4); //音楽スタート
 
 	//Font作成
-	Font::SetStrTex(L"0123456789分秒");
+	//Font::SetStrTex(L"0123456789分秒");
 	//外部データの読み込み（ステージ情報）
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
@@ -71,7 +66,7 @@ void CSceneMain::InitScene()
 
 	//グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
-	Draw::LoadImage(L"taitle.png", 10, TEX_SIZE_512);
+	Draw::LoadImage(L"タイトル.png", 10, TEX_SIZE_512);
 	Draw::LoadImage(L"主人公（移動　逆）.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);

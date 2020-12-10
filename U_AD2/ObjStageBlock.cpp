@@ -104,21 +104,24 @@ void CObjStageBlock::Action()
 					r = r * 180.0f / 3.14f;
 
 					if (r <= 0.0f)
-						r = abs(r);
-					else
-						r = 360.0f - abs(r);
-
+					{
+					  r = abs(r);
+				    }
+				    else
+				    {
+					 r = 360.0f - abs(r);
+				    }
 					if (len < 88.0f) {
 						if ((r < 45 && r > 0) || r > 315) {
 							hero->SetRight(true);
 							hero->SetX(x + 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Draw::Draw(31, &src, &dst, c, 0.0f);
+							//Draw::Draw(31, &src, &dst, c, 0.0f);
 						}
 						if (r > 45 && r < 135) {
 							hero->SetDown(true);
 							hero->SetY(y - 64.0f);
-							if (m_map[i][j] >= 9)
+							if (m_map[i][j] >= 6)
 								hero->SetBT(m_map[i][j]);
 								hero->SetVY(0.0f);
 						}
@@ -126,7 +129,7 @@ void CObjStageBlock::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Draw::Draw(31, &src, &dst, c, 0.0f);
+							//Draw::Draw(31, &src, &dst, c, 0.0f);
 
 						}
 						if (r > 255 && r < 315) {
@@ -149,7 +152,7 @@ void CObjStageBlock::Action()
 	}
 
 	
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] > 0) {
 				float x = j * 64.0f;
@@ -202,7 +205,7 @@ void CObjStageBlock::Action()
 			}
 		}
 	
-    }
+    }*/
 	//スタート位置の設定
 for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
@@ -262,7 +265,7 @@ for (int i = 0; i < 10; i++) {
 //ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
-			if (m_map[i][j] >= 8) {
+			if (m_map[i][j] == 8) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -742,7 +745,7 @@ void CObjStageBlock::Draw()
 	   if (SGN(w1) == SGN(w2))
 		   return false;//交点が外
 
-	   //杉下を返す
+	   //岩を返す
 	   *out_px = px; *out_py;
 
 	   return true;
