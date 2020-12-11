@@ -142,8 +142,7 @@ void CObjStageBlock::Action()
 						}
 					}
 				}
-
-				else
+				
 				{
 
 				}

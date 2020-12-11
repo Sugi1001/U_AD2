@@ -80,7 +80,7 @@ struct UserData
 #include "ObjTitle.h"
 #include"ObjGameOver.h"
 #include"ObjGameClear.h"
-
+#include"ObjStageClea1.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -88,6 +88,7 @@ struct UserData
 #include "SceneMain.h"
 #include"SceneGameOver.h"
 #include"SceneClear.h"
+#include"SceneStageClea1.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
