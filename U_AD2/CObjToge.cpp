@@ -28,7 +28,7 @@ void CObjToge::Init()
 	
 	//マップ情報
 	////当たり判定用のHitBoxの作成
-	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_TOGE, 4);
+	//Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_TOGE, 4);
 	
 	
 
