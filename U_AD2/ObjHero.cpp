@@ -28,7 +28,7 @@ void CObjHero::Init()
 	m_ani_time = 0;
 	m_ani_frame = 1;//静止フレームを初期にする
 
-	float m_speed_power = 6.0f;//通常速度
+	float m_speed_power = 1.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
 	//blockとの衝突状態確認用
@@ -195,12 +195,41 @@ void CObjHero::Draw()
 
 
 
+	
+
+	//主人公１
+	//表示位置の設定
+	dst.m_top = 0.0f + m_py;
+	dst.m_left = (40.0f * m_posture) + m_px;
+	dst.m_right = (64 - 50.0f * m_posture) + m_px;
+	dst.m_bottom = 64.0 + m_py;
+
+	//主人公１
+	//表示位置の設定
+	dst.m_top = 0.0f + m_py;
+	dst.m_left = (40.0f * m_posture) + m_px;
+	dst.m_right = (64 - 50.0f * m_posture) + m_px;
+	dst.m_bottom = 64.0 + m_py;
+
 	//切り取り位置の設定
 	src.m_top = 0.0f;
 	src.m_left = 0.0f;
 	src.m_right = 64.0f;
 	src.m_bottom = 64.0f;
 
+
+	//主人公２
+	//表示位置の設定
+	dst.m_top = 0.0f + m_py;
+	dst.m_left = (40.0f * m_posture) + m_px;
+	dst.m_right = (64 - 50.0f * m_posture) + m_px;
+	dst.m_bottom = 64.0 + m_py;
+
+	//切り取り位置の設定
+	src.m_top = 0.0f;
+	src.m_left = 0.0f;
+	src.m_right = 64.0f;
+	src.m_bottom = 64.0f;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
@@ -216,4 +245,7 @@ void CObjHero::Draw()
 
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
+
+	//描画
+	Draw::Draw(2, &src, &dst, c, 1.0f);
 }
