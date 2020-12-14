@@ -24,7 +24,7 @@ void CObjClear1::Action()
 	{
 		if (m_key_flag == true)
 		{
-			Scene::SetScene(new CSceneMain());
+			Scene::SetScene(new CSceneTitle());
 			m_key_flag = false;
 		}
 
