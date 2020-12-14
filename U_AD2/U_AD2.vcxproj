@@ -144,6 +144,7 @@
     <ClCompile Include="ObjGameClear.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjNukalmi.cpp" />
+    <ClCompile Include="ObjStageBlock1.cpp" />
     <ClCompile Include="ObjStageClea1.cpp" />
     <ClCompile Include="ObjTime.cpp" />
     <ClCompile Include="SceneClear.cpp" />
@@ -185,6 +186,7 @@
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjItem.h" />
     <ClInclude Include="ObjNukalmi.h" />
+    <ClInclude Include="ObjStageBlock1.h" />
     <ClInclude Include="ObjStageClea1.h" />
     <ClInclude Include="ObjTime.h" />
     <ClInclude Include="ObjTitle.h" />

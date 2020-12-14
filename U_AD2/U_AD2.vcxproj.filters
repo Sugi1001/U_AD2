@@ -123,7 +123,7 @@
     <ClCompile Include="SceneStageClea1.cpp">
       <Filter>ソース ファイル\Clear</Filter>
     </ClCompile>
-    <ClCompile Include="ObjStageBlock2.cpp">
+    <ClCompile Include="ObjStageBlock1.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -221,7 +221,7 @@
     <ClInclude Include="SceneStageClea1.h">
       <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
-    <ClInclude Include="ObjStageBlock2.h">
+    <ClInclude Include="ObjStageBlock1.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
