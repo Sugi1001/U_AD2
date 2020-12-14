@@ -168,6 +168,7 @@
     <ClCompile Include="UtilityModule.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="yamikin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjToge.h">
@@ -213,6 +214,7 @@
     <ClInclude Include="UtilityModule.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="yamikin.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="主人公.png" />
