@@ -4,7 +4,7 @@
 #include"GameL/SceneManager.h"
 #include"GameL\SceneObjManager.h"
 #include"GameHead.h"
-#include"ObjStageBlock.h"
+#include"ObjStageBlock1.h"
 #include"GameL\DrawFont.h"
 
 

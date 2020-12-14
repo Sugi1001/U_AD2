@@ -7,7 +7,7 @@
 #include "GameL\DrawTexture.h"
 #include"GameL/DrawFont.h"
 #include"GameL/UserData.h"
-#include "ObjStageBlock.h"
+#include "ObjStageBlock1.h"
 #include"GameL/Audio.h"
 #include"ObjTime.h"
 
