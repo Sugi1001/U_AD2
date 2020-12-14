@@ -43,8 +43,15 @@ void CObjEnemyBlock::Action()
 			if (m_map[i][j] > 0)
 			{
 				//要素番号を座標に変更
-				float x = j * 64.0f;
-				float y = i * 64.0f;
+				float x = j * 50.0f;
+				float y = i * 50.0f;
+
+				//主人公と岩の当たり判定
+				if (1)
+				{
+					//当たっている場合
+					;
+				}
 			}
 		}
 	}
