@@ -10,6 +10,7 @@ enum OBJ_NAME
 	OBJ_ENEMY,
 	OBJ_TOGE,
 	OBJ_HERO,
+	OBJ_YAMIKIN,
 	//OBJ_HP,
 	//OBJ_BLOCK,
 	OBJ_STAGE_BLOCK,
@@ -68,6 +69,7 @@ struct UserData
 
 //ゲームシーンオブジェクトヘッダ------------------
 #include "ObjHero.h"
+#include"yamikin.h"
 #include"ObjStageBlock.h"
 #include"ObjStageBlock1.h"
 #include "ObjEnemyBlock.h"
