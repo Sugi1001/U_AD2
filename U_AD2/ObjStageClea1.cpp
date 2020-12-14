@@ -19,27 +19,27 @@ void CObjClear1::Init()
 //アクション
 void CObjClear1::Action()
 {
-	////エンターキーを押してシーン：ゲームTitleに移行する
-	//if (Input::GetVKey(VK_RETURN) == true)
-	//{
-	//	if (m_key_flag == true)
-	//	{
-	//		Scene::SetScene(new CSceneMain2());
-	//		m_key_flag = false;
-	//	}
+	//エンターキーを押してシーン：ゲームTitleに移行する
+	if (Input::GetVKey(VK_RETURN) == true)
+	{
+		if (m_key_flag == true)
+		{
+			Scene::SetScene(new CSceneMain());
+			m_key_flag = false;
+		}
 
-	//}
-	//else
-	//{
-	//	m_key_flag = true;
-	//}
+	}
+	else
+	{
+		m_key_flag = true;
+	}
 }
 //ドロー
 void CObjClear1::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
-	/*Font::StrDraw(L"クリアおめでとう！！", 150, 105, 60, c);
+	Font::StrDraw(L"クリアおめでとう！！", 150, 105, 60, c);
 
 	Font::StrDraw(L"これで主人公の借金も無事に返済できるだろう", 140, 210, 30, c);
 
@@ -47,5 +47,5 @@ void CObjClear1::Draw()
 
 	Font::StrDraw(L"主人公のぐ～たら生活は続いていけるのだろうか!!", 85, 315, 30, c);
 
-	Font::StrDraw(L"最後にプレイしていただきありがとうございました", 18, 400, 34, c)*/;
+	Font::StrDraw(L"最後にプレイしていただきありがとうございました", 18, 400, 34, c);
 }
