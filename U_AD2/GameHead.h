@@ -89,6 +89,7 @@ struct UserData
 #include"SceneTitle.h"
 #include "SceneMain.h"
 #include "SceneMain1.h"
+#include "SceneMain2.h"
 #include"SceneGameOver.h"
 #include"SceneClear.h"
 #include"SceneStageClea1.h"

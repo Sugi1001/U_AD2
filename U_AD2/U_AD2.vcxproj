@@ -141,6 +141,7 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
+    <ClCompile Include="ObjFinalStage.cpp" />
     <ClCompile Include="ObjGameClear.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjNukalmi.cpp" />
@@ -153,6 +154,7 @@
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneMain1.cpp" />
+    <ClCompile Include="SceneMain2.cpp" />
     <ClCompile Include="SceneStageClea1.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="ObjEnemyBlock.cpp">
@@ -183,6 +185,7 @@
     <ClInclude Include="GameL\SetWindow.h" />
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
+    <ClInclude Include="ObjFinalStage.h" />
     <ClInclude Include="ObjGameClear.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjItem.h" />
@@ -195,6 +198,7 @@
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneMain1.h" />
+    <ClInclude Include="SceneMain2.h" />
     <ClInclude Include="SceneStageClea1.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="main .h" />
