@@ -75,7 +75,7 @@ struct UserData
 #include  "ObjNukalmi.h"
 #include "ObjTime.h"
 //#include "GameL/Audio.h"
-//#include "ObjItem.h"
+#include "ObjItem.h"
 //#include"ObjEnemy.h"
 
 
