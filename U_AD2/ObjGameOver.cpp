@@ -38,7 +38,7 @@ void CObjGameOver::Draw()
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
 	Font::StrDraw(L"GameOver　ゲ～ムオ～バ～", 120, 110, 50, c);
-	Font::StrDraw(L"諦めるな！", 170, 195, 32, c);
+	Font::StrDraw(L"諦めるな！", 350, 195, 32, c);
 	Font::StrDraw(L"諦めなければきっとゴールは見えてくる", 170, 250, 32, c);
 	Font::StrDraw(L"何度でもチャレンジするんだ!", 170, 300, 32, c);
 	Font::StrDraw(L"ENTER_KEYでタイトルに戻るよ", 90, 400, 50, c);
