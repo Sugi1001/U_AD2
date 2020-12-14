@@ -66,7 +66,7 @@ void CObjTyukan::Action()
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
 							Draw::Draw(31, &src, &dst, c, 0.0f);
-							m_map[i][j]==2==6;
+						    
 
 						}
 						if (r > 255 && r < 315) {

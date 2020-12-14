@@ -16,23 +16,23 @@
 using namespace GameL;
 
 //使用ヘッダー
-#include "SceneMain.h"
+#include "SceneMain1.h"
 #include "GameHead.h"
 
 //コンストラクタ
-CSceneMain::CSceneMain()
+CSceneMain1::CSceneMain1()
 {
-	
+
 }
 
 //デストラクタ
-CSceneMain::~CSceneMain()
+CSceneMain1::~CSceneMain1()
 {
 
 }
 
 //初期化メソッド
-void CSceneMain::InitScene()
+void CSceneMain1::InitScene()
 {
 	//音楽情報の読み込み
 	Audio::LoadAudio(4, L"BGM Stage.wav", SOUND_TYPE::BACK_MUSIC);
@@ -44,17 +44,17 @@ void CSceneMain::InitScene()
 	//外部データの読み込み（ステージ情報）
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
-	p = Save::ExternalDataOpen(L"Stage500.csv", &size);//外部データ読み込み
+	p = Save::ExternalDataOpen(L"Stage250.csv", &size);//外部データ読み込み
 
 	//int map[10][150];
 	//int count = 1;
 	//for (int i = 0; i < 10; i++)
-	int map[10][500];
+	int map[10][250];
 	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
 		//for (int j = 0; j < 150; j++)
-		for (int j = 0; j < 500; j++)
+		for (int j = 0; j < 250; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);
@@ -90,7 +90,7 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj, OBJ_HERO, 10);
 
 	//blockオブジェクト作成
-	CObjStageBlock* objb = new CObjStageBlock(map);
+	CObjStageBlock1* objb = new CObjStageBlock1(map);
 	Objs::InsertObj(objb, OBJ_STAGE_BLOCK, 2);
 
 	//棘オブジェクト作成
@@ -109,11 +109,11 @@ void CSceneMain::InitScene()
 	CObjTime* objti = new CObjTime();
 	Objs::InsertObj(objti, OBJ_TIME, 11);
 
-	
+
 }
 
 //実行中メソッド
-void CSceneMain::Scene()
+void CSceneMain1::Scene()
 {
 
 }

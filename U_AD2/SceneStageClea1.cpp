@@ -11,36 +11,36 @@
 using namespace GameL;
 
 //使用ヘッダー
-#include"SceneClear.h"
+#include"SceneStageClea1.h"
 #include"GameHead.h"
 
 //コンストラクタ
-CSceneClear::CSceneClear()
+CSceneClear1::CSceneClear1()
 {
 
 }
 
 //デストラクタ
-CSceneClear::~CSceneClear()
+CSceneClear1::~CSceneClear1()
 {
 
 }
 
 //初期化メソッド
-void CSceneClear::InitScene()
+void CSceneClear1::InitScene()
 {
-	Font::SetStrTex(L"クリアおめでとう！！");
+	/*Font::SetStrTex(L"クリアおめでとう！！");
 	Font::SetStrTex(L"これで主人公の借金も無事に返済できるだろう");
 	Font::SetStrTex(L"ただし、借金が増えないとも言ってない");
 	Font::SetStrTex(L"主人公のぐ～たら生活は続いていけるのだろうか!!");
-	Font::SetStrTex(L"最後に一言いうとしたらプレイしていただきありがとうございました");
+	Font::SetStrTex(L"最後に一言いうとしたらプレイしていただきありがとうございました");*/
 
 
 	//音楽情報の読み取り
 	Audio::LoadAudio(1, L"BGM Gameclear.wav", BACK_MUSIC);
 
 	//バックミュージックスタート
-	float v = Audio::VolumeMaster(1); 
+	float v = Audio::VolumeMaster(1);
 	v = Audio::VolumeMaster(1.0 - v);
 	Audio::Start(1); //音楽スタート
 
@@ -50,7 +50,7 @@ void CSceneClear::InitScene()
 }
 
 //実行中メソッド
-void CSceneClear::Scene()
+void CSceneClear1::Scene()
 {
 
 }

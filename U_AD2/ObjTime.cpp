@@ -7,6 +7,7 @@
 #include "GameHead.h"
 #include "ObjTime.h"
 
+
 //使用するネームスペース
 using namespace GameL;
 
@@ -35,10 +36,11 @@ void CObjTime::Action()
 
 	//フラグがオンの時、時間を進める
 
-	if (m_flag_time == true)
+	if (m_flag_time || true)
 	{
 		m_time++;
 	}
+	
 }
 
 //ドロー
@@ -56,11 +58,15 @@ void CObjTime::Draw()
 	wchar_t str[128];
 
 	//分　：　秒の値を文字列か
-	if (second < 10)
-		swprintf_s(str, L"%d分%d秒", minute, second);
-
+	if (second < 60) {
+		swprintf_s(str, L"%d分%d秒", minute,second);
+	}
 	else
-	swprintf_s(str, L"%d分:%d秒", m_time,second); //分 : 秒の値を文字列化
+	{
+		swprintf_s(str, L"%d分%d秒", m_time, second); //分 : 秒の値を文字列化
+	}
+
+	
 
 	Font::StrDraw(str, 10, 10,20, c);
 
