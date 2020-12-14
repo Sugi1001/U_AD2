@@ -6,11 +6,11 @@
 using namespace GameL;
 
 //オブジェクト：ブロック＆背景
-class CObjStageBlock1 :public CObj
+class CObjFinalStage :public CObj
 {
 public:
-	CObjStageBlock1(int map[10][250]);
-	~CObjStageBlock1() {};
+	CObjFinalStage(int map[10][10]);
+	~CObjFinalStage() {};
 	void Init();//イニシャライズ
 	void Action();//アクション
 	void Draw();//ドロー
@@ -28,7 +28,7 @@ private:
 	void BlockDraw(float x, float y, RECT_F* dst, float c[]);
 	void BlockDraw1(float x, float y, RECT_F* dst, float c[]);
 	//int m_map[10][150] = { 0 };//マップ情報
-	int m_map[10][500] = { 0 };
+	int m_map[10][10] = { 0 };
 	//	int m_map[10][150] = { 0 };//マップ情報
 		//int m_map[10][106];//マップ情報
 

@@ -4,13 +4,13 @@
 #include"GameL/SceneManager.h"
 #include"GameL\SceneObjManager.h"
 #include"GameHead.h"
-#include"ObjStageBlock1.h"
+#include"ObjFinalStage.h"
 #include"GameL\DrawFont.h"
 
 
 //使用するネームスペース
 using namespace GameL;
-CObjStageBlock1::CObjStageBlock1(int map[10][250])
+CObjFinalStage::CObjFinalStage(int map[10][10])
 {
 	//{1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1},
 	//{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
@@ -26,16 +26,16 @@ CObjStageBlock1::CObjStageBlock1(int map[10][250])
 
   //マップデータをコピー
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 250; j++) {
+		for (int j = 0; j < 10; j++) {
 			m_map[i][j] = map[i][j];
 		}
 	}
-	memcpy(m_map, map, sizeof(int) * (10 * 250));
+	memcpy(m_map, map, sizeof(int) * (10 * 10));
 
 };
 
 //イニシャライズ
-void CObjStageBlock1::Init()
+void CObjFinalStage::Init()
 {
 	m_scroll = 0.0f;
 
@@ -45,7 +45,7 @@ void CObjStageBlock1::Init()
 
 }
 //アクション
-void CObjStageBlock1::Action()
+void CObjFinalStage::Action()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 	RECT_F src;//描画元切り取り
@@ -73,7 +73,7 @@ void CObjStageBlock1::Action()
 
 
 		//場外に出たらリスタート
-		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
+		//Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
 
 
 	}
@@ -89,7 +89,7 @@ void CObjStageBlock1::Action()
 
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 128; j++) {
+		for (int j = 0; j < 10; j++) {
 			if (m_map[i][j] == 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -152,7 +152,7 @@ void CObjStageBlock1::Action()
 
 
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 250; j++) {
+		for (int j = 0; j < 10; j++) {
 			if (m_map[i][j] == 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -207,7 +207,7 @@ void CObjStageBlock1::Action()
 	}
 	//スタート位置の設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 250; j++) {
+		for (int j = 0; j < 10; j++) {
 			if (m_map[i][j] == 6) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -264,7 +264,7 @@ void CObjStageBlock1::Action()
 	}
 	//ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 250; j++) {
+		for (int j = 0; j < 10; j++) {
 			if (m_map[i][j] == 8) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -322,7 +322,7 @@ void CObjStageBlock1::Action()
 
 	//棘の上部に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 250; j++) {
+		for (int j = 0; j < 10; j++) {
 			if (m_map[i][j] >= 7) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -390,7 +390,7 @@ void CObjStageBlock1::Action()
 
 
 //ドロー
-void CObjStageBlock1::Draw()
+void CObjFinalStage::Draw()
 {
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -420,11 +420,11 @@ void CObjStageBlock1::Draw()
 //src.m_right=src.m_left+64.0f;
 //src.m_bottom=64.0f;
 
-	m_scroll -= 2.0f;//スクロール実験用
+	//m_scroll -= 2.0f;//スクロール実験用
 
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 250; j++)
+		for (int j = 0; j < 10; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
@@ -535,7 +535,7 @@ void CObjStageBlock1::Draw()
 //引数４ float    c  :カラー情報
 //ブロックを64*64限定描画用。リソース切り替えのみx.yで
 //設定できる
-void CObjStageBlock1::BlockDraw(float x, float y, RECT_F* dst, float c[])
+void CObjFinalStage::BlockDraw(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -547,7 +547,7 @@ void CObjStageBlock1::BlockDraw(float x, float y, RECT_F* dst, float c[])
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
 }
-void CObjStageBlock1::BlockDraw1(float x, float y, RECT_F* dst, float c[])
+void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -572,7 +572,7 @@ void CObjStageBlock1::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 //引数10 int* bt        :下部分判定、特殊なブロックのタイプを返す
 //判定を行うobjectとブロック50*50限定で、あたり判定と上下左右判定を行う
 //その結果は引数４～１０に返す
-void CObjStageBlock1::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool* down, bool* left, bool* right, float* vx, float* vy, int* bt)
+void CObjFinalStage::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool* down, bool* left, bool* right, float* vx, float* vy, int* bt)
 {
 	//主人公の衝突状態確認用フラグの初期化
 	*up = false;
@@ -585,7 +585,7 @@ void CObjStageBlock1::BlockHit(float* x, float* y, bool scroll_on, bool* up, boo
 	//m_mapの全要素にアクセス
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 250; j++)
+		for (int j = 0; j < 10; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
@@ -671,7 +671,7 @@ void CObjStageBlock1::BlockHit(float* x, float* y, bool scroll_on, bool* up, boo
 //引数３，４float bx,by:Bベクトル
 //戻り値　float:射影
 //内容　AベクトルとBベクトルで内積を行い射影をもとめる
-float CObjStageBlock1::Dot(float ax, float ay, float bx, float by)
+float CObjFinalStage::Dot(float ax, float ay, float bx, float by)
 {
 	float t = 0.0f;
 
@@ -685,7 +685,7 @@ float CObjStageBlock1::Dot(float ax, float ay, float bx, float by)
 //引数３，４float bx,by:Bベクトル
 //戻り値　float :射影
 //内容　AベクトルとBベクトルで外積を行い射影をもとめる
-float CObjStageBlock1::Cross(float ax, float ay, float bx, float by)
+float CObjFinalStage::Cross(float ax, float ay, float bx, float by)
 {
 	float t = 0.0f;
 
@@ -698,7 +698,7 @@ float CObjStageBlock1::Cross(float ax, float ay, float bx, float by)
 #define SGN(x) 1-(x<=0)-(x<0)
 
    //線と線と交差判定
-bool CObjStageBlock1::LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py)
+bool CObjFinalStage::LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py)
 {
 	//エラーコード
 	*out_px = -99999.0f; *out_py = -99999.0f;
@@ -754,7 +754,7 @@ bool CObjStageBlock1::LineCrossPoint(float a1x, float a1y, float a2x, float a2y,
 //ブロックとの当たり判定実行
 	//CObjStageBlock::CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
    //主人公と壁の交差判定関数
-bool CObjStageBlock1::HeroBlockCrossPoint(float x, float y, float vx, float vy, float* out_px, float* out_py, float* out_len)
+bool CObjFinalStage::HeroBlockCrossPoint(float x, float y, float vx, float vy, float* out_px, float* out_py, float* out_len)
 {
 	bool pb = false;//交差確認用
 	float len = 99999.0f;//交点との距離
@@ -770,7 +770,7 @@ bool CObjStageBlock1::HeroBlockCrossPoint(float x, float y, float vx, float vy, 
 	//m_mapの全要素アクセス
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 250; j++)
+		for (int j = 0; j < 10; j++)
 		{
 			if (m_map[i][j] > 0 && m_map[i][j] != 4)
 			{
