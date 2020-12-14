@@ -126,6 +126,9 @@
     <ClCompile Include="ObjStageBlock1.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="SceneMain1.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -222,6 +225,9 @@
       <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
     <ClInclude Include="ObjStageBlock1.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain1.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>

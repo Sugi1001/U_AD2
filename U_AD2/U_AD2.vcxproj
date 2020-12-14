@@ -152,6 +152,7 @@
     <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneMain1.cpp" />
     <ClCompile Include="SceneStageClea1.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="ObjEnemyBlock.cpp">
@@ -193,6 +194,7 @@
     <ClInclude Include="SceneClear.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
+    <ClInclude Include="SceneMain1.h" />
     <ClInclude Include="SceneStageClea1.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="main .h" />
