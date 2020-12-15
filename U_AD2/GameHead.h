@@ -10,9 +10,12 @@ enum OBJ_NAME
 	OBJ_ENEMY,
 	OBJ_TOGE,
 	OBJ_HERO,
+	OBJ_YAMIKIN,
 	//OBJ_HP,
 	//OBJ_BLOCK,
 	OBJ_STAGE_BLOCK,
+	OBJ_STAGE_BLOCK1,
+	OBJ_FINAL_STAGE,
 	OBJ_BLOCK,
 
 	OBJ_TITLE,
@@ -32,7 +35,7 @@ enum HIT_ELEMENTS
 	//以下　同じ属性同士では当たり判定は実行されない
 	//属性は追加可能だが、デバック時の色は初期設定分しか無い
 	ELEMENT_PLAYER,
-	ELEMENT_ENEMY,
+	ELEMENT_YAMIKIN,
 	ELEMENT_ITEM,
 	ELEMENT_MAGIC,
 	ELEMENT_FIELD,
@@ -66,28 +69,33 @@ struct UserData
 
 //ゲームシーンオブジェクトヘッダ------------------
 #include "ObjHero.h"
+#include"yamikin.h"
 #include"ObjStageBlock.h"
+#include"ObjStageBlock1.h"
 #include "ObjEnemyBlock.h"
-
+#include"ObjFinalStage.h"
 #include  "CObjToge.h"
 #include  "ObjNukalmi.h"
 #include "ObjTime.h"
 //#include "GameL/Audio.h"
-//#include "ObjItem.h"
+#include "ObjItem.h"
 //#include"ObjEnemy.h"
 
 
 #include "ObjTitle.h"
 #include"ObjGameOver.h"
 #include"ObjGameClear.h"
-
+#include"ObjStageClea1.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
 #include"SceneTitle.h"
 #include "SceneMain.h"
+#include "SceneMain1.h"
+#include "SceneMain2.h"
 #include"SceneGameOver.h"
 #include"SceneClear.h"
+#include"SceneStageClea1.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
