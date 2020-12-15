@@ -28,6 +28,9 @@
     <Filter Include="ソース ファイル\Clear">
       <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scenemain">
+      <UniqueIdentifier>{7c97a39d-1622-4720-a88f-179bb213ec74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -105,9 +108,6 @@
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Hero</Filter>
     </ClCompile>
-    <ClCompile Include="SceneMain.cpp">
-      <Filter>ソース ファイル\Sisutemu</Filter>
-    </ClCompile>
     <ClCompile Include="UtilityModule.cpp">
       <Filter>ソース ファイル\Sisutemu</Filter>
     </ClCompile>
@@ -126,17 +126,20 @@
     <ClCompile Include="ObjStageBlock1.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="SceneMain1.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjFinalStage.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneMain2.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="yamikin.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain1.cpp">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain.cpp">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain2.cpp">
+      <Filter>ソース ファイル\Scenemain</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -212,9 +215,6 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Hero</Filter>
     </ClInclude>
-    <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル\Sisutemu</Filter>
-    </ClInclude>
     <ClInclude Include="UtilityModule.h">
       <Filter>ソース ファイル\Sisutemu</Filter>
     </ClInclude>
@@ -236,17 +236,20 @@
     <ClInclude Include="ObjStageBlock1.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneMain1.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjFinalStage.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMain2.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="yamikin.h">
       <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain.h">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain1.h">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain2.h">
+      <Filter>ソース ファイル\Scenemain</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
