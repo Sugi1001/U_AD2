@@ -42,6 +42,7 @@ void CSceneGameOver::InitScene()
 	Font::SetStrTex(L"体調面などもきちんと考えてプレイを続けましょう");
 
 
+
 	//音楽情報の読み込み
 	Audio::LoadAudio(2, L"BGM Gameover.wav",BACK_MUSIC);
 
