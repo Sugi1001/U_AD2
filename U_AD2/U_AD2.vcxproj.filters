@@ -123,12 +123,6 @@
     <ClCompile Include="SceneStageClea1.cpp">
       <Filter>ソース ファイル\Clear</Filter>
     </ClCompile>
-    <ClCompile Include="ObjStageBlock1.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjFinalStage.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="yamikin.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -140,6 +134,12 @@
     </ClCompile>
     <ClCompile Include="SceneMain2.cpp">
       <Filter>ソース ファイル\Scenemain</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjStageBlock1.cpp">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjFinalStage.cpp">
+      <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -233,12 +233,6 @@
     <ClInclude Include="SceneStageClea1.h">
       <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
-    <ClInclude Include="ObjStageBlock1.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjFinalStage.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="yamikin.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
@@ -250,6 +244,12 @@
     </ClInclude>
     <ClInclude Include="SceneMain2.h">
       <Filter>ソース ファイル\Scenemain</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStageBlock1.h">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjFinalStage.h">
+      <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
