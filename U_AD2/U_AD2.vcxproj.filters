@@ -135,13 +135,13 @@
     <ClCompile Include="ObjFinalStage.cpp">
       <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
-    <ClCompile Include="ObjGameClear.cpp">
-      <Filter>ソース ファイル\ゲームクリア</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjStageClea1.cpp">
+    <ClCompile Include="SceneStageClea1.cpp">
       <Filter>ソース ファイル\ステージクリア</Filter>
     </ClCompile>
-    <ClCompile Include="SceneStageClea1.cpp">
+    <ClCompile Include="ObjStageClea1.cpp">
+      <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameClear.cpp">
       <Filter>ソース ファイル\ステージクリア</Filter>
     </ClCompile>
   </ItemGroup>
@@ -212,9 +212,6 @@
     <ClInclude Include="SceneClear.h">
       <Filter>ソース ファイル\ゲームクリア</Filter>
     </ClInclude>
-    <ClInclude Include="ObjGameClear.h">
-      <Filter>ソース ファイル\ゲームクリア</Filter>
-    </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Hero</Filter>
     </ClInclude>
@@ -248,10 +245,13 @@
     <ClInclude Include="ObjFinalStage.h">
       <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
-    <ClInclude Include="ObjStageClea1.h">
+    <ClInclude Include="SceneStageClea1.h">
       <Filter>ソース ファイル\ステージクリア</Filter>
     </ClInclude>
-    <ClInclude Include="SceneStageClea1.h">
+    <ClInclude Include="ObjStageClea1.h">
+      <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameClear.h">
       <Filter>ソース ファイル\ステージクリア</Filter>
     </ClInclude>
   </ItemGroup>
