@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ソース ファイル\title over">
-      <UniqueIdentifier>{47bfe6db-c4a9-4050-bd4e-ef7b0d98e336}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Hero">
       <UniqueIdentifier>{353f4933-e220-4d2d-a7ef-b7f359951917}</UniqueIdentifier>
     </Filter>
@@ -25,11 +22,17 @@
     <Filter Include="ソース ファイル\stage">
       <UniqueIdentifier>{84196e1a-d979-4133-af07-f610410a4307}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Clear">
-      <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Scenemain">
       <UniqueIdentifier>{7c97a39d-1622-4720-a88f-179bb213ec74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ステージクリア">
+      <UniqueIdentifier>{bc5f4c55-4446-458e-9453-a19bdfedcb4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ゲームクリア">
+      <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ゲームタイトル&amp;ゲームオーバー">
+      <UniqueIdentifier>{47bfe6db-c4a9-4050-bd4e-ef7b0d98e336}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -85,25 +88,22 @@
       <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClCompile>
     <ClCompile Include="ObjTitle.cpp">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClCompile>
     <ClCompile Include="ObjGameOver.cpp">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClCompile>
     <ClCompile Include="SceneTitle.cpp">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClCompile>
     <ClCompile Include="ObjNukalmi.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SceneClear.cpp">
-      <Filter>ソース ファイル\Clear</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjGameClear.cpp">
-      <Filter>ソース ファイル\Clear</Filter>
+      <Filter>ソース ファイル\ゲームクリア</Filter>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Hero</Filter>
@@ -116,12 +116,6 @@
     </ClCompile>
     <ClCompile Include="Objtyukan.cpp">
       <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjStageClea1.cpp">
-      <Filter>ソース ファイル\Clear</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneStageClea1.cpp">
-      <Filter>ソース ファイル\Clear</Filter>
     </ClCompile>
     <ClCompile Include="yamikin.cpp">
       <Filter>ソース ファイル</Filter>
@@ -140,6 +134,15 @@
     </ClCompile>
     <ClCompile Include="ObjFinalStage.cpp">
       <Filter>ソース ファイル\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameClear.cpp">
+      <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjStageClea1.cpp">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStageClea1.cpp">
+      <Filter>ソース ファイル\ステージクリア</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -192,25 +195,25 @@
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneGameOver.h">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
     <ClInclude Include="ObjTitle.h">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
     <ClInclude Include="ObjGameOver.h">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
     <ClInclude Include="SceneTitle.h">
-      <Filter>ソース ファイル\title over</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
     <ClInclude Include="ObjNukalmi.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneClear.h">
-      <Filter>ソース ファイル\Clear</Filter>
+      <Filter>ソース ファイル\ゲームクリア</Filter>
     </ClInclude>
     <ClInclude Include="ObjGameClear.h">
-      <Filter>ソース ファイル\Clear</Filter>
+      <Filter>ソース ファイル\ゲームクリア</Filter>
     </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Hero</Filter>
@@ -226,12 +229,6 @@
     </ClInclude>
     <ClInclude Include="Objtyukan.h">
       <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjStageClea1.h">
-      <Filter>ソース ファイル\Clear</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneStageClea1.h">
-      <Filter>ソース ファイル\Clear</Filter>
     </ClInclude>
     <ClInclude Include="yamikin.h">
       <Filter>ソース ファイル</Filter>
@@ -250,6 +247,12 @@
     </ClInclude>
     <ClInclude Include="ObjFinalStage.h">
       <Filter>ソース ファイル\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStageClea1.h">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneStageClea1.h">
+      <Filter>ソース ファイル\ステージクリア</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
