@@ -24,7 +24,8 @@ void CObjGameSousa::Action()
 	{
 		if (m_key_flag == true)
 		{
-			Scene::SetScene(new CSceneMain());
+			Scene::SetScene(new CSceneMain1());
+			//Scene::SetScene(new CSceneMain());
 			m_key_flag = false;
 		}
 
@@ -39,7 +40,7 @@ void CObjGameSousa::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
-	Font::StrDraw(L"→キー　前に進む", 150, 105, 60, c);
-	Font::StrDraw(L"←キー　後ろに進む", 150, 145, 60, c);
-	Font::StrDraw(L"Xキー　ジャンプ", 150, 185, 60, c);
+	Font::StrDraw(L"→キー　前に進む", 150, 150, 60, c);
+	Font::StrDraw(L"←キー　後ろに進む", 150, 250, 60, c);
+	Font::StrDraw(L"Xキー　ジャンプ", 150, 350, 60, c);
 }
