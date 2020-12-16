@@ -29,13 +29,9 @@ CSceneGameSousa::~CSceneGameSousa()
 //初期化メソッド
 void CSceneGameSousa::InitScene()
 {
-	/*Font::SetStrTex(L"クリアおめでとう！！");
-	Font::SetStrTex(L"これで主人公の借金も無事に返済できるだろう");
-	Font::SetStrTex(L"ただし、借金が増えないとも言ってない");
-	Font::SetStrTex(L"主人公のぐ～たら生活は続いていけるのだろうか!!");
-	Font::SetStrTex(L"最後に一言いうとしたらプレイしていただきありがとうございました");*/
-
-
+	Font::SetStrTex(L"→キー　前に進む");
+	Font::SetStrTex(L"←キー　後ろに進む");
+	Font::SetStrTex(L"Xキー　ジャンプ");
 
 	//クリアオブジェクト作成
 	CObjGameSousa* obj = new CObjGameSousa();
