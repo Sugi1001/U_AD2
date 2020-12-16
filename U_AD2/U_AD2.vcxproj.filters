@@ -34,6 +34,9 @@
     <Filter Include="ソース ファイル\ゲームタイトル&amp;ゲームオーバー">
       <UniqueIdentifier>{47bfe6db-c4a9-4050-bd4e-ef7b0d98e336}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\操作説明">
+      <UniqueIdentifier>{545c29b3-2c39-4017-b986-5e82d4b994c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -144,6 +147,12 @@
     <ClCompile Include="ObjGameClear.cpp">
       <Filter>ソース ファイル\ステージクリア</Filter>
     </ClCompile>
+    <ClCompile Include="ObjGameSousa.cpp">
+      <Filter>ソース ファイル\操作説明</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameSousa.cpp">
+      <Filter>ソース ファイル\操作説明</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -253,6 +262,12 @@
     </ClInclude>
     <ClInclude Include="ObjGameClear.h">
       <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameSousa.h">
+      <Filter>ソース ファイル\操作説明</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameSousa.h">
+      <Filter>ソース ファイル\操作説明</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
