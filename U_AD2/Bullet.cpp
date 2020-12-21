@@ -37,7 +37,7 @@ void CObjBullet::Init()
 void CObjBullet::Action()
 {
 	//Resources‚Ì•`‰æ•¨‚ÌRECT
-	m_eff = GetBulletEffec(&m_ani, &m_ani_time, m_del, 2);
+	//m_eff = GetBulletEffec(&m_ani, &m_ani_time, m_del, 2);
 
 	//’eŠÛÁ–Åˆ—--------
 	if (m_del == true)

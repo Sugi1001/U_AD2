@@ -90,19 +90,19 @@ void CObjyamikin::Action()
 	}
 
 	//’eŠÛ‚ÆÚG‚·‚é‚ÆHP‚ªŒ¸‚é
-	/*if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
+	if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
 	{
 		m_hp -= 1;
-	}*/
+	}
 
 	//HP‚ª‚O‚É‚È‚é‚Æ”jŠü
-	if (m_hp <= 0)
+	/*if (m_hp <= 0)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 
 		Scene::SetScene(new CSceneClear());
-	}
+	}*/
 
 
 
