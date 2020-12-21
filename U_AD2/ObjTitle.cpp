@@ -23,7 +23,8 @@ void CObjTitle::Action()
 	{
 		if (m_key_flag == true)
 		{
-			Scene::SetScene(new CSceneMain1());
+			//Scene::SetScene(new CSceneMain1());
+			Scene::SetScene(new CSceneGameSousa());
 		}
 	}
 	else

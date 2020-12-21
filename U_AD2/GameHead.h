@@ -10,6 +10,7 @@ enum OBJ_NAME
 	OBJ_ENEMY,
 	OBJ_TOGE,
 	OBJ_HERO,
+	OBJ_YAMIKIN,
 	//OBJ_HP,
 	//OBJ_BLOCK,
 	OBJ_STAGE_BLOCK,
@@ -24,6 +25,7 @@ enum OBJ_NAME
 	OBJ_TIME,
 	OBJ_TYUKAN,
 	//OBJ_BACKGROUND,
+	OBJ_GAME_SOUSA,
 };
 //------------------------------------------------
 
@@ -68,6 +70,7 @@ struct UserData
 
 //ゲームシーンオブジェクトヘッダ------------------
 #include "ObjHero.h"
+#include"yamikin.h"
 #include"ObjStageBlock.h"
 #include"ObjStageBlock1.h"
 #include "ObjEnemyBlock.h"
@@ -84,6 +87,7 @@ struct UserData
 #include"ObjGameOver.h"
 #include"ObjGameClear.h"
 #include"ObjStageClea1.h"
+#include"ObjGameSousa.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -94,6 +98,7 @@ struct UserData
 #include"SceneGameOver.h"
 #include"SceneClear.h"
 #include"SceneStageClea1.h"
+#include"SceneGameSousa.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------

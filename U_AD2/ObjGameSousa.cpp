@@ -4,27 +4,28 @@
 #include"GameL/SceneManager.h"
 
 #include"GameHead.h"
-#include"ObjGameClear.h"
+#include"ObjGameSousa.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjClear::Init()
+void CObjGameSousa::Init()
 {
 	//キーフラグ
 	m_key_flag = false;
 }
 
 //アクション
-void CObjClear::Action()
+void CObjGameSousa::Action()
 {
 	//エンターキーを押してシーン：ゲームTitleに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
 	{
 		if (m_key_flag == true)
 		{
-			Scene::SetScene(new CSceneMain());
+			Scene::SetScene(new CSceneMain1());
+			//Scene::SetScene(new CSceneMain());
 			m_key_flag = false;
 		}
 
@@ -35,10 +36,14 @@ void CObjClear::Action()
 	}
 }
 //ドロー
-void CObjClear::Draw()
+void CObjGameSousa::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
-	Font::StrDraw(L"次の階層へ！！", 150, 105, 60, c);
+	Font::StrDraw(L"→キー　前に進む", 150, 150, 60, c);
+	Font::StrDraw(L"←キー　後ろに進む", 150, 250, 60, c);
+	Font::StrDraw(L"Xキー　ジャンプ", 150, 350, 60, c);
 
+	Font::StrDraw(L"焦らず丁寧に進んでいこう（経験談）", 80, 460, 40, c);
+	Font::StrDraw(L"アイテムもあるから攻略に役立ててね！", 80, 510, 40, c);
 }
