@@ -52,11 +52,8 @@ void CObjHero::Action()
 	//CHitBox* hit = Hits::GetHitBox(this);
 	//hit->SetPos(m_x, m_y);
 
-	//棘が主人公に接触したら主人公のHPを減らす
-	//if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
-	//{
-		//m_hp -= 2;
-	//}
+	//棘と接触したらHPを減らす
+		
 	////移動ベクトルの破棄
 
 	if (m_py > 1000.0f)
@@ -80,21 +77,7 @@ void CObjHero::Action()
 
 	//};
 
-	//オブジェクト情報部と当たり判定を行い当たっていれば、HPを1減らす
-	for (int i = 0; i < 3; i++)
-	{
-		for (int j = 3; j < 1; j++)
-		{
-			;
-		}
-	}
-
-	////HPが0になったら破棄
-	//if (m_hp <= 0)
-	//{
-	//	this->SetStatus(false);
-	//	Hits::DeleteHitBox(this);
-	//}
+	
 
 
 

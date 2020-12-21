@@ -46,11 +46,11 @@ private:
 	float m_vy;
 	float m_posture; //姿勢
 	float m_x;
-	float m_y; //HitBox用の位置
+	float m_y;
+	int m_hp;//主人公のHP //主人公のひっとぽいんと]
 
-	float m_hp; //主人公のHP //主人公のひっとぽいんと
+
 	float hit;
-
 	float m_scroll;
 	
 
