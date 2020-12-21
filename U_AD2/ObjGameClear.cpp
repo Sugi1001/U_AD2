@@ -39,6 +39,8 @@ void CObjClear::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
-	Font::StrDraw(L"次の階層へ！！", 150, 105, 60, c);
+	Font::StrDraw(L"次の階層へ！！", 150, 125, 60, c);
 
+	Font::StrDraw(L"次はもっと難しくなるけれど焦らず行こう", 90, 305, 30, c);
+	Font::StrDraw(L"", 80, 405, 30, c);
 }
