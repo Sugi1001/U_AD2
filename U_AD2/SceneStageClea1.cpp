@@ -29,11 +29,8 @@ CSceneClear1::~CSceneClear1()
 //初期化メソッド
 void CSceneClear1::InitScene()
 {
-	/*Font::SetStrTex(L"クリアおめでとう！！");
-	Font::SetStrTex(L"これで主人公の借金も無事に返済できるだろう");
-	Font::SetStrTex(L"ただし、借金が増えないとも言ってない");
-	Font::SetStrTex(L"主人公のぐ～たら生活は続いていけるのだろうか!!");
-	Font::SetStrTex(L"最後に一言いうとしたらプレイしていただきありがとうございました");*/
+	Font::SetStrTex(L"次の階層へ！！");
+	Font::SetStrTex(L"次は難しくなるけれど焦らず行こう");
 
 
 	//音楽情報の読み取り
