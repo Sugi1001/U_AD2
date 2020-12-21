@@ -42,5 +42,8 @@ void CObjClear::Draw()
 	Font::StrDraw(L"次の階層へ！！", 150, 125, 60, c);
 
 	Font::StrDraw(L"次はもっと難しくなるけれど焦らず行こう", 90, 305, 30, c);
-	Font::StrDraw(L"", 80, 405, 30, c);
+
+	Font::StrDraw(L"豆知識だお", 80, 405, 30, c);
+	Font::StrDraw(L"日本で一番大きい洞窟は安家洞(あっかどう)だよ", 80, 455, 30, c);
+	Font::StrDraw(L"岩手県にあって総延長約23,702mだよ", 80, 505, 30, c);
 }
