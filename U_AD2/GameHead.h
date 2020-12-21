@@ -11,6 +11,7 @@ enum OBJ_NAME
 	OBJ_TOGE,
 	OBJ_HERO,
 	OBJ_YAMIKIN,
+	OBJ_BULLET,
 	//OBJ_HP,
 	//OBJ_BLOCK,
 	OBJ_STAGE_BLOCK,
@@ -81,6 +82,7 @@ struct UserData
 //#include "GameL/Audio.h"
 #include "ObjItem.h"
 //#include"ObjEnemy.h"
+#include"Bullet.h"
 
 
 #include "ObjTitle.h"

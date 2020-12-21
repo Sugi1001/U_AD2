@@ -82,6 +82,8 @@ void CSceneMain2::InitScene()
 	Draw::LoadImage(L"ぬかるみ.png", 30, TEX_SIZE_512);
 	Draw::LoadImage(L"崖掴まり.png", 31, TEX_SIZE_512);
 	Draw::LoadImage(L"中間.png", 32, TEX_SIZE_512);
+	Draw::LoadImage(L"闇金.png", 29, TEX_SIZE_512);
+	Draw::LoadImage(L"弾丸.png", 28, TEX_SIZE_512);
 
 
 
@@ -109,7 +111,9 @@ void CSceneMain2::InitScene()
 	CObjTime* objti = new CObjTime();
 	Objs::InsertObj(objti, OBJ_TIME, 11);
 
-
+	//棘オブジェクト作成
+	CObjyamikin* objt = new CObjyamikin(); //棘オブジェクト作成
+	Objs::InsertObj(objt, OBJ_YAMIKIN, 12);
 }
 
 //実行中メソッド

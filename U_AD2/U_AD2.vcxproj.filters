@@ -153,6 +153,9 @@
     <ClCompile Include="SceneGameSousa.cpp">
       <Filter>ソース ファイル\操作説明</Filter>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -268,6 +271,9 @@
     </ClInclude>
     <ClInclude Include="SceneGameSousa.h">
       <Filter>ソース ファイル\操作説明</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

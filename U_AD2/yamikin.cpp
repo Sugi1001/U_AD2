@@ -11,7 +11,6 @@ using namespace GameL;
 //コンストラクタ
 CObjyamikin::CObjyamikin(float x, float y)
 {
-
 	m_y = y;
 }
 
@@ -22,7 +21,7 @@ void CObjyamikin::Init()
 	m_hp = 45;
 	m_time = 0;
 	m_r = 0.0f;
-	m_vx = 0.0f;
+	//m_vx = 0.0f;
 	m_vy = 0.0f;
 
 	//当たり判定用HitBox作成
@@ -130,5 +129,5 @@ void CObjyamikin::Draw()
 	dst.m_bottom = 64.0f + m_y;
 
 	//1番目に登録したグラフィックをsrc,dst,cの情報の元に描画
-	Draw::Draw(1, &src, &dst, c, 0.0f);
+	Draw::Draw(29, &src, &dst, c, 0.0f);
 }
