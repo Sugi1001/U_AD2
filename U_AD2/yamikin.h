@@ -19,6 +19,7 @@ private:
 	float m_vx;//敵機移動ベクトルｘ
 	float m_vy;//敵機移動ベクトルｙ
 	float m_r;//サインカーブ用角度
+	//float hit;
 	int m_time;//弾丸間隔速度
 	int m_hp;//ボスのヒットポイント
 };
