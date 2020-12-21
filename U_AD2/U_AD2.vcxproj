@@ -175,7 +175,9 @@
     <ClCompile Include="UtilityModule.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="yamikin.cpp" />
+    <ClCompile Include="yamikin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -228,7 +230,9 @@
     <ClInclude Include="UtilityModule.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="yamikin.h" />
+    <ClInclude Include="yamikin.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="主人公.png" />
