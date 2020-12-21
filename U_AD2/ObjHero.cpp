@@ -247,5 +247,5 @@ void CObjHero::Draw()
 	Draw::Draw(1, &src, &dst, c, 1.0f);
 
 	//•`‰æ
-	Draw::Draw(1, &src, &dst, c, 1.0f);
+	Draw::Draw(2, &src, &dst, c, 1.0f);
 }
