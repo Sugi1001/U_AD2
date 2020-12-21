@@ -112,12 +112,12 @@ void CSceneMain2::InitScene()
 	Objs::InsertObj(objti, OBJ_TIME, 11);
 
 	//棘オブジェクト作成
-	CObjBullet* objt = new CObjBullet(9,10); //棘オブジェクト作成
+	/*CObjBullet* objt = new CObjBullet(9,10); //棘オブジェクト作成
 	Objs::InsertObj(objt, OBJ_BULLET, 12);
 
 	//棘オブジェクト作成
 	CObjyamikin* objt = new CObjyamikin(10,10); //棘オブジェクト作成
-	Objs::InsertObj(objt, OBJ_YAMIKIN, 13);
+	Objs::InsertObj(objt, OBJ_YAMIKIN, 13);*/
 }
 
 //実行中メソッド
