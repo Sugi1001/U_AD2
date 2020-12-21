@@ -244,8 +244,8 @@ void CObjHero::Draw()
 	dst.m_bottom = 64.0 + m_py;
 
 	//•`‰æ
-	Draw::Draw(1, &src, &dst, c, 1.0f);
+	Draw::Draw(0, &src, &dst, c, 1.0f);
 
 	//•`‰æ
-	//Draw::Draw(2, &src, &dst, c, 1.0f);
+	Draw::Draw(1, &src, &dst, c, 1.0f);
 }
