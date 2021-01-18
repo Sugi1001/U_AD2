@@ -14,23 +14,24 @@ using namespace GameL;
 //イニシャライズ
 void CObjToge::Init()
 {
-	m_px = 100.0f;
+	m_px = 1.0f; //位置
 	m_py = 0.0f;
-	m_x;
-	m_y;
-	
-	m_posture = 0.0f;
+	m_vx = 1.0f;//移動ベクトル
+	m_vy = 0.0f;
+	m_posture = 1.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
-	m_ani_frame = 1;
-	
+	m_ani_frame = 1;//静止フレームを初期にする
 
-	
-	//マップ情報
-	////当たり判定用のHitBoxの作成
-	//Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_TOGE, 4);
-	
-	
+	float m_speed_power = 1.0f;//通常速度
+	float m_ani_max_time;//アニメーション間隔幅
+
+	//blockとの衝突状態確認用
+	m_hit_up = false;
+	m_hit_down = false;
+	m_hit_left = false;
+	m_hit_right = false;
+
 
 }
 
@@ -64,6 +65,8 @@ void CObjToge::Action()
 
 	//HitBoxの内容を更新
 
+	//自由落下運動
+	m_vy += 9.8 / (16.0f);
 	
 }
 
@@ -72,7 +75,7 @@ void CObjToge::Draw()
 {
 	int AniData[4] =
 	{
-		1, 0 ,2 , 0,
+		1, 2 ,2 , 0,
 	};
 
 	//描画カラー情報
@@ -88,8 +91,6 @@ void CObjToge::Draw()
 	src.m_bottom = src.m_top+64.0f;
 
 	
-	//ブロック情報を持ってくる
-	CObjStageBlock* block = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64.0f * m_posture) + m_px;
@@ -97,7 +98,7 @@ void CObjToge::Draw()
 	dst.m_bottom = 64.0f + m_py;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	//Draw::Draw(8, &src, &dst, c, 0.0f);
+	Draw::Draw(8, &src, &dst, c, 0.0f);
 
 
 
