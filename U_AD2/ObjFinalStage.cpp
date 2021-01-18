@@ -27,10 +27,10 @@ CObjFinalStage::CObjFinalStage(int map[10][13])
   //マップデータをコピー
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			map[i][j] = map[i][j];
+			m_map[i][j] = map[i][j];
 		}
 	}
-	memcpy(map, map, sizeof(int) * (10 * 13));
+	memcpy(m_map, map, sizeof(int) * (10 * 13));
 
 };
 
