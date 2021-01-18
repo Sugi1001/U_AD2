@@ -24,7 +24,7 @@ void CObjTime::Action()
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 
-	//スターとブロックを踏んでいるならフラグをオンにする
+	//スタートブロックを踏んでいるならフラグをオンにする
 	if (hero->GetBT() == 2)
 	{
 		m_flag_time = true;
