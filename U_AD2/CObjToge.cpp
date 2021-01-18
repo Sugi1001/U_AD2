@@ -97,9 +97,9 @@ void CObjToge::Draw()
 	
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
-	dst.m_left = (64.0f * m_posture) + m_px;
-	dst.m_right = (50 + 64.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0f + m_py;
+	dst.m_left = (50.0f * m_posture) + m_px;
+	dst.m_right = (50 + 50.0f * m_posture) + m_px;
+	dst.m_bottom = 50.0f + m_py;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
 	Draw::Draw(8, &src, &dst, c, 0.0f);
