@@ -515,6 +515,25 @@ void CObjFinalStage::Draw()
 					Draw::Draw(2, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
+				else if (m_map[i][j] == 60)
+				{
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(60, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				else if (m_map[i][j] == 61)
+				{
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(61, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				
 				else
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
@@ -525,6 +544,7 @@ void CObjFinalStage::Draw()
 	}
 
 }
+
 //BlockDrawMethod関数
 //引数１ float    x  :リソース切り替え位置x
 //引数２ float    y  :リソース切り替え位置y
