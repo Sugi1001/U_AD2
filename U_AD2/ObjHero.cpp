@@ -8,8 +8,6 @@
 #include "GameHead.h"
 #include "ObjHero.h"
 
-
-
 #include "ObjStageBlock.h"
 
 //使用するネームスペース
@@ -48,6 +46,8 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+
+
 	//HitBoxの内容を更新
 	//CHitBox* hit = Hits::GetHitBox(this);
 	//hit->SetPos(m_x, m_y);

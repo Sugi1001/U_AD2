@@ -64,6 +64,8 @@ void CObjToge::Action()
 
 	//HitBoxの内容を更新
 
+	//自由落下運動
+	m_vy += 9.8 / (16.0f);
 	
 }
 
@@ -72,7 +74,7 @@ void CObjToge::Draw()
 {
 	int AniData[4] =
 	{
-		1, 0 ,2 , 0,
+		1, 2 ,2 , 0,
 	};
 
 	//描画カラー情報
@@ -93,11 +95,11 @@ void CObjToge::Draw()
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (64.0f * m_posture) + m_px;
-	dst.m_right = (64 - 64.0f * m_posture) + m_px;
+	dst.m_right = (64 - 30.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0f + m_py;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	//Draw::Draw(8, &src, &dst, c, 0.0f);
+	Draw::Draw(8, &src, &dst, c, 0.0f);
 
 
 
