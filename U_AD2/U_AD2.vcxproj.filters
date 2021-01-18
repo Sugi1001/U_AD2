@@ -37,6 +37,9 @@
     <Filter Include="ソース ファイル\操作説明">
       <UniqueIdentifier>{545c29b3-2c39-4017-b986-5e82d4b994c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\time">
+      <UniqueIdentifier>{f570da1e-dd28-4112-b3b2-e4a78e0fc432}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -114,9 +117,6 @@
     <ClCompile Include="UtilityModule.cpp">
       <Filter>ソース ファイル\Sisutemu</Filter>
     </ClCompile>
-    <ClCompile Include="ObjTime.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Objtyukan.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -155,6 +155,9 @@
     </ClCompile>
     <ClCompile Include="Bullet.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTime.cpp">
+      <Filter>ソース ファイル\time</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -233,9 +236,6 @@
     <ClInclude Include="ObjStageBlock.h">
       <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
-    <ClInclude Include="ObjTime.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Objtyukan.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
@@ -274,6 +274,9 @@
     </ClInclude>
     <ClInclude Include="Bullet.h">
       <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTime.h">
+      <Filter>ソース ファイル\time</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
