@@ -26,11 +26,11 @@ CObjFinalStage::CObjFinalStage(int map[10][10])
 
   //マップデータをコピー
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			m_map[i][j] = map[i][j];
 		}
 	}
-	memcpy(m_map, map, sizeof(int) * (10 * 10));
+	memcpy(m_map, map, sizeof(int) * (10 * 13));
 
 };
 
@@ -38,9 +38,6 @@ CObjFinalStage::CObjFinalStage(int map[10][10])
 void CObjFinalStage::Init()
 {
 	m_scroll = 0.0f;
-
-	//マップ情報
-	//int map[10][150] =
 
 
 }
@@ -89,7 +86,7 @@ void CObjFinalStage::Action()
 
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] == 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -152,7 +149,7 @@ void CObjFinalStage::Action()
 
 
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] == 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -207,7 +204,7 @@ void CObjFinalStage::Action()
 	}
 	//スタート位置の設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] == 6) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -264,7 +261,7 @@ void CObjFinalStage::Action()
 	}
 	//ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] == 8) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -322,7 +319,7 @@ void CObjFinalStage::Action()
 
 	//棘の上部に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] >= 7) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -424,7 +421,7 @@ void CObjFinalStage::Draw()
 
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 13; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
@@ -585,7 +582,7 @@ void CObjFinalStage::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool
 	//m_mapの全要素にアクセス
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 13; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
@@ -770,7 +767,7 @@ bool CObjFinalStage::HeroBlockCrossPoint(float x, float y, float vx, float vy, f
 	//m_mapの全要素アクセス
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 13; j++)
 		{
 			if (m_map[i][j] > 0 && m_map[i][j] != 4)
 			{
