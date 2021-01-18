@@ -68,7 +68,7 @@ void CObjToge::Action()
 	m_py += m_vy;
 
 	//Ž©—R—Ž‰º‰^“®
-	m_vy += 9.8 / (16.0f);
+	m_vy += 1.8 / (16.0f);
 
 	//–€ŽC
 	m_vx += -(m_vx * 0.098);
