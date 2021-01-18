@@ -347,7 +347,7 @@ void CObjStageBlock1::Action()
 							hero->SetX(x + 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
 						}
-						if (r > 45 && r < 135) {
+						if (r > 45 && r < 132) {
 							hero->SetDown(true);
 							hero->SetY(y - 64.0f);
 							if (m_map[i][j] >= 2)
@@ -355,13 +355,13 @@ void CObjStageBlock1::Action()
 							hero->SetVY(0.0f);
 							Scene::SetScene((new CSceneGameOver()));
 						}
-						if (r > 135 && r < 225) {
+						if (r > 132 && r < 225) {
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
 
 						}
-						if (r > 255 && r < 315) {
+						if (r > 225 && r < 315) {
 							hero->SetUp(true);
 							hero->SetY(y + 64.0f);
 
