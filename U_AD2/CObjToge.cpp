@@ -14,7 +14,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjToge::Init()
 {
-	m_px = 100.0f;
+	m_px = 50.0f;
 	m_py = 0.0f;
 	m_x;
 	m_y;
