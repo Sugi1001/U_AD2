@@ -14,12 +14,12 @@ using namespace GameL;
 //イニシャライズ
 void CObjToge::Init()
 {
-	m_px = 50.0f;
+	m_px = 100.0f;
 	m_py = 0.0f;
 	m_x;
 	m_y;
 	
-	m_posture = 1.0f;
+	m_posture = 0.0f;
 
 	m_ani_time = 0;
 	m_ani_frame = 1;
