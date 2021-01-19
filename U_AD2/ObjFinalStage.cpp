@@ -350,7 +350,7 @@ void CObjFinalStage::Action()
 							if (m_map[i][j] >= 2)
 								hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);
-							Scene::SetScene((new CSceneGameOver()));
+							Scene::SetScene((new CSceneGameOver1()));
 						}
 						if (r > 135 && r < 225) {
 							hero->SetLeft(true);

@@ -299,7 +299,7 @@ for (int i = 0; i < 10; i++) {
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Scene::SetScene((new CSceneClear1()));
+							Scene::SetScene((new CSceneClear2()));
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
