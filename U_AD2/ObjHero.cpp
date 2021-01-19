@@ -61,7 +61,7 @@ void CObjHero::Action()
 	if (m_py > 1000.0f)
 	{
 		//場外に出たらリスタート
-		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
+		Scene::SetScene((new CSceneGameOver1()));//CSceneGameOver
 
 		
 
