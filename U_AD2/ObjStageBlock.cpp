@@ -352,7 +352,7 @@ for (int i = 0; i < 10; i++) {
 							if (m_map[i][j] >= 2)
 								hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);
-							Scene::SetScene((new CSceneGameOver()));
+							Scene::SetScene((new CSceneGameOver1()));
 						}
 						if (r > 130 && r < 225) {
 							hero->SetLeft(true);
