@@ -178,6 +178,7 @@ list< unique_ptr<CFontCharTex>>::iterator CDrawFont::SetChar(wchar_t c)
 	int Level = 17;										// Level : ƒ¿’l‚Ì’iŠK (GGO_GRAY4_BITMAP‚È‚Ì‚Å17’iŠK)
 	DWORD Alpha, Color;
 
+
 	memset(pBits,0x00,sizeof(DWORD)*FONT_SIZE*FONT_SIZE);
 	//FillMemory(pBits , sizeof(pBits), 0);
 	for(int y=iOfs_y; y<iOfs_y+iBmp_h; y++)
