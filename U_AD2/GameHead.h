@@ -101,6 +101,7 @@ struct UserData
 #include"SceneGameOver.h"
 #include"SceneClear.h"
 #include"SceneStageClea1.h"
+#include"SceneStageClea2.h"
 #include"SceneGameSousa.h"
 //-----------------------------------------------
 
