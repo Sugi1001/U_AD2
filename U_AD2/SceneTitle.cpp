@@ -5,6 +5,7 @@
 //GeamLで使用するヘッダー
 #include"GameL\SceneObjManager.h"
 #include"GameL\DrawFont.h"
+#include"GameL/Audio.h"
 
 //使用するヘッダー
 #include"SceneMain.h"
@@ -27,6 +28,23 @@ void CSceneTitle::InitScene()
 {
 	//出力させるグラフィックをサクセイ
 	Font::SetStrTex(L"アンダーアドベンチャー");
+	Font::SetStrTex(L"エンタキー押したらスタートなのじゃ！！(*-*)");
+
+	Font::SetStrTex(L"あらすじなのじゃ！！");
+	Font::SetStrTex(L"主人公のもとに闇金が！！");
+	Font::SetStrTex(L"借りた金の返済のために洞窟へ！！");
+
+
+	//音楽情報の読み込み
+	Audio::LoadAudio(3, L"BGM Gametitle.wav",BACK_MUSIC);
+
+	//バックミュージックスタート
+	float Volume = Audio::VolumeMaster(0.5f); 
+	Audio::Start(3); //音楽スタート
+
+	//タイトル作成
+	CObjTitle* objeo = new CObjTitle();
+	Objs::InsertObj(objeo, OBJ_TITLE, 10);
 
 }
 
@@ -35,3 +53,4 @@ void CSceneTitle::Scene()
 {
 
 }
+

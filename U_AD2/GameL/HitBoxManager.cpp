@@ -40,11 +40,11 @@ void CHitBox::SetPos(float x,float y,float h,float w)
 	m_hit_box.h=h;
 	m_hit_box.w=w;
 }
-void CHitBox::SetPos(float x,float y)
-{
-	m_hit_box.x=x;
-	m_hit_box.y=y; 
-}
+//void CHitBox::SetPos(float x,float y)
+//{
+	//m_hit_box.x=x;
+	//m_hit_box.y=y; 
+//}
 void CHitBox::SetStatus(int e,int n,int p)
 {
 	m_hit_status.e=e;

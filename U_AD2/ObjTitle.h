@@ -1,6 +1,7 @@
 #pragma once
 //使用するヘッダー
 #include"GameL\SceneObjManager.h"
+
 //使用するネームペース
 using namespace GameL;
 
@@ -14,4 +15,5 @@ public:
 	void Action();
 	void Draw();
 private:
+	bool m_key_flag;//キーフラグ
 };

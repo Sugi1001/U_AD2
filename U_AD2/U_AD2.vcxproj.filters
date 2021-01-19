@@ -13,6 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Hero">
+      <UniqueIdentifier>{353f4933-e220-4d2d-a7ef-b7f359951917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Sisutemu">
+      <UniqueIdentifier>{d0c4d1e9-a215-47ff-9123-e3ccc2710503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\stage">
+      <UniqueIdentifier>{84196e1a-d979-4133-af07-f610410a4307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scenemain">
+      <UniqueIdentifier>{7c97a39d-1622-4720-a88f-179bb213ec74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ステージクリア">
+      <UniqueIdentifier>{bc5f4c55-4446-458e-9453-a19bdfedcb4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ゲームクリア">
+      <UniqueIdentifier>{db350715-3436-46ca-9dcf-63cc43fa5f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ゲームタイトル&amp;ゲームオーバー">
+      <UniqueIdentifier>{47bfe6db-c4a9-4050-bd4e-ef7b0d98e336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\操作説明">
+      <UniqueIdentifier>{545c29b3-2c39-4017-b986-5e82d4b994c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\time">
+      <UniqueIdentifier>{f570da1e-dd28-4112-b3b2-e4a78e0fc432}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -54,25 +81,7 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="StageBlock.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjHero.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjEnemyBlock.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="GameTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="CObjToge.cpp">
@@ -80,6 +89,75 @@
     </ClCompile>
     <ClCompile Include="ObjItem.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjStageBlock.cpp">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTitle.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameOver.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTitle.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjNukalmi.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClear.cpp">
+      <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjHero.cpp">
+      <Filter>ソース ファイル\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityModule.cpp">
+      <Filter>ソース ファイル\Sisutemu</Filter>
+    </ClCompile>
+    <ClCompile Include="Objtyukan.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="yamikin.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain1.cpp">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain.cpp">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain2.cpp">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjStageBlock1.cpp">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjFinalStage.cpp">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStageClea1.cpp">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjStageClea1.cpp">
+      <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameClear.cpp">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameSousa.cpp">
+      <Filter>ソース ファイル\操作説明</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameSousa.cpp">
+      <Filter>ソース ファイル\操作説明</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTime.cpp">
+      <Filter>ソース ファイル\time</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,22 +200,7 @@
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="StageBlock.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjHero.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjEnemyBlock.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneTitle.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjTitle.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMain.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="CObjToge.h">
@@ -146,5 +209,82 @@
     <ClInclude Include="ObjItem.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTitle.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameOver.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTitle.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjNukalmi.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClear.h">
+      <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjHero.h">
+      <Filter>ソース ファイル\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityModule.h">
+      <Filter>ソース ファイル\Sisutemu</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStageBlock.h">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Objtyukan.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="yamikin.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain.h">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain1.h">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain2.h">
+      <Filter>ソース ファイル\Scenemain</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStageBlock1.h">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjFinalStage.h">
+      <Filter>ソース ファイル\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneStageClea1.h">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStageClea1.h">
+      <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameClear.h">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameSousa.h">
+      <Filter>ソース ファイル\操作説明</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameSousa.h">
+      <Filter>ソース ファイル\操作説明</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTime.h">
+      <Filter>ソース ファイル\time</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="主人公.png">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="岩２.png">
+      <Filter>リソース ファイル</Filter>
+    </Image>
   </ItemGroup>
 </Project>
