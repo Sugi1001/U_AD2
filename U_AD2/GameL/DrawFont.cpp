@@ -46,6 +46,7 @@ void CDrawFont::Init(ID3D11Device* p_device,ID3D11DeviceContext* p_device_contex
 	//使用デバイス登録
 	m_pDevice		 = p_device;
 	m_pDeviceContext = p_device_context;
+
 	// フォント情報
 	HFONT hFont = CreateFont(
 		FONT_SIZE,
