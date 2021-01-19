@@ -11,23 +11,23 @@
 using namespace GameL;
 
 //使用ヘッダー
-#include"SceneStageClea1.h"
+#include"SceneStageClea2.h"
 #include"GameHead.h"
 
 //コンストラクタ
-CSceneClear1::CSceneClear1()
+CSceneClear2::CSceneClear2()
 {
 
 }
 
 //デストラクタ
-CSceneClear1::~CSceneClear1()
+CSceneClear2::~CSceneClear2()
 {
 
 }
 
 //初期化メソッド
-void CSceneClear1::InitScene()
+void CSceneClear2::InitScene()
 {
 	Font::SetStrTex(L"次の階層へ！！");
 	Font::SetStrTex(L"次は難しくなるけれど焦らず行こう");
@@ -47,7 +47,7 @@ void CSceneClear1::InitScene()
 }
 
 //実行中メソッド
-void CSceneClear1::Scene()
+void CSceneClear2::Scene()
 {
 
 }

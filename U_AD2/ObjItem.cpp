@@ -6,6 +6,9 @@
 
 #include"GameHead.h"
 #include"ObjItem.h"
+#include"ObjStageBlock.h"
+#include"ObjStageBlock1.h"
+#include"ObjStageBlock2.h"
 
 
 //使用するネームペース

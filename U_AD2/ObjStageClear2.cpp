@@ -2,7 +2,7 @@
 #include"GameL/DrawFont.h"
 #include"GameL/WinInputs.h"
 #include"GameL/SceneManager.h"
-#include"ObjStageClea1.h"
+#include"ObjStageClear2.h"
 #include"GameHead.h"
 //#include"ObjGameClear.h"
 
@@ -10,21 +10,21 @@
 using namespace GameL;
 
 //イニシャライズ
-void CObjClear1::Init()
+void CObjClear2::Init()
 {
 	//キーフラグ
 	m_key_flag = false;
 }
 
 //アクション
-void CObjClear1::Action()
+void CObjClear2::Action()
 {
 	//エンターキーを押してシーン：ゲームTitleに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
 	{
 		if (m_key_flag == true)
 		{
-			Scene::SetScene(new CSceneMain2());
+			Scene::SetScene(new CSceneTitle());
 			m_key_flag = false;
 		}
 
@@ -35,7 +35,7 @@ void CObjClear1::Action()
 	}
 }
 //ドロー
-void CObjClear1::Draw()
+void CObjClear2::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
@@ -43,7 +43,7 @@ void CObjClear1::Draw()
 
 	Font::StrDraw(L"これで主人公の借金も無事に返済できるだろう", 140, 210, 30, c);
 
-	Font::StrDraw(L"ただし、借金が増えないとも言ってないがね", 150, 265, 30, c);
+	Font::StrDraw(L"ただし、借金が増えないとも言ってない", 150, 265, 30, c);
 
 	Font::StrDraw(L"主人公のぐ～たら生活は続いていけるのだろうか!!", 85, 315, 30, c);
 

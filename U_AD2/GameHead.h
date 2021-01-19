@@ -88,7 +88,9 @@ struct UserData
 
 #include "ObjTitle.h"
 #include"ObjGameOver.h"
+#include"ObjGameOver1.h"
 #include"ObjGameClear.h"
+#include"ObjGameClear1.h"
 #include"ObjStageClea1.h"
 #include"ObjGameSousa.h"
 //------------------------------------------------
@@ -99,8 +101,10 @@ struct UserData
 #include "SceneMain1.h"
 #include "SceneMain2.h"
 #include"SceneGameOver.h"
+#include"SceneGameOver1.h"
 #include"SceneClear.h"
 #include"SceneStageClea1.h"
+#include"SceneStageClea2.h"
 #include"SceneGameSousa.h"
 //-----------------------------------------------
 
