@@ -240,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="主人公.png" />
+    <Image Include="岩２.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
