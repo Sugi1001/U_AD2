@@ -15,9 +15,9 @@ using namespace GameL;
 void CObjToge::Init()
 {
 	m_px = 1.0f; //位置
-	m_py = 0.0f;
-	m_vx = 1.0f;//移動ベクトル
-	m_vy = 0.0f;
+	m_py = 1.0f;
+	m_vx = 10.0f;//移動ベクトル
+	m_vy = 10.0f;
 	m_posture = 1.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
@@ -63,11 +63,15 @@ void CObjToge::Action()
 
 	//棘と接触したら主人公のHPを減らす
 
-	//HitBoxの内容を更新
+	//位置の更新
+	m_px += m_vx;
+	m_py += m_vy;
 
 	//自由落下運動
-	m_vy += 9.8 / (16.0f);
-	
+	m_vy += 1.8 / (16.0f);
+
+	//摩擦
+	m_vx += -(m_vx * 0.098);
 }
 
 //ドロー
@@ -93,9 +97,9 @@ void CObjToge::Draw()
 	
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
-	dst.m_left = (64.0f * m_posture) + m_px;
-	dst.m_right = (64 - 64.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0f + m_py;
+	dst.m_left = (50.0f * m_posture) + m_px;
+	dst.m_right = (50 + 50.0f * m_posture) + m_px;
+	dst.m_bottom = 50.0f + m_py;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
 	Draw::Draw(8, &src, &dst, c, 0.0f);
