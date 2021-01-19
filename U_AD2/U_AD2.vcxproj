@@ -146,6 +146,7 @@
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="ObjFinalStage.cpp" />
     <ClCompile Include="ObjGameClear.cpp" />
+    <ClCompile Include="ObjGameClear1.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjGameSousa.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -206,6 +207,7 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="ObjFinalStage.h" />
     <ClInclude Include="ObjGameClear.h" />
+    <ClInclude Include="ObjGameClear1.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjGameSousa.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>

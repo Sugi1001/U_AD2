@@ -42,7 +42,7 @@ void CSceneClear2::InitScene()
 	Audio::Start(1); //音楽スタート
 
 	//クリアオブジェクト作成
-	CObjClear* obj = new CObjClear();
+	CObjClear1* obj = new CObjClear1();
 	Objs::InsertObj(obj, OBJ_CLEAR, 1);
 }
 

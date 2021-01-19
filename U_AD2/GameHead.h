@@ -89,6 +89,7 @@ struct UserData
 #include "ObjTitle.h"
 #include"ObjGameOver.h"
 #include"ObjGameClear.h"
+#include"ObjGameClear1.h"
 #include"ObjStageClea1.h"
 #include"ObjGameSousa.h"
 //------------------------------------------------
