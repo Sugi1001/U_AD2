@@ -44,6 +44,6 @@ void CObjGameSousa::Draw()
 	Font::StrDraw(L"←キー　後ろに進む", 150, 250, 60, c);
 	Font::StrDraw(L"Xキー　ジャンプ", 150, 350, 60, c);
 
-	Font::StrDraw(L"焦らず丁寧に進むといいですよ（経験談）", 80, 460, 40, c);
+	Font::StrDraw(L"焦らず丁寧に進むといいですよ（経験談）", 55, 460, 40, c);
 	Font::StrDraw(L"アイテムもあるから攻略に役立ててね！", 80, 510, 40, c);
 }
