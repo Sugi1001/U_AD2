@@ -165,6 +165,15 @@
     <ClCompile Include="ObjStageClear2.cpp">
       <Filter>ソース ファイル\ゲームクリア</Filter>
     </ClCompile>
+    <ClCompile Include="ObjGameClear1.cpp">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameOver1.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver1.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -289,6 +298,15 @@
     </ClInclude>
     <ClInclude Include="ObjStageClear2.h">
       <Filter>ソース ファイル\ゲームクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameClear1.h">
+      <Filter>ソース ファイル\ステージクリア</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameOver1.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameOver1.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

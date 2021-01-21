@@ -146,7 +146,9 @@
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="ObjFinalStage.cpp" />
     <ClCompile Include="ObjGameClear.cpp" />
+    <ClCompile Include="ObjGameClear1.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
+    <ClCompile Include="ObjGameOver1.cpp" />
     <ClCompile Include="ObjGameSousa.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -161,6 +163,7 @@
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="SceneGameOver1.cpp" />
     <ClCompile Include="SceneGameSousa.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -206,7 +209,9 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="ObjFinalStage.h" />
     <ClInclude Include="ObjGameClear.h" />
+    <ClInclude Include="ObjGameClear1.h" />
     <ClInclude Include="ObjGameOver.h" />
+    <ClInclude Include="ObjGameOver1.h" />
     <ClInclude Include="ObjGameSousa.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -221,6 +226,7 @@
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneClear.h" />
     <ClInclude Include="SceneGameOver.h" />
+    <ClInclude Include="SceneGameOver1.h" />
     <ClInclude Include="SceneGameSousa.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>

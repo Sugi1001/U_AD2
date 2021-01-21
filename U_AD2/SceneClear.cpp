@@ -31,7 +31,7 @@ void CSceneClear::InitScene()
 {
 	Font::SetStrTex(L"クリアおめでとう！！");
 	Font::SetStrTex(L"これで主人公の借金も無事に返済できるだろう");
-	Font::SetStrTex(L"ただし、借金が増えないとも言ってない");
+	Font::SetStrTex(L"ただし、借金が増えないとも言ってないがね");
 	Font::SetStrTex(L"主人公のぐ～たら生活は続いていけるのだろうか!!");
 	Font::SetStrTex(L"最後までプレイしていただきありがとうございました");
 
