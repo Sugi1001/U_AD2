@@ -4,9 +4,8 @@
    #ifndef DBG_NEW
       #define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
       #define new DBG_NEW
-   #endif
+   #endif 
 #endif  // _DEBUG
-
 //LIB
 #pragma comment(lib, "winmm.lib")
 #pragma comment(lib, "d3d11.lib") 
