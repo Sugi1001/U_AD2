@@ -42,7 +42,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPTSTR szCmdLi
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	wchar_t  name[] = {GAME_NAME};	//ウィンドウ＆タイトルネーム
+	 wchar_t  name[] = {GAME_NAME};	//ウィンドウ＆タイトルネーム
 	MSG  msg;						//メッセージハンドル
 	
 	//ＣＯＭ初期化
