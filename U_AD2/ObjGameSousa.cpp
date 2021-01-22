@@ -35,6 +35,7 @@ void CObjGameSousa::Action()
 		m_key_flag = true;
 	}
 }
+
 //ÉhÉçÅ[
 void CObjGameSousa::Draw()
 {
