@@ -23,7 +23,7 @@ namespace GameL
 			CFontCharTex();
 			~CFontCharTex();
 		private:
-			wchar_t					  m_wc;				//使用されている文字(検索用)
+			 wchar_t				  m_wc;				//使用されている文字(検索用)
 			ID3D11Texture2D*		  m_pTexture;		//文字のテクスチャ情報
 			ID3D11ShaderResourceView* m_pTexResView;	//テクスチャをシェーダに送る入り口
 	};
