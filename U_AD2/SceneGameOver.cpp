@@ -30,6 +30,7 @@ CSceneGameOver::~CSceneGameOver()
 void CSceneGameOver::InitScene()
 {
 	//出力させる文字のグラフィックを作成
+	//ゲームオーバ画面に表示される文(消しても影響ない)
 	Font::SetStrTex(L"GameOver　ゲ～ムオ～バ～");
 	
 	Font::SetStrTex(L"諦めるな！");

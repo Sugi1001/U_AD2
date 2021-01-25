@@ -472,7 +472,7 @@ void CObjFinalStage::Draw()
 					src.m_left = 320.0f + 64.0;
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
-					Draw::Draw(20, &src, &dst, c, 0.0f);
+					Draw::Draw(31, &src, &dst, c, 0.0f);
 					//–€ŽC
 					//m_vx += +(m_vx * 0.098);
 
@@ -515,7 +515,7 @@ void CObjFinalStage::Draw()
 					Draw::Draw(2, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
-				else if (m_map[i][j] == 60)
+				else if (m_map[i][j] == 30)
 				{
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
@@ -524,7 +524,7 @@ void CObjFinalStage::Draw()
 					Draw::Draw(60, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
-				else if (m_map[i][j] == 61)
+				else if (m_map[i][j] == 31)
 				{
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
