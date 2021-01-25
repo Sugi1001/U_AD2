@@ -545,6 +545,7 @@ bool CreateTextureFromFile(ID3D11Device* pDevice, ID3D11DeviceContext* pDeviceCo
 
 	resource_tex->Release();
 
+
 	*h = height;
 	*w = width;
 	return true;

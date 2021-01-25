@@ -4,9 +4,8 @@
    #ifndef DBG_NEW
       #define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
       #define new DBG_NEW
-   #endif
+   #endif 
 #endif  // _DEBUG
-
 //LIB
 #pragma comment(lib, "winmm.lib")
 #pragma comment(lib, "d3d11.lib") 
@@ -43,7 +42,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPTSTR szCmdLi
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	wchar_t  name[] = {GAME_NAME};	//ウィンドウ＆タイトルネーム
+	 wchar_t  name[] = {GAME_NAME};	//ウィンドウ＆タイトルネーム
 	MSG  msg;						//メッセージハンドル
 	
 	//ＣＯＭ初期化

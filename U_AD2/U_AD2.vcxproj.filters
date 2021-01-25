@@ -309,12 +309,4 @@
       <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="主人公.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="岩２.png">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-  </ItemGroup>
 </Project>

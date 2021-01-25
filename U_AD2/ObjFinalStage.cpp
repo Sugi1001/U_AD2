@@ -205,7 +205,7 @@ void CObjFinalStage::Action()
 	//スタート位置の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] == 6) {
+			if (m_map[i][j] == 2) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -564,7 +564,7 @@ void CObjFinalStage::BlockDraw(float x, float y, RECT_F* dst, float c[])
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
 }
-void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
+/*void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -575,7 +575,7 @@ void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 
 	//描画
 	Draw::Draw(50, &src, dst, c, 0.0f);
-}
+}*/
 //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
 //引数２ float* y       :判定を行うobjectのy位置
