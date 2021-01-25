@@ -61,7 +61,6 @@ void CObjToge::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();*/
 
-	//棘と接触したら主人公のHPを減らす
 
 	//位置の更新
 	m_px += m_vx;
