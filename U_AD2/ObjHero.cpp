@@ -179,6 +179,8 @@ void CObjHero::Draw()
 	RECT_F src; //•`‰æŒ³Ø‚èŽæ‚èˆÊ’u
 	RECT_F dst; //•`‰ææ•\Ž¦ˆÊ’u
 
+	
+
 
 
 	

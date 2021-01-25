@@ -150,7 +150,7 @@ void CObjFinalStage::Action()
 
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] == 1) {
+			if (m_map[i][j] <= 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -240,7 +240,6 @@ void CObjFinalStage::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Scene::SetScene((new CSceneClear2()));
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
@@ -262,7 +261,7 @@ void CObjFinalStage::Action()
 	//ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] == 8) {
+			if (m_map[i][j] <= 5) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -297,7 +296,6 @@ void CObjFinalStage::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Scene::SetScene((new CSceneClear()));
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
@@ -318,9 +316,9 @@ void CObjFinalStage::Action()
 	}
 
 	//棘の上部に触れると死ぬ設定
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] >= 7) {
+			if (m_map[i][j] >= 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -350,7 +348,6 @@ void CObjFinalStage::Action()
 							if (m_map[i][j] >= 2)
 								hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);
-							Scene::SetScene((new CSceneGameOver1()));
 						}
 						if (r > 135 && r < 225) {
 							hero->SetLeft(true);
@@ -375,7 +372,7 @@ void CObjFinalStage::Action()
 				}
 			}
 		}
-	}
+	}*/
 
 	//テスト　交差取得
 	//float a, b;
@@ -469,10 +466,6 @@ void CObjFinalStage::Draw()
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(31, &src, &dst, c, 0.0f);
-					//摩擦
-					//m_vx += +(m_vx * 0.098);
-
-					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
 				else if (m_map[i][j] == 6)
 				{
@@ -542,18 +535,7 @@ void CObjFinalStage::BlockDraw(float x, float y, RECT_F* dst, float c[])
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
 }
-/*void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
-{
-	RECT_F src;
-	src.m_top = 0;
-	src.m_left = 0;
-	src.m_right = src.m_left + 64.0f;
-	src.m_bottom = src.m_top + 64.0f;
 
-
-	//描画
-	Draw::Draw(50, &src, dst, c, 0.0f);
-}*/
 //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
 //引数２ float* y       :判定を行うobjectのy位置
