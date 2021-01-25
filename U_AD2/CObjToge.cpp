@@ -14,9 +14,9 @@ using namespace GameL;
 //イニシャライズ
 void CObjToge::Init()
 {
-	m_px = 1.0f; //位置
-	m_py = 1.0f;
-	m_vx = 1.0f;//移動ベクトル
+	m_px = 10.0f; //位置
+	m_py = 10.0f;
+	m_vx = 10.0f;//移動ベクトル
 	m_vy = 0.0f;
 	m_posture = 1.0f; //右向き0.0f　左向き1.0f
 
@@ -80,16 +80,16 @@ void CObjToge::Draw()
 	RECT_F dst; //描画先表示位置
 
 	//切り取り位置の設定
-	src.m_top =50.0f;
-	src.m_left =0.0f + AniData[m_ani_frame]*60;
-	src.m_right =50.0f + AniData[m_ani_frame]*60;
+	src.m_top =64.0f;
+	src.m_left =0.0f + AniData[m_ani_frame]*64;
+	src.m_right =64.0f + AniData[m_ani_frame]*64;
 	src.m_bottom = src.m_top+64.0f;
 
 	
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (50.0f * m_posture) + m_px;
-	dst.m_right = (50 + 00.0f * m_posture) + m_px;
+	dst.m_right = (50 + 50.0f * m_posture) + m_px;
 	dst.m_bottom = 50.0f + m_py;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
