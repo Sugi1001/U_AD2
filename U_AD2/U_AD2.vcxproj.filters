@@ -40,6 +40,12 @@
     <Filter Include="ソース ファイル\time">
       <UniqueIdentifier>{f570da1e-dd28-4112-b3b2-e4a78e0fc432}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver1">
+      <UniqueIdentifier>{1e45e835-bebf-4e72-ba0c-e5cb1ff8f86e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver">
+      <UniqueIdentifier>{7f726088-5440-412c-bac4-9af099da9d56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -84,20 +90,14 @@
     <ClCompile Include="ObjEnemyBlock.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="CObjToge.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
     <ClCompile Include="ObjItem.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjStageBlock.cpp">
       <Filter>ソース ファイル\stage</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneGameOver.cpp">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjTitle.cpp">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjGameOver.cpp">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClCompile>
     <ClCompile Include="SceneTitle.cpp">
       <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
@@ -166,13 +166,19 @@
       <Filter>ソース ファイル\ステージクリア</Filter>
     </ClCompile>
     <ClCompile Include="ObjGameOver1.cpp">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver1</Filter>
     </ClCompile>
     <ClCompile Include="SceneGameOver1.cpp">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver1</Filter>
     </ClCompile>
-    <ClCompile Include="CObjToge.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="ObjGameOver.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTitle.cpp">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -218,16 +224,13 @@
     <ClInclude Include="ObjEnemyBlock.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="CObjToge.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="ObjItem.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneGameOver.h">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
-    </ClInclude>
     <ClInclude Include="ObjTitle.h">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjGameOver.h">
       <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
     <ClInclude Include="SceneTitle.h">
@@ -299,14 +302,17 @@
     <ClInclude Include="ObjGameClear1.h">
       <Filter>ソース ファイル\ステージクリア</Filter>
     </ClInclude>
-    <ClInclude Include="SceneGameOver1.h">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
-    </ClInclude>
     <ClInclude Include="ObjGameOver1.h">
-      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver1</Filter>
     </ClInclude>
-    <ClInclude Include="CObjToge.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="SceneGameOver1.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver1</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameOver.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー\GameOver</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
