@@ -149,6 +149,7 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
+    <ClCompile Include="CObjiwa.cpp" />
     <ClCompile Include="ObjFinalStage.cpp" />
     <ClCompile Include="ObjGameClear.cpp" />
     <ClCompile Include="ObjGameClear1.cpp" />
@@ -214,6 +215,7 @@
     <ClInclude Include="GameL\SetWindow.h" />
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
+    <ClInclude Include="CObjiwa.h" />
     <ClInclude Include="ObjFinalStage.h" />
     <ClInclude Include="ObjGameClear.h" />
     <ClInclude Include="ObjGameClear1.h" />

@@ -5,14 +5,14 @@
 #include  "GameL\HitBoxManager.h"
 
 #include "GameHead.h"
-#include  "CObjToge.h"
+#include  "CObjiwa.h"
 #include  "ObjHero.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjToge::Init()
+void CObjiwa::Init()
 {
 	m_px = 1.0f; //位置
 	m_py = 1.0f;
@@ -36,22 +36,17 @@ void CObjToge::Init()
 }
 
 //アクション
-void CObjToge::Action()
+void CObjiwa::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx;
 	float hp;
 
-	
-	
+
+
 	//ブロックタイプ検知用の変数がないためダミー
 	int d;
-
-
-	
-	
-	
 
 	//位置の更新
 	m_px += m_vx;
@@ -64,35 +59,37 @@ void CObjToge::Action()
 	m_vx += -(m_vx * 0.098);
 }
 
-//ドロー
-void CObjToge::Draw()
-{
-	int AniData[4] =
+
+
+
+	//ドロー
+	void CObjiwa::Draw()
 	{
-		1, 2 ,2 , 0,
-	};
+		int AniData[4] =
+		{
+			1, 2 ,2 , 0,
+		};
 
-	//描画カラー情報
-	float c[4] = { 1.0f , 1.0f , 1.0f , 1.0f };
+		//描画カラー情報
+		float c[4] = { 1.0f , 1.0f , 1.0f , 1.0f };
 
-	RECT_F src; //描画元切り取り位置
-	RECT_F dst; //描画先表示位置
+		RECT_F src; //描画元切り取り位置
+		RECT_F dst; //描画先表示位置
 
-	//切り取り位置の設定
-	src.m_top =64.0f;
-	src.m_left =0.0f + AniData[m_ani_frame]*64;
-	src.m_right =64.0f + AniData[m_ani_frame]*64;
-	src.m_bottom = src.m_top+64.0f;
+		//切り取り位置の設定
+		src.m_top = 64.0f;
+		src.m_left = 0.0f + AniData[m_ani_frame] * 64;
+		src.m_right = 64.0f + AniData[m_ani_frame] * 64;
+		src.m_bottom = src.m_top + 64.0f;
 
-	
-	//表示位置の設定
-	dst.m_top = 0.0f + m_py;
-	dst.m_left = (50.0f * m_posture) + m_px;
-	dst.m_right = (50 + 50.0f * m_posture) + m_px;
-	dst.m_bottom = 50.0f + m_py;
 
-	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(8, &src, &dst, c, 0.0f);
+		//表示位置の設定
+		dst.m_top = 0.0f + m_py;
+		dst.m_left = (50.0f * m_posture) + m_px;
+		dst.m_right = (50 + 50.0f * m_posture) + m_px;
+		dst.m_bottom = 50.0f + m_py;
 
-}
+		//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
+		Draw::Draw(8, &src, &dst, c, 0.0f);
 
+	}
