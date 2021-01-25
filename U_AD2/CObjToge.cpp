@@ -16,8 +16,8 @@ void CObjToge::Init()
 {
 	m_px = 1.0f; //位置
 	m_py = 1.0f;
-	m_vx = 10.0f;//移動ベクトル
-	m_vy = 10.0f;
+	m_vx = 1.0f;//移動ベクトル
+	m_vy = 0.0f;
 	m_posture = 1.0f; //右向き0.0f　左向き1.0f
 
 	m_ani_time = 0;
@@ -54,14 +54,15 @@ void CObjToge::Action()
 	
 
 	//位置の更新
-	m_px += m_vx;
-	m_px += m_vx;
+	m_py += m_vy;
+	m_px += m_vy;
+
 
 	//自由落下運動
 	m_vy += 0.0 / (1.0f);
 
 	//摩擦
-	m_vx += -(m_vx * 0.098);
+	m_vx += -(m_vx * 0.009);
 }
 
 //ドロー
@@ -88,7 +89,7 @@ void CObjToge::Draw()
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (50.0f * m_posture) + m_px;
-	dst.m_right = (50 + 50.0f * m_posture) + m_px;
+	dst.m_right = (50 + 00.0f * m_posture) + m_px;
 	dst.m_bottom = 50.0f + m_py;
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
