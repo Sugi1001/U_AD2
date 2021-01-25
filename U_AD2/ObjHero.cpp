@@ -185,10 +185,10 @@ void CObjHero::Draw()
 
 	//主人公１
 	//表示位置の設定
-	dst.m_top = 0.0f + m_py;
+	/*dst.m_top = 0.0f + m_py;
 	dst.m_left = (40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;
+	dst.m_bottom = 64.0 + m_py;*/
 
 	//主人公１
 	//表示位置の設定
@@ -206,31 +206,31 @@ void CObjHero::Draw()
 
 	//主人公２
 	//表示位置の設定
-	dst.m_top = 0.0f + m_py;
+	/*dst.m_top = 0.0f + m_py;
 	dst.m_left = (40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;
+	dst.m_bottom = 64.0 + m_py;*/
 
 	//切り取り位置の設定
-	src.m_top = 0.0f;
+	/*src.m_top = 0.0f;
 	src.m_left = 0.0f;
 	src.m_right = 64.0f;
-	src.m_bottom = 64.0f;
+	src.m_bottom = 64.0f;*/
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_py;
+	/*dst.m_top = 0.0f + m_py;
 	dst.m_left = (40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;
+	dst.m_bottom = 64.0 + m_py;*/
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_py;
+	/*dst.m_top = 0.0f + m_py;
 	dst.m_left = (40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;
+	dst.m_bottom = 64.0 + m_py;*/
 
 	//描画
-	Draw::Draw(0, &src, &dst, c, 1.0f);
+	//Draw::Draw(0, &src, &dst, c, 1.0f);
 
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
