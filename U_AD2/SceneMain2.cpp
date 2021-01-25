@@ -79,13 +79,13 @@ void CSceneMain2::InitScene()
 	Draw::LoadImage(L"岩2.png", 9, TEX_SIZE_512);
 	Draw::LoadImage(L"氷床.png", 20, TEX_SIZE_512);
 	Draw::LoadImage(L"宝箱（重要アイテム）.png", 50, TEX_SIZE_512);
-	Draw::LoadImage(L"ぬかるみ.png", 30, TEX_SIZE_512);
-	Draw::LoadImage(L"崖掴まり.png", 31, TEX_SIZE_512);
-	Draw::LoadImage(L"中間.png", 32, TEX_SIZE_512);
+	//Draw::LoadImage(L"ぬかるみ.png", 30, TEX_SIZE_512);
+	//Draw::LoadImage(L"崖掴まり.png", 31, TEX_SIZE_512);
+	//Draw::LoadImage(L"中間.png", 32, TEX_SIZE_512);
 	Draw::LoadImage(L"闇金.png", 29, TEX_SIZE_512);
 	Draw::LoadImage(L"弾丸.png", 28, TEX_SIZE_512);
-	Draw::LoadImage(L"ビル入口.png", 60, TEX_SIZE_512);
-	Draw::LoadImage(L"ビル.png", 61, TEX_SIZE_512);
+	Draw::LoadImage(L"ビル入口.png", 30, TEX_SIZE_512);
+	Draw::LoadImage(L"ビル.png", 31, TEX_SIZE_512);
 
 
 
