@@ -71,17 +71,8 @@ void CSceneMain2::InitScene()
 	Draw::LoadImage(L"ローラースケート.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"レンガ.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);
-	Draw::LoadImage(L"毒.png", 4, TEX_SIZE_512);
-	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
-	Draw::LoadImage(L"こうもり.png", 6, TEX_SIZE_512);
-	Draw::LoadImage(L"こうもり（移動）.png", 7, TEX_SIZE_512);
 	Draw::LoadImage(L"棘.png", 8, TEX_SIZE_512);
 	Draw::LoadImage(L"岩2.png", 9, TEX_SIZE_512);
-	Draw::LoadImage(L"氷床.png", 20, TEX_SIZE_512);
-	Draw::LoadImage(L"宝箱（重要アイテム）.png", 50, TEX_SIZE_512);
-	//Draw::LoadImage(L"ぬかるみ.png", 30, TEX_SIZE_512);
-	//Draw::LoadImage(L"崖掴まり.png", 31, TEX_SIZE_512);
-	//Draw::LoadImage(L"中間.png", 32, TEX_SIZE_512);
 	Draw::LoadImage(L"闇金.png", 29, TEX_SIZE_512);
 	Draw::LoadImage(L"弾丸.png", 28, TEX_SIZE_512);
 	Draw::LoadImage(L"ビル入口.png", 30, TEX_SIZE_512);
@@ -105,21 +96,13 @@ void CSceneMain2::InitScene()
 	CObjEnemyBlock* objeb = new CObjEnemyBlock();
 	Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 12);
 
-	//こうもりオブジェクト作成
-	//CObjEnemy* obj_enemy = new CObjEnemy();
-	//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 6);
+	
 
 	//タイムオブジェクト作成
 	CObjTime* objti = new CObjTime();
 	Objs::InsertObj(objti, OBJ_TIME, 11);
 
-	//棘オブジェクト作成
-	/*CObjBullet* objt = new CObjBullet(9,10); //棘オブジェクト作成
-	Objs::InsertObj(objt, OBJ_BULLET, 12);
-
-	//棘オブジェクト作成
-	CObjyamikin* objt = new CObjyamikin(10,10); //棘オブジェクト作成
-	Objs::InsertObj(objt, OBJ_YAMIKIN, 13);*/
+	
 }
 
 //実行中メソッド

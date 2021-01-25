@@ -87,7 +87,7 @@ void CObjFinalStage::Action()
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] == 9) {
+			if (m_map[i][j] <= 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -448,15 +448,11 @@ void CObjFinalStage::Draw()
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(2, &src, &dst, c, 0.0f);
-					//BlockDraw(320.0f + 64.0f, 64.0f, &dst, c);
-					//Scene::SetScene((new CSceneClear()));
-					/*if (ObjHero != nullptr)
-					{
-						Scene::SetScene((new CSceneClear()));
-					};*/
+					
 				}
 				else if (m_map[i][j] == 4)
 				{
+					//ビル入口
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
 					src.m_right = src.m_left + 64.0f;
@@ -467,7 +463,7 @@ void CObjFinalStage::Draw()
 				}
 				else if (m_map[i][j] == 5)
 				{
-					//	氷
+					//	ビル
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
 					src.m_right = src.m_left + 64.0f;
@@ -513,24 +509,6 @@ void CObjFinalStage::Draw()
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(2, &src, &dst, c, 0.0f);
-					//BlockDraw(320.0f, 0.0f, &dst, c);
-				}
-				else if (m_map[i][j] == 30)
-				{
-					src.m_top = 0.0f;
-					src.m_left = 320.0f + 64.0;
-					src.m_right = src.m_left + 64.0f;
-					src.m_bottom = src.m_top + 64.0f;
-					Draw::Draw(60, &src, &dst, c, 0.0f);
-					//BlockDraw(320.0f, 0.0f, &dst, c);
-				}
-				else if (m_map[i][j] == 31)
-				{
-					src.m_top = 0.0f;
-					src.m_left = 320.0f + 64.0;
-					src.m_right = src.m_left + 64.0f;
-					src.m_bottom = src.m_top + 64.0f;
-					Draw::Draw(61, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
 				
