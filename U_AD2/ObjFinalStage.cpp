@@ -452,6 +452,7 @@ void CObjFinalStage::Draw()
 				}
 				else if (m_map[i][j] == 4)
 				{
+					//ƒrƒ‹“üŒû
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
 					src.m_right = src.m_left + 64.0f;
@@ -462,7 +463,7 @@ void CObjFinalStage::Draw()
 				}
 				else if (m_map[i][j] == 5)
 				{
-					//	•X
+					//	ƒrƒ‹
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
 					src.m_right = src.m_left + 64.0f;
