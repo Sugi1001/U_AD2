@@ -18,7 +18,7 @@ enum OBJ_NAME
 	OBJ_STAGE_BLOCK1,
 	OBJ_FINAL_STAGE,
 	OBJ_BLOCK,
-	OBJ_ITEM,
+	//OBJ_ITEM,
 
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
@@ -39,7 +39,7 @@ enum HIT_ELEMENTS
 	//属性は追加可能だが、デバック時の色は初期設定分しか無い
 	ELEMENT_PLAYER,
 	ELEMENT_YAMIKIN,
-	ELEMENT_ITEM,
+	//ELEMENT_ITEM,
 	ELEMENT_MAGIC,
 	ELEMENT_FIELD,
 	ELEMENT_RED,
@@ -81,7 +81,7 @@ struct UserData
 #include  "ObjNukalmi.h"
 #include "ObjTime.h"
 //#include "GameL/Audio.h"
-#include "ObjItem.h"
+//#include "ObjItem.h"
 //#include"ObjEnemy.h"
 #include"Bullet.h"
 
