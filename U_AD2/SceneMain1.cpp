@@ -46,14 +46,12 @@ void CSceneMain1::InitScene()
 	int size;//ステージ情報の大きさ
 	p = Save::ExternalDataOpen(L"Stage250.csv", &size);//外部データ読み込み
 
-	//int map[10][150];
-	//int count = 1;
-	//for (int i = 0; i < 10; i++)
+	
 	int map[10][250];
 	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
-		//for (int j = 0; j < 150; j++)
+		
 		for (int j = 0; j < 250; j++)
 		{
 			int w = 0;
