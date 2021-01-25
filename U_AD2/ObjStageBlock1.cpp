@@ -61,7 +61,6 @@ void CObjStageBlock1::Action()
 
 	//主人公衝突判定
 	hero->SetUp(false);
-	//hero->SetDown(false);
 	hero->SetLeft(false);
 	hero->SetRight(false);
 	//後方スクロールライン
