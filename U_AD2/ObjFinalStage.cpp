@@ -85,7 +85,7 @@ void CObjFinalStage::Action()
 	}
 
 	//’†ŠÔ‚Ìİ’èi“r’†j
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] <= 9) {
 				float x = j * 64.0f;
@@ -145,12 +145,12 @@ void CObjFinalStage::Action()
 				}
 			}
 		}
-	}
+	}*/
 
 
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] <= 1) {
+			if (m_map[i][j] >= 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
