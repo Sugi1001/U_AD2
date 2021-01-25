@@ -784,7 +784,7 @@ bool CObjStageBlock1::HeroBlockCrossPoint(float x, float y, float vx, float vy, 
 					//交点チェック
 					if (b == true)
 					{
-						//杉下との距離を求める、だるいから
+						
 						l = sqrt((px - x) * (px - x) + (py - y) * (py - y));
 
 						//見つけた交差の中でも最も距離が短いモノを探す
