@@ -166,7 +166,9 @@
     <ClCompile Include="ObjTime.cpp" />
     <ClCompile Include="SceneClear.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
-    <ClCompile Include="ObjItem.cpp" />
+    <ClCompile Include="ObjItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneGameOver1.cpp" />
     <ClCompile Include="SceneGameSousa.cpp">
@@ -222,7 +224,9 @@
     <ClInclude Include="ObjGameSousa.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="ObjItem.h" />
+    <ClInclude Include="ObjItem.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjNukalmi.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>

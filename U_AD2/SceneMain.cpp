@@ -39,21 +39,20 @@ void CSceneMain::InitScene()
 	float v = Audio::VolumeMaster(0.5);
 	Audio::Start(4); //音楽スタート
 
-	//Font作成
-	//Font::SetStrTex(L"0123456789分秒");
-	//外部データの読み込み（ステージ情報）
+	//Font作成    //改新
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
 	p = Save::ExternalDataOpen(L"Stage500.csv", &size);//外部データ読み込み
 
-	//int map[10][150];
-	//int count = 1;
-	//for (int i = 0; i < 10; i++)
+
+
+	//マップ情報　改新
 	int map[10][500];
 	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
-		//for (int j = 0; j < 150; j++)
+		
+
 		for (int j = 0; j < 500; j++)
 		{
 			int w = 0;
@@ -102,9 +101,7 @@ void CSceneMain::InitScene()
 	CObjEnemyBlock* objeb = new CObjEnemyBlock();
 	Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 12);
 
-	//こうもりオブジェクト作成
-	//CObjEnemy* obj_enemy = new CObjEnemy();
-	//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 6);
+	
 
 	//タイムオブジェクト作成
 	CObjTime* objti = new CObjTime();
