@@ -8,8 +8,6 @@
 #include "GameHead.h"
 #include "ObjHero.h"
 
-
-
 #include "ObjStageBlock.h"
 
 //使用するネームスペース
@@ -31,6 +29,8 @@ void CObjHero::Init()
 	float m_speed_power = 1.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
+	m_hp = 5;//主人公のヒットポイント
+
 	//blockとの衝突状態確認用
 	m_hit_up = false;
 	m_hit_down = false;
@@ -48,6 +48,8 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+
+
 	//HitBoxの内容を更新
 	//CHitBox* hit = Hits::GetHitBox(this);
 	//hit->SetPos(m_x, m_y);
@@ -59,11 +61,12 @@ void CObjHero::Action()
 	if (m_py > 1000.0f)
 	{
 		//場外に出たらリスタート
-		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
+		Scene::SetScene((new CSceneGameOver1()));//CSceneGameOver
 
 		
 
 	}
+
 	//中間点で死亡した場合、中間点で、沸くプログラム
 
 	
@@ -132,13 +135,13 @@ void CObjHero::Action()
 	//ブロックとの当たり判定実行
 	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
 	pb->BlockHit(&m_px, &m_py, true,
-		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
-		&m_block_type
+		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vy, &m_vx,
+	    &m_block_type);
 
 
+	
 
-
-	);
+	
 
 	//ぬかるみとの当たり判定実行
 	/*CObjNukalmi* pb = (CObjNukalmi*) Objs::GetObj(OBJ_NUKALMI);

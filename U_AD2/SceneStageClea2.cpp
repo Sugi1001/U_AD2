@@ -11,46 +11,43 @@
 using namespace GameL;
 
 //使用ヘッダー
-#include"SceneClear.h"
+#include"SceneStageClea2.h"
 #include"GameHead.h"
 
 //コンストラクタ
-CSceneClear::CSceneClear()
+CSceneClear2::CSceneClear2()
 {
 
 }
 
 //デストラクタ
-CSceneClear::~CSceneClear()
+CSceneClear2::~CSceneClear2()
 {
 
 }
 
 //初期化メソッド
-void CSceneClear::InitScene()
+void CSceneClear2::InitScene()
 {
-	Font::SetStrTex(L"クリアおめでとう！！");
-	Font::SetStrTex(L"これで主人公の借金も無事に返済できるだろう");
-	Font::SetStrTex(L"ただし、借金が増えないとも言ってないがね");
-	Font::SetStrTex(L"主人公のぐ～たら生活は続いていけるのだろうか!!");
-	Font::SetStrTex(L"最後までプレイしていただきありがとうございました");
+	Font::SetStrTex(L"次の階層へ！！");
+	Font::SetStrTex(L"次は難しくなるけれど焦らず行こう");
 
 
 	//音楽情報の読み取り
 	Audio::LoadAudio(1, L"BGM Gameclear.wav", BACK_MUSIC);
 
 	//バックミュージックスタート
-	float v = Audio::VolumeMaster(1); 
+	float v = Audio::VolumeMaster(1);
 	v = Audio::VolumeMaster(1.0 - v);
 	Audio::Start(1); //音楽スタート
 
 	//クリアオブジェクト作成
-	CObjClear* obj = new CObjClear();
+	CObjClear1* obj = new CObjClear1();
 	Objs::InsertObj(obj, OBJ_CLEAR, 1);
 }
 
 //実行中メソッド
-void CSceneClear::Scene()
+void CSceneClear2::Scene()
 {
 
 }

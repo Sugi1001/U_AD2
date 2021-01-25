@@ -10,7 +10,7 @@
 
 //使用するネームスペース
 using namespace GameL;
-CObjFinalStage::CObjFinalStage(int map[10][10])
+CObjFinalStage::CObjFinalStage(int map[10][13])
 {
 	//{1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1},
 	//{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
@@ -26,11 +26,11 @@ CObjFinalStage::CObjFinalStage(int map[10][10])
 
   //マップデータをコピー
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			m_map[i][j] = map[i][j];
 		}
 	}
-	memcpy(m_map, map, sizeof(int) * (10 * 10));
+	memcpy(m_map, map, sizeof(int) * (10 * 13));
 
 };
 
@@ -38,9 +38,6 @@ CObjFinalStage::CObjFinalStage(int map[10][10])
 void CObjFinalStage::Init()
 {
 	m_scroll = 0.0f;
-
-	//マップ情報
-	//int map[10][150] =
 
 
 }
@@ -89,7 +86,7 @@ void CObjFinalStage::Action()
 
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] == 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -152,7 +149,7 @@ void CObjFinalStage::Action()
 
 
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] == 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -207,8 +204,8 @@ void CObjFinalStage::Action()
 	}
 	//スタート位置の設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
-			if (m_map[i][j] == 6) {
+		for (int j = 0; j < 13; j++) {
+			if (m_map[i][j] == 2) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -243,7 +240,7 @@ void CObjFinalStage::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Scene::SetScene((new CSceneClear()));
+							Scene::SetScene((new CSceneClear2()));
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
@@ -264,7 +261,7 @@ void CObjFinalStage::Action()
 	}
 	//ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] == 8) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -322,7 +319,7 @@ void CObjFinalStage::Action()
 
 	//棘の上部に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+		for (int j = 0; j < 13; j++) {
 			if (m_map[i][j] >= 7) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -353,7 +350,7 @@ void CObjFinalStage::Action()
 							if (m_map[i][j] >= 2)
 								hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);
-							Scene::SetScene((new CSceneGameOver()));
+							Scene::SetScene((new CSceneGameOver1()));
 						}
 						if (r > 135 && r < 225) {
 							hero->SetLeft(true);
@@ -424,7 +421,7 @@ void CObjFinalStage::Draw()
 
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 13; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
@@ -518,6 +515,25 @@ void CObjFinalStage::Draw()
 					Draw::Draw(2, &src, &dst, c, 0.0f);
 					//BlockDraw(320.0f, 0.0f, &dst, c);
 				}
+				else if (m_map[i][j] == 60)
+				{
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(60, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				else if (m_map[i][j] == 61)
+				{
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(61, &src, &dst, c, 0.0f);
+					//BlockDraw(320.0f, 0.0f, &dst, c);
+				}
+				
 				else
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
@@ -528,6 +544,7 @@ void CObjFinalStage::Draw()
 	}
 
 }
+
 //BlockDrawMethod関数
 //引数１ float    x  :リソース切り替え位置x
 //引数２ float    y  :リソース切り替え位置y
@@ -547,7 +564,7 @@ void CObjFinalStage::BlockDraw(float x, float y, RECT_F* dst, float c[])
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
 }
-void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
+/*void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top = 0;
@@ -558,7 +575,7 @@ void CObjFinalStage::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 
 	//描画
 	Draw::Draw(50, &src, dst, c, 0.0f);
-}
+}*/
 //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
 //引数２ float* y       :判定を行うobjectのy位置
@@ -585,7 +602,7 @@ void CObjFinalStage::BlockHit(float* x, float* y, bool scroll_on, bool* up, bool
 	//m_mapの全要素にアクセス
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 13; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
@@ -770,7 +787,7 @@ bool CObjFinalStage::HeroBlockCrossPoint(float x, float y, float vx, float vy, f
 	//m_mapの全要素アクセス
 	for (int i = 0; i < 10; i++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 13; j++)
 		{
 			if (m_map[i][j] > 0 && m_map[i][j] != 4)
 			{

@@ -44,17 +44,17 @@ void CSceneMain2::InitScene()
 	//外部データの読み込み（ステージ情報）
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
-	p = Save::ExternalDataOpen(L"Stage250.csv", &size);//外部データ読み込み
+	p = Save::ExternalDataOpen(L"Finalstage.csv", &size);//外部データ読み込み
 
 	//int map[10][150];
 	//int count = 1;
 	//for (int i = 0; i < 10; i++)
-	int map[10][10];
+	int map[10][13];
 	int count = 1;
 	for (int i = 0; i < 10; i++)
 	{
 		//for (int j = 0; j < 150; j++)
-		for (int j = 0; j < 10; j++)
+		for (int j = 0; j < 13; j++)
 		{
 			int w = 0;
 			swscanf_s(&p.get()[count], L"%d", &w);
@@ -69,7 +69,7 @@ void CSceneMain2::InitScene()
 	Draw::LoadImage(L"背景１.png", 0, TEX_SIZE_512);
 	Draw::LoadImage(L"タイトル.png", 10, TEX_SIZE_512);
 	Draw::LoadImage(L"ローラースケート.png", 1, TEX_SIZE_512);
-	Draw::LoadImage(L"コンクリート.png", 2, TEX_SIZE_512);
+	Draw::LoadImage(L"レンガ.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);
 	Draw::LoadImage(L"毒.png", 4, TEX_SIZE_512);
 	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
@@ -84,6 +84,8 @@ void CSceneMain2::InitScene()
 	Draw::LoadImage(L"中間.png", 32, TEX_SIZE_512);
 	Draw::LoadImage(L"闇金.png", 29, TEX_SIZE_512);
 	Draw::LoadImage(L"弾丸.png", 28, TEX_SIZE_512);
+	Draw::LoadImage(L"ビル入口.png", 60, TEX_SIZE_512);
+	Draw::LoadImage(L"ビル.png", 61, TEX_SIZE_512);
 
 
 

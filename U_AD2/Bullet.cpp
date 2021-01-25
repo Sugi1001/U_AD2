@@ -97,7 +97,7 @@ void CObjBullet::Action()
 		if (hit->CheckObjNameHit(data_base[i]) != nullptr)
 		{
 	//’…’e‰¹‚ð–Â‚ç‚·
-Audio::Start(3);
+          //Audio::Start(3);
 
 			m_del = true;                //Á–ÅŽÀs
 		hit->SetInvincibility(true); //“–‚½‚è”»’è–³Œø

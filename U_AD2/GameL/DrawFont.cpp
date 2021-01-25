@@ -46,6 +46,7 @@ void CDrawFont::Init(ID3D11Device* p_device,ID3D11DeviceContext* p_device_contex
 	//使用デバイス登録
 	m_pDevice		 = p_device;
 	m_pDeviceContext = p_device_context;
+
 	// フォント情報
 	HFONT hFont = CreateFont(
 		FONT_SIZE,
@@ -176,6 +177,7 @@ list< unique_ptr<CFontCharTex>>::iterator CDrawFont::SetChar(wchar_t c)
 	int iBmp_h = GM.gmBlackBoxY;						// iBmp_w, iBmp_h : フォントビットマップの幅高
 	int Level = 17;										// Level : α値の段階 (GGO_GRAY4_BITMAPなので17段階)
 	DWORD Alpha, Color;
+
 
 	memset(pBits,0x00,sizeof(DWORD)*FONT_SIZE*FONT_SIZE);
 	//FillMemory(pBits , sizeof(pBits), 0);

@@ -18,7 +18,7 @@ CObjyamikin::CObjyamikin(float x, float y)
 //イニシャライズ
 void CObjyamikin::Init()
 {
-	m_hp = 45;
+	m_hp = 1;
 	m_time = 0;
 	m_r = 0.0f;
 	//m_vx = 0.0f;
@@ -83,17 +83,17 @@ void CObjyamikin::Action()
 
 
 	//敵機が完全に領域外に出たら敵機を破棄する
-	if (m_y < -32.0f)
+	/*if (m_y < -32.0f)
 	{
 		this->SetStatus(false);//自身に削除命令を出す
 		Hits::DeleteHitBox(this);//敵機弾丸が所有するHitBoxに削除する
-	}
+	}*/
 
 	//弾丸と接触するとHPが減る
-	if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
+	/*if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
 	{
 		m_hp -= 1;
-	}
+	}*/
 
 	//HPが０になると破棄
 	/*if (m_hp <= 0)

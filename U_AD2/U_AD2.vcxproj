@@ -36,7 +36,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -69,7 +69,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -102,11 +104,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,6 +131,7 @@
   <ItemGroup>
     <ClCompile Include="Bullet.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="CObjToge.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -146,18 +151,24 @@
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="ObjFinalStage.cpp" />
     <ClCompile Include="ObjGameClear.cpp" />
+    <ClCompile Include="ObjGameClear1.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
+    <ClCompile Include="ObjGameOver1.cpp" />
     <ClCompile Include="ObjGameSousa.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ObjNukalmi.cpp" />
+    <ClCompile Include="ObjNukalmi.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjStageBlock1.cpp" />
     <ClCompile Include="ObjStageClea1.cpp" />
+    <ClCompile Include="ObjStageClear2.cpp" />
     <ClCompile Include="ObjTime.cpp" />
     <ClCompile Include="SceneClear.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="SceneGameOver1.cpp" />
     <ClCompile Include="SceneGameSousa.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -165,6 +176,7 @@
     <ClCompile Include="SceneMain1.cpp" />
     <ClCompile Include="SceneMain2.cpp" />
     <ClCompile Include="SceneStageClea1.cpp" />
+    <ClCompile Include="SceneStageClea2.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="ObjEnemyBlock.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -173,6 +185,7 @@
     <ClCompile Include="ObjStageBlock.cpp" />
     <ClCompile Include="Objtyukan.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="UtilityModule.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -184,6 +197,7 @@
   <ItemGroup>
     <ClInclude Include="Bullet.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="CObjToge.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -202,18 +216,24 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="ObjFinalStage.h" />
     <ClInclude Include="ObjGameClear.h" />
+    <ClInclude Include="ObjGameClear1.h" />
     <ClInclude Include="ObjGameOver.h" />
+    <ClInclude Include="ObjGameOver1.h" />
     <ClInclude Include="ObjGameSousa.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjItem.h" />
-    <ClInclude Include="ObjNukalmi.h" />
+    <ClInclude Include="ObjNukalmi.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjStageBlock1.h" />
     <ClInclude Include="ObjStageClea1.h" />
+    <ClInclude Include="ObjStageClear2.h" />
     <ClInclude Include="ObjTime.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneClear.h" />
     <ClInclude Include="SceneGameOver.h" />
+    <ClInclude Include="SceneGameOver1.h" />
     <ClInclude Include="SceneGameSousa.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -221,6 +241,7 @@
     <ClInclude Include="SceneMain1.h" />
     <ClInclude Include="SceneMain2.h" />
     <ClInclude Include="SceneStageClea1.h" />
+    <ClInclude Include="SceneStageClea2.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="main .h" />
     <ClInclude Include="ObjHero.h" />
@@ -230,6 +251,7 @@
     <ClInclude Include="ObjStageBlock.h" />
     <ClInclude Include="Objtyukan.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="UtilityModule.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -237,9 +259,6 @@
     <ClInclude Include="yamikin.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="主人公.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

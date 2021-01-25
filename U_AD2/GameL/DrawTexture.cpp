@@ -288,7 +288,7 @@ void CDrawTexture::InitDraw(ID3D11Device* p_device,ID3D11DeviceContext* p_device
 	//ブロブからバーテックスシェーダー作成
 	if (FAILED(D3DCompile(g_hlsl_str, strlen(g_hlsl_str), 0, 0, D3D_COMPILE_STANDARD_FILE_INCLUDE, "vs", "vs_4_0", 0,0, &pCompiledShader, &pErrors)))
 	{
-		char* c = (char*)pErrors->GetBufferPointer();
+		  char* c = (char*)pErrors->GetBufferPointer();
 		MessageBox(0, L"hlsl読み込み失敗", NULL, MB_OK);
 		return;
 	}
@@ -544,6 +544,7 @@ bool CreateTextureFromFile(ID3D11Device* pDevice, ID3D11DeviceContext* pDeviceCo
 	delete pBitmap;
 
 	resource_tex->Release();
+
 
 	*h = height;
 	*w = width;
