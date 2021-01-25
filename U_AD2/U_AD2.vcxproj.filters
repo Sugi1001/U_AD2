@@ -84,9 +84,6 @@
     <ClCompile Include="ObjEnemyBlock.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="CObjToge.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjItem.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -174,6 +171,9 @@
     <ClCompile Include="SceneGameOver1.cpp">
       <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClCompile>
+    <ClCompile Include="CObjToge.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -216,9 +216,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjEnemyBlock.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="CObjToge.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjItem.h">
@@ -307,6 +304,9 @@
     </ClInclude>
     <ClInclude Include="ObjGameOver1.h">
       <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjToge.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
