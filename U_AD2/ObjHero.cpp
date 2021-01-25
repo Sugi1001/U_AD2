@@ -29,7 +29,6 @@ void CObjHero::Init()
 	float m_speed_power = 1.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
-	m_hp = 5;//主人公のヒットポイント
 
 	//blockとの衝突状態確認用
 	m_hit_up = false;
@@ -178,6 +177,8 @@ void CObjHero::Draw()
 
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
+
+	
 
 
 
