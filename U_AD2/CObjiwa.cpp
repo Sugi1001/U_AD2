@@ -43,7 +43,7 @@ void CObjiwa::Action()
 	float hx;
 	float hp;
 
-	//オブジェクトと主人公の当たり判定
+
 
 	//ブロックタイプ検知用の変数がないためダミー
 	int d;
