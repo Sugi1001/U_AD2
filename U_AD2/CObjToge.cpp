@@ -46,7 +46,7 @@ void CObjToge::Action()
 	
 
 	//à íuÇÃçXêV
-	m_px += m_vx;
+	m_px += m_vy;
 	m_py += m_vy; 
 
 	
