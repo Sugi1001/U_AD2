@@ -70,14 +70,7 @@ void CObjHero::Action()
 
 	
 
-	////当たり判定を行うオブジェクト情報部
-	//int data_base[3] =
-	//{
-	//	OBJ_HERO,
-	//	OBJ_TOGE,
-	//	OBJ_ENEMY_BLOCK,
-
-	//};
+	
 
 	
 
@@ -142,19 +135,7 @@ void CObjHero::Action()
 
 	
 
-	//ぬかるみとの当たり判定実行
-	/*CObjNukalmi* pb = (CObjNukalmi*) Objs::GetObj(OBJ_NUKALMI);
-	pb->BlockHit(&m_px, &m_py, true,
-		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
-		&m_block_type
-		);*/
-
-
-	//棘が主人公に接触したら主人公のHPを減らす
-	//	if (hit->CheckObjNameHit(OBJ_TOGE) != nullptr)
-	//	{
-	//		m_hp -= 2;
-	//	}
+	
 
 
 		//位置の更新
@@ -182,15 +163,6 @@ void CObjHero::Draw()
 
 
 
-	
-
-	//主人公１
-	//表示位置の設定
-	/*dst.m_top = 0.0f + m_py;
-	dst.m_left = (40.0f * m_posture) + m_px;
-	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;*/
-
 	//主人公１
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
@@ -205,33 +177,6 @@ void CObjHero::Draw()
 	src.m_bottom = 64.0f;
 
 
-	//主人公２
-	//表示位置の設定
-	/*dst.m_top = 0.0f + m_py;
-	dst.m_left = (40.0f * m_posture) + m_px;
-	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;*/
-
-	//切り取り位置の設定
-	/*src.m_top = 0.0f;
-	src.m_left = 0.0f;
-	src.m_right = 64.0f;
-	src.m_bottom = 64.0f;*/
-
-	//表示位置の設定
-	/*dst.m_top = 0.0f + m_py;
-	dst.m_left = (40.0f * m_posture) + m_px;
-	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;*/
-
-	//表示位置の設定
-	/*dst.m_top = 0.0f + m_py;
-	dst.m_left = (40.0f * m_posture) + m_px;
-	dst.m_right = (64 - 50.0f * m_posture) + m_px;
-	dst.m_bottom = 64.0 + m_py;*/
-
-	//描画
-	//Draw::Draw(0, &src, &dst, c, 1.0f);
 
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
