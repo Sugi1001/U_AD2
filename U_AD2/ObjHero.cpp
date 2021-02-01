@@ -49,14 +49,6 @@ void CObjHero::Action()
 {
 
 
-	//HitBoxの内容を更新
-	//CHitBox* hit = Hits::GetHitBox(this);
-	//hit->SetPos(m_x, m_y);
-
-	//棘と接触したらHPを減らす
-		
-	////移動ベクトルの破棄
-
 	if (m_py > 1000.0f)
 	{
 		//場外に出たらリスタート
@@ -66,7 +58,7 @@ void CObjHero::Action()
 
 	}
 
-	//中間点で死亡した場合、中間点で、沸くプログラム
+	
 
 	
 
@@ -130,12 +122,6 @@ void CObjHero::Action()
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vy, &m_vx,
 	    &m_block_type);
 
-
-	
-
-	
-
-	
 
 
 		//位置の更新
