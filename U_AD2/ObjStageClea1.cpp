@@ -12,7 +12,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjClear1::Init()
 {
-	//キーフラグ
+	//キーフラグka
 	m_key_flag = false;
 }
 
