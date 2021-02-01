@@ -84,9 +84,6 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjItem.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjStageBlock.cpp">
       <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
@@ -177,6 +174,9 @@
     <ClCompile Include="ObjEnemyBlock.cpp">
       <Filter>ソース ファイル\凍結</Filter>
     </ClCompile>
+    <ClCompile Include="ObjItem.cpp">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -217,9 +217,6 @@
     </ClInclude>
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjItem.h">
-      <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneGameOver.h">
       <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
@@ -309,6 +306,9 @@
       <Filter>ソース ファイル\凍結</Filter>
     </ClInclude>
     <ClInclude Include="ObjEnemyBlock.h">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjItem.h">
       <Filter>ソース ファイル\凍結</Filter>
     </ClInclude>
   </ItemGroup>
