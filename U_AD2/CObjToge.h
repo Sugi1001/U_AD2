@@ -22,6 +22,13 @@ private:
 	float m_vx;
 	float m_vy;
 	float m_posture;  //épê®
+    float GetX() { return m_px; }
+	float GetY() { return m_py; }
+	void SetUp(bool b) { m_hit_up = b; }
+	void SetDown(bool b) { m_hit_down = b; }
+	void SetLeft(bool b) { m_hit_left = b; }
+	void SetRight(bool b) { m_hit_right = b; }
+
 
 	int m_ani_time;
 	int m_ani_frame;

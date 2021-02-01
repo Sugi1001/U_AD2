@@ -251,9 +251,6 @@
     <ClInclude Include="SceneMain.h">
       <Filter>ソース ファイル\Scenemain</Filter>
     </ClInclude>
-    <ClInclude Include="SceneMain1.h">
-      <Filter>ソース ファイル\Scenemain</Filter>
-    </ClInclude>
     <ClInclude Include="SceneMain2.h">
       <Filter>ソース ファイル\Scenemain</Filter>
     </ClInclude>
@@ -310,6 +307,9 @@
     </ClInclude>
     <ClInclude Include="ObjItem.h">
       <Filter>ソース ファイル\凍結</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain1.h">
+      <Filter>ソース ファイル\Sisutemu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
