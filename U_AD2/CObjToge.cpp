@@ -47,10 +47,13 @@ void CObjToge::Action()
 
 	//位置の更新
 	m_px += m_vy;
-	m_py += m_vy;
+	m_py += m_vy; 
+
+	
 
 	//自由落下運動
 	m_vy += 001.0 / (1.0f);
+
 
 	//摩擦
 	m_vx += -(m_vy * 0.001);
@@ -83,9 +86,10 @@ void CObjToge::Draw()
 	src.m_bottom = 64.0f;
 
 
+
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
 	Draw::Draw(5, &src, &dst, c, 0.0f);
-
+	
 
 }
 
