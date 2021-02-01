@@ -26,7 +26,7 @@ CSceneGameSousa::~CSceneGameSousa()
 
 }
 
-//初期化メソッド
+//初期化メソッド・
 void CSceneGameSousa::InitScene()
 {
 	Font::SetStrTex(L"→キー　前に進む");
