@@ -11,8 +11,8 @@ class CObjStageBlock1 :public CObj
 public:
 	CObjStageBlock1(int map[10][250]);
 	~CObjStageBlock1() {};
-	void Init();//イニシャライズ
-	void Action();//アクション
+	void Initt();//イニシャライズ
+	void Actions();//アクション
 	void Draw();//ドロー
 
 	void SetScroll(float s) { m_scroll = s; }
@@ -30,7 +30,7 @@ private:
 
 	//マップ情報
 	int m_map[10][500] = { 0 };
-	
+
 
 	float m_scroll;
 
