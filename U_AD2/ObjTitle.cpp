@@ -1,6 +1,7 @@
 #include"GameL\DrawFont.h"
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
+#include "GameL\DrawTexture.h"
 
 
 #include"GameHead.h"
@@ -39,6 +40,25 @@ void CObjTitle::Draw()
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
+	RECT_F src;
+	RECT_F dst;
+
+	//切り取り位置の設定
+	src.m_top = 0.0f;
+	src.m_left = 0.0f;
+	src.m_right = 512.0f;
+	src.m_bottom = 512.0f;
+
+	//表示位置の設定
+	dst.m_top = 0.0f;
+	dst.m_left = 0.0f;
+	dst.m_right = 800.0f;
+	dst.m_bottom = 600.0f;
+
+	//描画
+	Draw::Draw(0, &src, &dst, c, 0.0f);
+
+
 	//タイトル文
 	Font::StrDraw(L"アンダーアドベンチャー", 17, 150, 70, c);
 	
@@ -53,5 +73,8 @@ void CObjTitle::Draw()
 	//小ネタ文
 	Font::StrDraw(L"なに？主人公がなかなか家から出ない？", 310, 510, 15, c);
 	Font::StrDraw(L"構わん　今すぐ連れてけやーー！", 330, 528, 15, c);
+
+	
+
 
 }
