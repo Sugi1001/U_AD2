@@ -150,7 +150,7 @@ void CObjFinalStage::Action()
 
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] >= 1) {
+			if (m_map[i][j] >= 0) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -261,7 +261,7 @@ void CObjFinalStage::Action()
 	//ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 13; j++) {
-			if (m_map[i][j] <= 5) {
+			if (m_map[i][j] >= 5) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
