@@ -151,7 +151,9 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
-    <ClCompile Include="ObjFinalStage.cpp" />
+    <ClCompile Include="ObjFinalStage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjGameClear.cpp" />
     <ClCompile Include="ObjGameClear1.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
@@ -180,7 +182,9 @@
     </ClCompile>
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneMain1.cpp" />
-    <ClCompile Include="SceneMain2.cpp" />
+    <ClCompile Include="SceneMain2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SceneStageClea1.cpp" />
     <ClCompile Include="SceneStageClea2.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
@@ -201,6 +205,7 @@
     </ClCompile>
     <ClCompile Include="yamikin.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -225,7 +230,9 @@
     <ClInclude Include="GameL\SetWindow.h" />
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
-    <ClInclude Include="ObjFinalStage.h" />
+    <ClInclude Include="ObjFinalStage.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjGameClear.h" />
     <ClInclude Include="ObjGameClear1.h" />
     <ClInclude Include="ObjGameOver.h" />
@@ -254,7 +261,9 @@
     </ClInclude>
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneMain1.h" />
-    <ClInclude Include="SceneMain2.h" />
+    <ClInclude Include="SceneMain2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="SceneStageClea1.h" />
     <ClInclude Include="SceneStageClea2.h" />
     <ClInclude Include="SceneTitle.h" />
@@ -276,6 +285,7 @@
     </ClInclude>
     <ClInclude Include="yamikin.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
