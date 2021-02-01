@@ -11,8 +11,8 @@ class CObjStageBlock1 :public CObj
 public:
 	CObjStageBlock1(int map[10][250]);
 	~CObjStageBlock1() {};
-	void Init();//イニシャライズ
-	void Action();//アクション
+	void Initt();//イニシャライズ
+	void Actions();//アクション
 	void Draw();//ドロー
 
 	void SetScroll(float s) { m_scroll = s; }
@@ -30,7 +30,7 @@ private:
 
 	//マップ情報
 	int m_map[10][500] = { 0 };
-	
+
 
 	float m_scroll;
 
@@ -39,7 +39,7 @@ private:
 
 
 	//線と線と交差判定
-	bool LineCrossPoinfl(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py);；
+	bool LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py); 
 
 
 
