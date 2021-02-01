@@ -46,7 +46,7 @@ void CObjToge::Action()
 	
 
 	//位置の更新
-	m_px += m_vx;
+	m_px += m_vy;
 	m_py += m_vy;
 
 	//自由落下運動
