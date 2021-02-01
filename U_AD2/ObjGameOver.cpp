@@ -40,9 +40,9 @@ void CObjGameOver::Draw()
 
 	//ゲームオーバー画面(メイン文)
 	Font::StrDraw(L"GameOver　ゲ～ムオ～バ～", 120, 110, 50, c);
-	Font::StrDraw(L"諦めるのは早いです", 270, 195, 32, c);
-	Font::StrDraw(L"諦めなければきっとゴールは見えて来ます", 100, 250, 32, c);
-	Font::StrDraw(L"何度でもチャレンジしましょう!", 170, 300, 32, c);
+	Font::StrDraw(L"諦めるのは早いです", 250, 195, 32, c);
+	Font::StrDraw(L"諦めなければきっとゴールは見えて来ます", 90, 250, 32, c);
+	Font::StrDraw(L"何度でもチャレンジしましょう!", 160, 300, 32, c);
 	Font::StrDraw(L"ENTER_KEYでタイトルに戻るよ", 90, 400, 50, c);
 
 
