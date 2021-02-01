@@ -86,7 +86,7 @@ void CObjToge::Draw()
 
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	//Draw::Draw(6, &src, &dst, c, 0.0f);
+	Draw::Draw(6, &src, &dst, c, 0.0f);
 
 
 }
