@@ -43,20 +43,22 @@ void CObjToge::Action()
 
 	
 	
-	
+	//ブロックとの当たり判定実行
+	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
+
 
 	//位置の更新
-	m_px += m_vx;
+	m_px += m_vy;
 	m_py += m_vy; 
 
-	
+	//摩擦
+	m_vx += -(m_vx * 0.098);
 
 	//自由落下運動
-	m_vy += 001.0 / (1.0f);
+	m_vy += 9.8 / (16.0f);
 
 
-	//摩擦
-	m_vx += -(m_vy * 0.001);
+	
 }
 
 //ドロー
