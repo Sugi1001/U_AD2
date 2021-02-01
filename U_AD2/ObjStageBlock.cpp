@@ -90,7 +90,7 @@ void CObjStageBlock::Action()
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 128; j++) {
-			if (m_map[i][j] == 9) {
+			if (m_map[i][j] >= 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -208,7 +208,7 @@ void CObjStageBlock::Action()
 	//スタート位置の設定
 for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
-			if (m_map[i][j] == 6) {
+			if (m_map[i][j] == 2) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -322,7 +322,7 @@ for (int i = 0; i < 10; i++) {
 	//棘の上部に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
-			if (m_map[i][j] >= 7) {
+			if (m_map[i][j] == 7) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -382,7 +382,7 @@ for (int i = 0; i < 10; i++) {
 	//棘の上部に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
-			if (m_map[i][j] >= 9) {
+			if (m_map[i][j] == 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -440,7 +440,7 @@ for (int i = 0; i < 10; i++) {
 		}
 	}
 
-	//棘の上部に触れると死ぬ設定
+	//闇金に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 500; j++) {
 			if (m_map[i][j] == 3) {
