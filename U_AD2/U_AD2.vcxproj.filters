@@ -40,6 +40,9 @@
     <Filter Include="ソース ファイル\time">
       <UniqueIdentifier>{f570da1e-dd28-4112-b3b2-e4a78e0fc432}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\凍結">
+      <UniqueIdentifier>{6c8fb318-0e5e-498b-8992-a75522655fd3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -81,12 +84,6 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjEnemyBlock.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjItem.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjStageBlock.cpp">
       <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
@@ -113,9 +110,6 @@
     </ClCompile>
     <ClCompile Include="UtilityModule.cpp">
       <Filter>ソース ファイル\Sisutemu</Filter>
-    </ClCompile>
-    <ClCompile Include="Objtyukan.cpp">
-      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="yamikin.cpp">
       <Filter>ソース ファイル</Filter>
@@ -150,9 +144,6 @@
     <ClCompile Include="SceneGameSousa.cpp">
       <Filter>ソース ファイル\操作説明</Filter>
     </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjTime.cpp">
       <Filter>ソース ファイル\time</Filter>
     </ClCompile>
@@ -173,6 +164,18 @@
     </ClCompile>
     <ClCompile Include="CObjToge.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClCompile>
+    <ClCompile Include="Objtyukan.cpp">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjEnemyBlock.cpp">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjItem.cpp">
+      <Filter>ソース ファイル\凍結</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -215,12 +218,6 @@
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjEnemyBlock.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjItem.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="SceneGameOver.h">
       <Filter>ソース ファイル\ゲームタイトル&amp;ゲームオーバー</Filter>
     </ClInclude>
@@ -247,9 +244,6 @@
     </ClInclude>
     <ClInclude Include="ObjStageBlock.h">
       <Filter>ソース ファイル\stage</Filter>
-    </ClInclude>
-    <ClInclude Include="Objtyukan.h">
-      <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="yamikin.h">
       <Filter>ソース ファイル</Filter>
@@ -284,9 +278,6 @@
     <ClInclude Include="SceneGameSousa.h">
       <Filter>ソース ファイル\操作説明</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjTime.h">
       <Filter>ソース ファイル\time</Filter>
     </ClInclude>
@@ -307,6 +298,18 @@
     </ClInclude>
     <ClInclude Include="CObjToge.h">
       <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClInclude>
+    <ClInclude Include="Objtyukan.h">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjEnemyBlock.h">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjItem.h">
+      <Filter>ソース ファイル\凍結</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

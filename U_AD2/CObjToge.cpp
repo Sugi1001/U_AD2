@@ -43,9 +43,7 @@ void CObjToge::Action()
 
 	
 	
-	//ブロックタイプ検知用の変数がないためダミー
-	int d;
-
+	
 
 	//位置の更新
 	m_px += m_vx;
@@ -75,7 +73,7 @@ void CObjToge::Draw()
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
 	dst.m_left = (40.0f * m_posture) + m_px;
-	dst.m_right = (64 - 50.0f * m_posture) + m_px;
+	dst.m_right = (30 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
 
 	//切り取り位置の設定
@@ -86,7 +84,7 @@ void CObjToge::Draw()
 
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(6, &src, &dst, c, 0.0f);
+	Draw::Draw(30, &src, &dst, c, 0.0f);
 
 
 }
