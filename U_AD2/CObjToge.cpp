@@ -62,7 +62,7 @@ void CObjToge::Action()
 	m_vx += -(m_vx * 0.098);
 
 	//©—R—‰º‰^“®
-	m_vy += 9.8 / (16.0f);
+	m_vy += 0.4 / (16.0f);
 
 
 	
@@ -91,8 +91,8 @@ void CObjToge::Draw()
 	//Ø‚èæ‚èˆÊ’u‚Ìİ’è
 	src.m_top = 0.0f;
 	src.m_left = 0.0f;
-	src.m_right = 64.0f;
-	src.m_bottom = 64.0f;
+	src.m_right = 50.0f;
+	src.m_bottom = 50.0f;
 
 
 

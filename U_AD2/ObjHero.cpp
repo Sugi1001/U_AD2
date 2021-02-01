@@ -52,7 +52,7 @@ void CObjHero::Action()
 	if (m_py > 1000.0f)
 	{
 		//場外に出たらリスタート
-		Scene::SetScene((new CSceneGameOver1()));//CSceneGameOver
+		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
 
 		
 
@@ -114,7 +114,7 @@ void CObjHero::Action()
 	m_vx += -(m_vx * 0.098);
 
 	//自由落下運動
-	m_vy += 9.8 / (16.0f);
+	m_vy += 10.8 / (16.0f);
 
 	//ブロックとの当たり判定実行
 	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
