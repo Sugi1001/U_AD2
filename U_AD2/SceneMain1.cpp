@@ -96,8 +96,8 @@ void CSceneMain1::InitScene()
 	Objs::InsertObj(objt, OBJ_TOGE, 8);
 
 	//岩2オブジェクト作成
-	CObjEnemyBlock* objeb = new CObjEnemyBlock();
-	Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 12);
+	//CObjEnemyBlock* objeb = new CObjEnemyBlock();
+	//Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 12);
 
 	//こうもりオブジェクト作成
 	//CObjEnemy* obj_enemy = new CObjEnemy();
