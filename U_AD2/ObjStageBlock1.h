@@ -29,7 +29,7 @@ private:
 	void BlockDraw1(float x, float y, RECT_F* dst, float c[]);
 
 	//ƒ}ƒbƒvî•ñ
-	int m_map[10][500] = { 0 };
+	int m_map[10][500] = { 0 };;
 
 
 	float m_scroll;
