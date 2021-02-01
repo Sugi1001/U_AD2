@@ -43,9 +43,7 @@ void CObjToge::Action()
 
 	
 	
-	//ブロックタイプ検知用の変数がないためダミー
-	int d;
-
+	
 
 	//位置の更新
 	m_px += m_vx;
@@ -86,7 +84,7 @@ void CObjToge::Draw()
 
 
 	//3番目に登録したグラフィックをsrc.dst.cの情報を元に描画
-	Draw::Draw(2, &src, &dst, c, 0.0f);
+	Draw::Draw(30, &src, &dst, c, 0.0f);
 
 
 }
