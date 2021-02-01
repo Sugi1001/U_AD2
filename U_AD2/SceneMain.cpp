@@ -71,7 +71,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"ローラースケート.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);
-	Draw::LoadImage(L"毒.png", 4, TEX_SIZE_512);
+	Draw::LoadImage(L"闇金.png", 4, TEX_SIZE_512);
 	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
 	Draw::LoadImage(L"棘.png", 8, TEX_SIZE_512);
 	Draw::LoadImage(L"岩2.png", 9, TEX_SIZE_512);
