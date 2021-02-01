@@ -43,7 +43,7 @@ void CObjGameOver::Draw()
 	Font::StrDraw(L"諦めるのは早いです", 250, 195, 32, c);
 	Font::StrDraw(L"諦めなければきっとゴールは見えて来ます", 90, 250, 32, c);
 	Font::StrDraw(L"何度でもチャレンジしましょう!", 160, 300, 32, c);
-	Font::StrDraw(L"ENTER_KEYでタイトルに戻るよ", 90, 400, 50, c);
+	Font::StrDraw(L"ENTER_KEYでタイトルに戻ります", 40, 400, 50, c);
 
 
 	//注意書き
