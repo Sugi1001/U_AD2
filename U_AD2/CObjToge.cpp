@@ -43,13 +43,20 @@ void CObjToge::Action()
 
 	
 	
-	//ブロックとの当たり判定実行
-	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
+	
 
+	//刺の位置を取得
+	CObjToge* Toge = (CObjToge*)Objs::GetObj(OBJ_TOGE);
+	float hx = Toge->GetX();
+	float hy = Toge->GetY();
+	//刺衝突判定
+	Toge->SetUp(false);
+	Toge->SetLeft(false);
+	Toge->SetRight(false);
 
 	//位置の更新
 	m_px += m_vy;
-	m_py += m_vy; 
+	m_py += m_vy;
 
 	//摩擦
 	m_vx += -(m_vx * 0.098);
