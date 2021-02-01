@@ -27,10 +27,10 @@ public:
 private:
 	void BlockDraw(float x, float y, RECT_F* dst, float c[]);
 	void BlockDraw1(float x, float y, RECT_F* dst, float c[]);
-	//int m_map[10][150] = { 0 };//マップ情報
+
+	//マップ情報
 	int m_map[10][500] = { 0 };
-	//	int m_map[10][150] = { 0 };//マップ情報
-		//int m_map[10][106];//マップ情報
+	
 
 	float m_scroll;
 
@@ -39,7 +39,7 @@ private:
 
 
 	//線と線と交差判定
-	bool LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py);
+	bool LineCrossPoinfl(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py);；
 
 
 
