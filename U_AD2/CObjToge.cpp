@@ -91,8 +91,8 @@ void CObjToge::Draw()
 	//Ø‚èæ‚èˆÊ’u‚Ìİ’è
 	src.m_top = 0.0f;
 	src.m_left = 0.0f;
-	src.m_right = 100.0f;
-	src.m_bottom = 100.0f;
+	src.m_right = 20.0f;
+	src.m_bottom = 20.0f;
 
 
 
