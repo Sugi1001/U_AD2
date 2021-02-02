@@ -18,7 +18,7 @@ public:
 	float GetY() { return m_py; }
 	float GetVY() { return m_vy; }
 	float GetVX() { return m_vx; }
-	int GetBT() { return m_block_type; }
+	int   GetBT() { return m_block_type; }
 
 	void SetX(float x) { m_px = x; }
 	void SetY(float y) { m_py = y; }
@@ -41,18 +41,18 @@ private:
 	float m_vx; //移動ベクトル
 	float m_vy;
 	float m_posture; //姿勢
-	int m_ani_time;
-	int m_ani_frame;
+	int   m_ani_time;
+	int   m_ani_frame;
 	float m_x;
 	float m_y;
-	int m_hp;//主人公のHP //主人公のひっとぽいんと]
+	int   m_hp;//主人公のHP //主人公のひっとぽいんと]
 
 	float hit;
 	float m_scroll;
 
 	//int m_ani_time = 0;//アニメーションフレーム動作間隔
 	//int m_ani_frame = 1;//描画フレーム  //静止フレームを初期にする。
-	int m_map[10][500] = { 0 };
+	int   m_map[10][500] = { 0 };
 	
 	float m_ani_max_time;//アニメーション動作間隔最大値
 

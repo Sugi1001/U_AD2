@@ -5,11 +5,11 @@
 //GameLで使用するヘッダー
 #include "GameL\SceneObjManager.h"
 #include "GameL\DrawTexture.h"
-#include"GameL/DrawFont.h"
-#include"GameL/UserData.h"
+#include "GameL/DrawFont.h"
+#include "GameL/UserData.h"
 #include "ObjStageBlock.h"
-#include"GameL/Audio.h"
-#include"ObjTime.h"
+#include "GameL/Audio.h"
+#include "ObjTime.h"
 
 
 //使用するネームスペース

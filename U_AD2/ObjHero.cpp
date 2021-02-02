@@ -21,16 +21,16 @@ void CObjHero::Init()
 	m_vy = 0.0f;
 	m_posture = 1.0f; //右向き0.0f　左向き1.0f
 
-	m_ani_time = 0;
+	m_ani_time  = 0;
 	m_ani_frame = 1;//静止フレームを初期にする
 
 	float m_speed_power = 1.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
 	//blockとの衝突状態確認用
-	m_hit_up = false;
-	m_hit_down = false;
-	m_hit_left = false;
+	m_hit_up    = false;
+	m_hit_down  = false;
+	m_hit_left  = false;
 	m_hit_right = false;
 
 	m_block_type = 0; //踏んでいるブロックの種類を確認用
@@ -66,7 +66,7 @@ void CObjHero::Action()
 	{
 		m_vx = +1.5f;
 		m_vx = -5.0f;
-		m_posture = 1.5f;
+		m_posture   = 1.5f;
 		m_ani_time += 1;
 	}
 	
@@ -74,19 +74,19 @@ void CObjHero::Action()
 	{
 		m_vx = -10.5f;
 		m_vx = +3.0f;
-		m_posture = 0.0f;
+		m_posture   = 0.0f;
 		m_ani_time += 1;
 	}
 	else
 	{
 		m_ani_frame = 1; //キーが入力が無い場合静止フレームにする
-		m_ani_time = 1;
+		m_ani_time  = 1;
 		m_vx -= 0.22f;
 	}
     if (m_ani_time > 4)
 	{
 		m_ani_frame += 1;
-		m_ani_time = 0;
+		m_ani_time   = 0;
 	}
 	if (m_ani_frame == 4)
 	{
@@ -127,15 +127,15 @@ void CObjHero::Draw()
 
 	//主人公１
 	//表示位置の設定
-	dst.m_top = 0.0f + m_py;
-	dst.m_left = (      40.0f * m_posture) + m_px;
-	dst.m_right = (64 - 50.0f * m_posture) + m_px;
+	dst.m_top    = 0.0f + m_py;
+	dst.m_left   = (     40.0f * m_posture) + m_px;
+	dst.m_right  = (64 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
 
 	//切り取り位置の設定
-	src.m_top = 0.0f;
-	src.m_left =   0.0f;
-	src.m_right = 64.0f;
+	src.m_top    = 0.0f;
+	src.m_left   = 0.0f;
+	src.m_right  = 64.0f;
 	src.m_bottom = 64.0f;
 
 	//描画

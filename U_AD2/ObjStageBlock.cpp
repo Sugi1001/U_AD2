@@ -490,14 +490,14 @@ void CObjStageBlock::Draw()
 	RECT_F dst;//描画先表示位置
 
 	 //背景表示
-	src.m_top = 256.0f;
-	src.m_left = 0.0f;
-	src.m_right = 512.0f;
+	src.m_top    = 256.0f;
+	src.m_left   = 0.0f;
+	src.m_right  = 512.0f;
 	src.m_bottom = 512.0f;
 
-	dst.m_top = 0.0f;
-	dst.m_left = 0.0f;
-	dst.m_right = 800.0f;
+	dst.m_top    = 0.0f;
+	dst.m_left   = 0.0f;
+	dst.m_right  = 800.0f;
 	dst.m_bottom = 600.0f;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
@@ -616,9 +616,9 @@ void CObjStageBlock::Draw()
    void CObjStageBlock::BlockDraw(float x, float y, RECT_F* dst, float c[])
    {
 	RECT_F src;
-	src.m_top = 0;
+	src.m_top  = 0;
 	src.m_left = 0;
-	src.m_right = src.m_left + 64.0f;
+	src.m_right  = src.m_left + 64.0f;
 	src.m_bottom = src.m_top + 64.0f;
 
 	//描画
@@ -627,9 +627,9 @@ void CObjStageBlock::Draw()
    void CObjStageBlock::BlockDraw1(float x, float y, RECT_F* dst, float c[])
    {
 	   RECT_F src;
-	   src.m_top = 0;
+	   src.m_top  = 0;
 	   src.m_left = 0;
-	   src.m_right = src.m_left + 64.0f;
+	   src.m_right  = src.m_left + 64.0f;
 	   src.m_bottom = src.m_top + 64.0f;
 
 	   //描画
@@ -651,9 +651,9 @@ void CObjStageBlock::Draw()
    void CObjStageBlock::BlockHit(float *x, float *y, bool scroll_on, bool*up, bool* down, bool *left, bool* right, float* vx, float *vy, int* bt)
    {
 	   //主人公の衝突状態確認用フラグの初期化
-	   *up=false;
-	   *down=false;
-	   *left=false;
+	   *up   =false;
+	   *down =false;
+	   *left =false;
 	   *right=false;
 	   //踏んでいるブロックの種類の初期化
 	   *bt=0;
