@@ -73,7 +73,7 @@ void CObjStageBlock::Action()
 
 
 		//場外に出たらリスタート
-		Scene::SetScene((new CSceneGameOver()));//CSceneGameOver
+		Scene::SetScene((new CSceneGameOver1()));//CSceneGameOver
 
 
 	}
