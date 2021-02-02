@@ -71,22 +71,22 @@ struct UserData
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
-#include "ObjHero.h"
+#include"ObjHero.h"
 #include"yamikin.h"
 #include"ObjStageBlock.h"
 #include"ObjStageBlock1.h"
-#include "ObjEnemyBlock.h"
+#include"ObjEnemyBlock.h"
 #include"ObjFinalStage.h"
-#include  "CObjToge.h"
-#include  "ObjNukalmi.h"
-#include "ObjTime.h"
-//#include "GameL/Audio.h"
-//#include "ObjItem.h"
+#include"CObjToge.h"
+#include"ObjNukalmi.h"
+#include"ObjTime.h"
+//#include"GameL/Audio.h"
+//#include"ObjItem.h"
 //#include"ObjEnemy.h"
 #include"Bullet.h"
 
 
-#include "ObjTitle.h"
+#include"ObjTitle.h"
 #include"ObjGameOver.h"
 #include"ObjGameOver1.h"
 #include"ObjGameClear.h"
@@ -97,9 +97,9 @@ struct UserData
 
 //ゲームシーンクラスヘッダ------------------------
 #include"SceneTitle.h"
-#include "SceneMain.h"
-#include "SceneMain1.h"
-#include "SceneMain2.h"
+#include"SceneMain.h"
+#include"SceneMain1.h"
+#include"SceneMain2.h"
 #include"SceneGameOver.h"
 #include"SceneGameOver1.h"
 #include"SceneClear.h"
