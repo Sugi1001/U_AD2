@@ -7,7 +7,6 @@
 
 #include "GameHead.h"
 #include "ObjHero.h"
-
 #include "ObjStageBlock.h"
 
 //使用するネームスペース
@@ -16,7 +15,6 @@ using namespace GameL;
 //イニシャライズ
 void CObjHero::Init()
 {
-
 	m_px = 1.0f; //位置
 	m_py = 0.0f;
 	m_vx = 1.0f;//移動ベクトル
@@ -29,14 +27,11 @@ void CObjHero::Init()
 	float m_speed_power = 1.0f;//通常速度
 	float m_ani_max_time;//アニメーション間隔幅
 
-
 	//blockとの衝突状態確認用
 	m_hit_up = false;
 	m_hit_down = false;
 	m_hit_left = false;
 	m_hit_right = false;
-
-
 
 	m_block_type = 0; //踏んでいるブロックの種類を確認用
 
@@ -57,17 +52,6 @@ void CObjHero::Action()
 		
 
 	}
-
-	
-
-	
-
-	
-
-	
-
-
-
 
 	if (Input::GetVKey('X') == true)
 	{
@@ -109,7 +93,6 @@ void CObjHero::Action()
 		m_vx -= 0.22f;
 	}
 
-
 	//摩擦
 	m_vx += -(m_vx * 0.098);
 
@@ -121,8 +104,6 @@ void CObjHero::Action()
 	pb->BlockHit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vy, &m_vx,
 	    &m_block_type);
-
-
 
 		//位置の更新
 	m_px += m_vx;
@@ -144,10 +125,6 @@ void CObjHero::Draw()
 
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
-
-	
-
-
 
 	//主人公１
 	//表示位置の設定

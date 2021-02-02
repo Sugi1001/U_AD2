@@ -31,7 +31,6 @@ private:
 	//ƒ}ƒbƒvî•ñ
 	int m_map[10][500] = { 0 };
 
-
 	float m_scroll;
 
 	float Dot(float ax, float ay, float bx, float by);//“àÏ
@@ -40,10 +39,6 @@ private:
 
 	//ü‚Æü‚ÆŒğ·”»’è
 	bool LineCrossPoint(float a1x, float a1y, float a2x, float a2y, float b1x, float b1y, float b2x, float b2y, float* out_px, float* out_py);
-
-
-
-
 
 };
 

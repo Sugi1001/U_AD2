@@ -94,12 +94,6 @@ void CSceneMain::InitScene()
 	CObjToge* objt = new CObjToge(); //棘オブジェクト作成
 	Objs::InsertObj(objt, OBJ_TOGE, 8);
 
-	//岩2オブジェクト作成
-	//CObjEnemyBlock* objeb = new CObjEnemyBlock();
-	//Objs::InsertObj(objeb, OBJ_ENEMY_BLOCK, 12);
-
-	
-
 	//タイムオブジェクト作成
 	CObjTime* objti = new CObjTime();
 	Objs::InsertObj(objti, OBJ_TIME, 11);

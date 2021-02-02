@@ -62,7 +62,6 @@ void CSceneMain1::InitScene()
 		}
 	}
 
-
 	//グラフィック読み込み
 	Draw::LoadImage(L"背景.png", 0, TEX_SIZE_512);
 	Draw::LoadImage(L"タイトル.png", 10, TEX_SIZE_512);
@@ -80,7 +79,6 @@ void CSceneMain1::InitScene()
 	Draw::LoadImage(L"ぬかるみ.png", 30, TEX_SIZE_512);
 	Draw::LoadImage(L"崖掴まり.png", 31, TEX_SIZE_512);
 	Draw::LoadImage(L"中間.png", 32, TEX_SIZE_512);
-
 
 
 	//主人公オブジェクト作成
