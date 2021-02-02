@@ -41,6 +41,8 @@ private:
 	float m_vx; //移動ベクトル
 	float m_vy;
 	float m_posture; //姿勢
+	int m_ani_time;
+	int m_ani_frame;
 	float m_x;
 	float m_y;
 	int m_hp;//主人公のHP //主人公のひっとぽいんと]
@@ -48,8 +50,8 @@ private:
 	float hit;
 	float m_scroll;
 
-	int m_ani_time = 0;//アニメーションフレーム動作間隔
-	int m_ani_frame = 1;//描画フレーム  //静止フレームを初期にする。
+	//int m_ani_time = 0;//アニメーションフレーム動作間隔
+	//int m_ani_frame = 1;//描画フレーム  //静止フレームを初期にする。
 	int m_map[10][500] = { 0 };
 	
 	float m_ani_max_time;//アニメーション動作間隔最大値

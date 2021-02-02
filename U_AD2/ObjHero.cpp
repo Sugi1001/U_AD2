@@ -69,16 +69,7 @@ void CObjHero::Action()
 		m_posture = 1.5f;
 		m_ani_time += 1;
 	}
-	if (m_ani_time > 4)
-	{
-		m_ani_frame += 1;
-		m_ani_time = 0;
-	}
-	if (m_ani_frame == 4)
-	{
-		m_ani_frame = 0;
-	}
-
+	
 	else if (Input::GetVKey(VK_RIGHT) == true)
 	{
 		m_vx = -10.5f;
@@ -92,7 +83,15 @@ void CObjHero::Action()
 		m_ani_time = 1;
 		m_vx -= 0.22f;
 	}
-
+    if (m_ani_time > 4)
+	{
+		m_ani_frame += 1;
+		m_ani_time = 0;
+	}
+	if (m_ani_frame == 4)
+	{
+		m_ani_frame = 0;
+	}
 	//摩擦
 	m_vx += -(m_vx * 0.098);
 
@@ -119,6 +118,10 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
+	int AniData[4] =
+	{
+		33,1,33,1,
+	};
 
 	///描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -129,17 +132,15 @@ void CObjHero::Draw()
 	//主人公１
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;
-	dst.m_left = (40.0f * m_posture) + m_px;
+	dst.m_left = (      40.0f * m_posture) + m_px;
 	dst.m_right = (64 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
 
 	//切り取り位置の設定
 	src.m_top = 0.0f;
-	src.m_left = 0.0f;
-	src.m_right = 64.0f;
+	src.m_left =   0.0f+AniData[m_ani_frame]*64;
+	src.m_right = 64.0f+AniData[m_ani_frame]*64;
 	src.m_bottom = 64.0f;
-
-
 
 	//描画
 	Draw::Draw(1, &src, &dst, c, 1.0f);
