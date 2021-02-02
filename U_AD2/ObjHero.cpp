@@ -118,10 +118,6 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
-	int AniData[4] =
-	{
-		33,1,33,1,
-	};
 
 	///描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -138,8 +134,8 @@ void CObjHero::Draw()
 
 	//切り取り位置の設定
 	src.m_top = 0.0f;
-	src.m_left =   0.0f+AniData[m_ani_frame]*64;
-	src.m_right = 64.0f+AniData[m_ani_frame]*64;
+	src.m_left =   0.0f;
+	src.m_right = 64.0f;
 	src.m_bottom = 64.0f;
 
 	//描画
