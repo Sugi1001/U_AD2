@@ -120,13 +120,7 @@
     <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル\Scenemain</Filter>
     </ClCompile>
-    <ClCompile Include="SceneMain2.cpp">
-      <Filter>ソース ファイル\Scenemain</Filter>
-    </ClCompile>
     <ClCompile Include="ObjStageBlock1.cpp">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjFinalStage.cpp">
       <Filter>ソース ファイル\stage</Filter>
     </ClCompile>
     <ClCompile Include="SceneStageClea1.cpp">
@@ -175,6 +169,12 @@
       <Filter>ソース ファイル\凍結</Filter>
     </ClCompile>
     <ClCompile Include="ObjItem.cpp">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain2.cpp">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjFinalStage.cpp">
       <Filter>ソース ファイル\凍結</Filter>
     </ClCompile>
   </ItemGroup>
@@ -251,13 +251,7 @@
     <ClInclude Include="SceneMain.h">
       <Filter>ソース ファイル\Scenemain</Filter>
     </ClInclude>
-    <ClInclude Include="SceneMain2.h">
-      <Filter>ソース ファイル\Scenemain</Filter>
-    </ClInclude>
     <ClInclude Include="ObjStageBlock1.h">
-      <Filter>ソース ファイル\stage</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjFinalStage.h">
       <Filter>ソース ファイル\stage</Filter>
     </ClInclude>
     <ClInclude Include="SceneStageClea1.h">
@@ -310,6 +304,12 @@
     </ClInclude>
     <ClInclude Include="SceneMain1.h">
       <Filter>ソース ファイル\Sisutemu</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain2.h">
+      <Filter>ソース ファイル\凍結</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjFinalStage.h">
+      <Filter>ソース ファイル\凍結</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
