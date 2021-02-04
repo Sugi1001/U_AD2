@@ -79,7 +79,6 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"‚Ê‚©‚é‚İ.png", 30, TEX_SIZE_512);
 	Draw::LoadImage(L"‹t™.png", 31, TEX_SIZE_512);
 	Draw::LoadImage(L"’†ŠÔ.png", 32, TEX_SIZE_512);
-	Draw::LoadImage(L"ålŒöiˆÚ“®j.png", 33, TEX_SIZE_512);
 
 
 
