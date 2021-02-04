@@ -71,7 +71,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"地面.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"地面（中）(1).png", 3, TEX_SIZE_512);
 	Draw::LoadImage(L"闇金.png", 4, TEX_SIZE_512);
-	Draw::LoadImage(L"毒ノーマル.png", 5, TEX_SIZE_512);
+	Draw::LoadImage(L"主人公（移動).png", 5, TEX_SIZE_512);
 	Draw::LoadImage(L"棘.png", 8, TEX_SIZE_512);
 	Draw::LoadImage(L"岩2.png", 9, TEX_SIZE_512);
 	Draw::LoadImage(L"氷床.png", 20, TEX_SIZE_512);
