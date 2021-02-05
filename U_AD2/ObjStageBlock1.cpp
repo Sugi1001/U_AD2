@@ -65,9 +65,9 @@ void CObjStageBlock1::Action()
 	}
 
 	//中間の設定（途中）
-	/*for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 128; j++) {
-			if (m_map[i][j] == 9) {
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 250; j++) {
+			if (m_map[i][j] >= 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -218,7 +218,7 @@ void CObjStageBlock1::Action()
 							hero->SetLeft(true);
 							hero->SetX(x - 64.0f + (m_scroll));
 							hero->SetVX(-hero->GetVX() * 0.1f);
-							Scene::SetScene((new CSceneClear()));
+							//Scene::SetScene((new CSceneClear()));
 						}
 						if (r > 255 && r < 315) {
 							hero->SetUp(true);
@@ -498,7 +498,7 @@ void CObjStageBlock1::BlockDraw(float x, float y, RECT_F* dst, float c[])
 	//描画
 	Draw::Draw(2, &src, dst, c, 0.0f);
 }
-void CObjStageBlock1::BlockDraw1(float x, float y, RECT_F* dst, float c[])
+/*void CObjStageBlock1::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 {
 	RECT_F src;
 	src.m_top  = 0;
@@ -508,7 +508,7 @@ void CObjStageBlock1::BlockDraw1(float x, float y, RECT_F* dst, float c[])
 
 	//描画
 	Draw::Draw(50, &src, dst, c, 0.0f);
-}
+}*/
 //BlockHit関数
 //引数１ float* x       :判定を行うobjectのx位置
 //引数２ float* y       :判定を行うobjectのy位置

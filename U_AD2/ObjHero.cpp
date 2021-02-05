@@ -118,7 +118,6 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
-
 	///描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
