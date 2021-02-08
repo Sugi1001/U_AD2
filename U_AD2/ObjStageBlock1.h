@@ -26,7 +26,7 @@ public:
 
 private:
 	void BlockDraw(float x, float y, RECT_F* dst, float c[]);
-	void BlockDraw1(float x, float y, RECT_F* dst, float c[]);
+	//void BlockDraw1(float x, float y, RECT_F* dst, float c[]);
 
 	//ƒ}ƒbƒvî•ñ
 	int m_map[10][250] = { 0 };
