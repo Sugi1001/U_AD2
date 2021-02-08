@@ -28,11 +28,11 @@ void CSceneTitle::InitScene()
 {
 	//出力させるグラフィックをサクセイ
 	Font::SetStrTex(L"アンダーアドベンチャー");
-	Font::SetStrTex(L"エンタキー押したらスタートなのじゃ！！(*-*)");
+	Font::SetStrTex(L"エンタキー押したらスタートなのじゃ!!(*-*)");
 
-	Font::SetStrTex(L"あらすじなのじゃ！！");
-	Font::SetStrTex(L"主人公のもとに闇金が！！");
-	Font::SetStrTex(L"借りた金の返済のために洞窟へ！！");
+	Font::SetStrTex(L"あらすじなのじゃ!!");
+	Font::SetStrTex(L"主人公のもとに闇金が!?");
+	Font::SetStrTex(L"借りた金の返済のために洞窟へ!!");
 
 
 	//音楽情報の読み込み
