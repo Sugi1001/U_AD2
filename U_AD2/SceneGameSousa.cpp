@@ -33,7 +33,7 @@ void CSceneGameSousa::InitScene()
 	Font::SetStrTex(L"←キー　後ろに進む");
 	Font::SetStrTex(L"Xキー　ジャンプ");
 	Font::SetStrTex(L"焦らず丁寧に進むといいですよ（経験談）");
-	Font::SetStrTex(L"アイテムもあるから攻略に役立ててね！");
+	Font::SetStrTex(L"エンターキーでスタート");
 
 	//クリアオブジェクト作成
 	CObjGameSousa* obj = new CObjGameSousa();

@@ -46,5 +46,5 @@ void CObjGameSousa::Draw()
 	Font::StrDraw(L"Xキー　ジャンプ", 150, 350, 60, c);
 
 	Font::StrDraw(L"焦らず丁寧に進むといいですよ（経験談）", 35, 460, 40, c);
-	Font::StrDraw(L"アイテムもあるから攻略に役立ててね！", 60, 510, 40, c);
+	Font::StrDraw(L"エンターキーでゲームスタート", 150, 510, 40, c);
 }

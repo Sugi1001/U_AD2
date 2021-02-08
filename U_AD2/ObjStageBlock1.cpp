@@ -66,8 +66,8 @@ void CObjStageBlock1::Action()
 
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 250; j++) {
-			if (m_map[i][j] <= 1) {
+		for (int j = 0; j < 128; j++) {
+			if (m_map[i][j] >= 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -180,7 +180,7 @@ void CObjStageBlock1::Action()
 		}
 
 	}
-	//スタート位置の設定
+	
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 2) {
@@ -237,7 +237,6 @@ void CObjStageBlock1::Action()
 			}
 		}
 	}
-	//ゴール＆クリア画面への移行の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 6) {
@@ -297,7 +296,7 @@ void CObjStageBlock1::Action()
 	//棘の上部に触れると死ぬ設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
-			if (m_map[i][j] >= 7) {
+			if (m_map[i][j] == 7) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -353,7 +352,11 @@ void CObjStageBlock1::Action()
 			}
 		}
 	}
+	
+	
 }
+
+
 
 
 
