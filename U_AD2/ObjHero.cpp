@@ -134,8 +134,8 @@ void CObjHero::Draw()
 	//Ø‚èæ‚èˆÊ’u‚Ìİ’è
 	src.m_top    = 0.0f;
 	src.m_left   = 0.0f;
-	src.m_right  = 50.0f;
-	src.m_bottom = 50.0f;
+	src.m_right  = 65.0f;
+	src.m_bottom = 65.0f;
 
 	//•`‰æ
 	Draw::Draw(1, &src, &dst, c, 1.0f);
