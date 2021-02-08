@@ -16,7 +16,7 @@ enum OBJ_NAME
 	//OBJ_BLOCK,
 	OBJ_STAGE_BLOCK,
 	OBJ_STAGE_BLOCK1,
-	OBJ_FINAL_STAGE,
+	//OBJ_FINAL_STAGE,
 	OBJ_BLOCK,
 	//OBJ_ITEM,
 
@@ -76,7 +76,7 @@ struct UserData
 #include"ObjStageBlock.h"
 #include"ObjStageBlock1.h"
 #include"ObjEnemyBlock.h"
-#include"ObjFinalStage.h"
+//#include"ObjFinalStage.h"
 #include"CObjToge.h"
 #include"ObjNukalmi.h"
 #include"ObjTime.h"

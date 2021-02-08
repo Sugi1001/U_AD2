@@ -96,7 +96,7 @@ void CObjHero::Action()
 	m_vx += -(m_vx * 0.098);
 
 	//自由落下運動
-	m_vy += 10.8 / (16.0f);
+	m_vy += 10.5 / (16.0f);
 
 	//ブロックとの当たり判定実行
 	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
@@ -127,7 +127,7 @@ void CObjHero::Draw()
 	//主人公１
 	//表示位置の設定
 	dst.m_top    = 0.0f + m_py;
-	dst.m_left   = (     40.0f * m_posture) + m_px;
+	dst.m_left   = (     64.0f * m_posture) + m_px;
 	dst.m_right  = (64 - 50.0f * m_posture) + m_px;
 	dst.m_bottom = 64.0 + m_py;
 
