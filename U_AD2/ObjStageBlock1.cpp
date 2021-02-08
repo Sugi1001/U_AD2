@@ -66,7 +66,7 @@ void CObjStageBlock1::Action()
 
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 128; j++) {
+		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] >= 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
@@ -456,7 +456,7 @@ void CObjStageBlock1::Draw()
 					Draw::Draw(8, &src, &dst, c, 0.0f);
 					
 				}
-				else if (m_map[i][j] == 8)
+				/*else if (m_map[i][j] == 8)
 				{
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
@@ -464,8 +464,8 @@ void CObjStageBlock1::Draw()
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(50, &src, &dst, c, 0.0f);
 					
-				}
-				else if (m_map[i][j] == 9)
+				}*/
+				/*else if (m_map[i][j] == 9)
 				{
 					src.m_top = 0.0f;
 					src.m_left = 320.0f + 64.0;
@@ -473,7 +473,7 @@ void CObjStageBlock1::Draw()
 					src.m_bottom = src.m_top + 64.0f;
 					Draw::Draw(2, &src, &dst, c, 0.0f);
 					
-				}
+				}*/
 				else
 				{
 					BlockDraw(320.0f, 0.0f, &dst, c);
@@ -699,7 +699,7 @@ bool CObjStageBlock1::LineCrossPoint(float a1x, float a1y, float a2x, float a2y,
 
 }
 //ブロックとの当たり判定実行
-	//CObjStageBlock::CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
+	//CObjStageBlock1::CObjStageBlock1* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
    //主人公と壁の交差判定関数
 bool CObjStageBlock1::HeroBlockCrossPoint(float x, float y, float vx, float vy, float* out_px, float* out_py, float* out_len)
 {

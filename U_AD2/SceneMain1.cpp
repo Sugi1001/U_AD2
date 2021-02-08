@@ -39,9 +39,7 @@ void CSceneMain1::InitScene()
 	float v = Audio::VolumeMaster(0.5);
 	Audio::Start(4); //音楽スタート
 
-	//Font作成
-	//Font::SetStrTex(L"0123456789分秒");
-	//外部データの読み込み（ステージ情報）
+	
 	unique_ptr<wchar_t>p;//ステージ情報ポインター
 	int size;//ステージ情報の大きさ
 	p = Save::ExternalDataOpen(L"Stage250.csv", &size);//外部データ読み込み
