@@ -64,7 +64,7 @@ void CObjTitle::Draw()
 	
 	//あらすじ文
 	Font::StrDraw(L"あらすじ", 325, 300, 32, c);
-	Font::StrDraw(L"主人公のもとに闇金が！！", 215, 350, 32, c);
+	Font::StrDraw(L"主人公のもとに闇金が！！", 215, 345, 32, c);
 	Font::StrDraw(L"借りた金の返済のために洞窟へ！！", 150, 390, 32, c);
 
 	//誘導文
