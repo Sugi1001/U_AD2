@@ -96,7 +96,7 @@ void CObjHero::Action()
 	m_vx += -(m_vx * 0.098);
 
 	//自由落下運動
-	m_vy += 10.8 / (16.0f);
+	m_vy += 10.5 / (16.0f);
 
 	//ブロックとの当たり判定実行
 	CObjStageBlock* pb = (CObjStageBlock*)Objs::GetObj(OBJ_STAGE_BLOCK);
