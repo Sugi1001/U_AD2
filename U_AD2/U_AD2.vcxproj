@@ -163,6 +163,7 @@
     </ClCompile>
     <ClCompile Include="ObjNukalmi.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjStageBlock1.cpp" />
     <ClCompile Include="ObjStageClea1.cpp" />
@@ -247,6 +248,7 @@
     </ClInclude>
     <ClInclude Include="ObjNukalmi.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjStageBlock1.h" />
     <ClInclude Include="ObjStageClea1.h" />

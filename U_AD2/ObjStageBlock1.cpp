@@ -65,9 +65,9 @@ void CObjStageBlock1::Action()
 	}
 
 	//íÜä‘ÇÃê›íËÅiìríÜÅj
-	/*for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
-			if (m_map[i][j] >= 1) {
+			if (m_map[i][j] >= 9) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -125,10 +125,10 @@ void CObjStageBlock1::Action()
 				}
 			}
 		}
-	}*/
-	/*for (int i = 0; i < 10; i++) {
+	}
+	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
-			if (m_map[i][j] >= 1) {
+			if (m_map[i][j] == 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -179,9 +179,9 @@ void CObjStageBlock1::Action()
 			}
 		}
 
-	}*/
+	}
 	
-	/*for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 2) {
 				float x = j * 64.0f;
@@ -236,7 +236,7 @@ void CObjStageBlock1::Action()
 				}
 			}
 		}
-	}*/
+	}
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 6) {
@@ -294,7 +294,7 @@ void CObjStageBlock1::Action()
 		}
 	}
 	//ûôÇÃè„ïîÇ…êGÇÍÇÈÇ∆éÄÇ ê›íË
-	/*for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 7) {
 				float x = j * 64.0f;
@@ -351,7 +351,7 @@ void CObjStageBlock1::Action()
 				}
 			}
 		}
-	}*/
+	}
 	//íÜä‘ÇÃê›íËÅiìríÜÅj
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 128; j++) {
@@ -582,7 +582,7 @@ void CObjStageBlock1::Action()
 		}
 	}
 	//ûôÇÃè„ïîÇ…êGÇÍÇÈÇ∆éÄÇ ê›íË
-	/*for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 7) {
 				float x = j * 64.0f;
@@ -639,9 +639,9 @@ void CObjStageBlock1::Action()
 				}
 			}
 		}
-	}*/
+	}
 	//ûôÇÃè„ïîÇ…êGÇÍÇÈÇ∆éÄÇ ê›íË
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 9) {
 				float x = j * 64.0f;
@@ -699,9 +699,9 @@ void CObjStageBlock1::Action()
 				}
 			}
 		}
-	}
+	}*/
 	//à≈ã‡Ç…êGÇÍÇÈÇ∆éÄÇ ê›íË
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 3) {
 				float x = j * 64.0f;
@@ -760,7 +760,7 @@ void CObjStageBlock1::Action()
 				}
 			}
 		}
-	}
+	}*/
 }
 
 
