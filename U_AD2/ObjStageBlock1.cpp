@@ -10,15 +10,15 @@
 
 //使用するネームスペース
 using namespace GameL;
-CObjStageBlock1::CObjStageBlock1(int map[10][250])
+CObjStageBlock1::CObjStageBlock1(int map[10][500])
 {
   //マップデータをコピー
 	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 250; j++) {
+		for (int j = 0; j < 500; j++) {
 			m_map[i][j] = map[i][j];
 		}
 	}
-	memcpy(m_map, map, sizeof(int) * (10 * 250));
+	memcpy(m_map, map, sizeof(int) * (10 * 500));
 
 };
 

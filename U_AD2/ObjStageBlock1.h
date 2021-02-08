@@ -9,7 +9,7 @@ using namespace GameL;
 class CObjStageBlock1 :public CObj
 {
 public:
-	CObjStageBlock1(int map[10][250]);
+	CObjStageBlock1(int map[10][500]);
 	~CObjStageBlock1() {};
 	void Init();//イニシャライズ
 	void Action();//アクション
@@ -29,7 +29,7 @@ private:
 	//void BlockDraw1(float x, float y, RECT_F* dst, float c[]);
 
 	//マップ情報
-	int m_map[10][250] = { 0 };
+	int m_map[10][500] = { 0 };
 
 	float m_scroll;
 
