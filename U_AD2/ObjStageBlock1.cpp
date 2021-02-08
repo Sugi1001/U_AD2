@@ -67,7 +67,7 @@ void CObjStageBlock1::Action()
 	//中間の設定（途中）
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
-			if (m_map[i][j] >= 1) {
+			if (m_map[i][j] <= 1) {
 				float x = j * 64.0f;
 				float y = i * 64.0f;
 
@@ -126,7 +126,7 @@ void CObjStageBlock1::Action()
 			}
 		}
 	}
-	/*for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
 			if (m_map[i][j] == 1) {
 				float x = j * 64.0f;
@@ -179,7 +179,7 @@ void CObjStageBlock1::Action()
 			}
 		}
 
-	}*/
+	}
 	//スタート位置の設定
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 250; j++) {
